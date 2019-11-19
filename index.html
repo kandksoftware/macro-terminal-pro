@@ -1,66 +1,154 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#container{
-  width: 100%;
-  height: 100%;
-  left:0;
-  top:0;
-  
-  position: absolute;
-  background-color: rgb(220,220,220);
-}
-
-#container .content{
-  width: 80%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  background-color: transparent;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#container .content .header{
-  padding: 5px;
-  background-color: dodgerblue;
-  border-radius: 10px 10px 0px 0px;
-}
-
-#container h1{
-  color: #fff;
-}
-</style>
-</head>
-<body>
-
-  <div id="container">
-    <div class="content">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/mobile-view.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/card.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <header>
       <div class="header">
-        <h1 style="font-size:30px">
-          Macro Terminal Pro Support
-        </h1>
+        <a href="#main" class="logo">Macro Terminal Pro</a>
+        <div class="header-right">
+          <a href="#about">Main</a>
+          <a href="#about">About</a>
+          <a class="selected" href="#buy">Buy</a>
+          <a href="#support">Support</a>
+        </div>
       </div>
-      <h3>In case any problems, please don't hesitate to contact us :</h3>
-      <h4>E-mail:angrysoftwareengineer@gmail.com</h4>
-      <p>We will reply within 48 hours.</p>
+      
+    </header>
+    <div class="module" id="about">
+      <div class="row">
+        <div class="column col-full">
+          <div class="desciption-container large-font border">
+            <h2>Elegant and modern user interface (UI) and user interface (UX) make using <span style="color:dodgerBlue;">Macro Terminal Pro</span> application easy and intuitive.</h2>
+            
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+    <div class="module" id="about">
+      <div class="row">
+        <div class="column col-medium">
+          <div class="desciption-container large-font border">
+            <h2>Work better with <span style="color:dodgerBlue;">Macro Terminal Pro</span></h2>
+            <p style="text-align: left;">Macro Terminal is the most powerful and modern off-line, mobile CNC tool by now.It’s based on especially made for this purpose compiler with build-in debugging current processes tool to execute and analyze macros (parametric programs) for Fanuc, Haas and compatible g-code based CNC controls.</p>
+          </div>
+        </div>
+        <div class="column col-medium">
+          <div class="image-box">
+            <div id="mobile-frame">
+              <div class="indentation">
+                <div class="microphone"></div>
+                <div class="lens"></div>
+              </div>
+              <img src="resources/debugging.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="module">
+      <div class="row">
+        <div class="column col-medium">
+          <div class="image-box">
+            <div id="mobile-frame">
+              <div class="indentation">
+                <div class="microphone"></div>
+                <div class="lens"></div>
+              </div>
+              <img src="resources/main.png">
+            </div>
+          </div>
+        </div>
+        <div class="column col-medium">
+          <div class="desciption-container large-font">
+            <h2>Why <span style="color:dodgerBlue;">Macro Terminal Pro</span> ?</h2>
+            <p style="text-align: left;">
+              - user interface designed to achieve the best contrast in poor lighting conditions.<br/>
+              - the compiler displays a parse tree of mathematical and logical results.<br/>
+              - displaying variables and highlighting newly initiated.<br/>
+              - we do not use any ready libraries.All elements are designed and created by us.<br/>
+              - the result of the compiler’s work in the form of g-code is highlighted in order to better assimilate the information contained in it.<br/>
 
-
-
-</body>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="module">
+      <div class="row">
+        <div class="column col-medium">
+          <div class="desciption-container large-font">
+            <h2>Do you want to program faster, more efficiently and safely?</h2>
+            <p>By using our application you will learn better and faster programming so that you and your company earn more, you will make your work safer and more enjoyable.</p>
+          </div>
+        </div>
+        <div class="column col-medium">
+          <div class="image-box">
+            <div id="mobile-frame">
+              <div class="indentation">
+                <div class="microphone"></div>
+                <div class="lens"></div>
+              </div>
+              <img src="resources/error.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="module large-font" id="buy">
+      <h1>How to buy it?</h1>
+      <div class="row">
+        <div class="column col-medium">
+          <div class="card free">
+            <h3>Macro Terminal Pro Free</h3>
+            <p>Limited version</p>
+            <a href="https://apps.apple.com/us/app/macro-terminal-pro/id1487702390"><img src="resources/app-store-badge.svg"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminal"><img src="resources/google-play-badge.svg"></a>
+          </div>
+        </div>
+        <div class="column col-medium">
+          <div class="card paid">
+            <h3>Macro Terminal Pro Full</h3>
+            <p>Unlimited version</p>
+            <a href="https://apps.apple.com/us/app/macro-terminal-pro-full/id1487942650"><img src="resources/app-store-badge.svg"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro"><img src="resources/google-play-badge.svg"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="module large-font" id="support">
+      <h2>Contact us</h2>
+      <div class="row">
+        <div class="column col-full">
+          <span style="color:dodgerBlue;font-size: 20px;">angrysoftwareengineer@gmail.com</span>
+        </div>
+      </div>
+    </div>  
+    <footer class="module">
+      <div class="row">
+        <div class="column col-full">
+          <div class="footer-section">
+            <a href="#about">Main</a>
+            <a href="#about">About</a>
+            <a href="#buy">Buy</a>
+            <a href="#contact">Contact</a>
+            <a href="#support">Support</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column col-full" style="border-top: 1px solid lightGray;margin-top:20px;padding: 50px;">
+          <span>Copyright © 2019 K&K Software. All rights reserved.</span>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
