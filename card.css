@@ -1,1 +1,33 @@
 
+.card {
+  text-align: center;
+  background-color: #fff;
+}
+
+.free{
+  border: 8px solid #576A87;
+  color: #576A87;
+}
+
+.free h3{
+   color: #576A87;
+}
+
+.paid{
+  border: 8px solid #C53926;
+  color: #C53926;
+}
+
+.paid h3{
+   color: #C53926;
+}
+
+.card img{
+  height: 100px;
+  width: 200px;
+  display: inline;
+}
+
+.card p{
+  font-size: 45px !important;
+}
