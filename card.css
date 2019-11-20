@@ -11,6 +11,7 @@
 
 .free h3{
    color: #576A87;
+   padding:5px 0px;
 }
 
 .paid{
@@ -19,7 +20,8 @@
 }
 
 .paid h3{
-   color: #C53926;
+  color: #C53926;
+  padding:5px 0px;
 }
 
 .card img{
