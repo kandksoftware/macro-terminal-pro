@@ -11,6 +11,7 @@
 
 .free h2{
    color: #576A87;
+    font-size:0.8em;
  }
 
 .paid{
@@ -20,6 +21,17 @@
 
 .paid h2{
   color: #C53926;
+  font-size:0.8em;
+}
+
+@media screen and (max-width: 800px) {
+  .free h2{
+    color: #576A87;
+  }
+  
+  .paid h2{
+    color: #C53926;
+  }
 }
 
 .card img{
