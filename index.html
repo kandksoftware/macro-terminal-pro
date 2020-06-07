@@ -14,17 +14,20 @@
     <meta name="description" content="Macro Terminal is CNC compiler for Fanuc and Haas to learn cnc parametric programming and g-code used in cnc milling machines and lathes" />
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow">
+    <script>
+      const $ = id => document.getElementById(id);
+    </script>
   </head>
   <body>
     <header>
       <div class="header">
         <a href="#main" class="logo">Macro Terminal Pro</a>
-        <div class="header-right">
+        <nav class="header-right">
           <a href="#about">Main</a>
           <a href="#about">About</a>
           <a class="selected" href="#buy">Buy</a>
           <a href="#support">Support</a>
-        </div>
+        </nav>
       </div>
       
     </header>
@@ -142,10 +145,13 @@
       </div>
       <div class="row">
         <div class="column col-full" style="border-top: 1px solid lightGray;margin-top:20px;padding: 50px;">
-          <span>Copyright © 2020 K&K Software. All rights reserved.</span>
+          <span>Copyright © <span id="date"></span> K&K Software. All rights reserved.</span>
           <a href="privacy-policy.html">Privacy Policy</a>
         </div>
       </div>
     </footer>
+    <script>
+      $('date').innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>
