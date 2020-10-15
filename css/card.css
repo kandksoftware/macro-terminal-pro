@@ -1,0 +1,37 @@
+
+.card{
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.card a{
+  color: red;
+  font-size: 16px;
+}
+
+.card .fa-star{
+  font-size: 22px;
+}
+
+.card h2{
+  font-size:0.8em;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .card h2{
+    font-size:1em;
+    margin-bottom: 15px;
+  }
+}
+
+.card img{
+  height: 100px;
+  width: 200px;
+  display: inline;
+}
+
+.card p{
+  font-size: 45px !important;
+}
