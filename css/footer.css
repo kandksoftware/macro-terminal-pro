@@ -1,0 +1,35 @@
+footer{
+  width: 100%;
+  position: absolute;
+}
+
+.footer-section{
+   width: 100%;
+   height: auto;
+   text-align: center;
+   margin-top: 10px;
+   padding: 10px;
+}
+
+.footer-section a{
+   display: inline-block;
+   color:#000;
+   margin:0px 40px;
+}
+
+@media screen and (max-width: 900px) {
+  .footer-section a {
+    margin:0px 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-section a {
+    margin:0px 5px;
+  }
+
+  footer .privacy{
+    display: block;
+    margin-top: 10px;
+  }
+}
