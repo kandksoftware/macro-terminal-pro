@@ -4,16 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" type="text/css" href="mobile.css">
-    <link rel="stylesheet" type="text/css" href="header.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
-    <link rel="stylesheet" type="text/css" href="card.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/card.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Macro Terminal | cnc compiler for Fanuc and Haas to learn cnc parametric programming and g-codes</title>
     <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
     <meta name="description" content="Macro Terminal is CNC compiler for Fanuc and Haas to learn cnc parametric programming and g-code used in cnc milling machines and lathes" />
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
       const $ = id => document.getElementById(id);
     </script>
@@ -21,132 +22,191 @@
   <body>
     <header>
       <div class="header">
-        <a href="#main" class="logo">Macro Terminal Pro</a>
+        <a href="#main" class="logo">Macro Terminal CNC</a>
         <nav class="header-right">
           <a href="#about">Main</a>
-          <a href="#about">About</a>
-          <a class="selected" href="#buy">Buy</a>
+          <a href="#product">Product</a>
+          <a class="active" href="get-started.html">Get started</a>
+          <!--<a class="active" href="#buy">Buy</a>-->
           <a href="#support">Support</a>
         </nav>
       </div>
-      
     </header>
-    
-    <div class="module" id="about">
+    <div class="module margin-top-large" id="about">
       <div class="row">
-        <div class="column col-medium">
+        <div class="column col-medium increase-margin">
           <div class="desciption-container large-font border">
-            <h2>Work better with <span style="color:dodgerBlue;">Macro Terminal Pro</span></h2>
-            <p style="text-align: left;">Macro Terminal is the most powerful and modern off-line, mobile CNC tool by now.It’s based on especially made for this purpose compiler with build-in debugging current processes tool to execute and analyze macros (parametric programs) for Fanuc, Haas and compatible g-code based CNC controls.</p>
+            <h2>Learn, test and debug better with Macro Terminal CNC</span></h2>
+            <p style="text-align: left;">Macro Terminal CNC is the most powerful and modern off-line, mobile CNC tool by now.It’s based on especially made for this purpose interpreter with build-in debugging current processes tool to execute and analyze macros (parametric programs) for Fanuc, Haas and compatible g-code based CNC controls.</p>
+            <br/>
+            <a href="https://apps.apple.com/us/app/macro-terminal-pro-full/id1487942650"><img class="redirect-img" src="resources/app-store-badge.svg"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro"><img class="redirect-img" src="resources/google-play-badge.svg"></a>
           </div>
         </div>
         <div class="column col-medium">
           <div class="image-box">
-            <div id="mobile-frame">
-              <div class="indentation">
-                <div class="microphone"></div>
-                <div class="lens"></div>
+            <div class="double-image-container set-center">
+              <div id="mobile-frame" class="first-absolute-position">
+                <!--<div class="indentation">
+                  <div class="microphone"></div>
+                  <div class="lens"></div>
+                </div>-->
+                <img src="resources/milling_shape_2.png" alt="Cell phone image">
               </div>
-              <img src="debugging.png" alt="Cell phone image">
+              <div id="mobile-frame" class="second-absolute-position">
+                <!--<div class="indentation">
+                  <div class="microphone"></div>
+                  <div class="lens"></div>
+                </div>-->
+                <img src="resources/code.png" alt="Cell phone image">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="module">
+    <div class="module margin-top-large" id="co-companies" style="background-color:#fff;">
+      <div class="row">
+        <div class="column col-full">
+          <h1>Fanuc Siemens Haas</h1>
+        </div>
+      </div>
+    </div>
+    <div class="module margin-top-large" id="product">
       <div class="row">
         <div class="column col-medium">
           <div class="image-box">
             <div id="mobile-frame">
-              <div class="indentation">
+              <!--<div class="indentation">
                 <div class="microphone"></div>
                 <div class="lens"></div>
-              </div>
-              <img src="main.png" alt="Cell phone image">
+              </div>-->
+              <img src="resources/parsing_tree.png" alt="Cell phone image">
             </div>
           </div>
         </div>
         <div class="column col-medium">
           <div class="desciption-container large-font">
-            <h2>Why <span style="color:dodgerBlue;">Macro Terminal Pro</span> ?</h2>
-            <p style="text-align: left;">
-              - user interface designed to achieve the best contrast in poor lighting conditions.<br/>
-              - the compiler displays a parse tree of mathematical and logical results.<br/>
-              - displaying variables and highlighting newly initiated.<br/>
-              - we do not use any ready libraries.All elements are designed and created by us.<br/>
-              - the result of the compiler’s work in the form of g-code is highlighted in order to better assimilate the information contained in it.<br/>
-
+            <h2>Why Macro Terminal CNC?</h2>
+            <div style="text-align: left;">
+              <p style="text-align: left;">
+                1.Because Macro Terminal CNC is the only CNC software in the world that shows all math and logic operations one by one, line by line (known as parse tree).</p>
+              <p>2.Macro Terminal CNC can be used for traditional programming as well as for parametric programming.</p>
+              <p>3.Macro Terminal CNC supports G16, G52, G68 and Haas G70 Bolt Hole Circle, Haas G71 Bolt Hole Arc, Haas G72 Bolt Holes Along an Angle.
+              </p>
+              <p>3.Pay once and enjoy free upgrades!
+              </p>
+            </div>
+            <p>
+              <a href="product.html" style="color:red;">Read more</a>
             </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="module">
+    <div class="module margin-top">
       <div class="row">
         <div class="column col-medium">
           <div class="desciption-container large-font">
             <h2>Do you want to program faster, more efficiently and safely?</h2>
-            <p>By using our application you will learn better and faster programming so that you and your company earn more, you will make your work safer and more enjoyable.</p>
+            <p>By using Macro Terminal CNC you'll learn better and faster programming so that you and your company earn more, you will make your work safer and more enjoyable.</p>
           </div>
         </div>
         <div class="column col-medium">
           <div class="image-box">
             <div id="mobile-frame">
-              <div class="indentation">
+              <!--<div class="indentation">
                 <div class="microphone"></div>
                 <div class="lens"></div>
-              </div>
-              <img src="error.png" alt="Cell phone image">
+              </div>-->
+              <img src="resources/error_2.png" alt="Cell phone image">
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="module large-font" id="buy">
-      <h1>How to buy it?</h1>
+    <div class="module large-font margin-top-large" id="opinions">
+      <h2 style="color:red">What our customers think about Macro Terminal CNC?</h2>
       <div class="row">
-        <div class="column col-medium">
-          <div class="card free">
-            <h2>Macro Terminal Pro Free</h2>
-            <p>Limited version</p>
-            <a href="https://apps.apple.com/us/app/macro-terminal-pro/id1487702390"><img src="app-store-badge.svg"></a>
-            <a href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminal"><img src="google-play-badge.svg"></a>
+        <div class="column col-small">
+          <div class="card">
+            <h2>Martin Wesselink</h2>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <p>This is a very useful and accurate program to check your macro calculations, before you put them in the machine. Helps very good with the debugging of your program. I use it to check ...</p>
+            <a href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro">Read more</a>
           </div>
         </div>
-        <div class="column col-medium">
-          <div class="card paid">
-            <h2>Macro Terminal Pro Full</h2>
-            <p>Unlimited version</p>
-            <a href="https://apps.apple.com/us/app/macro-terminal-pro-full/id1487942650"><img src="app-store-badge.svg"></a>
-            <a href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro"><img src="google-play-badge.svg"></a>
+        <div class="column col-small">
+          <div class="card">
+            <h2>Paul S</h2>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <p>This software is a godsend for building macros. You can see the program as it would flow naturally if the program was written point-to-point. Great for testing out how the logic will play out ...</p>
+            <a href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro">Read more</a>
+          </div>
+        </div>
+        <div class="column col-small">
+          <div class="card">
+            <h2>rabbit_goodwin</h2>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <p>Amazing app
+            I do a ton of programming at the machine(HAAS). This app is super helpful for writing new programs while it’s running and is perfect for testing new macros without ...</p>
+            <a href="https://apps.apple.com/us/app/macro-terminal-pro-full/id1487942650">Read more</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="module large-font" id="support">
-      <h2>Contact us</h2>
+    <div class="module margin-top-large" id="support">
       <div class="row">
-        <div class="column col-full">
-          <span style="color:dodgerBlue;font-size: 20px;">mobilecamcnc@gmail.com</span>
+        <div class="column col-medium">
+          <div class="image-box">
+            <div id="mobile-frame">
+              <!--<div class="indentation">
+                <div class="microphone"></div>
+                <div class="lens"></div>
+              </div>-->
+              <img src="resources/milling_shape.png" alt="Cell phone image">
+            </div>
+          </div>
+        </div>
+        <div class="column col-medium">
+          <div class="desciption-container large-font" style="text-align: left;">
+            <h2>Contact me</h2>
+            <span>mobilecamcnc@gmail.com</span>
+            <h4 style="color:red">I'll answer you within 48hours*</h4>
+            <p style="color:lightGray">*Excluding weekends and holidays</p>
+          </div>
         </div>
       </div>
-    </div>  
-    <footer class="module">
+    </div>
+    <footer class="module margin-top-large">
       <div class="row">
         <div class="column col-full">
           <div class="footer-section">
             <a href="#about">Main</a>
-            <a href="#about">About</a>
-            <a href="#buy">Buy</a>
-            <a href="#contact">Contact</a>
-            <a href="#support">Support</a>
+            <a href="#product">Product</a>
+            <a href="get-started.html">Get started</a>
+            <a href="#support">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="https://www.youtube.com/channel/UC1jqMGHbE-v0UPthEAwQl_w?view_as=subscriber">Youtube</a>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="column col-full" style="border-top: 1px solid lightGray;margin-top:20px;padding: 50px;">
+        <div class="column col-full" style="border-top: 2px solid red;margin-top:20px;padding: 50px;">
           <span>Copyright © <span id="date"></span> Mobile CAM CNC. All rights reserved.</span>
-          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="privacy-policy.html" class="privacy">Privacy Policy</a>
         </div>
       </div>
     </footer>
