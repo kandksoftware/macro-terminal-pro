@@ -1,0 +1,22 @@
+.faq-content{
+  padding: 10px;
+}
+
+.faq-content h1{
+  color: dodgerBlue;
+  padding-bottom:10px; 
+  border-bottom: 1px solid gray;
+}
+
+.faq-content h2{
+  font-weight:normal;
+}
+
+.faq-content h2::before{
+  counter-increment: section;                  
+  content: counter(section) ". ";
+}
+
+.faq-content p{
+  color: gray;
+}
