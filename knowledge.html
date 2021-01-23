@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/card.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Macro Terminal CNC | a CNC interpreter and simulator for Fanuc and Haas to learn, test and debug CNC parametric programming and g-codes</title>
+    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+    <meta name="description" content="Macro Terminal CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      
+      table, td, th {  
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      th, td {
+        padding: 15px;
+      }
+      </style>
+  </head>
+  <body>
+    <noscript>To see the content your browser must to support JavaScript!</noscript>
+    <div id="app" class="hide">
+      <header id="header"></header>
+      <div class="center-view">
+        <h1>Common system variables:</h1>
+        <table>
+          <tr>
+            <th>Variable</th>
+            <th>Function</th>
+            <th>Controls</th>
+          </tr>
+          <tr>
+            <td>#3000</td>
+            <td>Custom alarm message</td>
+            <td>Fanuc/Haas</td>
+          </tr>
+          <tr>
+            <td>#3001</td>
+            <td>This variable acts as a timer that counts continuously at 1 millisecond intervals. Upon reaching 2,147,483,648 milliseconds, the timer returns to 0.</td>
+            <td>Fanuc/Haas</td>
+          </tr>
+          <tr>
+            <td>#3011</td>
+            <td>This variable contains the current date (year / month / day). for example, February 01, 2020 is stored as 20200201.</td>
+            <td>Fanuc/Haas</td>
+          </tr>
+          <tr>
+            <td>#3012</td>
+            <td>This variable contains the current time (hours/minutes/seconds) 
+              . for example, February 01, 2020 is stored as 20200201. For example, 15 minutes and 10 seconds after 4 p.m. is stored as 161410. 
+              </td>
+            <td>Fanuc/Haas</td>
+          </tr>
+        </table>
+      </div>
+      <div class="center-view">
+        <h1>System variables for Fanuc 0/16/18/21</h1>
+        <table>
+          <tr>
+            <th>Variable</th>
+            <th>G-code</th>
+            <th>Group number</th>
+          </tr>
+          <tr>
+            <td>#4001</td>
+            <td>G00 G01 G02 G03 G33</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>#4002</td>
+            <td>G17 G18 G19</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>#4003</td>
+            <td>G90 G91</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>#4004</td>
+            <td>G22 G23</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>#4005</td>
+            <td>G93 G94 G95</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>#4006</td>
+            <td>G20 G21</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>#4007</td>
+            <td>G40 G41 G42</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>#4008</td>
+            <td>G43 G44 G45</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>#4009</td>
+            <td>G73 G74 G76 G80 G81 G82 G83 G84 G85 G86 G87 G88 G89</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>#4010</td>
+            <td>G98 G99</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>#4011</td>
+            <td>G50 G51</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>#4012</td>
+            <td>G65 G66 G67</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>#4013</td>
+            <td>G96 G97</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>#4014</td>
+            <td>G54 G55 G56 G57 G58 G59</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>#4015</td>
+            <td>G61 G62 G63 G64</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>#4016</td>
+            <td>G68 G69</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>#4017</td>
+            <td>G15 G16</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>#4019</td>
+            <td>G40.1 G41.1 G42.1</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>#4022</td>
+            <td>G50.1 G51.1</td>
+            <td>22</td>
+          </tr>
+        </table>
+      </div>
+      <div class="center-view">
+        <h1>System variables for Fanuc 10/11/15</h1>
+        <table>
+          <tr>
+            <th>Variable - previous line</th>
+            <th>Variable - current line</th>
+            <th>G-code</th>
+            <th>Group number</th>
+          </tr>
+          <tr>
+            <td>#4001</td>
+            <td>#4201</td>
+            <td>G00 G01 G02 G03 G33</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>#4002</td>
+            <td>#4202</td>
+            <td>G17 G18 G19</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>#4003</td>
+            <td>#4203</td>
+            <td>G90 G91</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>#4004</td>
+            <td>#4204</td>
+            <td>G22 G23</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>#4005</td>
+            <td>#4205</td>
+            <td>G93 G94 G95</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>#4006</td>
+            <td>#4206</td>
+            <td>G20 G21</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>#4007</td>
+            <td>#4207</td>
+            <td>G40 G41 G42</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>#4008</td>
+            <td>#4208</td>
+            <td>G43 G44 G45</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>#4009</td>
+            <td>#4209</td>
+            <td>G73 G74 G76
+              G80 G81 G82 G83 G84 G85 G86 G87 G88 G89</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>#4010</td>
+            <td>#4210</td>
+            <td>G98 G99</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>#4011</td>
+            <td>#4211</td>
+            <td>G50 G51</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>#4012</td>
+            <td>#4212</td>
+            <td>G65 G66 G67</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>#4013</td>
+            <td>#4213</td>
+            <td>G96 G97</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>#4014</td>
+            <td>#4214</td>
+            <td>G54 G55 G56 G57 G58 G59</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>#4015</td>
+            <td>#4215</td>
+            <td>G61 G62 G63 G64</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>#4016</td>
+            <td>#4216</td>
+            <td>G68 G69</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>#4017</td>
+            <td>#4217</td>
+            <td>G15 G16</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>#4018</td>
+            <td>#4218</td>
+            <td>G50.1 G51.1</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>#4019</td>
+            <td>#4219</td>
+            <td>G40.1 G41.1 G42.1</td>
+            <td>19</td>
+          </tr>
+        </table>
+      </div>
+      <div class="center-view">
+        <h1>Other modal for Fanuc 0/16/18/21</h1>
+        <table>
+          <tr>
+            <th>Variable</th>
+            <th>Adress</th>
+          </tr>
+          <tr>
+            <td>#4102</td>
+            <td>"B" - axis position</td>
+          </tr>
+          <tr>
+            <td>#4107</td>
+            <td>"D" - cutter radius</td>
+          </tr>
+          <tr>
+            <td>#4108</td>
+            <td>"E" - feed rate (optional)</td>
+          </tr>
+          <tr>
+            <td>#4109</td>
+            <td>"F" - feed rate</td>
+          </tr>
+          <tr>
+            <td>#4111</td>
+            <td>"H" - tool length</td>
+          </tr>
+          <tr>
+            <td>#4113</td>
+            <td>"M" - miscellaneous</td>
+          </tr>
+          <tr>
+            <td>#4115</td>
+            <td>"O" - program number</td>
+          </tr>
+          <tr>
+            <td>#4119</td>
+            <td>"S" - speed rate</td>
+          </tr>
+          <tr>
+            <td>#4120</td>
+            <td>"T" - tool number</td>
+          </tr>
+        </table>
+      </div>
+      <div class="center-view">
+        <h1>Other modal for Fanuc 10/11/15</h1>
+        <table>
+          <tr>
+            <th>Variable - previous line</th>
+            <th>Variable - current line</th>
+            <th>Adress</th>
+          </tr>
+          <tr>
+            <td>#4102</td>
+            <td>#4302</td>
+            <td>"B" - axis position</td>
+          </tr>
+          <tr>
+            <td>#4107</td>
+            <td>#4307</td>
+            <td>"D" - cutter radius</td>
+          </tr>
+          <tr>
+            <td>#4108</td>
+            <td>#4308</td>
+            <td>"E" - feed rate (optional)</td>
+          </tr>
+          <tr>
+            <td>#4109</td>
+            <td>#4309</td>
+            <td>"F" - feed rate</td>
+          </tr>
+          <tr>
+            <td>#4111</td>
+            <td>#4311</td>
+            <td>"H" - tool length</td>
+          </tr>
+          <tr>
+            <td>#4113</td>
+            <td>#4313</td>
+            <td>"M" - miscellaneous</td>
+          </tr>
+          <tr>
+            <td>#4115</td>
+            <td>#4315</td>
+            <td>"O" - program number</td>
+          </tr>
+          <tr>
+            <td>#4119</td>
+            <td>#4319</td>
+            <td>"S" - speed rate</td>
+          </tr>
+          <tr>
+            <td>#4120</td>
+            <td>#4320</td>
+            <td>"T" - tool number</td>
+          </tr>
+        </table>
+      </div>
+      <footer class="module" id="footer"></footer>
+    </div>
+    <script src="nav-builder.js"></script>
+  </body>
+</html>
