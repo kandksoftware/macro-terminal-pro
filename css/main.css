@@ -10,6 +10,10 @@ body{
   counter-reset: section; 
 }
 
+.hide{
+  display: none;
+}
+
 .column {
   float: left;
   padding: 0 10px;
@@ -209,7 +213,20 @@ a{
   }
 }
 
+.center-view{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 10px;
+  margin-top: 50px;
+}
 
+@media screen and (min-width: 768px) {
+  .center-view{
+    width: 50%;
+    margin-top: 80px;
+  }
+}
 
 
 
