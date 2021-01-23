@@ -15,51 +15,20 @@
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-      const $ = id => document.getElementById(id);
-    </script>
   </head>
   <body>
-    <header>
-      <div class="header">
-        <a href="index.html" class="logo">Macro Terminal CNC</a>
-        <nav class="header-right">
-          <a href="index.html#about">Main</a>
-          <a href="index.html#product">Product</a>
-          <a class="active" href="/get-started">Get started</a>
-          <a href="index.html#support">Support</a>
-        </nav>
-      </div>
-    </header>
-    <div class="module margin-top-large">
-      <div class="row">
-        <div class="column col-full">
-         <iframe width="100%" height="400"  src="https://www.youtube.com/embed/vYiN6X74mbg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <footer class="module">
-      <div class="row">
-        <div class="column col-full">
-          <div class="footer-section">
-            <a href="index.html#about">Main</a>
-            <a href="index.html#product">Product</a>
-            <a href="get-started.html">Get started</a>
-            <a href="index.html#support">Contact</a>
-            <a href="faq.html">FAQ</a>
-            <a href="https://www.youtube.com/channel/UC1jqMGHbE-v0UPthEAwQl_w?view_as=subscriber">Youtube</a>
+    <noscript>To see the content your browser must to support JavaScript!</noscript>
+    <div id="app" class="hide">
+      <header id="header"></header>
+      <div class="module margin-top-large">
+        <div class="row">
+          <div class="column col-full">
+            <iframe width="100%" height="400"  src="https://www.youtube.com/embed/vYiN6X74mbg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="column col-full" style="border-top: 2px solid red;margin-top:20px;padding: 50px;">
-          <span>Copyright © <span id="date"></span> Mobile CAM CNC. All rights reserved.</span>
-          <a href="privacy-policy.html" class="privacy">Privacy Policy</a>
-        </div>
-      </div>
-    </footer>
-    <script>
-      $('date').innerHTML = new Date().getFullYear();
-    </script>
+      <footer class="module" id="footer"></footer>
+    </div>
+    <script src="nav-builder.js"></script>
   </body>
 </html>

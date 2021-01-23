@@ -16,69 +16,37 @@
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-      const $ = id => document.getElementById(id);
-    </script>
   </head>
   <body>
-    <header>
-      <div class="header">
-        <a href="index.html" class="logo">Macro Terminal CNC</a>
-        <nav class="header-right">
-          <a href="index.html#about">Main</a>
-          <a href="index.html#product">Product</a>
-          <a class="active" href="get-started.html">Get started</a>
-          <a href="index.html#support">Support</a>
-        </nav>
-      </div>
-    </header>
-    <div class="faq-content">
-      <div class="row margin-top">
-        <div class="column col-full">
-          <h1>FAQ</h1>
-          <h2>Whether the purchase is indefinite or has a validity period.</h2>
-          <p>The purchase is for an unlimited period of time and has no expiry date.</p>
-          <h2>Graphics (simulator) is unresponsive.</h2>
-          <p>Press the reset button in the upper right corner.</p>
-          <h2>The message "Program not found" appears.</h2>
-          <p>You are probably using the wrong settings - for example: if you want to create a program for a Haas machine, select the Haas option in the settings panel. If it doesn't work, please <a href="index.html#support">contact me.</a></p>
-          <h2>"R" value in G2 or G3 is not working properly.</h2>
-          <p>The CNC terminal macro does not yet support the "R" value for circular interpolation.</p>
-          <h2>I found an error, what should I do?</h2>
-          <p>If you found any bug, please <a href="index.html#support">contact me.</a></p>
-          <h2>I can't save the file.</h2>
-          <p>On your device, go to settings, find “apps”, then find Macro Terminal CNC, select "allowed storage".
-          If it hasn't worked, please <a href="index.html#support">contact me.</a></p>
-          <h2>After pressing the "Exec" button (the light gray triangle in the upper left corner of the upper bar) the application freezes.</h2>
-          <p>Probably the program you are trying to execute loops endlessly. If you can't find the wrong part in your code, go to the "exec line" and press "Play" or "Play fast".After a while you should recognize what part of the code is repeating.If You are still not sure, press “Stop” and then manually step through the lines using the button “Next”.</p>
-          <h2>Why does the CNC Macro Terminal not have 3D graphics?</h2>
-          <p>The mobile phone has limited resources and, moreover, the screen size is too small to manipulate the 3D graphics with your fingers.</p>
-          <h1></h1>
-        </div>
-      </div>
-    </div>
-    <footer class="module">
-      <div class="row">
-        <div class="column col-full">
-          <div class="footer-section">
-            <a href="index.html#about">Main</a>
-            <a href="index.html#product">Product</a>
-            <a href="get-started.html">Get started</a>
-            <a href="index.html#support">Contact</a>
-            <a href="faq.html">FAQ</a>
-            <a href="https://www.youtube.com/channel/UC1jqMGHbE-v0UPthEAwQl_w?view_as=subscriber">Youtube</a>
+    <noscript>To see the content your browser must to support JavaScript!</noscript>
+    <div id="app" class="hide">
+      <header id="header"></header>
+      <div class="faq-content">
+        <div class="row margin-top">
+          <div class="column col-full">
+            <h1>FAQ</h1>
+            <h2>Whether the purchase is indefinite or has a validity period.</h2>
+            <p>The purchase is for an unlimited period of time and has no expiry date.</p>
+            <h2>Graphics (simulator) is unresponsive.</h2>
+            <p>Press the reset button in the upper right corner.</p>
+            <h2>The message "Program not found" appears.</h2>
+            <p>You are probably using the wrong settings - for example: if you want to create a program for a Haas machine, select the Haas option in the settings panel. If it doesn't work, please <a href="index.html#support">contact us.</a></p>
+           
+            <h2>I found an error, what should I do?</h2>
+            <p>If you found any bug, please <a href="index.html#support">contact us.</a></p>
+            <h2>I can't save the file.</h2>
+            <p>On your device, go to settings, find “apps”, then find Macro Terminal CNC, select "allowed storage".
+            If it hasn't worked, please <a href="index.html#support">contact us.</a></p>
+            <h2>After pressing the "Exec" button (the light gray triangle in the upper left corner of the upper bar) the application freezes.</h2>
+            <p>Probably the program you are trying to execute loops endlessly. If you can't find the wrong part in your code, go to the "exec line" and press "Play" or "Play fast".After a while you should recognize what part of the code is repeating.If You are still not sure, press “Stop” and then manually step through the lines using the button “Next”.</p>
+            <h2>Why does the CNC Macro Terminal not have 3D graphics?</h2>
+            <p>The mobile phone has limited resources and moreover, the screen size is too small to manipulate the 3D graphics with your fingers.</p>
+            <h1></h1>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="column col-full" style="border-top: 2px solid red;margin-top:20px;padding: 50px;">
-          <span>Copyright © <span id="date"></span> Mobile CAM CNC. All rights reserved.</span>
-          <a href="privacy-policy.html" class="privacy">Privacy Policy</a>
-        </div>
-      </div>
-    </footer>
-    <script>
-      $('date').innerHTML = new Date().getFullYear();
-    </script>
+      <footer class="module" id="footer"></footer>
+    </div>
+    <script src="nav-builder.js"></script>
   </body>
 </html>

@@ -15,84 +15,53 @@
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-      const $ = id => document.getElementById(id);
-    </script>
   </head>
   <body>
-    <header>
-      <div class="header">
-        <a href="index.html" class="logo">Macro Terminal CNC</a>
-        <nav class="header-right">
-          <a href="index.html#about">Main</a>
-          <a href="index.html#product">Product</a>
-          <a class="active" href="get-started.html">Get started</a>
-          <a href="index.html#support">Support</a>
-        </nav>
-      </div>
-    </header>
-    <div class="module margin-top" id="product">
-      <div class="row">
-        <div class="column col-medium" style="text-align: left;padding: 10px 20px;">
-          <h1>Informations:</h1>
-          <ul>
-            <li>executing CNC macros</li>
-            <li>fully compatible with Fanuc Custom Macro B and Fanuc-compatible controls (e.g. HAAS, SINUMERIK 802D)</li>
-            <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
-            <li>showing the assigned variables and colors the new assigned variables</li>
-            <li>showing a parsing tree (great solution for debugging and learn CNC macros - parametric programming)</li>
-            <li>running line-by-line (manually and auto-play mode)</li>
-            <li>CNC simulator (a graphical representation of tool path) XY, XZ, YZ (milling) and XZ (lathe) mode</li>
-            <li>19 examples of CNC programming and CNC macro programming</li>
-            <li>mill/lathe mode</li>
-            <li>FANUC/HAAS mode</li>
-            <li>undo, format, copy, surround features</li>
-            <li>full support G16 (polar coordinate), G51 (scaling), G52 (shift work offset), G68 (coordinate rotation), G65 / G66 (macro subprogram call), G98, G99, repeat canned cycle (L and K)</li>
-            <li>supporting for Haas G70 Bolt Hole Circle, Haas G71 Bolt Hole Arc, Haas G72 Bolt Holes Along an Angle</li>
-            <li>circular interpolation supported by using (I, J, K or R)</li>
-            <li>supporting for old FANUC repeat subprogram syntax (for example:P120001, 12 - number of repetitions, 0001 - subprogram name)</li>
-            <li>supporting FANUC (4digits) and HAAS program title format (5digits)</li>
-            <li>metric/imperial mode</li>
-            <li>syntax checker (G-code analyzer, open brackets etc.)</li>
-            <li>reading file with EOB ( ; ) / not or mix</li>
-            <li>output syntax highlighting</li>
-            <li>save/save as/open file/clear</li>
-            <li>save/open file with extension: cnc, cn, txt</li>
-            <li>auto file save (1s, 2s, 4s)</li>
-            <li>custom look (2 themes, font color, font size)</li>
-          </ul>
-        </div>
-        <div class="column col-medium">
-          <div class="image-box">
-            <div id="mobile-frame">
-              <img src="resources/parsing_tree.png" alt="Cell phone image">
+    <noscript>To see the content your browser must to support JavaScript!</noscript>
+    <div id="app" class="hide">
+      <header id="header"></header>
+      <div class="module margin-top" id="product">
+        <div class="row">
+          <div class="column col-medium" style="text-align: left;padding: 10px 20px;">
+            <h1>Informations:</h1>
+            <ul>
+              <li>executing CNC macros</li>
+              <li>fully compatible with Fanuc Custom Macro B and Fanuc-compatible controls (e.g. HAAS, SINUMERIK 802D)</li>
+              <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
+              <li>showing the assigned variables and colors the new assigned variables</li>
+              <li>showing a parsing tree (great solution for debugging and learn CNC macros - parametric programming)</li>
+              <li>running line-by-line (manually and auto-play mode)</li>
+              <li>CNC simulator (a graphical representation of tool path) XY, XZ, YZ (milling) and XZ (lathe) mode</li>
+              <li>19 examples of CNC programming and CNC macro programming</li>
+              <li>mill/lathe mode</li>
+              <li>FANUC/HAAS mode</li>
+              <li>undo, format, copy, surround features</li>
+              <li>full support G16 (polar coordinate), G51 (scaling), G52 (shift work offset), G68 (coordinate rotation), G65 / G66 (macro subprogram call), G98, G99, repeat canned cycle (L and K)</li>
+              <li>supporting for Haas G70 Bolt Hole Circle, Haas G71 Bolt Hole Arc, Haas G72 Bolt Holes Along an Angle</li>
+              <li>circular interpolation supported by using (I, J, K or R)</li>
+              <li>supporting for old FANUC repeat subprogram syntax (for example:P120001, 12 - number of repetitions, 0001 - subprogram name)</li>
+              <li>supporting FANUC (4digits) and HAAS program title format (5digits)</li>
+              <li>metric/imperial mode</li>
+              <li>syntax checker (G-code analyzer, open brackets etc.)</li>
+              <li>reading file with EOB ( ; ) / not or mix</li>
+              <li>output syntax highlighting</li>
+              <li>save/save as/open file/clear</li>
+              <li>save/open file with extension: cnc, cn, txt</li>
+              <li>auto file save (1s, 2s, 4s)</li>
+              <li>custom look (2 themes, font color, font size)</li>
+            </ul>
+          </div>
+          <div class="column col-medium">
+            <div class="image-box">
+              <div id="mobile-frame">
+                <img src="resources/parsing_tree.png" alt="Cell phone image">
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <footer class="module" id="footer"></footer>
     </div>
-    <footer class="module">
-      <div class="row">
-        <div class="column col-full">
-          <div class="footer-section">
-            <a href="index.html#about">Main</a>
-            <a href="index.html#product">Product</a>
-            <a href="get-started.html">Get started</a>
-            <a href="index.html#support">Contact</a>
-            <a href="faq.html">FAQ</a>
-            <a href="https://www.youtube.com/channel/UC1jqMGHbE-v0UPthEAwQl_w?view_as=subscriber">Youtube</a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column col-full" style="border-top: 2px solid red;margin-top:20px;padding: 50px;">
-          <span>Copyright © <span id="date"></span> Mobile CAM CNC. All rights reserved.</span>
-          <a href="privacy-policy.html" class="privacy">Privacy Policy</a>
-        </div>
-      </div>
-    </footer>
-    <script>
-      $('date').innerHTML = new Date().getFullYear();
-    </script>
+    <script src="nav-builder.js"></script>
   </body>
 </html>
