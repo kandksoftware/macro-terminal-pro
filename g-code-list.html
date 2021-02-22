@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Macro Terminal CNC | Most popular common system variables used in Fanuc and Haas controls</title>
     <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-    <meta name="description" content="List of the most popular G codes for CNC mill and lathe machines using Fanuc controls" />
+    <meta name="description" content="List of the most popular G-codes for CNC milling machines and lathes with ISO-based control (Fanuc, Haas, Mazak, Heidenhain)" />
     <meta name="keywords" content="" />
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,11 +21,11 @@
     <div id="app" class="hide">
       <header id="header"></header>
       <div class="center-view">
-        <h1>The most common G-codes</h1>
+        <h1>The most popular G-codes for milling machines and lathes</h1>
         <table>
           <tr>
             <th>Name</th>
-            <th>Function</th>
+            <th>Meaning</th>
             <th>Machine type</th>
           </tr>
           <tr>
@@ -95,6 +95,11 @@
           </tr>
           <tr>
             <td>G32</td>
+            <td>Thread cutting</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G33</td>
             <td>Thread cutting</td>
             <td>Lathe</td>
           </tr>
@@ -199,6 +204,11 @@
             <td>Lathe</td>
           </tr>
           <tr>
+            <td>G78</td>
+            <td>Threading cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
             <td>G80</td>
             <td>Cancel canned cycle</td>
             <td>Mill</td>
@@ -244,8 +254,18 @@
             <td>Mill</td>
           </tr>
           <tr>
+            <td>G92</td>
+            <td>Threading cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
             <td>G94</td>
             <td>Simple facing cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G96</td>
+            <td>Constant surface speed</td>
             <td>Lathe</td>
           </tr>
           <tr>
