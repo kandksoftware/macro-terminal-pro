@@ -37,7 +37,7 @@
   },{
     type:['nav','menu'],
     link:'#!',
-    dec:['btn btn-red'],
+    dec:['btn btn-red btn-purchase'],
     desc:'Purchase'
   }]
 
@@ -52,5 +52,12 @@
   const att = document.createAttribute('onclick')
   att.value = "location.href='index.html'"
   nc.setAttributeNode(att)
+
+  APP.initPurchaseBtnListener()
+  
+  APP.createElement('div','m-b')
+
+  
+
 })();
 
