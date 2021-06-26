@@ -1,222 +1,177 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" type="text/css" href="css/mobile.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/card.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/banner.css">
-    <title>Macro Terminal CNC | a CNC interpreter and simulator for Fanuc and Haas to learn, test and debug CNC parametric programming and g-codes</title>
-    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-    <meta name="description" content="Macro Terminal CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
-    <meta name="keywords" content="" />
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <noscript>To see the content your browser must to support JavaScript!</noscript>
-    <div id="app" class="hide">
-      <header id="header"></header>
-      <div class="module banner margin-top-large hide">
-        <div class="row">
-          <div class="column col-full">
-            You have no programming skills or are you a beginner?<br/>Don't worry, we have a different CNC app which doesn't require CNC programming skills. <a href="https://mobilecamcnc.github.io/products/">Read more</a>
-          </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/macro-terminal-icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Macro Terminal CNC</title>
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+  <meta name="description" content="Macro Terminal CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
+  <meta name="keywords" content=""/>
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header id="main">
+    <nav class="nav">
+      <div class="nav__container">
+        <img class="nav__icon" src="resources/macro-terminal-icon.png" alt="Macro Terminal CNC">
+        <div class="nav__name">
         </div>
       </div>
-      <div class="module margin-top-large" id="about">
-        <div class="row">
-          <div class="column col-medium increase-margin">
-            <div class="desciption-container large-font border">
-              <h2>Learn, test, and simulate better with Macro Terminal CNC</span></h2>
-              <p style="text-align: left;">Macro Terminal CNC is the most powerful and modern off-line, mobile CNC tool by now.It’s based on especially made for this purpose interpreter with build-in debugging current processes tool to execute and analyze macros (parametric programs) for Fanuc, Haas and compatible g-code based CNC controls.</p>
-              <br/>
-              <a href="https://apps.apple.com/us/app/macro-terminal-pro-full/id1487942650"><img class="redirect-img" src="resources/app-store-badge.svg"></a>
-              <a href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro"><img class="redirect-img" src="resources/google-play-badge.svg"></a>
-            </div>
-          </div>
-          <div class="column col-medium">
-            <div class="image-box">
-              <div class="double-image-container set-center">
-                <div id="mobile-frame" class="first-absolute-position">
-                  <img src="resources/slot.png" alt="Circular slot milling with Macro Terminal CNC">
-                </div>
-                <div id="mobile-frame" class="second-absolute-position">
-                  <img src="resources/code.png" alt="G-code with the CNC macro">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="nav__links">
+        <a href="#main">Main</a>
+        <a href="https://kandksoftware.github.io/macro-terminal-pro/product.html">Product</a>
+        <a href="https://kandksoftware.github.io/macro-terminal-pro/knowledge.html">Knowledge</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-red" href="#">Buy</a>
       </div>
-      <div class="module margin-top-large" id="co-companies" style="background-color:#fff;">
-        <div class="row">
-          <div class="column col-full">
-            <h1>Fanuc Siemens Haas Mazak</h1>
-          </div>
-        </div>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <!-- product -->
-      <div class="module margin-top-large" id="product">
-        <div class="row">
-          <div class="column col-medium">
-            <div class="image-box">
-              <div id="mobile-frame">
-                <img src="resources/parsing_tree.png" alt="Example of parsed CNC macro">
-              </div>
-            </div>
-          </div>
-          <div class="column col-medium">
-            <div class="desciption-container large-font">
-              <h2>Why Macro Terminal CNC?</h2>
-              <div style="text-align: left;">
-                <p style="text-align: left;">
-                  1.Because Macro Terminal CNC is the only CNC software in the world that shows all math and logic operations one by one, line by line (known as parse tree).</p>
-                <p>2.Macro Terminal CNC can be used for traditional programming as well as for parametric programming.</p>
-                <p>3.Macro Terminal CNC supports G16, G52, G68 and Haas G70 Bolt Hole Circle, Haas G71 Bolt Hole Arc, Haas G72 Bolt Holes Along an Angle.
-                </p>
-                <p>3.Pay once and enjoy free upgrades!
-                </p>
-              </div>
-              <p>
-                <a href="product.html" style="color:red;margin-top: 50px;display: block;">Read more</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- learning -->
-      <div class="module margin-top-large" id="product">
-        <div class="row">
-          <div class="column col-medium">
-            <div class="desciption-container large-font">
-              <h2>Learning with Macro Terminal CNC</h2>
-              <div style="text-align: left;">
-                <p style="text-align: left;">
-                Macro Terminal CNC, despite the fact that it is a very powerful tool, due to its simplicity, is an excellent choice for anyone who wants to learn CNC macro (parametric), traditional programming (absolute, incremental and polar) or any programming using ISO. Thanks to the many built-in examples of CNC programs and macro CNC programs, the possibility of choosing many languages and customization, the Macro Terminal CNC is the best software of this type on the market.
-              </p>
-              </div>
-            </div>
-          </div>
-          <div class="column col-medium">
-            <div class="image-box">
-              <div id="mobile-frame">
-                <img src="resources/examples.png" alt="CNC code examples">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- compatibility -->
-      <div class="module margin-top-large" id="product">
-        <div class="row">
-          <div class="column col-medium">
-            <div class="image-box">
-              <div id="mobile-frame">
-                <img src="resources/pocket.png" alt="Pocket milling using G68 g-code">
-              </div>
-            </div>
-          </div>
-          <div class="column col-medium">
-            <div class="desciption-container large-font">
-              <h2>Compatibility of Macro Terminal CNC</h2>
-              <div style="text-align: left;">
-                <p style="text-align: left;">
-                  Macro Terminal CNC is fully compatible with Fanuc Custom Macro B and Haas version of this system which helps to develop CNC macro programming skills. It is also compatible with ISO, so you can program for controllers such as Fanuc, Haas, Mazak, Heidenhain and others that use this standard.
-  Also supports popular Fanuc / Haas G-codes such as: G16 (polar coordinates), G51 (scaling), G52 (shift work offset), G68 (coordinate rotation), G65 / G66 (macro subroutine call), G98 (retract to initial “Z” value level), G99 (retract to “R” value level), repeat canned cycle (L and K) and Haas typical g-codes such as: Haas G70 Bolt Hole Circle, Haas G71 Bolt Hole Arc, Haas G72 Bolt Holes Along an Angle.
-
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- testing -->
-      <div class="module margin-top">
-        <div class="row">
-          <div class="column col-medium">
-            <div class="desciption-container large-font">
-              <h2>Do you want to program faster, more efficiently and safely?</h2>
-              <p style="text-align: left;">CNC programming with CNC macros (so called parametric programming with Fanuc Macro B / Haas) is an extremely efficient and flexible way to work on various CNC machines.However, it should be remembered that while CNC macros greatly improve traditional programming, even the slightest mistake can cause the machine to crash or cause injury or death to the operator.By using the Macro Terminal CNC, you can check your code accurately, thanks to the built-in module that displays all logical processes and calculations step by step.
-  </p>
-            </div>
-          </div>
-          <div class="column col-medium">
-            <div class="image-box">
-              <div id="mobile-frame">
-                <img src="resources/error_2.png" alt="Displaying errors in the CNC macro and g-code">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="module large-font margin-top-large" id="opinions">
-        <h2 style="color:red">What some of our customers think about Macro Terminal CNC?</h2>
-        <div class="row">
-          <div class="column col-small">
-            <div class="card">
-              <h2>Martin Wesselink</h2>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <p>This is a very useful and accurate program to check your macro calculations, before you put them in the machine. Helps very good with the debugging of your program. I use it to check ...</p>
-              <a href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro">Read more</a>
-            </div>
-          </div>
-          <div class="column col-small">
-            <div class="card">
-              <h2>Paul S</h2>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <p>This software is a godsend for building macros. You can see the program as it would flow naturally if the program was written point-to-point. Great for testing out how the logic will play out ...</p>
-              <a href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro">Read more</a>
-            </div>
-          </div>
-          <div class="column col-small">
-            <div class="card">
-              <h2>rabbit_goodwin</h2>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <p>Amazing app
-              I do a ton of programming at the machine(HAAS). This app is super helpful for writing new programs while it’s running and is perfect for testing new macros without ...</p>
-              <a href="https://apps.apple.com/us/app/macro-terminal-pro-full/id1487942650">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="module margin-top-large" id="support">
-        <div class="row">
-          <div class="column col-medium">
-            <div class="image-box">
-              <div id="mobile-frame">
-                <img src="resources/simulation.png" alt="milling operation in progress">
-              </div>
-            </div>
-          </div>
-          <div class="column col-medium">
-            <div class="desciption-container large-font" style="text-align: left;">
-              <h2>Contact us</h2>
-              <span>mobilecamcnc@gmail.com</span>
-              <h4 style="color:red">We will answer you within 48hours*</h4>
-              <p style="color:lightGray">*Excluding weekends and holidays</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer class="module margin-top-large" id="footer"></footer>
+    </nav>
+    <div class="menu-overlay"></div>
+    <div class="menu">
+      <a href="#main">Main</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/product.html">Product</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/knowledge.html">Knowledge</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-red" href="#">Buy</a>
     </div>
-  </body>
-  <script src="nav-builder.js"></script>
+  </header>
+  <main>
+    <section class="main flex-c">
+      <div class="main__image p-1 hide-for-small">
+        <img class="mobile" src="resources/code.png" alt="Code CNC">
+      </div>
+      <div class="main__text p-1">
+        <h1>A huge power in your hand</h1>
+        <h3>Macro Terminal CNC is the most powerful and advanced CNC app, based on especially made for this purpose interpreter with build-in debugging current processes tool to execute and analyze macros (parametric programs) for Fanuc, Haas and compatible g-code based CNC controls.</h3>
+        <a class="btn btn-red" href="#">Purchase</a>
+      </div>
+      <div class="main__image p-1">
+        <img class="mobile" src="resources/slot.png" alt="Code CNC">
+      </div>
+    </section>
+    <section class="brands p-1 flex-c">
+      <h1>Fanuc</h1>
+      <h1>Haas</h1>
+      <h1>Siemens</h1>
+      <h1>Mazak</h1>
+    </section>
+    <section class="section section__bg-standard r-o p-1">
+      <div class="flex-c">
+        <img class="mobile" src="resources/parsing_tree.png" alt="Code CNC">
+      </div>
+      <div class="t-c">
+        <h1>Compatibility</h1>
+        <h3>Macro Terminal CNC is fully compatible with Fanuc Custom Macro B and Haas version of this system which helps to develop CNC macro programming skills. It is also compatible with ISO, so you can program for controllers such as Fanuc, Haas, Mazak, Heidenhain and others that use this standard. Also supports popular Fanuc / Haas G-codes such as: G16 (polar coordinates), G51 (scaling), G52 (shift work offset), G68 (coordinate rotation), G65 / G66 (macro subroutine call), G98 (retract to initial “Z” value level), G99 (retract to “R” value level), repeat canned cycle (L and K) and Haas typical g-codes such as: Haas G70 Bolt Hole Circle, Haas G71 Bolt Hole Arc, Haas G72 Bolt Holes Along an Angle. </h3>
+      </div>
+    </section>
+    <section class="section reversed p-1">
+      <div class="t-c">
+        <h1>Simple & powerful</h1>
+        <h3>Macro Terminal CNC, despite the fact that it is a very powerful tool, due to its simplicity, is an excellent choice for anyone who wants to learn CNC macro (parametric), traditional programming (absolute, incremental and polar) or any programming using ISO. Thanks to the many built-in examples of CNC programs and macro CNC programs, the possibility of choosing many languages and customization, the Macro Terminal CNC is the best software of this type on the market.</h3>
+      </div>
+      <div class="flex-c">
+        <img class="mobile" src="resources/error_2.png" alt="Code CNC">
+      </div>
+    </section>
+    <section class="section section__bg-standard r-o p-1">
+      <div class="flex-c">
+        <img class="mobile" src="resources/pocket.png" alt="Code CNC">
+      </div>
+      <div class="t-c">
+        <h1>The best features in your hand</h1>
+        <h3>Terror grips a small mountain town as bodies are discovered after each full moon. Losing sleep, raising a teenage daughter, and caring for his ailing father, officer Marshall struggles to remind himself there's no such thing as werewolves. </h3>
+      </div>
+    </section>
+    <section class="section reversed p-1">
+      <div class="t-c">
+        <h1>The best features in your hand</h1>
+        <h3>Macro Terminal CNC, despite the fact that it is a very powerful tool, due to its simplicity, is an excellent choice for anyone who wants to learn CNC macro (parametric), traditional programming (absolute, incremental and polar) or any programming using ISO. Thanks to the many built-in examples of CNC programs and macro CNC programs, the possibility of choosing many languages and customization, the Macro Terminal CNC is the best software of this type on the market.</h3>
+      </div>
+      <div class="flex-c">
+        <img class="mobile" src="resources/simulation.png" alt="Code CNC">
+      </div>
+    </section>
+    <section class="customers-header p-1 flex-c">
+      <h1 class="customers-header__desc">What some of our customers think about Macro Terminal CNC?</h1>
+    </section>
+    <section class="customers p-1 section__bg-standard">
+      <div class="customer">
+        <h1 class="customer__name">Martin Wesselink</h1>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <h3 class="customer__review">
+          This is a very useful and accurate program to check your macro calculations, before you put them in the machine. Helps very good with the debugging of your program. I use it to check ...
+        </h3>
+        <a class="customer__link btn btn-red" href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro">Read</a>
+      </div>
+      <div class="customer">
+        <h1 class="customer__name">Paul S</h1>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <h3 class="customer__review">
+          This software is a godsend for building macros. You can see the program as it would flow naturally if the program was written point-to-point. Great for testing out how the logic will play out ...
+        </h3>
+        <a class="customer__link btn btn-red" href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro">Read</a>
+      </div>
+      <div class="customer">
+        <h1 class="customer__name">rabbit_goodwin</h1>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <h3 class="customer__review">
+          Amazing app I do a ton of programming at the machine (HAAS). This app is super helpful for writing new programs while it’s running and is perfect for testing new macros without ...
+        </h3>
+        <a class="customer__link btn btn-red" href="https://apps.apple.com/us/app/macro-terminal-pro-full/id1487942650">Read</a>
+      </div>
+    </section>
+    <section class="contact p-1 r-o" id="contact">
+      <div class="flex-c">
+        <img class="mobile" src="resources/pocket.png" alt="Code CNC">
+      </div>
+      <div class="t-c">
+        <h1 class="contact__title">Contact us</h1>
+        <h2 class="contact__mail"><i class="fa fa-envelope" aria-hidden="true"></i> mobilecamcnc@gmail.com</h2>
+        <h3 class="contact__mess">We will answer you within 48hours*</h3>
+        <p class="contact__warn">*Excluding weekends and holidays</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__links">
+      <a href="#main">Main</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/product.html">Product</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/knowledge.html">Knowledge</a>
+      <a href="#">Contact</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/faq.html">FAQ</a>
+    </div>
+    <div class="footer__copy">
+      <a href="#!">Copyright © 2021 Mobile CAM CNC. All rights reserved.</a> 
+      <a href="#">Privacy Policy</a>
+    </div>
+  </footer>
+  <script src="js/global.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/menu-open.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function(){
+      document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } Mobile CAM CNC. All rights reserved.`
+    })();
+  </script>
+</body>
 </html>
