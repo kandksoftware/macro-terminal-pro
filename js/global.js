@@ -33,9 +33,11 @@ var APP = APP || {};
                       </div>`
         b.classList.add('active')
         let mwl = document.querySelectorAll('.modal-window__link')
+        let overlay = document.querySelector('.modal-overlay')
         mwl.forEach(l => {
           l.addEventListener('click',() => APP.modal().hide())
         })
+        overlay.addEventListener('click',() => APP.modal().hide())
       },
       hide:() => {
         d.innerHTML = ''
