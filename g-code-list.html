@@ -1,289 +1,331 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" type="text/css" href="css/mobile.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/card.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <title>Macro Terminal CNC | Most popular common system variables used in Fanuc and Haas controls</title>
-    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-    <meta name="description" content="List of the most popular G-codes for CNC milling machines and lathes with ISO-based control (Fanuc, Haas, Mazak, Heidenhain)" />
-    <meta name="keywords" content="" />
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <noscript>To see the content your browser must to support JavaScript!</noscript>
-    <div id="app" class="hide">
-      <header id="header"></header>
-      <div class="center-view">
-        <h1>The most popular G-codes for milling machines and lathes</h1>
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>Meaning</th>
-            <th>Machine type</th>
-          </tr>
-          <tr>
-            <td>G00</td>
-            <td>Rapid positioning</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G01</td>
-            <td>Linear interpolation</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G02</td>
-            <td>Clockwise circular interpolation</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G03</td>
-            <td>Counterclockwise ircular interpolation</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G16</td>
-            <td>Polar programming</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G19</td>
-            <td>Cancel polar programming</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G17</td>
-            <td>XY plane selection</td>
-            <td>Mill  </td>
-          </tr>
-          <tr>
-            <td>G18</td>
-            <td>XZ plane selection</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G19</td>
-            <td>YZ plane selection</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G20</td>
-            <td>Imperial mode</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G21</td>
-            <td>Metric mode</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G28</td>
-            <td>Return to home position</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G30</td>
-            <td>Return to home position specified by the parameters</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G32</td>
-            <td>Thread cutting</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G33</td>
-            <td>Thread cutting</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G40</td>
-            <td>Cancel tool radius compensation</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G41</td>
-            <td>Tool radius compensation from left to right</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G42</td>
-            <td>Tool radius compensation from right to left</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G43</td>
-            <td>Tool length (height) compensation</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G50</td>
-            <td>Cancel scaling coordinate</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G51</td>
-            <td>Scaling coordinate</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G52</td>
-            <td>Local (programmable) coordinate</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G53</td>
-            <td>Machine coordinate</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G54 ... G59</td>
-            <td>Work coordinate</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G65 / G66</td>
-            <td>Macro subroutine call</td>
-            <td>Mill / Lathe</td>
-          </tr>
-          <tr>
-            <td>G68</td>
-            <td>Coordinate rotation</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G69</td>
-            <td>Cancel coordinate rotation</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G70</td>
-            <td>Finishing cycle</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G71</td>
-            <td>Roughing cycle</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G72</td>
-            <td>Facing cycle</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G73</td>
-            <td>Fast peck drilling</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G73</td>
-            <td>Pattern repeating cycle</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G74</td>
-            <td>Face grooving cycle (peck drilling)</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G75</td>
-            <td>Grooving cycle</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G76</td>
-            <td>Threading cycle</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G78</td>
-            <td>Threading cycle</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G80</td>
-            <td>Cancel canned cycle</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G81</td>
-            <td>Simple drilling canned cycle</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G82</td>
-            <td>Dwell drilling canned cycle</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G83</td>
-            <td>Peck drilling canned cycle</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G84</td>
-            <td>Tapping canned cycle</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G85</td>
-            <td>Boring canned cycle</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G90</td>
-            <td>Absolute programming</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G90</td>
-            <td>Straight and tapered cycle</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G91</td>
-            <td>Incremental programming</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G92</td>
-            <td>Threading cycle</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G94</td>
-            <td>Simple facing cycle</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G96</td>
-            <td>Constant surface speed</td>
-            <td>Lathe</td>
-          </tr>
-          <tr>
-            <td>G98</td>
-            <td>In the canned cycle, is it a return to initial "Z" value position</td>
-            <td>Mill</td>
-          </tr>
-          <tr>
-            <td>G99</td>
-            <td>In the canned cycle, is it a return to "R" value position</td>
-            <td>Mill</td>
-          </tr>
-        </table>
-        <br/>
-        <p><a href="knowledge.html">&#8592; back to the knowledge section</a></p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/macro-terminal-icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Macro Terminal CNC | G-codes</title>
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+  <meta name="description" content="Macro Terminal CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
+  <meta name="keywords" content=""/>
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header id="main">
+    <nav class="nav">
+      <div class="nav__container">
+        <img class="nav__icon" src="resources/macro-terminal-icon.png" alt="Macro Terminal CNC">
+        <div class="nav__name">
+        </div>
       </div>
-      <footer class="module" id="footer"></footer>
+      <div class="nav__links">
+        <a href="#main">Main</a>
+        <a href="https://kandksoftware.github.io/macro-terminal-pro/product.html">Product</a>
+        <a href="https://kandksoftware.github.io/macro-terminal-pro/knowledge.html">Knowledge</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-red" href="#">Buy</a>
+      </div>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+    <div class="menu-overlay"></div>
+    <div class="menu">
+      <a href="#main">Main</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/product.html">Product</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/knowledge.html">Knowledge</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-red" href="#">Buy</a>
     </div>
-    <script src="nav-builder.js"></script>
-  </body>
+  </header>
+  <main>
+    <section class="table-view center-view">
+      <h1 class="table-view__title">The most popular G-codes for milling machines and lathes</h1>
+      <table class="table">
+        <tr>
+          <th>Name</th>
+          <th>Meaning</th>
+          <th>Machine type</th>
+        </tr>
+        <tr>
+          <td>G00</td>
+          <td>Rapid positioning</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G01</td>
+          <td>Linear interpolation</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G02</td>
+          <td>Clockwise circular interpolation</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G03</td>
+          <td>Counterclockwise ircular interpolation</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G16</td>
+          <td>Polar programming</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G19</td>
+          <td>Cancel polar programming</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G17</td>
+          <td>XY plane selection</td>
+          <td>Mill  </td>
+        </tr>
+        <tr>
+          <td>G18</td>
+          <td>XZ plane selection</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G19</td>
+          <td>YZ plane selection</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G20</td>
+          <td>Imperial mode</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G21</td>
+          <td>Metric mode</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G28</td>
+          <td>Return to home position</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G30</td>
+          <td>Return to home position specified by the parameters</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G32</td>
+          <td>Thread cutting</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G33</td>
+          <td>Thread cutting</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G40</td>
+          <td>Cancel tool radius compensation</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G41</td>
+          <td>Tool radius compensation from left to right</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G42</td>
+          <td>Tool radius compensation from right to left</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G43</td>
+          <td>Tool length (height) compensation</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G50</td>
+          <td>Cancel scaling coordinate</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G51</td>
+          <td>Scaling coordinate</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G52</td>
+          <td>Local (programmable) coordinate</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G53</td>
+          <td>Machine coordinate</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G54 ... G59</td>
+          <td>Work coordinate</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G65 / G66</td>
+          <td>Macro subroutine call</td>
+          <td>Mill / Lathe</td>
+        </tr>
+        <tr>
+          <td>G68</td>
+          <td>Coordinate rotation</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G69</td>
+          <td>Cancel coordinate rotation</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G70</td>
+          <td>Finishing cycle</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G71</td>
+          <td>Roughing cycle</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G72</td>
+          <td>Facing cycle</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G73</td>
+          <td>Fast peck drilling</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G73</td>
+          <td>Pattern repeating cycle</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G74</td>
+          <td>Face grooving cycle (peck drilling)</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G75</td>
+          <td>Grooving cycle</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G76</td>
+          <td>Threading cycle</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G78</td>
+          <td>Threading cycle</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G80</td>
+          <td>Cancel canned cycle</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G81</td>
+          <td>Simple drilling canned cycle</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G82</td>
+          <td>Dwell drilling canned cycle</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G83</td>
+          <td>Peck drilling canned cycle</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G84</td>
+          <td>Tapping canned cycle</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G85</td>
+          <td>Boring canned cycle</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G90</td>
+          <td>Absolute programming</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G90</td>
+          <td>Straight and tapered cycle</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G91</td>
+          <td>Incremental programming</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G92</td>
+          <td>Threading cycle</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G94</td>
+          <td>Simple facing cycle</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G96</td>
+          <td>Constant surface speed</td>
+          <td>Lathe</td>
+        </tr>
+        <tr>
+          <td>G98</td>
+          <td>In the canned cycle, is it a return to initial "Z" value position</td>
+          <td>Mill</td>
+        </tr>
+        <tr>
+          <td>G99</td>
+          <td>In the canned cycle, is it a return to "R" value position</td>
+          <td>Mill</td>
+        </tr>
+      </table>
+      <a class="table-view__back-link" href="knowledge.html">&#8592; back to the knowledge section</a>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__links">
+      <a href="#main">Main</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/product.html">Product</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/knowledge.html">Knowledge</a>
+      <a href="#">Contact</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/faq.html">FAQ</a>
+    </div>
+    <div class="footer__copy">
+      <a href="#!">Copyright © 2021 Mobile CAM CNC. All rights reserved.</a> 
+      <a href="#">Privacy Policy</a>
+    </div>
+  </footer>
+  <script src="js/global.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/menu-open.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function(){
+      document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } Mobile CAM CNC. All rights reserved.`
+    })();
+  </script>
+</body>
 </html>
