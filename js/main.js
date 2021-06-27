@@ -1,4 +1,49 @@
 (function(){
+
+  const array = [{
+    id:'header',
+    content:`<nav class="nav">
+      <div class="nav__container">
+        <img class="nav__icon" src="resources/macro-terminal-icon.png" alt="Macro Terminal CNC">
+        <div class="nav__name">
+        </div>
+      </div>
+      <div class="nav__links">
+        <a href="#main">Main</a>
+        <a href="https://kandksoftware.github.io/macro-terminal-pro/product.html">Product</a>
+        <a href="https://kandksoftware.github.io/macro-terminal-pro/knowledge.html">Knowledge</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-red" href="#">Buy</a>
+      </div>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+    <div class="menu-overlay"></div>
+    <div class="menu">
+      <a href="#main">Main</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/product.html">Product</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/knowledge.html">Knowledge</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-red" href="#">Buy</a>
+    </div>`
+  },{
+    id:'footer',
+    content:`<div class="footer__links">
+      <a href="#main">Main</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/product.html">Product</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/knowledge.html">Knowledge</a>
+      <a href="#">Contact</a>
+      <a href="https://kandksoftware.github.io/macro-terminal-pro/faq.html">FAQ</a>
+    </div>
+    <div class="footer__copy">
+      <a href="#!">Copyright © 2021 Mobile CAM CNC. All rights reserved.</a> 
+      <a href="#">Privacy Policy</a>
+    </div>`
+  }]
+
   const components = [{
     n:'nav',
     id:'.nav__links'
@@ -40,6 +85,8 @@
     dec:['btn btn-red btn-purchase'],
     desc:'Purchase'
   }]
+
+  APP.injectTemplates(array)
 
   APP.buildMenu(
     components,
