@@ -40,7 +40,7 @@ body.active {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 a {
@@ -185,6 +185,29 @@ a {
 
 .table a {
   color: #c50000;
+}
+
+noscript {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #c50000;
+  color: #fff;
 }
 
 .nav {
