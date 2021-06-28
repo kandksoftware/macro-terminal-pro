@@ -40,7 +40,7 @@
     </div>
     <div class="footer__copy">
       <a href="#!">Copyright © 2021 Mobile CAM CNC. All rights reserved.</a> 
-      <a href="#">Privacy Policy</a>
+      <a href="privacy-policy">Privacy Policy</a>
     </div>`
   }]
 
@@ -103,6 +103,11 @@
   APP.initPurchaseBtnListener()
   
   APP.createElement('div','m-b')
+
+  const app = document.querySelector('#app')
+  if(app){
+    app.classList.remove('hide')
+  }
 
 })();
 
