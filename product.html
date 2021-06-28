@@ -1,70 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="resources/macro-terminal-icon.png" type="image/png" />
-  <link rel="stylesheet" href="css/main.css">
-  <title>Macro Terminal CNC | Product</title>
-  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-  <meta name="description" content="Macro Terminal CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
-  <meta name="keywords" content=""/>
-  <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-  <header id="main">
-    {{ header }}
-  </header>
-  <main>
-    <section class="product">
-      <div class="product__image">
-        <img class="mobile" src="resources/parsing_tree.png" alt="Code CNC">
-      </div>
-      <div class="product__content">
-        <h1 class="product__title">Informations:</h1>
-        <div class="separator"></div>
-        <ul class="product__list">
-          <li>executing CNC macros, reading system variables</li>
-          <li>fully compatible with Fanuc Custom Macro B and Fanuc-compatible controls (e.g. HAAS, SINUMERIK 802D)</li>
-          <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
-          <li>showing the assigned variables and colors the new assigned variables</li>
-          <li>showing a parsing tree (great solution for debugging and learn CNC macros - parametric programming)</li>
-          <li>running line-by-line (manually and auto-play mode)</li>
-          <li>CNC simulator (a graphical representation of tool path) XY, XZ, YZ (milling) and XZ (lathe) mode</li>
-          <li>23 examples of CNC programs and CNC macro programming</li>
-          <li>mill / lathe mode</li>
-          <li>FANUC / HAAS mode</li>
-          <li>undo, format, copy, surround features</li>
-          <li>full support G16 (polar coordinate), G51 (scaling), G52 (shift work offset), G68 (coordinate rotation), G65 / G66 (macro subprogram call), G98, G99, repeat canned cycle (L and K)</li>
-          <li>supporting for Haas G70 Bolt Hole Circle, Haas G71 Bolt Hole Arc, Haas G72 Bolt Holes Along an Angle</li>
-          <li>circular interpolation supported by using (I, J, K or R)</li>
-          <li>supporting for old FANUC repeat subprogram syntax (for example:P120001, 12 - number of repetitions, 0001 - subprogram name)</li>
-          <li>supporting FANUC (4digits) and HAAS program title format (5digits)</li>
-          <li>metric/imperial mode</li>
-          <li>syntax checker (G-code analyzer, open brackets etc.)</li>
-          <li>reading file with EOB ( ; ) / not or mix</li>
-          <li>output syntax highlighting</li>
-          <li>save / save as/open file/clear</li>
-          <li>save / open file with extension: cnc, cn, txt</li>
-          <li>auto file save (1s, 2s, 4s)</li>
-          <li>custom look (2 themes, font color, font size)</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    {{ footer }}
-  </footer>
-  <script src="js/global.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/menu-open.js"></script>
-  <script src="js/template-injector.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    (function(){
-      document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } Mobile CAM CNC. All rights reserved.`
-    })();
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/macro-terminal-icon.png" type="image/png" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Macro Terminal CNC | Product</title>
+    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+    <meta name="description" content="Macro Terminal CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
+    <meta name="keywords" content=""/>
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <div id="app" class="hide">
+      <header>
+        {{ header }}
+      </header>
+      <main>
+        <section class="product">
+          <div class="product__image">
+            <img class="mobile" src="resources/parsing_tree.png" alt="Code CNC">
+          </div>
+          <div class="product__content">
+            <h1 class="product__title">Informations:</h1>
+            <div class="separator"></div>
+            <ul class="product__list">
+              <li>executing CNC macros, reading system variables</li>
+              <li>fully compatible with Fanuc Custom Macro B and Fanuc-compatible controls (e.g. HAAS, SINUMERIK 802D)</li>
+              <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
+              <li>showing the assigned variables and colors the new assigned variables</li>
+              <li>showing a parsing tree (great solution for debugging and learn CNC macros - parametric programming)</li>
+              <li>running line-by-line (manually and auto-play mode)</li>
+              <li>CNC simulator (a graphical representation of tool path) XY, XZ, YZ (milling) and XZ (lathe) mode</li>
+              <li>23 examples of CNC programs and CNC macro programming</li>
+              <li>mill / lathe mode</li>
+              <li>FANUC / HAAS mode</li>
+              <li>undo, format, copy, surround features</li>
+              <li>full support G16 (polar coordinate), G51 (scaling), G52 (shift work offset), G68 (coordinate rotation), G65 / G66 (macro subprogram call), G98, G99, repeat canned cycle (L and K)</li>
+              <li>supporting for Haas G70 Bolt Hole Circle, Haas G71 Bolt Hole Arc, Haas G72 Bolt Holes Along an Angle</li>
+              <li>circular interpolation supported by using (I, J, K or R)</li>
+              <li>supporting for old FANUC repeat subprogram syntax (for example:P120001, 12 - number of repetitions, 0001 - subprogram name)</li>
+              <li>supporting FANUC (4digits) and HAAS program title format (5digits)</li>
+              <li>metric/imperial mode</li>
+              <li>syntax checker (G-code analyzer, open brackets etc.)</li>
+              <li>reading file with EOB ( ; ) / not or mix</li>
+              <li>output syntax highlighting</li>
+              <li>save / save as/open file/clear</li>
+              <li>save / open file with extension: cnc, cn, txt</li>
+              <li>auto file save (1s, 2s, 4s)</li>
+              <li>custom look (2 themes, font color, font size)</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        {{ footer }}
+      </footer>
+      <script src="js/global.js"></script>
+      <script src="js/menu.js"></script>
+      <script src="js/menu-open.js"></script>
+      <script src="js/template-injector.js"></script>
+      <script src="js/main.js"></script>
+      <script>
+        (function(){
+          document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } Mobile CAM CNC. All rights reserved.`
+        })();
+      </script>
+    </div>
+  </body>
 </html>
