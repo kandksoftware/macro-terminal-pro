@@ -64,7 +64,7 @@
     link:'product.html',
     desc:'Product'
   },{
-    type:['footer'],
+    type:['footer','menu'],
     link:'https://kandksoftware.github.io/entry/',
     desc:'Products'
   },{
