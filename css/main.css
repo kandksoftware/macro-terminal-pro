@@ -869,17 +869,68 @@ main {
   padding: 0;
 }
 
-.main__text, .main__image {
-  text-align: center;
-  width: 100%;
+.get-started {
+  min-height: 100vh;
+  padding: 1rem;
 }
 
-.main__text > h1,
-.main__text > h3 {
+.get-started__title {
+  color: #c50000;
+}
+
+.get-started > iframe {
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .get-started {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .get-started__title {
+    text-align: left;
+  }
+}
+
+.make-big {
+  height: 120vh;
+}
+
+.position-abs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.move-down-left {
+  -webkit-transform: translate(calc(-50% - 100px), calc(-50% + 20px)) !important;
+          transform: translate(calc(-50% - 100px), calc(-50% + 20px)) !important;
+}
+
+.move-up-right {
+  -webkit-transform: translate(calc(-50% + 100px), calc(-50% - 20px)) !important;
+          transform: translate(calc(-50% + 100px), calc(-50% - 20px)) !important;
+}
+
+.main__product-text, .main__product-image {
+  text-align: center;
+  /*width: 100%;*/
+}
+
+.main__product-image > img {
+  width: 100%;
+  height: auto;
+}
+
+.main__product-text > h1,
+.main__product-text > h3 {
   margin-bottom: 1rem;
 }
 
-.main__text > a {
+.main__product-text > a {
   font-size: 1.125rem;
   padding: 0.2rem 2rem !important;
 }
@@ -891,12 +942,11 @@ main {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .main__text {
-    width: 40%;
+  .main__product-image, .main__product-text {
     text-align: center;
+    width: 50%;
   }
-  .main__image {
-    width: 30%;
+  .main__product-image {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -907,13 +957,10 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    /*> img:first-child{
-        transform: translate(2rem,2rem);
-      }
-  
-      > img:last-child{
-        transform: translate(-2rem,-0rem);
-      }*/
+  }
+  .main__product-image > img {
+    width: 440px;
+    height: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -69,12 +69,20 @@
     desc:'Products'
   },{
     type:['nav','menu','footer'],
+    link:'get-started.html',
+    desc:'Get started'
+  },{
+    type:['nav','menu','footer'],
     link:'knowledge.html',
     desc:'Knowledge'
   },{
     type:['nav','menu','footer'],
     link:'index.html#contact',
     desc:'Contact'
+  },{
+    type:['footer'],
+    link:'https://youtu.be/7C7BgGQ-uTo',
+    desc:'Youtube'
   },{
     type:['footer'],
     link:'faq.html',

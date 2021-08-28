@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" type="text/css" href="css/mobile.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/card.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <title>Macro Terminal CNC | a CNC interpreter and simulator for Fanuc and Haas to learn, test and debug CNC parametric programming and g-codes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/macro-terminal-icon.png" type="image/png" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Macro Terminal CNC | M-codes</title>
     <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
     <meta name="description" content="Macro Terminal CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content=""/>
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <noscript>To see the content your browser must to support JavaScript!</noscript>
+    <noscript>Your browser does not support JavaScript!</noscript>
     <div id="app" class="hide">
-      <header id="header"></header>
-      <div class="module margin-top-large">
-        <div class="row">
-          <div class="column col-full">
-            <iframe width="100%" height="400"  src="https://www.youtube.com/embed/vYiN6X74mbg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+      <header>
+        {{ header }}
+      </header>
+      <main>
+        <div class="get-started">
+          <h1 class="get-started__title">Get started</h1>
+          <div class="separator"></div>
+          <iframe width="100%" height="400"  src="https://www.youtube.com/embed/vYiN6X74mbg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-      </div>
-      <footer class="module" id="footer"></footer>
+      </main>
+      <footer class="footer">
+        {{ footer }}
+      </footer>
+      <script src="js/global.js"></script>
+      <script src="js/menu.js"></script>
+      <script src="js/menu-open.js"></script>
+      <script src="js/template-injector.js"></script>
+      <script src="js/main.js"></script>
+      <script>
+        (function(){
+          document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } Mobile CAM CNC. All rights reserved.`
+        })();
+      </script>
     </div>
-    <script src="nav-builder.js"></script>
   </body>
 </html>
