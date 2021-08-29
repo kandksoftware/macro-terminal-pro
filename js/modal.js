@@ -1,9 +1,9 @@
 (function(app){
   'use strict'
-  app.initPurchaseBtnListener = () => {
+  app.initPurchaseBtnListener = items => {
     const pur = document.querySelectorAll('.btn-purchase')
     pur.forEach(p => {
-      p.addEventListener('click',() => APP.modal().show())
+      p.addEventListener('click',() => APP.modal(items).show())
     })
   }
   
@@ -15,19 +15,22 @@
     document.body.appendChild(mod)
   }
 
-  app.modal = () => {
+  const renderItems = items => {
+    return items.map(i => {
+      return `<a class="modal-window__link" href="${ i.link }">
+              <img class="modal-window__img" src="${ i.img }" alt="${ i.name }"/>
+            </a>`
+    }).join('')
+  }
+
+  app.modal = items => {
     let d = document.querySelector('.m-b')
     let b = document.querySelector('body')
     return {
       show:() => {
         d.innerHTML = `<div class="modal-overlay"></div>
                         <div class="modal-window">
-                          <a class="modal-window__link" href="https://apps.apple.com/us/app/macro-terminal-cnc/id1487942650">
-                            <img class="modal-window__img" src="resources/app-store-badge.svg" alt="App Store"/>
-                          </a>
-                          <a class="modal-window__link" href="https://play.google.com/store/apps/details?id=com.kandksoftware.macroterminalpro">
-                            <img class="modal-window__img" src="resources/google-play-badge.svg" alt="Google Play"/>
-                          </a>
+                          ${ renderItems(items) }
                         </div>`
         b.classList.add('active')
         let mwl = document.querySelectorAll('.modal-window__link')

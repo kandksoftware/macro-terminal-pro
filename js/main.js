@@ -1,12 +1,13 @@
 window.addEventListener('load', () => {
   const __PATH = 'js/'
+  const __REMOTE_PATH = 'https://kandksoftware.github.io/remote/'
 
   new ScriptLoader([
-    'https://kandksoftware.github.io/remote/global.js',
+    __REMOTE_PATH + 'global.js',
     __PATH + 'modal.js',
-    'https://kandksoftware.github.io/remote/menu.js',
-    __PATH + 'template-injector.js',
-    __PATH + 'feedback.js',
+    __REMOTE_PATH + 'menu.js',
+    __REMOTE_PATH + 'template-injector.js',
+    __REMOTE_PATH + 'feedback.js',
     __PATH + 'build.js',
   ]).exec(() => main())
 })
