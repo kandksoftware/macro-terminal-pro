@@ -654,7 +654,7 @@ noscript {
   min-width: 300px;
   min-height: 300px;
   height: auto;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   text-align: center;
   border: 1px solid #c50000;
   border-radius: 15px;
@@ -676,6 +676,7 @@ noscript {
 .customer__rate > span {
   display: inline;
   margin: 0 5px;
+  font-size: 1rem !important;
 }
 
 .customer__container {
