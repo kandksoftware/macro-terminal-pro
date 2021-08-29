@@ -46,7 +46,7 @@ a {
   max-width: 400px;
 }
 
-.btn-red {
+.btn-brand-color {
   border: 1px solid #c50000;
   color: #c50000 !important;
   font-weight: 600;
@@ -629,60 +629,68 @@ noscript {
 }
 
 .customers {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  white-space: nowrap;
+  overflow: auto;
 }
 
-@media screen and (min-width: 768px) {
-  .customers {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+.customers::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .customer {
-  width: 100%;
+  white-space: normal;
+  display: inline-block !important;
+  min-width: 300px;
+  min-height: 300px;
+  height: auto;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #c50000;
+  border-radius: 15px;
+  margin: 0 5px;
 }
 
 .customer__name {
-  margin-bottom: 1rem;
-  margin-top: 1rem !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 
-.customer__review {
-  margin-top: 1rem;
+.customer__rate {
+  width: 100%;
+  text-align: center;
 }
 
-.customer__link {
-  margin-top: 1rem;
-  display: inline-block;
+.customer__rate > span {
+  display: inline;
+  margin: 0 5px;
 }
 
-@media screen and (min-width: 768px) {
-  .customer {
-    width: 30%;
-  }
-  .customer__name {
-    margin-top: 0;
-  }
+.customer__container {
+  width: 100%;
+  height: 15%;
+  float: left;
+  position: relative;
+}
+
+.customer--abs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .contact__mess, .contact__warn {
@@ -954,6 +962,7 @@ main {
 .main__product-text > h1 {
   font-weight: 800;
   color: #c50000;
+  text-transform: capitalize;
 }
 
 @media screen and (min-width: 768px) {
