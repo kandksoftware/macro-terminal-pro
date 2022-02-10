@@ -133,7 +133,7 @@ const main = () => {
     img:'resources/app-store-badge.svg'
   },{
     name:'Google Play',
-    link:'https://kandksoftware.github.io/saas/',
+    link:'https://boring-turing-b5f05e.netlify.app/',
     img:'resources/google-play-badge.svg'
   }])//modal
   
