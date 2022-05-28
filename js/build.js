@@ -135,9 +135,14 @@ const main = () => {
   const app = document.querySelector('#app')
   if(app) app.classList.remove('hide')
   
+<<<<<<< HEAD
 
   const ss = document.querySelector('#splash-screen')
   if(ss) ss.classList.add('hide')
   //inject a current date
   document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } ${APP_NAME}. All rights reserved.`
 }
+=======
+  document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } Mobile CAM CNC. All rights reserved.`
+}
+>>>>>>> 4a27559298b7360d8499813921aee1f631e7f1ed
