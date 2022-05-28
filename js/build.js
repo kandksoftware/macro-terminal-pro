@@ -1,13 +1,13 @@
 'use strict'
 
 const main = () => {
+  const APP_NAME = 'Macro Simulator CNC'
   const array = [{
     id:'header',
     content:`<nav class="nav">
       <div class="nav__container">
-        <img class="nav__icon" src="resources/macro-terminal-icon.png" alt="Macro Terminal CNC">
-        <div class="nav__name">
-        </div>
+        <img class="nav__icon" src="resources/icon.png" alt="${APP_NAME}">
+        <div class="nav__name"></div>
       </div>
       <div class="nav__links"></div>
       <div class="hamburger">
@@ -17,18 +17,12 @@ const main = () => {
       </div>
     </nav>
     <div class="menu-overlay"></div>
-    <div class="menu"></div>`
+    <div class="menu">Inject here</div>`
   },{
     id:'footer',
-    content:`<div class="footer__links">
-      <a href="#main">Main</a>
-      <a href="https://kandksoftware.github.io/macro-terminal-pro/product.html">Product</a>
-      <a href="https://kandksoftware.github.io/macro-terminal-pro/knowledge.html">Knowledge</a>
-      <a href="#">Contact</a>
-      <a href="https://kandksoftware.github.io/macro-terminal-pro/faq.html">FAQ</a>
-    </div>
+    content:`<div class="footer__links"></div>
     <div class="footer__copy">
-      <a href="#!">Copyright © 2021 Mobile CAM CNC. All rights reserved.</a> 
+      <a href="#!">Inject here</a> 
       <a href="privacy-policy">Privacy Policy</a>
     </div>`
   },{
@@ -58,11 +52,6 @@ const main = () => {
       rate:5,
       review:'This app works as advertised that is for sure! It helped me troubleshoot and write some macro cycles I was attempting. I didn’t have time to test them on the machines at work every adjustment. So here I could nail down the code to then only fix minor controller differences in the code',
       location:APP.GOOGLE_PLAY()
-    },{
-      name:'Byron Carlson',
-      rate:5,
-      review:'The Best!',
-      location:APP.GOOGLE_PLAY()
     }])
   }]
 
@@ -83,27 +72,31 @@ const main = () => {
     desc:'Main'
   },{
     type:['nav','menu'],
-    link:'product.html',
-    desc:'Product'
+    link:'technical.html',
+    desc:'Technical'
   },{
+    type:['footer'],
+    link:'aers.html',
+    desc:'AERS'
+  }/*,{
     type:['footer','menu'],
     link:'https://kandksoftware.github.io/entry/',
     desc:'Products'
-  },{
+  }*/,{
     type:['nav','menu','footer'],
     link:'get-started.html',
     desc:'Get started'
   },{
-    type:['nav','menu','footer'],
-    link:'knowledge.html',
+    type:['footer'],
+    link:'https://kandksoftware.github.io/macro-terminal-pro/knowledge.html',
     desc:'Knowledge'
   },{
     type:['nav','menu','footer'],
-    link:'index.html#contact',
+    link:'contact.html',
     desc:'Contact'
   },{
     type:['footer'],
-    link:'https://youtu.be/7C7BgGQ-uTo',
+    link:'https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA',
     desc:'Youtube'
   },{
     type:['footer'],
@@ -111,8 +104,8 @@ const main = () => {
     desc:'FAQ'
   },{
     type:['nav','menu'],
-    link:'#!',
-    dec:['btn btn-brand-color btn-purchase'],
+    link:'pricing.html',
+    dec:['btn btn-brand-color'],
     desc:'Purchase'
   }]
 
@@ -129,20 +122,22 @@ const main = () => {
 
   APP.initPurchaseBtnListener([{
     name:'App Store',
-    link:'https://apps.apple.com/us/app/macro-terminal-cnc/id1487942650',
+    link:'https://apps.apple.com/us/app/macro-mill-plus/id1562501002',
     img:'resources/app-store-badge.svg'
   },{
     name:'Google Play',
-    link:'https://kandksoftware.github.io/saas/',
+    link:'https://play.google.com/store/apps/details?id=com.kandksoftware.macromillplus',
     img:'resources/google-play-badge.svg'
   }])//modal
   
   APP.createElement('div','m-b')
 
   const app = document.querySelector('#app')
-  if(app){
-    app.classList.remove('hide')
-  }
+  if(app) app.classList.remove('hide')
   
-  document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } Mobile CAM CNC. All rights reserved.`
+
+  const ss = document.querySelector('#splash-screen')
+  if(ss) ss.classList.add('hide')
+  //inject a current date
+  document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } ${APP_NAME}. All rights reserved.`
 }

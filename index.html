@@ -3,114 +3,106 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="resources/macro-terminal-icon.png" type="image/png" />
+    <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
     <link rel="stylesheet" href="css/main.css">
-    <title>Macro Terminal CNC</title>
-    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-    <meta name="description" content="Macro Terminal CNC is a CNC simulator for Fanuc Macro B and Haas macros to learn, test and debug parametric cnc programming and g code used in cnc milling machines and lathes" />
+    <title>Macro Simulator CNC | The most powerful, advanced and easy-to-use software for CNC machines</title>
+    <meta name="description" content="Macro Simulator CNC - The most powerful, advanced and easy-to-use software for CNC machines" />
     <meta name="keywords" content=""/>
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
   </head>
   <body>
     <noscript>Your browser does not support JavaScript!</noscript>
+    <div id="splash-screen">
+      <img src="resources/spinner.gif"  alt="spinner"/>
+    </div>
     <div id="app" class="hide">
       <header>
         {{ header }}
       </header>
       <main>
-        <section class="main flex-c">
+        <section class="main flex-c movie">
           <div class="main__product-text p-1">
-            <h1>A huge power in your hand</h1>
-            <h3>Macro Terminal CNC is the most powerful, popular and advanced CNC simulator for CNC parametric programming (CNC macro programming) with Fanuc Custom Macro B and Haas macro, trusted by hundreds of users around the world!</h3>
-            <a class="btn btn-brand-color btn-purchase" href="#">Purchase</a>
-          </div>
-          <div class="main__product-image p-1">
-            <img class="" src="resources/main.png" alt="Code CNC">
-          </div>
-        </section>
-        <section class="brands p-1 flex-c">
-          <h1>Fanuc</h1>
-          <h1>Haas</h1>
-          <h1>Siemens 802D</h1>
-          <h1>Mazak ISO</h1>
-          <h1>Okuma ISO</h1>
-        </section>
-        <section class="section section__bg-standard r-o p-1">
-          <div class="flex-c">
-            <img class="mobile" src="resources/parsing_tree.png" alt="Code CNC">
-          </div>
-          <div class="t-c">
-            <h1>Cnc macro programming</h1>
-            <h3>Macro Terminal CNC is built specifically to support CNC macro programming (CNC parametric programming) and many system variables that are compatible with Fanuc Custom Macro B or Haas macros. Macro Terminal CNC has a built-in special tool to analyze all calculations and logical expressions during code execution, which makes it extremely easy to test CNC programs or learn CNC parametric programming.</h3>
-            <!--<a class="btn btn-brand-color" href="#" style="display:inline-block;margin-top:1rem;">Read more</a>-->
-          </div>
-        </section>
-        <section class="section reversed p-1">
-          <div class="t-c">
-            <h1>Cnc programming</h1>
-            <h3>Macro Terminal CNC not only supports parametric programming, but also subprograms (subroutines), absolute, incremental and polar programming which is compatible with ISO programming. Also remember that the Macro Terminal CNC supports multiple cycles (compatible with Fanuc and Haas controls) for milling machines and machining centers.</h3>
-            <!--<a class="btn btn-brand-color" href="#" style="display:inline-block;margin-top:1rem;">Read more</a>-->
-          </div>
-          <div class="flex-c">
-            <img class="mobile" src="resources/spiral.png" alt="Code CNC">
-          </div>
-        </section>
-        <section class="section section__bg-standard r-o p-1">
-          <div class="flex-c">
-            <img class="mobile" src="resources/examples.png" alt="Code CNC">
-          </div>
-          <div class="t-c">
-            <h1>Learning CNC</h1>
-            <h3>Macro Terminal CNC is the perfect solution for anyone who wants to learn CNC programming.It has many useful sample programs that can facilitate the adventure with traditional CNC programming, CNC parametric programming and the use of system variables or various frequently used cycles.</h3>
-            <!--<a class="btn btn-brand-color" href="#" style="display:inline-block;margin-top:1rem;">Read more</a>-->
-          </div>
-        </section>
-        <section class="section reversed p-1">
-          <div class="t-c">
-            <h1>Program safer and faster</h1>
-            <h3>Cnc macro programming is an extremely efficient and flexible way to work on various CNC machines.However, it should be remembered that while CNC macros greatly improve traditional CNC programming, even the slightest mistake can cause the machine to crash or cause injury or death to the operator.By using Macro Terminal CNC, you can check your code accurately, thanks to the built-in module that displays all logical processes and calculations step by step.</h3>
-          </div>
-          <div class="flex-c">
-            <img class="mobile" src="resources/error_2.png" alt="Code CNC">
-          </div>
-        </section>
-        <section class="section section__bg-standard r-o p-1">
-          <div class="flex-c">
-            <img class="mobile" src="resources/simulation.png" alt="Code CNC">
-          </div>
-          <div class="t-c" >
-            <h1 style="text-align: center;">Versatile</h1>
-            <h3>
-              Macro Terminal CNC supports CNC cycles such as (Fanuc / Haas):G16 (polar coordinates), G51 (scaling), G52 (shift work offset), G68 (coordinate rotation), G65 / G66 (macro subroutine call), G98 (retract to initial “Z” value level), G99 (retract to “R” value level), repeat canned cycle (L and K) and Haas cycles such as: Haas G70 Bolt Hole Circle, Haas G71 Bolt Hole Arc, Haas G72 Bolt Holes Along an Angle.
+            <h1>Macro Simulator CNC</h1>
+            <h3 class="main__desc">The most powerful, advanced and easy-to-use software for CNC machines
             </h3>
+            <div class="main__btn-container">
+              <a class="btn btn-brand-color" href="pricing.html">Purchase</a>
+              <a class="btn btn--reverse" href="get-started.html" style="margin-left: 10px;">Get started</a>
+            </div>
           </div>
         </section>
-        <section class="section reversed p-1">
-          <div class="t-c">
-            <h1>Compatibility</h1>
-            <h3>Macro Terminal CNC is compatible with CNC controls: Fanuc 0(M/T), Fanuc 6(M/T), Fanuc 10(M/T), Fanuc 11(M/T), Fanuc 15(M/T), Fanuc 16(M/T), Fanuc 18(M/T), Fanuc 20(M/T), Fanuc 21(M/T) and higher, Haas and others using CNC macros based on Fanuc Custom Macro B.</h3>
+        <section class="article article--main">
+          <h2 class="article__subtitle" style="margin: 1rem;">Macro Simulator CNC (successor to Macro Terminal CNC) is a revolutionary, cross-platform CNC software with a micro-command system (only extended version) and an Advanced Error Recognition System (AERS) that enables faster, less error-prone code writing and can export code for multiple control system (Fanuc, Haas, Heidenhain*, Sinumerik*, Num* and any other*). It has code editor and backplotter for G-Code (RS-274) and Fanuc Macro B programs for 3-axis milling machines. </h2>
+          <p style="font-size: 0.8rem;padding:0rem 1rem 0.2rem;">* Only on special request and at an additional cost</p>
+            <div class="separator" style="margin: 1rem;"></div>
+            <div class="cards">
+            <div class="card">
+              <div class="card__title">
+                Code checking
+              </div>
+              <img class="card__img" src="resources/safetiness.png" alt="safetiness"/>
+              <div class="card__content">
+                Macro Simulator CNC code testing is supported by an Advanced Error Recognition System that can recognize over 40 potentially fatal errors
+              </div>
+              <a class="card__read-more" href="aers.html">Read more ></a>
+            </div>
+            <div class="card">
+              <div class="card__title">
+                Multiplatform
+              </div>
+              <img class="card__img" src="resources/multi-platform.png" alt="multi-platform"/>
+              <div class="card__content">
+                Macro Simulator CNC is built from the get-go to run on multiple platforms and screen sizes.
+                It can run on Windows*, MacOS*, Linux*, Android and IOS
+              </div>
+              <a class="card__read-more" href="technical.html">Read more ></a>
+            </div>
+            <div class="card">
+              <div class="card__title">
+                Productivity
+              </div>
+              <img class="card__img" src="resources/productivity.png" alt="productivity"/>
+              <div class="card__content">
+                The use of micro-commands speeds up programming, reduces the susceptibility to spelling errors, and reduces the boilerplate code for a better understanding of the information contained **
+              </div>
+              <a class="card__read-more" href="technical.html">Read more ></a>
+            </div>
           </div>
-          <div class="flex-c">
-            <img class="mobile" src="resources/settings.png" alt="Code CNC">
+          <div class="cards">
+            <div class="card">
+              <div class="card__title">
+                Easy-to-use
+              </div>
+              <img class="card__img" src="resources/easy-to-use.png" alt="easy-to-use"/>
+              <div class="card__content">
+                This software has been created both for people starting their experience with CNC as well as experienced programmers and operators, therefore its simple and elegant interface makes it much easier to use
+              </div>
+              <a class="card__read-more" href="technical.html">Read more ></a>
+            </div>
+            <div class="card">
+              <div class="card__title">
+                Compatibility
+              </div>
+              <img class="card__img" src="resources/compatibility.png" alt="compatibility"/>
+              <div class="card__content">
+                Macro Simulator CNC works with a large number of the most popular CNC controls on the market and allows you to export the code for various controls***.
+              </div>
+              <a class="card__read-more" href="technical.html#compatibility">Read more ></a>
+            </div>
+            <div class="card">
+              <div class="card__title">
+                File export
+              </div>
+              <img class="card__img" src="resources/file-export.png" alt="file-export"/>
+              <div class="card__content">
+                Exporting the code is very important, therefore it is equipped with many useful functions, such as code compression or automatic adding of comments with the tool used
+              </div>
+              <a class="card__read-more" href="technical.html">Read more ></a>
+            </div>
           </div>
-        </section>
-        <section class="customers-header p-1 flex-c">
-          <h1 class="customers-header__desc">What some of our customers think about Macro Terminal CNC?</h1>
-        </section>
-        <section class="customers p-1 section__bg-standard">
-          {{ feedback }}
-        </section>
-        <section class="contact p-1 r-o" id="contact">
-          <div class="flex-c">
-            <img class="mobile" src="resources/pocket.png" alt="Code CNC">
-          </div>
-          <div class="t-c">
-            <h1 class="contact__title">Contact us</h1>
-            <h2 class="contact__mail"><i class="fa fa-envelope" aria-hidden="true"></i> mobilecamcnc@gmail.com</h2>
-            <h3 class="contact__mess">We will answer you within 48hours*</h3>
-            <p class="contact__warn">*Excluding weekends and holidays</p>
-          </div>
+          <div class="separator" style="margin: 1rem;"></div>
+          <p style="font-size: 0.8rem;padding:1rem 1rem 0.5rem;">* (requires Google Chrome or Edge for installation on Windows, MacOS or Linux), ** only extended version can use micro-commands, *** Only on special request and at an additional cost</p>
         </section>
       </main>
       <footer class="footer">

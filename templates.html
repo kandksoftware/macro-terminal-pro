@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Macro Simulator CNC | Templates</title>
+    <meta name="description" content="Macro Simulator CNC | Using a powerful feature" />
+    <meta name="keywords" content=""/>
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+  </head>
+  <body>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <div id="splash-screen">
+      <img src="resources/spinner.gif"  alt="spinner"/>
+    </div>
+    <div id="app" class="hide">
+      <header>
+        {{ header }}
+      </header>
+      <main>
+        <section class="article">
+          <h1 class="article__title">Templates</h1>
+          <div class="separator"></div>
+          <p class="article__content">
+            Macro Simulator CNC supports templates! What are templates? Templates are the game changer in the CNC industry! They allow code reuse, make the program smaller and more readable, but at the same time they are not a compatibility issue as they will be converted to pure g-code* on the fly. Moreover, they allow you to use arguments that allow you to pass a given value to template. Remember that you can nest templates as many times as you want!
+          </p>
+          <h2 class="article__subtitle">So how to use them? It's so easy, just take a look:</h2>
+          
+          <p class="article__content article__counter article--attantion-color" >
+            Write or open the program in the editor
+          </p>
+          <p class="article__content article__counter article--attantion-color">
+            Save as template <span class="article--warning-color">(the @ symbol will be added automatically)</span>
+          </p>
+          <p class="article__content article__counter article--attantion-color">
+            To use it, add "@" before the template name (for example, the template name was a circle, followed by an @circle)
+          </p>
+          
+          <p class="article__content" style="margin-top: 10px;">
+            To edit it, just select your template in "Open template", edit it and save it by selecting “save”.
+          </p>
+          <div class="message message--info">
+            You can also pass a value using arguments, see an example below:
+          </div>
+          <p class="article__content">
+            Inside of your template code:
+          </p>
+          <div class="code-view">
+            #100 = #diameter<br/>
+            #101 = #xLocation<br/>
+            #102 = #yLocation<br/>
+          </div>
+          <div class="message message--alert">
+            Arguments must start with the # symbol, and the next symbol must be a letter (for example:#radius, #strategy2)
+          </div>
+          <p class="article__content">
+            then call your template:
+          </p>
+          <div class="code-view">
+            @circle diameter=100 xLocation=0 yLocation=0
+          </div>
+          <p class="article__content">
+            Isn't that amazing? By using words that you understand, the arguments become self-explanatory which will make it easier for you and the person working with your programs.
+          </p>
+          <div class="message message--alert">
+            Remember that the template system is a new tool and is constantly being tested and improved, so always back up your programs!
+          </div>
+          <p class="article__content">
+            *If the program contains a macro, it should be converted to pure g-code using the "export" option.
+          </p>
+        </section>
+      </main>
+      <footer class="footer">
+        {{ footer }}
+      </footer>
+      <script src="js/script-loader.js"></script>
+      <script src="js/main.js"></script>
+    </div>
+  </body>
+</html>

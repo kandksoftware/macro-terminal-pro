@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/macro-terminal-icon.png" type="image/png" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Macro Simulator CNC | AERS</title>
+    <meta name="description" content="Macro Simulator CNC | Advanced Error Recognition System" />
+    <meta name="keywords" content=""/>
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+  </head>
+  <body>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <div id="splash-screen">
+      <img src="resources/spinner.gif"  alt="spinner"/>
+    </div>
+    <div id="app" class="hide">
+      <header>
+        {{ header }}
+      </header>
+      <main>
+        <section class="article">
+          <h1 class="article__title">AERS - Advanced Error Recognition System</h1>
+          <div class="separator"></div>
+          <div class="message message--alert">
+            Remember to always use AERS and keep it on for your own safety and that of others!
+          </div>
+          <div class="message message--alert">
+            Remember to always be extremely vigilant when running programs on the CNC machine and run freshly created programs line by line!
+          </div>
+          <div class="message message--info">
+            If you have found a potential error that occurs quite often, is security related and is still not in the AERS database, please <a href="contact.html">contact us</a>.
+          </div>
+          <img class="article__img" src="resources/tablet-alert-warning.png" alt="CNC warnings and alerts"/>
+          <h2 class="article__subtitle">About AERS
+          </h2>
+          <p class="article__content">AERS (Advanced Error Recognition System) - is a security system that checks the code for the most dangerous errors that can only be caught by an experienced CNC programmer. AERS is so far able to test your code against over 40 potentially dangerous scenarios.
+            <br/>AERS is made up of three elements:
+            <span>1. On-the-fly code verification (code verification already when writing the program)</span>
+            <span>2. Run-time check (code testing for potential syntax errors, incorrect values such as "null", etc.)</span>
+            <span>3. Additional checking of already pure G code (converted from macro) for potential errors</span>
+          </p>
+          <h2 class="article__subtitle">Why using AERS is so important?</h2>
+          <img class="article__img" src="resources/error_console.png" alt="macro null alert"/>
+          <p class="article__content">Remember that the unit cost of most CNC machines starts at hundreds of thousands of dollars. Also, any damage to the tool means high costs (e.g., end mills) and wasted time on its replacement and measurements, and often needed changes in the CNC program. Even the smallest error can immobilize your CNC machine for many months or cause a dangerous accident! AERS can prevent many potentially dangerous situations by checking your code before running it on a milling machine or machining centers.
+          </p>
+          <h2 class="article__subtitle">But I am an experienced CNC programmer / machinist. Why should I use AERS?
+          </h2>
+          <img class="article__img" src="resources/tabler-alert.png" alt="macro null modal alert"/>
+          <p class="article__content">Remember that the human brain works much slower in the morning or late hours. Also at work requiring a lot of concentration and precision, after 4-5 hours there is a lot of fatigue. This can create a dangerous situation in your workplace. AERS in Macro Mill Plus CNC does not need time to rest. It is always ready to help you create a better and safer CNC program.
+            .</p>
+          <h2 class="article__subtitle">How easy is to undestand warning and alerts from AERS?</h2>
+          <img class="article__img" src="resources/zoomed-notification.png" alt="in line notifications"/>
+          <p class="article__content">AERS will notify you by displaying a red shield (if there is an error, the run button will disappear) or an orange shield (if there is a warning) in the top bar.
+
+          </p>
+          <img class="article__img" src="resources/topbar-notification.png" alt="topbar notifications"/>
+          <p class="article__content">The line number will also be marked in color. For more information about a potential alert or warning, you can press the line number. After clicking, a window with a description of the situation should appear.
+
+          </p>
+          <img class="article__img" src="resources/alert-box.png" alt="modal alert"/>
+          <p class="article__content"> As you can see it is very simple.
+
+          </p>
+          
+        </section>
+      </main>
+      <footer class="footer">
+        {{ footer }}
+      </footer>
+      <script src="js/script-loader.js"></script>
+      <script src="js/main.js"></script>
+    </div>
+  </body>
+</html>

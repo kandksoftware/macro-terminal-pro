@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Macro Simulator CNC | Product</title>
+    <meta name="description" content="Macro Simulator CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
+    <meta name="keywords" content=""/>
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+  </head>
+  <body>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <div id="splash-screen">
+      <img src="resources/spinner.gif"  alt="spinner"/>
+    </div>
+    <div id="app" class="hide">
+      <header>
+        {{ header }}
+      </header>
+      <main>
+        <section class="article">
+          <h1 class="article__title">Technical information</h1>
+          <div class="separator"></div>
+          <h2 class="article__subtitle" id="cycles">Commands (only extended version):</br>
+            The command can be used in conjunction with standard code, subprograms as well as macros
+          </h2>
+          <div class="article__list">
+            <ul>
+              <li>TOOL - tool call</li>
+              <li>SET - changing global data used by other commands such as approach point (X, Y, Z) or start angle (A)</li>
+              <li>CYCLE - drilling / tapping cycles</li>
+              <li>POCKET - pocket milling (circular and rectangle) and groving milling (circular and rectangle)</li>
+              <li>SHOULDER - shoulder milling (circular and rectangle)</li>
+              <li>FACE - face milling (3 strategies)</li>
+              <li>PATTERN - drilling patterns (4 strategies)</li>
+              <li>SLOT - circular slot (from ver:1.9.0)</li>
+              <li>THREADING - external / internal (from ver:1.9.0)</li>
+              <li>MIRROR (from ver:1.10.0)</li>
+              <li>special command (on special request and at an additional cost)</li>
+            </ul>
+          </div>
+          <h2 class="article__subtitle">Program export:</h2>
+          <div class="article__list">
+            <ul>
+              <li>export to pure g-code</li>
+              <li>scode compressing</li>
+              <li>removing empty lines</li>
+              <li>adding decimal point</li>
+              <li>adding automatically information about the tool used (at the beginning of the program as before calling it)</li>
+            </ul> 
+          </div>
+          <h2 class="article__subtitle">Viewport (simulator/graphics) information:</h2>
+          <div class="article__list">
+            <ul>
+              <li>3D tool path</li>
+              <li>simulation (play, play fast, stop, next, reset, previous, rewind)</li>
+              <li>4 view modes (3D, XY, XZ, YZ)</li>
+              <li>image rotation in x axis</li>
+              <li>zoom</li>
+              <li>shift image</li>
+              <li>show/hide rapid movement</li>
+              <li>simplified representation of tools (max 50 tools)</li>
+              <li>metric/imperial mode</li>
+              <li>3 themes (dark, bright, black & white)</li>
+            </ul> 
+          </div>
+          <h2 class="article__subtitle">G-code/Fanuc/Haas/Mazak ISO support:</h2>
+          <div class="article__list">
+            <ul>
+              <li>absolute, incremental and polar mode</li>
+              <li>G16 polar coordinate</li>
+              <li>G51 scaling</li>
+              <li>G52 local work shift</li>
+              <li>G65/G66 macro subprogram call</li>
+              <li>G68 coordinate system rotation</li>
+              <li>G98 retract to initial Z value</li>
+              <li>G99 retract to R value</li>
+              <li>M98 subprogram (multiple formats)</li>
+              <li>repeat canned cycle (L and K)</li>
+              <li>circular interpolation supported by using (I, J or R)</li>
+            </ul> 
+          </div>
+
+          <h2 class="article__subtitle">Haas support:</h2>
+          <div class="article__list">
+            <ul>
+              <li>G70 Bolt Hole Circle</li>
+              <li>G71 Bolt Hole Arc</li>
+              <li>G72 Bolt Holes Along an Angle</li>
+            </ul> 
+          </div>
+
+          <h2 class="article__subtitle">Macro (Fanuc Custom Macro B) support:</h2>
+          <div class="article__list">
+            <ul>
+              <li>keywords: IF, THEN, GOTO,  WHILE, DO, END</li>
+              <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
+              <li>local, common variables and some of the most popular system variables</li>
+            </ul> 
+          </div>
+          <h2 class="article__subtitle">Debugger:</h2>
+          <div class="article__list">
+            <ul>
+              <li>showing current line</li>
+              <li>assigned and created variables</li>
+              <li>math and logical calculations in line</li>
+              <li>for IF and WHILE statement shows the actual value (true or false)</li>
+            </ul> 
+          </div>
+          <h2 class="article__subtitle">Code editor:</h2>
+          <div class="article__list">
+            <ul>
+              <li>code highlighting</li>
+              <li>formatting</li>
+              <li>undo/redo</li>
+              <li>adding/removing EOB</li>
+              <li>adding/removing %</li>
+              <li>adding decimal point</li>
+            </ul> 
+          </div>
+          <h2 class="article__subtitle">Files:</h2>
+          <div class="article__list">
+            <ul>
+              <li>new project</li>
+              <li>open file</li>
+              <li>open template</li>
+              <li>append(to add a subroutine locally)</li>
+              <li>save</li>
+              <li>save as</li>
+              <li>export(to export macro program as a pure g code program)</li>
+              <li>file extension supported:nc, cn, ncc, cnc, eia, txt</li>
+            </ul> 
+          </div>
+
+          <h2 class="article__subtitle" id="compatibility">Input compatibility:</h2>
+          <div class="article__feature">
+            Fanuc 0(M), Fanuc 6(M), Fanuc 10(M), Fanuc 11(M), Fanuc 12(M), Fanuc 15(M), Fanuc 16(M), Fanuc 18(M), Fanuc 20(M), Fanuc 21(M), Fanuc 30i, Fanuc 31i, Fanuc 32i, Fanuc 35i, Haas, Mazak ISO, Siemens 802D and others using CNC macros based on Fanuc Custom Macro B.
+          </div>
+          <h2 class="article__subtitle" id="compatibility">Output compatibility:</h2>
+          <div class="article__feature">
+            Same as input control selected, it also can be converted to Heidenhain, Sinumerik or other control upon special request.
+          </div>
+
+          <h2 class="article__subtitle">Languages:</h2>
+          <div class="article__feature">
+            English, Français, Deutsche, Italiano, Español, 한국어, 日本語, Polski, Magyar, Pусский, Português, 中文, Türkçe
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        {{ footer }}
+      </footer>
+      <script src="js/script-loader.js"></script>
+      <script src="js/main.js"></script>
+    </div>
+  </body>
+</html>
