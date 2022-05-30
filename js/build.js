@@ -139,12 +139,14 @@ const main = () => {
   const ss = document.querySelector('#splash-screen')
   if(ss) ss.classList.add('hide')
   //inject a current date
+
   document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } ${APP_NAME}. All rights reserved.`;
-
-
 
   [...document.querySelectorAll('.code-view')].forEach(e => {
     const hg = new Highlighter().exec(e.innerHTML)
     e.innerHTML = hg
   });
 }
+
+
+
