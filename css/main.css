@@ -821,7 +821,7 @@ noscript {
 
 .article__content {
   padding-bottom: 0.5rem;
-  color: #262626;
+  color: #595959;
   font-size: 1.2rem;
 }
 
@@ -872,6 +872,14 @@ noscript {
   .article--main {
     width: 70% !important;
   }
+}
+
+.article__intro {
+  color: #404040;
+}
+
+.article__intro > a {
+  color: #c50000;
 }
 
 .message {
@@ -1057,11 +1065,11 @@ th, td {
 }
 
 .code-view {
-  background-color: #292929;
+  background-color: #1E2127;
   color: cyan;
-  padding: 5px;
+  padding: 0.5rem;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin: 1rem 0;
 }
 
 .cards {

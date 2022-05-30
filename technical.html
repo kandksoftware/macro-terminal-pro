@@ -25,9 +25,7 @@
         <section class="article">
           <h1 class="article__title">Technical information</h1>
           <div class="separator"></div>
-          <h2 class="article__subtitle" id="cycles">Commands (only extended version):</br>
-            The command can be used in conjunction with standard code, subprograms as well as macros
-          </h2>
+          <h2 class="article__subtitle" id="cycles">Micro commands (only extended version):</h2>
           <div class="article__list">
             <ul>
               <li>TOOL - tool call</li>
@@ -37,20 +35,22 @@
               <li>SHOULDER - shoulder milling (circular and rectangle)</li>
               <li>FACE - face milling (3 strategies)</li>
               <li>PATTERN - drilling patterns (4 strategies)</li>
-              <li>SLOT - circular slot (from ver:1.9.0)</li>
-              <li>THREADING - external / internal (from ver:1.9.0)</li>
-              <li>MIRROR (from ver:1.10.0)</li>
+              <li>SLOT - circular slot (ver:1.9.0)</li>
+              <li>THREADING - external / internal (ver:1.9.0)</li>
+              <li>MIRROR (ver:1.10.0)</li>
               <li>special command (on special request and at an additional cost)</li>
             </ul>
           </div>
           <h2 class="article__subtitle">Program export:</h2>
           <div class="article__list">
             <ul>
-              <li>export to pure g-code</li>
-              <li>scode compressing</li>
+              <li>code compressing</li>
               <li>removing empty lines</li>
               <li>adding decimal point</li>
               <li>adding automatically information about the tool used (at the beginning of the program as before calling it)</li>
+              <li>adding line number (ver:1.9.0)</li>
+              <li>adding safety line (ver:1.9.0)</li>
+              <li>auto adding end of program (M30) (ver:1.9.0)</li>
             </ul> 
           </div>
           <h2 class="article__subtitle">Viewport (simulator/graphics) information:</h2>
@@ -105,7 +105,6 @@
           <h2 class="article__subtitle">Debugger:</h2>
           <div class="article__list">
             <ul>
-              <li>showing current line</li>
               <li>assigned and created variables</li>
               <li>math and logical calculations in line</li>
               <li>for IF and WHILE statement shows the actual value (true or false)</li>

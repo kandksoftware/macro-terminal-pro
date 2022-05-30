@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
     __PATH + 'template-injector.js',
     __PATH + 'feedback.js',
     __PATH + 'replacer.js',
+    __PATH + 'highlighter.js',
     __PATH + 'build.js',
   ]).exec(() => main())
 })
