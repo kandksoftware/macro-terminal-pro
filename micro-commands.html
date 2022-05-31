@@ -141,7 +141,7 @@ Well, it's time for a real example of the program!
           </div>
           <img class="article__img" src="resources/scheme.png" alt="scheme"/>
           <div class="article__content">
-            And here's what the finished program for this example looks like.
+            Here's what a finished program looks like using micro commands for this example
           </div>
           <div class="code-view">
             O0001
@@ -162,65 +162,71 @@ Well, it's time for a real example of the program!
             PATTERN 4 L#100 C#101
           </div>
           <div class="article__content">
-            And exported code
+            And as it looked, without using micro commands. 
+            Of course, you can use a subroutine for coordinates, but the code is less readable anyway and requires more focus when changing any of the contained data.
           </div>
           <div class="code-view">
             O0001 ;
-( SAFETY LINE ) ;
-G00 G17 G21 G40 G53 G80 G90 ;
-( END MILL 10X100 ) ;
-T1 M06 ;
-G54 X0. Y0. ;
-S3067 M3 ;
-G43 H1 Z50. M8 ;
-G98 G81 Z-23.981 R3. K0. F613. ;
-X-67.460 Y25.478 ;
-X-58.462 Y-13.497 ;
-X-49.464 Y-52.472 ;
-X-28.485 Y34.476 ;
-X-10.489 Y-43.474 ;
-X10.489 Y43.474 ;
-X28.485 Y-34.476 ;
-X49.464 Y52.472 ;
-X58.462 Y13.497 ;
-X67.460 Y-25.478 ;
-G80 Z50. ;
-( D6.5 X H50 ) ;
-T2 M06 ;
-G54 X0. Y0. ;
-S523 M3 ;
-G43 H2 M8 ;
-G98 G81 Z-2.25 R3. K0. F107. ;
-X-67.460 Y25.478 ;
-X-58.462 Y-13.497 ;
-X-49.464 Y-52.472 ;
-X-28.485 Y34.476 ;
-X-10.489 Y-43.474 ;
-X10.489 Y43.474 ;
-X28.485 Y-34.476 ;
-X49.464 Y52.472 ;
-X58.462 Y13.497 ;
-X67.460 Y-25.478 ;
-G80 Z50. ;
-( COARSE M10 X 1.5 ) ;
-T3 M06 ;
-G54 X0. Y0. ;
-S290 M3 ;
-G43 H3 M8 ;
-G98 G84 Z-32. R3. K0. F435. ;
-X-67.460 Y25.478 ;
-X-58.462 Y-13.497 ;
-X-49.464 Y-52.472 ;
-X-28.485 Y34.476 ;
-X-10.489 Y-43.474 ;
-X10.489 Y43.474 ;
-X28.485 Y-34.476 ;
-X49.464 Y52.472 ;
-X58.462 Y13.497 ;
-X67.460 Y-25.478 ;
-G80 Z50. ;
-M30 ;
-        </div>
+            ( SAFETY LINE ) ;
+            G00 G17 G21 G40 G53 G80 G90 ;
+            ( END MILL 10X100 ) ;
+            T1 M06 ;
+            G54 X0. Y0. ;
+            S3067 M3 ;
+            G43 H1 Z50. M8 ;
+            G98 G81 Z-23.981 R3. K0. F613. ;
+            X-67.460 Y25.478 ;
+            X-58.462 Y-13.497 ;
+            X-49.464 Y-52.472 ;
+            X-28.485 Y34.476 ;
+            X-10.489 Y-43.474 ;
+            X10.489 Y43.474 ;
+            X28.485 Y-34.476 ;
+            X49.464 Y52.472 ;
+            X58.462 Y13.497 ;
+            X67.460 Y-25.478 ;
+            G80 Z50. ;
+            ( D6.5 X H50 ) ;
+            T2 M06 ;
+            G54 X0. Y0. ;
+            S523 M3 ;
+            G43 H2 M8 ;
+            G98 G81 Z-2.25 R3. K0. F107. ;
+            X-67.460 Y25.478 ;
+            X-58.462 Y-13.497 ;
+            X-49.464 Y-52.472 ;
+            X-28.485 Y34.476 ;
+            X-10.489 Y-43.474 ;
+            X10.489 Y43.474 ;
+            X28.485 Y-34.476 ;
+            X49.464 Y52.472 ;
+            X58.462 Y13.497 ;
+            X67.460 Y-25.478 ;
+            G80 Z50. ;
+            ( COARSE M10 X 1.5 ) ;
+            T3 M06 ;
+            G54 X0. Y0. ;
+            S290 M3 ;
+            G43 H3 M8 ;
+            G98 G84 Z-32. R3. K0. F435. ;
+            X-67.460 Y25.478 ;
+            X-58.462 Y-13.497 ;
+            X-49.464 Y-52.472 ;
+            X-28.485 Y34.476 ;
+            X-10.489 Y-43.474 ;
+            X10.489 Y43.474 ;
+            X28.485 Y-34.476 ;
+            X49.464 Y52.472 ;
+            X58.462 Y13.497 ;
+            X67.460 Y-25.478 ;
+            G80 Z50. ;
+            M30 ;
+          </div>
+          <div class="message message--info">
+            <h3 class="message__header">Good to know</h3>
+            You may have noticed that there is a security line in the code above, the names of the tools before the call, and the end of the program. 
+            Macro Simulator CNC adds this data automatically when exporting the program.
+          </div>
         </div>
       </main>
       <footer class="footer">

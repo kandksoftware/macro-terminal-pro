@@ -78,18 +78,10 @@ const main = () => {
     type:['footer'],
     link:'aers.html',
     desc:'AERS'
-  }/*,{
-    type:['footer','menu'],
-    link:'https://kandksoftware.github.io/entry/',
-    desc:'Products'
-  }*/,{
+  },{
     type:['nav','menu','footer'],
     link:'get-started.html',
     desc:'Get started'
-  },{
-    type:['footer'],
-    link:'https://kandksoftware.github.io/macro-terminal-pro/knowledge.html',
-    desc:'Knowledge'
   },{
     type:['nav','menu','footer'],
     link:'contact.html',
@@ -139,7 +131,6 @@ const main = () => {
   const ss = document.querySelector('#splash-screen')
   if(ss) ss.classList.add('hide')
   //inject a current date
-
   document.querySelector('.footer__copy a').innerHTML =  `Copyright © ${ new Date().getFullYear() } ${APP_NAME}. All rights reserved.`;
 
   [...document.querySelectorAll('.code-view')].forEach(e => {
@@ -147,6 +138,3 @@ const main = () => {
     e.innerHTML = hg
   });
 }
-
-
-
