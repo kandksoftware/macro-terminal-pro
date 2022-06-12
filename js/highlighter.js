@@ -4,11 +4,15 @@ function TestIdentical(){
   this.exec = (token,array) => (array.includes(token))
 }
 
+function isLetter(token,index = 0){
+  return token[index] >= 'A' && token[index] <= 'Z'
+}
+
 function TestContainsFirst(){
   this.exec = (token,array) => {
     for(var a of array){
       if(token.length >= 1){
-        if((token[0] >= 'A' && token[0] <= 'Z') && !(token[1] >= 'A' && token[1] <= 'Z')){
+        if(isLetter(token) && !isLetter(token,1)){
           if(token[0] === a) return true
         }
       }
@@ -22,7 +26,7 @@ function Highlighter(){
     this.keyword = [{
       name:'keyword',
       keys:[
-        'WHILE','IF','GOTO','THEN','END','DO','POCKET','TOOL','SLOT','CYCLE','PATTERN','SURFACE','SHOULDER','SET','SETTOOL','THREADING'
+        'WHILE','IF','GOTO','THEN','END','DO','POCKET','TOOL','SLOT','CYCLE','PATTERN','SURFACE','SHOULDER','SET','SETTOOL','THREADING','DRILLING','BORING','MIRROR','SHIFT','ZOOM'
       ],
       test:new TestIdentical(),
       color:'#C677DD'

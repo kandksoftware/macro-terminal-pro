@@ -882,6 +882,10 @@ noscript {
   color: #c50000;
 }
 
+.article--important {
+  font-weight: 800;
+}
+
 .message {
   border-radius: 5px;
   padding: 0.5rem;
@@ -1154,5 +1158,11 @@ th, td {
   display: inline-block;
   margin-top: 1rem;
   color: #c50000;
+}
+
+.card--device {
+  color: #c50000;
+  font-weight: 800;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=main.css.map */
