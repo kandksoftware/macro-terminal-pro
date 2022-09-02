@@ -57,7 +57,7 @@ a {
   padding: 4rem;
 }
 
-.flex-c, .contact__image {
+.flex-c {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,7 +74,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .flex-c, .contact__image {
+  .flex-c {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -151,12 +151,14 @@ a {
   margin-bottom: 1rem;
 }
 
-.table td, .table th {
+.table td,
+.table th {
   border: 1px solid #d9d9d9;
   text-align: left;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   padding: 0.9375rem;
 }
 
@@ -200,6 +202,19 @@ noscript {
   text-align: right;
   margin-top: 1rem;
   font-weight: bold;
+}
+
+.input {
+  width: 100% !important;
+  height: 40px;
+}
+
+.mess-sent-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #splash-screen {
@@ -537,7 +552,7 @@ noscript {
   }
 }
 
-.section, .contact {
+.section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,72 +569,68 @@ noscript {
   counter-reset: counter;
 }
 
-.section img, .contact img {
+.section img {
   margin-top: 1rem;
 }
 
-.section > :first-child, .contact > :first-child,
-.section > :last-child,
-.contact > :last-child {
+.section > :first-child,
+.section > :last-child {
   width: 100%;
 }
 
-.section > :first-child h1, .contact > :first-child h1,
-.section > :last-child h1,
-.contact > :last-child h1 {
+.section > :first-child h1,
+.section > :last-child h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 800;
   color: #c50000;
 }
 
-.section.r-o > :first-child, .r-o.contact > :first-child {
+.section.r-o > :first-child {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 
-.section.r-o > :last-child, .r-o.contact > :last-child {
+.section.r-o > :last-child {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
 
 @media screen and (min-width: 768px) {
-  .section, .contact {
+  .section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .section h1, .contact h1 {
+  .section h1 {
     font-size: 4rem;
   }
-  .section img, .contact img {
+  .section img {
     margin-top: 0rem;
   }
-  .section > :first-child, .contact > :first-child {
+  .section > :first-child {
     width: 40%;
   }
-  
-  .section > :last-child,
-  .contact > :last-child {
+  .section > :last-child {
     width: 50%;
   }
-  .section.r-o > :first-child, .r-o.contact > :first-child {
+  .section.r-o > :first-child {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  .section.r-o > :last-child, .r-o.contact > :last-child {
+  .section.r-o > :last-child {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  .section.reversed > :first-child, .reversed.contact > :first-child {
+  .section.reversed > :first-child {
     width: 50%;
   }
-  .section.reversed > :last-child, .reversed.contact > :last-child {
+  .section.reversed > :last-child {
     width: 40%;
   }
 }
@@ -628,60 +639,16 @@ noscript {
   background-color: #fff;
 }
 
-.section .counter, .contact .counter {
+.section .counter {
   display: inline-block;
   margin-bottom: 1rem;
 }
 
-.section .counter::before, .contact .counter::before {
+.section .counter::before {
   counter-increment: counter;
   content: counter(counter) ": ";
   color: #c50000;
   font-weight: 800;
-}
-
-.contact {
-  padding: 1rem;
-  margin-top: 1rem;
-  min-height: calc(100vh - 48px);
-}
-
-.contact__image, .contact__description {
-  width: 100%;
-  text-align: center;
-}
-
-.contact__image > img {
-  width: 100%;
-  height: auto;
-}
-
-.contact__mess, .contact__warn {
-  padding: 1rem;
-}
-
-.contact__warn {
-  color: #ff5f5f;
-  padding: 1rem;
-}
-
-@media screen and (min-width: 768px) {
-  .contact {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .contact__image, .contact__description {
-    width: 50%;
-  }
-  .contact__description {
-    text-align: center;
-  }
-  .contact__image > img {
-    width: 27.5rem;
-    height: auto;
-  }
 }
 
 .faq {
@@ -1164,5 +1131,37 @@ th, td {
   color: #c50000;
   font-weight: 800;
   font-size: 1.2rem;
+}
+
+.contact {
+  text-align: right !important;
+}
+
+.contact input {
+  height: 30px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  border: 1px solid #c50000;
+  font-size: 1rem;
+}
+
+.contact textarea {
+  resize: none;
+}
+
+.contact button {
+  background-color: #c50000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: 14px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
