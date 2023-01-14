@@ -891,6 +891,15 @@ noscript {
   font-weight: 800;
 }
 
+.main__title {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  color: #c50000;
+}
+
 .main__product-text, .main__product-image {
   text-align: center;
   /*width: 100%;*/
@@ -963,14 +972,34 @@ noscript {
 }
 
 .movie {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../resources/product.gif");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../resources/product.gif");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../resources/conversational.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../resources/conversational.png");
   height: 50vh;
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.controls {
+  margin: 1rem;
+  text-align: center;
+  background-color: #c50000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px;
+}
+
+.controls > .control {
+  margin: 0 5px;
+  font-size: 2rem;
+  display: inline-block;
+  color: #fff;
 }
 
 .btn {
@@ -1080,7 +1109,7 @@ th, td {
 .card__title {
   font-weight: 800;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #c50000;
 }
 
@@ -1092,9 +1121,8 @@ th, td {
 
 .card__img {
   width: 100%;
-  max-height: 400px;
+  max-height: 450px;
   border-radius: 5px;
-  border: 1px solid gray;
 }
 
 .card--pricing {
@@ -1117,7 +1145,7 @@ th, td {
     margin: 1rem;
   }
   .card__content {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 

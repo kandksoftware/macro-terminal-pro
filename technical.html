@@ -1,164 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
-    <link rel="stylesheet" href="css/main.css">
-    <title>Macro Simulator CNC | Product</title>
-    <meta name="description" content="Macro Simulator CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
-    <meta name="keywords" content=""/>
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-  </head>
-  <body>
-    <noscript>Your browser does not support JavaScript!</noscript>
-    <div id="splash-screen">
-      <img src="resources/spinner.gif"  alt="spinner"/>
-    </div>
-    <div id="app" class="hide">
-      <header>
-        {{ header }}
-      </header>
-      <main>
-        <section class="article">
-          <h1 class="article__title">Technical information</h1>
-          <div class="separator"></div>
-          <h2 class="article__subtitle" id="cycles">Micro commands (only extended version):</h2>
-          <div class="article__list">
-            <ul>
-              <li><span class="article--important">TOOL</span> - tool call</li>
-              <li><span class="article--important">SET</span> - changing global data used by other commands such as approach point (X, Y, Z), rotation (A), coolant (C), retraction (R), spindle direction (D), work offset (W) or surface coordinate (S)</li>
-              <li><span class="article--important">CYCLE</span> - drilling / tapping cycles</li>
-              <li><span class="article--important">POCKET</span> - pocket milling (circular and rectangle) and groving milling (circular and rectangle)</li>
-              <li><span class="article--important">SHOULDER</span> - shoulder milling (circular and rectangle)</li>
-              <li><span class="article--important">SURFACE</span> - face milling (3 strategies)</li>
-              <li><span class="article--important">PATTERN</span> - drilling patterns (4 strategies)</li>
-              <!--<li><span class="article--important">SLOT</span> - circular slot</li>-->
-              <li><span class="article--important">THREADING</span> - milling threading external and internal</li>
-              <li><span class="article--important">DRILLING</span> - peck drilling with dwell time (between pecks) and full retract (between pecks)</li>
-              <li><span class="article--important">BORING</span> - helical boring</li>
-              <li><span class="article--important">MIRROR</span> - reverse coordinates in x, y axis</li>
-              <li><span class="article--important">ZOOM</span> - resize coordinates x and y</li>
-              <li><span class="article--important">SHIFT</span> - move coordinates in x, y axis</li>
-              <li>special command (on special request and at an additional cost)</li>
-            </ul>
-          </div>
-          <h2 class="article__subtitle">Program export:</h2>
-          <div class="article__list">
-            <ul>
-              <li>code compressing</li>
-              <li>removing empty lines</li>
-              <li>adding decimal point</li>
-              <li>adding automatically information about the tool used (at the beginning of the program as before calling it)</li>
-              <li>adding line number</li>
-              <li>adding safety line</li>
-              <li>auto adding end of program (M30)</li>
-            </ul> 
-          </div>
-          <h2 class="article__subtitle">Viewport (simulator/graphics) information:</h2>
-          <div class="article__list">
-            <ul>
-              <li>3D tool path</li>
-              <li>simulation (play, play fast, stop, next, reset, previous, rewind)</li>
-              <li>5 view modes (3D, XY, XY removal, XZ, YZ)</li>
-              <li>image rotation in x axis</li>
-              <li>zoom</li>
-              <li>shift image</li>
-              <li>show/hide rapid movement</li>
-              <li>simplified representation of tools (max 50 tools)</li>
-              <li>metric/imperial mode</li>
-              <li>3 themes (dark, bright, black & white)</li>
-            </ul> 
-          </div>
-          <h2 class="article__subtitle">G-code/Fanuc/Haas/Mazak ISO support:</h2>
-          <div class="article__list">
-            <ul>
-              <li>absolute, incremental and polar mode</li>
-              <li>G16 polar coordinate</li>
-              <li>G51 scaling</li>
-              <li>G52 local work shift</li>
-              <li>G65/G66 macro subprogram call</li>
-              <li>G68 coordinate system rotation</li>
-              <li>G98 retract to initial Z value</li>
-              <li>G99 retract to R value</li>
-              <li>M98 subprogram (multiple formats)</li>
-              <li>repeat canned cycle (L and K)</li>
-              <li>circular interpolation supported by using (I, J or R)</li>
-            </ul> 
-          </div>
 
-          <h2 class="article__subtitle">Haas support:</h2>
-          <div class="article__list">
-            <ul>
-              <li>G70 Bolt Hole Circle</li>
-              <li>G71 Bolt Hole Arc</li>
-              <li>G72 Bolt Holes Along an Angle</li>
-            </ul> 
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Macro Simulator CNC | Product</title>
+  <meta name="description"
+    content="Macro Simulator CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
 
-          <h2 class="article__subtitle">Macro (Fanuc Custom Macro B) support:</h2>
-          <div class="article__list">
-            <ul>
-              <li>keywords: IF, THEN, GOTO,  WHILE, DO, END</li>
-              <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
-              <li>local, common variables and some of the most popular system variables</li>
-            </ul> 
-          </div>
-          <h2 class="article__subtitle">Debugger:</h2>
-          <div class="article__list">
-            <ul>
-              <li>assigned and created variables</li>
-              <li>math and logical calculations in line</li>
-              <li>for IF and WHILE statement shows the actual value (true or false)</li>
-            </ul> 
-          </div>
-          <h2 class="article__subtitle">Code editor:</h2>
-          <div class="article__list">
-            <ul>
-              <li>code highlighting</li>
-              <li>formatting</li>
-              <li>undo/redo</li>
-              <li>adding/removing EOB</li>
-              <li>adding/removing %</li>
-              <li>adding decimal point</li>
-            </ul> 
-          </div>
-          <h2 class="article__subtitle">Files:</h2>
-          <div class="article__list">
-            <ul>
-              <li>new project</li>
-              <li>open file</li>
-              <li>open template</li>
-              <li>append(to add a subroutine locally)</li>
-              <li>save</li>
-              <li>save as</li>
-              <li>export(to export macro program as a pure g code program)</li>
-              <li>file extension supported:nc, cn, ncc, cnc, eia, txt</li>
-            </ul> 
-          </div>
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ header }}
+    </header>
+    <main>
+      <section class="article">
+        <h1 class="article__title">Technical information</h1>
+        <div class="separator"></div>
+        <h2 class="article__subtitle" id="cycles">Conversational mode (only conversational version):</h2>
+        <div class="article__list">
+          <ul>
+            <li><span class="article--important">POCKET</span> - circular/rectangular pocket milling</li>
+            <li><span class="article--important">CYCLE</span> - simple drilling, dwell drilling, peck drilling, taping
 
-          <h2 class="article__subtitle" id="compatibility">Input compatibility:</h2>
-          <div class="article__feature">
-            Fanuc 0, Fanuc 6, Fanuc 10, Fanuc 11, Fanuc 12, Fanuc 15, Fanuc 16, Fanuc 18, Fanuc 20, Fanuc 21, Fanuc 30i, Fanuc 31i, Fanuc 32i, Fanuc 35i, Haas, Mazak ISO, Siemens 802D and others using CNC macros based on Fanuc Custom Macro B.
-          </div>
-          <h2 class="article__subtitle" id="compatibility">Output compatibility:</h2>
-          <div class="article__feature">
-            Same as input control selected, it also can be converted to Heidenhain, Sinumerik or other control upon special request.
-          </div>
+            </li>
+            <li><span class="article--important">THREAD MILLING</span> - external and internal thread milling</li>
+            <li><span class="article--important">SURFACE</span> - face milling (3 strategies)</li>
+            <li><span class="article--important">SHOULDER</span> - shoulder circular or rectangle milling, circular or
+              rectangle grooving</li>
+            <li><span class="article--important">DRILLING</span> - peck drilling with dwell time (between pecks) and
+              full retract (between pecks)</li>
+            <li><span class="article--important">HELICAL BORING</span> - helical boring, circular pocket milling</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle" id="cycles">Micro commands (only conversational version):</h2>
+        <div class="article__list">
+          <ul>
+            <li><span class="article--important">TOOL</span> - tool call</li>
+            <li><span class="article--important">SET</span> - changing global data used by other commands such as
+              approach point (X, Y, Z), rotation (A), coolant (C), retraction (R), spindle direction (D), work offset
+              (W) or surface coordinate (S)</li>
+            <li><span class="article--important">CYCLE</span> - drilling / tapping cycles</li>
+            <li><span class="article--important">POCKET</span> - pocket milling (circular and rectangle) and groving
+              milling (circular and rectangle)</li>
+            <li><span class="article--important">SHOULDER</span> - shoulder milling (circular and rectangle)</li>
+            <li><span class="article--important">SURFACE</span> - face milling (3 strategies)</li>
+            <li><span class="article--important">PATTERN</span> - drilling patterns (4 strategies)</li>
+            <!--<li><span class="article--important">SLOT</span> - circular slot</li>-->
+            <li><span class="article--important">THREADING</span> - milling threading external and internal</li>
+            <li><span class="article--important">DRILLING</span> - peck drilling with dwell time (between pecks) and
+              full retract (between pecks)</li>
+            <li><span class="article--important">HELICAL BORING</span> - helical boring</li>
+            <li><span class="article--important">MIRROR</span> - reverse coordinates in x, y axis</li>
+            <li><span class="article--important">ZOOM</span> - resize coordinates x and y</li>
+            <li><span class="article--important">SHIFT</span> - move coordinates in x, y axis</li>
+            <li>special command (on special request and at an additional cost)</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Program export:</h2>
+        <div class="article__list">
+          <ul>
+            <li>code compressing</li>
+            <li>removing empty lines</li>
+            <li>adding decimal point</li>
+            <li>adding automatically information about the tool used (at the beginning of the program as before calling
+              it)</li>
+            <li>adding line number</li>
+            <li>adding safety line</li>
+            <li>auto adding end of program (M30)</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Viewport (simulator/graphics) information:</h2>
+        <div class="article__list">
+          <ul>
+            <li>3D tool path</li>
+            <li>simulation (play, play fast, stop, next, reset, previous, rewind)</li>
+            <li>5 view modes (3D, XY, XY removal, XZ, YZ)</li>
+            <li>image rotation in x axis</li>
+            <li>zoom</li>
+            <li>shift image</li>
+            <li>show/hide rapid movement</li>
+            <li>simplified representation of tools (max 50 tools)</li>
+            <li>metric/imperial mode</li>
+            <li>3 themes (dark, bright, black & white)</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">G-code/Fanuc/Haas/Mazak ISO support:</h2>
+        <div class="article__list">
+          <ul>
+            <li>absolute, incremental and polar mode</li>
+            <li>G16 polar coordinate</li>
+            <li>G51 scaling</li>
+            <li>G52 local work shift</li>
+            <li>G65/G66 macro subprogram call</li>
+            <li>G68 coordinate system rotation</li>
+            <li>G98 retract to initial Z value</li>
+            <li>G99 retract to R value</li>
+            <li>M98 subprogram (multiple formats)</li>
+            <li>repeat canned cycle (L and K)</li>
+            <li>circular interpolation supported by using (I, J or R)</li>
+          </ul>
+        </div>
 
-          <h2 class="article__subtitle">Languages:</h2>
-          <div class="article__feature">
-            English, Français, Deutsche, Italiano, Español, 한국어, 日本語, Polski, Magyar, Pусский, Português, 中文, Türkçe
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
-        {{ footer }}
-      </footer>
-      <script src="js/script-loader.js"></script>
-      <script src="js/main.js"></script>
-    </div>
-  </body>
+        <h2 class="article__subtitle">Haas support:</h2>
+        <div class="article__list">
+          <ul>
+            <li>G70 Bolt Hole Circle</li>
+            <li>G71 Bolt Hole Arc</li>
+            <li>G72 Bolt Holes Along an Angle</li>
+          </ul>
+        </div>
+
+        <h2 class="article__subtitle">Macro (Fanuc Custom Macro B) support:</h2>
+        <div class="article__list">
+          <ul>
+            <li>keywords: IF, THEN, GOTO, WHILE, DO, END, ELSE</li>
+            <li>comparison operators (FANUC/HAAS): EQ, LT, LE, GT, GE, NE</li>
+            <li>comparison operators (CENTROID): <code>== or EQ, < OR LT, <= or LE, > or GT, >= or GE, != or NE</code>
+            </li>
+            <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
+            <li>local, common variables and some of the most popular system variables</li>
+            <li>support for both syntax FANUC/HAAS and CENTROID</li>
+            <div class="code-view">
+              IF [ #100 EQ 200 ] THEN GOTO 15 (FANUC MACRO B SYNTAX)
+            </div>
+            <div class="code-view">
+              IF #100 == 200 THEN GOTO 15 ELSE GOTO 55 (CENTROID SYNTAX)
+            </div>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Debugger:</h2>
+        <div class="article__list">
+          <ul>
+            <li>assigned and created variables</li>
+            <li>math and logical calculations in line</li>
+            <li>for IF and WHILE statement shows the actual value (true or false)</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Code editor:</h2>
+        <div class="article__list">
+          <ul>
+            <li>code highlighting</li>
+            <li>formatting</li>
+            <li>undo/redo</li>
+            <li>adding/removing EOB</li>
+            <li>adding/removing %</li>
+            <li>adding decimal point</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Files:</h2>
+        <div class="article__list">
+          <ul>
+            <li>new project</li>
+            <li>open file</li>
+            <li>open template</li>
+            <li>append(to add a subroutine locally)</li>
+            <li>save</li>
+            <li>save as</li>
+            <li>export(to export macro program as a pure g code program)</li>
+            <li>file extension supported:nc, cn, ncc, cnc, eia, txt</li>
+          </ul>
+        </div>
+
+        <h2 class="article__subtitle" id="compatibility">Input compatibility:</h2>
+        <div class="article__feature">
+          Fanuc 0, Fanuc 6, Fanuc 10, Fanuc 11, Fanuc 12, Fanuc 15, Fanuc 16, Fanuc 18, Fanuc 20, Fanuc 21,
+          Fanuc 30i,
+          Fanuc 31i, Fanuc 32i, Fanuc 35i, Haas, Centroid, Mazak ISO, Siemens 802D and others using CNC macros based on
+          Fanuc
+          Custom Macro B.
+        </div>
+        <h2 class="article__subtitle" id="compatibility">Output compatibility:</h2>
+        <div class="article__feature">
+          Same as input control selected, it also can be converted to Heidenhain, Sinumerik or other control upon
+          special request.
+        </div>
+
+        <h2 class="article__subtitle">Languages:</h2>
+        <div class="article__feature">
+          English, Français, Deutsche, Italiano, Español, 한국어, 日本語, Polski, Magyar, Pусский, Português, 中文, Türkçe
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
 </html>
