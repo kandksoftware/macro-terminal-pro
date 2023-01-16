@@ -1171,6 +1171,10 @@ th, td {
     width: 100%;
     max-height: 180px;
   }
+  .card__img-full {
+    width: 100%;
+    height: auto;
+  }
   .card--pricing {
     margin: 1rem;
   }
