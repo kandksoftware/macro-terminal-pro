@@ -1155,6 +1155,12 @@ th, td {
   border-radius: 5px;
 }
 
+.card__img-full {
+  width: calc(100% - 2rem);
+  height: auto;
+  margin-left: 1rem;
+}
+
 .card--pricing {
   border: 1px solid #c50000;
   text-align: center;
@@ -1172,7 +1178,7 @@ th, td {
     max-height: 180px;
   }
   .card__img-full {
-    width: 100%;
+    width: calc(100% - 2rem);
     height: auto;
   }
   .card--pricing {
