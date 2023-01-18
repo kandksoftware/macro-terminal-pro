@@ -81,7 +81,7 @@ const main = () => {
   }, {
     type: ['nav', 'menu', 'footer'],
     link: 'get-started.html',
-    desc: 'Get started'
+    desc: 'Manual'
   }, {
     type: ['nav', 'menu', 'footer'],
     link: 'contact.html',

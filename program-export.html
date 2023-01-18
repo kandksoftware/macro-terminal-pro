@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Macro Simulator CNC | CNC program export</title>
+  <meta name="description"
+    content="Macro Simulator CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ header }}
+    </header>
+    <main>
+      <div class="article">
+        <h1 class="article__title">CNC Program export</h1>
+        <div class="separator"></div>
+        <span class="format">
+          Historically, Macro Simulator CNC was developed mainly to work with advanced CNC macros (CNC Parametric
+          Programming), therefore much attention was paid to exporting macros to pure ISO code.
+        </span>
+        <span class="format">
+          This is of great importance, because
+          although
+          the programs created with the help of macros offer great flexibility and save time, a large number of CNC
+          machines do not support them or the operators do not know them.</span>
+        <span class="format">
+          For this reason, many useful functions have been added to get more control on the generated code like adding a
+          decimal point, adding comments about needed tools (at the beginning of the program) or just before calling a
+          given tool, code compression, using EOB (End Of Block) and so on.
+        </span>
+        <div class="message message--info">
+          <h3 class="message__header">Conversion for unlimited axes!</h3>
+          Macro Simulator CNC supports a 3-axis viewer, but can theoretically convert an unlimited number of axes to
+          pure g-code
+        </div>
+        <div class="message message--info">
+          <h3 class="message__header">Code compressing!</h3>
+          A program compressed by Macro Simulator CNC is up to 40% lighter than without compression.
+        </div>
+        <img class="article__img" src="resources/file-export2.png" alt="Macro Simulator CNC - milling pockets" />
+      </div>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>

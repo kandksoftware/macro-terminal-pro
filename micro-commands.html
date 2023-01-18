@@ -1,248 +1,268 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="resources/icon.png" type="image/png"/>
-    <link rel="stylesheet" href="css/main.css">
-    <title>Macro Simulator CNC | Micro commands</title>
-    <meta name="description" content="Macro Simulator CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
-    <meta name="keywords" content=""/>
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-  </head>
-  <body>
-    <noscript>Your browser does not support JavaScript!</noscript>
-    <div id="splash-screen">
-      <img src="resources/spinner.gif"  alt="spinner"/>
-    </div>
-    <div id="app" class="hide">
-      <header>
-        {{ header }}
-      </header>
-      <main>
-        <div class="article">
-          <h1 class="article__title">Micro commands</h1>
-          <div class="separator"></div>
-          <div class="message message--alert">
-            <h3 class="message__header">Important</h3>
-            If you are using a micro command, the TOOL micro-command is mandatory before using another micro-command. The only exception is the SET micro-command.
-          </div>
-          <div class="message message--alert">
-            <h3 class="message__header">Important</h3>
-            Remember to define the tool radius in the Macro Simulator CNC tool magazine before calling TOOL micro command.
-          </div>
-          <div class="article__content">
-            Micro-commands are part of the synthetic sugar for ISO (RS-274) containing special keywords that describe cycles and special functions that are not normally available in G-code.
-            Their use greatly simplifies programming and allows to minimize the amount of repetitive code.
-          </div>
-          <div class="article__content">
-            Currently, they include keywords such as:
-          </div>
-          <div class="code-view this">
-            SET
-            TOOL
-            CYCLE
-            PATTERN
-            POCKET
-            SLOT
-            SURFACE
-            SHOULDER 
-            THREADING
-            DRILLING
-            BORING
-            MIRROR
-            SHIFT
-            ZOOM
-          </div>
-          <div class="article__content"> 
-            You can also use micro-commands alternating with regular code or with macros to automate various types of tasks. 
-          </div>
-          <div class="message message--info">
-            <h3 class="message__header">Good to know</h3>
-            The micro-commands are not part of the ISO standard and therefore must be converted by Macro Simulator CNC to the proper code, understandable for CNC machines, which is done during code export.
-          </div>
-          <div class="article__content">
-            To see how useful micro-commands are, let's see some common examples.
-            As you know, in order to start performing any task on a CNC machine, you need to insert data about the tool, approach points, height correction, etc.What usually looks like this:
-          </div>
-          <div class="code-view">
-            T1 M6
-            G00 G54 X0. Y0.
-            S1200 M3
-            G43 H1 Z50. M8
-          </div>
-          <div class="article__content">
-            Just look, 4 lines of boilerplate code that repeats almost all the time, with most of the only difference being the tool number and the approach point. Additionally, remember not to forget to insert the decimal point!Looks like a huge waste of time, right? Of course, you can try to copy and paste, but you still need to change some data and so on. And here you can see how useful microcommands are.Instead of writing the same piece of code over and over again, you can use:
-          </div>
-          <div class="code-view">
-            TOOL 1 S1200
-          </div>
-          <div class="article__content">
-            Amazing, isn't it? This micro-command produces the same code snippet as the output as in the example above. But what if you want to change some data? How to do it?It's simple, take a look:
-          </div>
-          <div class="code-view">
-            TOOL 1 S1200 X100
-          </div>
-          <div class="article__content">
-            Is equal to:
-          </div>
-          <div class="code-view">
-            T1 M6
-            G00 G54 X100. Y0.
-            S1200 M3
-            G43 H1 Z50. M8
-          </div>
-          <div class="article__content">
-            Next one:
-          </div>
-          <div class="code-view">
-            TOOL 1 S1200 C0 (COOLANT OFF)
-          </div>
-          <div class="article__content">
-            Is equal to:
-          </div>
-          <div class="code-view">
-            T1 M6
-            G00 G54 X0. Y0.
-            S1200 M3
-            G43 H1 Z50. M9
-          </div>
-          <div class="article__content">
-            As you may have noticed, the name of the address in most cases corresponds to the first letter of a full English term, which makes it much easier to use.
 
-<br/><br/>Let's see another, more extensive example. Mostly in real life, you will have to invoke the tool multiple times and some data changes but others stay the same, such as the approach point.
-In this case, it is very useful to use the SET keyword to override the default values of other micro-commands.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Macro Simulator CNC | Micro commands</title>
+  <meta name="description"
+    content="Macro Simulator CNC is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
 
-          </div>
-          <div class="code-view">
-            SET X20 Y35 Z3
-            TOOL 1 S500
-            …
-            TOOL 2 S1200
-            …
-            TOOL 3 S250
-          </div>
-          <div class="article__content">
-            Is equal to:
-          </div>
-          <div class="code-view">
-            T1 M6
-            G00 G54 X20. Y35.
-            S500 M3
-            G43 H1 Z3. M8
-            …
-            T2 M6
-            G00 G54 X20. Y35.
-            S1200 M3
-            G43 H2 Z3. M8
-            …
-            T3 M6
-            G00 G54 X20. Y35.
-            S250 M3
-            G43 H3 Z3. M8
-          </div>
-          <div class="article__content">
-            You are probably already able to notice how micro-commands make the work easier.
-Well, it's time for a real example of the program!
-<br/><br/>In this diagram there are 10 COARSE M10 X 1.5 threads at a 13 degree angle. Of course, holes must be drilled before tapping and chamfered.
-          </div>
-          <img class="article__img" src="resources/scheme.png" alt="scheme"/>
-          <div class="article__content">
-            Here's what a finished program looks like using micro commands for this example
-          </div>
-          <div class="code-view">
-            O0001
-            SET A13
-            #100 = 3 (LINES)
-            #101 = 4 (COLUMNS)
-            (DRILLING)
-            TOOL 1 S3067
-            CYCLE Z-23.981 F613
-            PATTERN 4 L#100 C#101
-            (CHAMFERING)
-            TOOL 2 S523
-            CYCLE Z-2.25 F107
-            PATTERN 4 L#100 C#101
-            (TAPPING)
-            TOOL 3 S290
-            CYCLE 4 Z-32 F435
-            PATTERN 4 L#100 C#101
-          </div>
-          <div class="article__content">
-            And as it looked, without using micro commands. 
-            Of course, you can use a subroutine for coordinates, but the code is less readable anyway and requires more focus when changing any of the contained data.
-          </div>
-          <div class="code-view">
-            O0001 ;
-            ( SAFETY LINE ) ;
-            G00 G17 G21 G40 G53 G80 G90 ;
-            ( END MILL 10X100 ) ;
-            T1 M06 ;
-            G54 X0. Y0. ;
-            S3067 M3 ;
-            G43 H1 Z50. M8 ;
-            G98 G81 Z-23.981 R3. K0. F613. ;
-            X-67.460 Y25.478 ;
-            X-58.462 Y-13.497 ;
-            X-49.464 Y-52.472 ;
-            X-28.485 Y34.476 ;
-            X-10.489 Y-43.474 ;
-            X10.489 Y43.474 ;
-            X28.485 Y-34.476 ;
-            X49.464 Y52.472 ;
-            X58.462 Y13.497 ;
-            X67.460 Y-25.478 ;
-            G80 Z50. ;
-            ( D6.5 X H50 ) ;
-            T2 M06 ;
-            G54 X0. Y0. ;
-            S523 M3 ;
-            G43 H2 M8 ;
-            G98 G81 Z-2.25 R3. K0. F107. ;
-            X-67.460 Y25.478 ;
-            X-58.462 Y-13.497 ;
-            X-49.464 Y-52.472 ;
-            X-28.485 Y34.476 ;
-            X-10.489 Y-43.474 ;
-            X10.489 Y43.474 ;
-            X28.485 Y-34.476 ;
-            X49.464 Y52.472 ;
-            X58.462 Y13.497 ;
-            X67.460 Y-25.478 ;
-            G80 Z50. ;
-            ( COARSE M10 X 1.5 ) ;
-            T3 M06 ;
-            G54 X0. Y0. ;
-            S290 M3 ;
-            G43 H3 M8 ;
-            G98 G84 Z-32. R3. K0. F435. ;
-            X-67.460 Y25.478 ;
-            X-58.462 Y-13.497 ;
-            X-49.464 Y-52.472 ;
-            X-28.485 Y34.476 ;
-            X-10.489 Y-43.474 ;
-            X10.489 Y43.474 ;
-            X28.485 Y-34.476 ;
-            X49.464 Y52.472 ;
-            X58.462 Y13.497 ;
-            X67.460 Y-25.478 ;
-            G80 Z50. ;
-            M30 ;
-          </div>
-          <div class="message message--info">
-            <h3 class="message__header">Good to know</h3>
-            You may have noticed that there is a security line in the code above, the names of the tools before the call, and the end of the program. 
-            Macro Simulator CNC adds this data automatically when exporting the program.
-          </div>
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ header }}
+    </header>
+    <main>
+      <div class="article">
+        <h1 class="article__title">Micro commands</h1>
+        <div class="separator"></div>
+        <div class="message message--alert">
+          <h3 class="message__header">Important</h3>
+          If you are using a micro command, the TOOL micro-command is mandatory before using another micro-command. The
+          only exception is the SET micro-command.
         </div>
-      </main>
-      <footer class="footer">
-        {{ footer }}
-      </footer>
-      <script src="js/script-loader.js"></script>
-      <script src="js/main.js"></script>
-    </div>
-  </body>
+        <div class="message message--alert">
+          <h3 class="message__header">Important</h3>
+          Remember to define the tool radius in the Macro Simulator CNC tool magazine before calling TOOL micro command.
+        </div>
+        <div class="article__content">
+          Micro-commands are part of the synthetic sugar for ISO (RS-274) containing special keywords that describe
+          cycles and special functions that are not normally available in G-code.
+          Their use greatly simplifies programming and allows to minimize the amount of repetitive code.
+        </div>
+        <div class="article__content">
+          Currently, they include keywords such as:
+        </div>
+        <div class="code-view this">
+          SET
+          TOOL
+          CYCLE
+          PATTERN
+          POCKET
+          SLOT
+          SURFACE
+          SHOULDER
+          THREADING
+          DRILLING
+          BORING
+          MIRROR
+          SHIFT
+          ZOOM
+          ROTATE
+        </div>
+        <div class="article__content">
+          You can also use micro-commands alternating with regular code or with macros to automate various types of
+          tasks.
+        </div>
+        <div class="message message--info">
+          <h3 class="message__header">Good to know</h3>
+          The micro-commands are not part of the ISO standard and therefore must be converted by Macro Simulator CNC to
+          the proper code, understandable for CNC machines, which is done during code export.
+        </div>
+        <div class="article__content">
+          To see how useful micro-commands are, let's see some common examples.
+          As you know, in order to start performing any task on a CNC machine, you need to insert data about the tool,
+          approach points, height correction, etc.What usually looks like this:
+        </div>
+        <div class="code-view">
+          T1 M6
+          G00 G54 X0. Y0.
+          S1200 M3
+          G43 H1 Z50. M8
+        </div>
+        <div class="article__content">
+          Just look, 4 lines of boilerplate code that repeats almost all the time, with most of the only difference
+          being the tool number and the approach point. Additionally, remember not to forget to insert the decimal
+          point!Looks like a huge waste of time, right? Of course, you can try to copy and paste, but you still need to
+          change some data and so on. And here you can see how useful microcommands are.Instead of writing the same
+          piece of code over and over again, you can use:
+        </div>
+        <div class="code-view">
+          TOOL 1 S1200
+        </div>
+        <div class="article__content">
+          Amazing, isn't it? This micro-command produces the same code snippet as the output as in the example above.
+          But what if you want to change some data? How to do it?It's simple, take a look:
+        </div>
+        <div class="code-view">
+          TOOL 1 S1200 X100
+        </div>
+        <div class="article__content">
+          Is equal to:
+        </div>
+        <div class="code-view">
+          T1 M6
+          G00 G54 X100. Y0.
+          S1200 M3
+          G43 H1 Z50. M8
+        </div>
+        <div class="article__content">
+          Next one:
+        </div>
+        <div class="code-view">
+          TOOL 1 S1200 C0 (COOLANT OFF)
+        </div>
+        <div class="article__content">
+          Is equal to:
+        </div>
+        <div class="code-view">
+          T1 M6
+          G00 G54 X0. Y0.
+          S1200 M3
+          G43 H1 Z50. M9
+        </div>
+        <div class="article__content">
+          As you may have noticed, the name of the address in most cases corresponds to the first letter of a full
+          English term, which makes it much easier to use.
+
+          <br /><br />Let's see another, more extensive example. Mostly in real life, you will have to invoke the tool
+          multiple times and some data changes but others stay the same, such as the approach point.
+          In this case, it is very useful to use the SET keyword to override the default values of other micro-commands.
+
+        </div>
+        <div class="code-view">
+          SET X20 Y35 Z3
+          TOOL 1 S500
+          …
+          TOOL 2 S1200
+          …
+          TOOL 3 S250
+        </div>
+        <div class="article__content">
+          Is equal to:
+        </div>
+        <div class="code-view">
+          T1 M6
+          G00 G54 X20. Y35.
+          S500 M3
+          G43 H1 Z3. M8
+          …
+          T2 M6
+          G00 G54 X20. Y35.
+          S1200 M3
+          G43 H2 Z3. M8
+          …
+          T3 M6
+          G00 G54 X20. Y35.
+          S250 M3
+          G43 H3 Z3. M8
+        </div>
+        <div class="article__content">
+          You are probably already able to notice how micro-commands make the work easier.
+          Well, it's time for a real example of the program!
+          <br /><br />In this diagram there are 10 COARSE M10 X 1.5 threads at a 13 degree angle. Of course, holes must
+          be drilled before tapping and chamfered.
+        </div>
+        <img class="article__img" src="resources/scheme.png" alt="scheme" />
+        <div class="article__content">
+          Here's what a finished program looks like using micro commands for this example
+        </div>
+        <div class="code-view">
+          O0001
+          SET A13
+          #100 = 3 (LINES)
+          #101 = 4 (COLUMNS)
+          (DRILLING)
+          TOOL 1 S3067
+          CYCLE Z-23.981 F613
+          PATTERN 4 L#100 C#101
+          (CHAMFERING)
+          TOOL 2 S523
+          CYCLE Z-2.25 F107
+          PATTERN 4 L#100 C#101
+          (TAPPING)
+          TOOL 3 S290
+          CYCLE 4 Z-32 F435
+          PATTERN 4 L#100 C#101
+        </div>
+        <div class="article__content">
+          And as it looked, without using micro commands.
+          Of course, you can use a subroutine for coordinates, but the code is less readable anyway and requires more
+          focus when changing any of the contained data.
+        </div>
+        <div class="code-view">
+          O0001 ;
+          ( SAFETY LINE ) ;
+          G00 G17 G21 G40 G53 G80 G90 ;
+          ( END MILL 10X100 ) ;
+          T1 M06 ;
+          G54 X0. Y0. ;
+          S3067 M3 ;
+          G43 H1 Z50. M8 ;
+          G98 G81 Z-23.981 R3. K0. F613. ;
+          X-67.460 Y25.478 ;
+          X-58.462 Y-13.497 ;
+          X-49.464 Y-52.472 ;
+          X-28.485 Y34.476 ;
+          X-10.489 Y-43.474 ;
+          X10.489 Y43.474 ;
+          X28.485 Y-34.476 ;
+          X49.464 Y52.472 ;
+          X58.462 Y13.497 ;
+          X67.460 Y-25.478 ;
+          G80 Z50. ;
+          ( D6.5 X H50 ) ;
+          T2 M06 ;
+          G54 X0. Y0. ;
+          S523 M3 ;
+          G43 H2 M8 ;
+          G98 G81 Z-2.25 R3. K0. F107. ;
+          X-67.460 Y25.478 ;
+          X-58.462 Y-13.497 ;
+          X-49.464 Y-52.472 ;
+          X-28.485 Y34.476 ;
+          X-10.489 Y-43.474 ;
+          X10.489 Y43.474 ;
+          X28.485 Y-34.476 ;
+          X49.464 Y52.472 ;
+          X58.462 Y13.497 ;
+          X67.460 Y-25.478 ;
+          G80 Z50. ;
+          ( COARSE M10 X 1.5 ) ;
+          T3 M06 ;
+          G54 X0. Y0. ;
+          S290 M3 ;
+          G43 H3 M8 ;
+          G98 G84 Z-32. R3. K0. F435. ;
+          X-67.460 Y25.478 ;
+          X-58.462 Y-13.497 ;
+          X-49.464 Y-52.472 ;
+          X-28.485 Y34.476 ;
+          X-10.489 Y-43.474 ;
+          X10.489 Y43.474 ;
+          X28.485 Y-34.476 ;
+          X49.464 Y52.472 ;
+          X58.462 Y13.497 ;
+          X67.460 Y-25.478 ;
+          G80 Z50. ;
+          M30 ;
+        </div>
+        <div class="message message--info">
+          <h3 class="message__header">Good to know</h3>
+          You may have noticed that there is a security line in the code above, the names of the tools before the call,
+          and the end of the program.
+          Macro Simulator CNC adds this data automatically when exporting the program.
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
 </html>

@@ -26,7 +26,7 @@ function Highlighter() {
     this.keyword = [{
       name: 'keyword',
       keys: [
-        'WHILE', 'IF', 'GOTO', 'THEN', 'END', 'DO', 'ELSE', 'POCKET', 'TOOL', 'SLOT', 'CYCLE', 'PATTERN', 'SURFACE', 'SHOULDER', 'SET', 'SETTOOL', 'THREADING', 'DRILLING', 'BORING', 'MIRROR', 'SHIFT', 'ZOOM'
+        'WHILE', 'IF', 'GOTO', 'THEN', 'END', 'DO', 'ELSE', 'POCKET', 'TOOL', 'SLOT', 'CYCLE', 'PATTERN', 'SURFACE', 'SHOULDER', 'SET', 'SETTOOL', 'THREADING', 'DRILLING', 'BORING', 'MIRROR', 'SHIFT', 'ZOOM', 'ROTATE', 'CUSTOM'
       ],
       test: new TestIdentical(),
       color: '#C677DD'
@@ -125,8 +125,8 @@ function Highlighter() {
   }
 
   this.exec = (string = '') => {
-    const array = string.split('\n')
-    return array.filter((line, i) => line.length !== 0 && i !== array.length - 1).map(line => this.color(line) + '<br/>').join('');
+    const array = string.split('\n').slice(1)
+    return array.filter((line, i) => i !== array.length - 1).map(line => this.color(line) + '<br/>').join('');
   }
 
   this.colorComments = string => {
