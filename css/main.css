@@ -806,7 +806,7 @@ noscript {
 
 .article__content {
   padding-bottom: 0.5rem;
-  color: #595959;
+  color: #404040;
   font-size: 1.2rem;
 }
 
@@ -1252,7 +1252,7 @@ th, td {
   margin: 1rem;
   text-align: center;
   background-color: #c50000;
-  border-radius: 5px;
+  border-radius: 2.5rem;
   color: #fff;
   font-size: 2rem;
   padding: 1rem;
@@ -1262,14 +1262,13 @@ th, td {
   content: 'Need a demo version? Click me!';
 }
 
+.banner:hover {
+  background-color: #ffc43c;
+}
+
 .banner--full {
   width: 100%;
   margin: 0;
-}
-
-.format {
-  display: inline-block;
-  margin-bottom: 1rem;
 }
 
 .list {
@@ -1294,6 +1293,14 @@ th, td {
   content: '+ ';
   color: red;
   font-size: 1.6rem;
+}
+
+.list--full {
+  margin-left: 0;
+}
+
+.list--full > li {
+  width: 100%;
 }
 
 .new {
