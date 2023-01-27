@@ -914,6 +914,14 @@ noscript {
   font-weight: 800;
 }
 
+.main__list > li {
+  color: #c50000;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  list-style-type: none;
+}
+
 .main__title {
   display: inline-block;
   margin-top: 1rem;
@@ -1251,15 +1259,26 @@ th, td {
   width: calc(100% - 2rem);
   margin: 1rem;
   text-align: center;
-  background-color: #c50000;
   border-radius: 2.5rem;
   color: #fff;
   font-size: 2rem;
   padding: 1rem;
 }
 
-.banner::after {
+.banner__demo {
+  background-color: #c50000;
+}
+
+.banner__demo::after {
   content: 'Need a demo version? Click me!';
+}
+
+.banner__lathe {
+  background-color: #37aadb;
+}
+
+.banner__lathe::after {
+  content: 'Need a lathe version? Click me!';
 }
 
 .banner:hover {
@@ -1315,5 +1334,50 @@ th, td {
 
 .new::after {
   content: 'New';
+}
+
+.gallery {
+  overflow: auto;
+  white-space: nowrap;
+  position: relative;
+}
+
+.gallery > img {
+  width: 650px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.sell-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*@include media-md {
+    flex-direction: row;
+  }*/
+}
+
+.sell-container .price {
+  font-size: 2.5rem;
+  margin-right: 0;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=main.css.map */
