@@ -674,8 +674,7 @@ noscript {
 }
 
 .faq__question {
-  margin-top: 40px;
-  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .faq__question::before {
@@ -685,7 +684,7 @@ noscript {
 }
 
 .faq__answer {
-  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #737373;
   font-size: 1.2rem;
 }
@@ -747,13 +746,14 @@ noscript {
 .article {
   min-height: 100vh;
   padding: 1rem;
+  margin-top: 1rem;
   counter-reset: c;
   font-family: Arial, Helvetica, serif;
 }
 
 @media screen and (min-width: 768px) {
   .article {
-    padding: 1rem;
+    margin-top: 4rem;
   }
 }
 
@@ -778,7 +778,7 @@ noscript {
 }
 
 .article__subtitle {
-  margin-top: 40px;
+  /*margin-top: 40px;*/
   padding-bottom: 0.5rem;
   font-size: 1.3rem;
   /*&::before{
@@ -805,9 +805,9 @@ noscript {
 }
 
 .article__content {
-  padding-bottom: 0.5rem;
-  color: #404040;
-  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #262626;
+  font-size: 1.4rem;
 }
 
 .article__content > a {
@@ -841,10 +841,12 @@ noscript {
 .article__list {
   color: #333333;
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .article__feature {
   color: #333333;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -1281,19 +1283,33 @@ th, td {
   content: 'Need a lathe version? Click me!';
 }
 
+.banner__buy {
+  background-color: #c50000;
+}
+
+.banner__buy::after {
+  content: 'Don\'t wait and get it now!';
+}
+
 .banner:hover {
   background-color: #ffc43c;
 }
 
 .banner--full {
   width: 100%;
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .list {
   font-size: 1.5rem;
   margin-left: 1rem;
   list-style-type: none;
+}
+
+.list--nice {
+  color: #404040;
+  font-size: 1.2rem;
 }
 
 .list > li {
@@ -1366,6 +1382,7 @@ th, td {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 1rem;
   /*@include media-md {
     flex-direction: row;
   }*/

@@ -53,6 +53,9 @@ const main = () => {
       review: 'This app works as advertised that is for sure! It helped me troubleshoot and write some macro cycles I was attempting. I didn’t have time to test them on the machines at work every adjustment. So here I could nail down the code to then only fix minor controller differences in the code',
       location: APP.GOOGLE_PLAY()
     }])
+  }, {
+    id: 'current-year',
+    content: new Date().getFullYear()
   }]
 
   const components = [{
@@ -86,6 +89,10 @@ const main = () => {
     type: ['nav', 'menu', 'footer'],
     link: 'get-started.html',
     desc: 'Manual'
+  }, {
+    type: ['nav', 'menu', 'footer'],
+    link: 'macro-programming.html',
+    desc: 'Why'
   }, {
     type: ['nav', 'menu', 'footer'],
     link: 'contact.html',
