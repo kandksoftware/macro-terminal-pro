@@ -1,7 +1,7 @@
 'use strict'
 
 const main = () => {
-  const APP_NAME = 'Macro Simulator CNC'
+  const APP_NAME = 'CNC Macro Simulator'
   const array = [{
     id: 'header',
     content: `<nav class="nav">

@@ -254,7 +254,7 @@ noscript {
 }
 
 #splash-screen::before {
-  content: "Macro Simulator CNC";
+  content: "CNC Macro Simulator";
 }
 
 #splash-screen > img {
@@ -305,13 +305,13 @@ noscript {
 }
 
 .nav__name::after {
-  content: "MS";
+  content: "CMS";
   font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
   .nav__name::after {
-    content: "Macro Simulator CNC";
+    content: "CNC Macro Simulator";
   }
 }
 

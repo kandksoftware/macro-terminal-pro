@@ -1,87 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
-    <link rel="stylesheet" href="css/main.css">
-    <title>Macro Simulator CNC | Quick start</title>
-    <meta name="description" content="Macro Simulator CNC | Quick start" />
-    <meta name="keywords" content=""/>
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-  </head>
-  <body>
-    <noscript>Your browser does not support JavaScript!</noscript>
-    <div id="splash-screen">
-      <img src="resources/spinner.gif"  alt="spinner"/>
-    </div>
-    <div id="app" class="hide">
-      <header>
-        {{ header }}
-      </header>
-      <main>
-        <section class="article">
-          <h1 class="article__title">Quick start</h1>
-          <div class="separator"></div>
-          <div class="message message--alert">
-            <h3 class="message__header">Important</h3>
-            Remember to always use AERS and keep it on for your own safety and that of others!
-          </div>
-          <div class="message message--alert">
-            <h3 class="message__header">Important</h3>
-            Remember to always be extremely vigilant when running programs on the CNC machine and run freshly created programs line by line!
-          </div>
-          <div class="message message--info">
-            <h3 class="message__header">Good to know</h3>
-            If you have found a potential error that occurs quite often, is security related and is still not in the AERS database, please <a href="contact.html">contact us</a>.
-          </div>
-          <h2 class="article__subtitle">Pre-settings</h2>
-          <img class="article__img" src="resources/pre-settings.png" alt="Pre settings"/>
-          <p class="article__content">
-            Choose your preferred language, control which one you want to work with and the measurement system (mm/inch).
-          </p>
-          <div class="message message--info">
-            <h3 class="message__header">Good to know</h3>
-            Remember that you can always change your settings in the settings panel.
-          </div>
-          <div class="message message--info">
-            <h3 class="message__header">Good to know</h3>
-            If you have not found the setting you are looking for, please <a href="contact.html">contact us</a>.
-          </div>
-          <h2 class="article__subtitle">Code editor</h2>
-          <img class="article__img" src="resources/editor.png" alt="code editor"/>
-          <p class="article__content">After saving your presets, you should see an editor window with a welcome text. To use it, you can paste your code, open a file, use one of the examples or simply write a cnc program yourself.
-            In this case, we will use one of the built-in code examples.
-          </p>
-          <h2 class="article__subtitle">Code execution</h2>
-          <img class="article__img" src="resources/code-example.png" alt="code examples"/>
-          <p class="article__content">As you can see in the attached picture, the code is automatically colored and formatted to increase the readability of the information it contains.
-          </p>
-          <img class="article__img" src="resources/menu-run.png" alt="menu run"/>
-          <p class="article__content">To execute the code, press the triangular button in the upper right corner. See the picture above.</p>
-          <img class="article__img" src="resources/code-error.png" alt="code error"/>
-          <p class="article__content">In the screenshot above, you can see what happens after the code is executed. As you can see, a lot of bugs have emerged. This is due to the fact that the example program used does not have such information about the tool used and other important information, without which the tool can hit the milling table or the workpiece.
-            But if you are writing code only for learning macros or writing a subroutine and therefore your code does not contain information such as the tool number or other information that is usually entered at the beginning of the main program, you can disable AERS by using the switch in the settings (see image below).
-          </p>
-          <img class="article__img" src="resources/aers-off.png" alt="aers off"/>
-          <p class="article__content">If you are writing code only for learning macros or writing a subroutine and therefore your code does not contain information such as the tool number or other information that is usually entered at the beginning of the main program, you can disable AERS by using the switch in the settings (see image above).
-          </p>
-          <img class="article__img" src="resources/code-executed.png" alt="code executed"/>
-          <p class="article__content">As you can see now, the program ran without any error messages. However, remember to always use AERS turned on, your program is to be used in practice.
-          </p>
-          <!--<h2 class="article__subtitle">Save / export / append code</h2>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>CNC Macro Simulator | Quick start</title>
+  <meta name="description" content="CNC Macro Simulator | Quick start" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ header }}
+    </header>
+    <main>
+      <section class="article">
+        <h1 class="article__title">Quick start</h1>
+        <div class="separator"></div>
+        <div class="message message--alert">
+          <h3 class="message__header">Important</h3>
+          Remember to always use AERS and keep it on for your own safety and that of others!
+        </div>
+        <div class="message message--alert">
+          <h3 class="message__header">Important</h3>
+          Remember to always be extremely vigilant when running programs on the CNC machine and run freshly created
+          programs line by line!
+        </div>
+        <div class="message message--info">
+          <h3 class="message__header">Good to know</h3>
+          If you have found a potential error that occurs quite often, is security related and is still not in the AERS
+          database, please <a href="contact.html">contact us</a>.
+        </div>
+        <h2 class="article__subtitle">Pre-settings</h2>
+        <img class="article__img" src="resources/pre-settings.png" alt="Pre settings" />
+        <p class="article__content">
+          Choose your preferred language, control which one you want to work with and the measurement system (mm/inch).
+        </p>
+        <div class="message message--info">
+          <h3 class="message__header">Good to know</h3>
+          Remember that you can always change your settings in the settings panel.
+        </div>
+        <div class="message message--info">
+          <h3 class="message__header">Good to know</h3>
+          If you have not found the setting you are looking for, please <a href="contact.html">contact us</a>.
+        </div>
+        <h2 class="article__subtitle">Code editor</h2>
+        <img class="article__img" src="resources/editor.png" alt="code editor" />
+        <p class="article__content">After saving your presets, you should see an editor window with a welcome text. To
+          use it, you can paste your code, open a file, use one of the examples or simply write a cnc program yourself.
+          In this case, we will use one of the built-in code examples.
+        </p>
+        <h2 class="article__subtitle">Code execution</h2>
+        <img class="article__img" src="resources/code-example.png" alt="code examples" />
+        <p class="article__content">As you can see in the attached picture, the code is automatically colored and
+          formatted to increase the readability of the information it contains.
+        </p>
+        <img class="article__img" src="resources/menu-run.png" alt="menu run" />
+        <p class="article__content">To execute the code, press the triangular button in the upper right corner. See the
+          picture above.</p>
+        <img class="article__img" src="resources/code-error.png" alt="code error" />
+        <p class="article__content">In the screenshot above, you can see what happens after the code is executed. As you
+          can see, a lot of bugs have emerged. This is due to the fact that the example program used does not have such
+          information about the tool used and other important information, without which the tool can hit the milling
+          table or the workpiece.
+          But if you are writing code only for learning macros or writing a subroutine and therefore your code does not
+          contain information such as the tool number or other information that is usually entered at the beginning of
+          the main program, you can disable AERS by using the switch in the settings (see image below).
+        </p>
+        <img class="article__img" src="resources/aers-off.png" alt="aers off" />
+        <p class="article__content">If you are writing code only for learning macros or writing a subroutine and
+          therefore your code does not contain information such as the tool number or other information that is usually
+          entered at the beginning of the main program, you can disable AERS by using the switch in the settings (see
+          image above).
+        </p>
+        <img class="article__img" src="resources/code-executed.png" alt="code executed" />
+        <p class="article__content">As you can see now, the program ran without any error messages. However, remember to
+          always use AERS turned on, your program is to be used in practice.
+        </p>
+        <!--<h2 class="article__subtitle">Save / export / append code</h2>
           <img class="article__img" src="resources/save.png" alt="save code"/>
           <p class="article__content">
           </p>-->
-        </section>
-      </main>
-      <footer class="footer">
-        {{ footer }}
-      </footer>
-      <script src="js/script-loader.js"></script>
-      <script src="js/main.js"></script>
-    </div>
-  </body>
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
 </html>
