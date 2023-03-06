@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
   <link rel="stylesheet" href="css/main.css">
-  <title>CNC Macro Simulator | Product</title>
+  <title>CNC Macro Simulator II | Product</title>
   <meta name="description"
-    content="CNC Macro Simulator is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
+    content="CNC Macro Simulator II is CNC simulator with CNC interpreter for Fanuc and Haas to learn, test and debug cnc parametric programming and g-code used in cnc milling machines and lathes" />
   <meta name="keywords" content="" />
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,9 +26,9 @@
     </header>
     <main>
       <section class="article">
-        <h1 class="article__title">Technical information</h1>
+        <h1 class="article__title">Technical information (CNC Macro Simulator II)</h1>
         <div class="separator"></div>
-        <h2 class="article__subtitle" id="cycles">Conversational mode (only conversational version):</h2>
+        <h2 class="article__subtitle" id="cycles">Conversational mode (conversation and PRO version only):</h2>
         <div class="article__list">
           <ul>
             <li><span class="article--important">POCKET</span> - circular/rectangular pocket milling</li>
@@ -44,7 +44,7 @@
             <li><span class="article--important">HELICAL BORING</span> - helical boring, circular pocket milling</li>
           </ul>
         </div>
-        <h2 class="article__subtitle" id="cycles">Micro commands (only conversational version):</h2>
+        <h2 class="article__subtitle" id="cycles">Micro commands (conversation and PRO version only):</h2>
         <div class="article__list">
           <ul>
             <li><span class="article--important">TOOL</span> - tool call</li>
@@ -66,6 +66,7 @@
             <li><span class="article--important">ZOOM</span> - resize coordinates x and y</li>
             <li><span class="article--important">SHIFT</span> - move coordinates in x, y axis</li>
             <li><span class="article--important">ROTATE</span> - rotate coordinates in x, y axis
+              <div class="new new--small"></div>
             </li>
           </ul>
         </div>
@@ -78,6 +79,8 @@
             <li>adding automatically information about the tool used (at the beginning of the program as before calling
               it)</li>
             <li>adding line number</li>
+            <li>removing original line number<div class="new new--small"></div>
+            </li>
             <li>adding safety line</li>
             <li>auto adding end of program (M30)</li>
           </ul>
@@ -86,6 +89,8 @@
         <div class="article__list">
           <ul>
             <li>3D tool path</li>
+            <li>measuring an object / coordinates<div class="new new--small"></div>
+            </li>
             <li>simulation (play, play fast, stop, next, reset, previous, rewind)</li>
             <li>5 view modes (3D, XY, XY removal, XZ, YZ)</li>
             <li>image rotation in x axis</li>
@@ -126,9 +131,16 @@
         <h2 class="article__subtitle">Macro (Fanuc Custom Macro B/Haas/Centroid) support:</h2>
         <div class="article__list">
           <ul>
+            <li>improved and faster macro interpreter (XME 1.4.0) for advanced macro programs<div
+                class="new new--small"></div>
+            </li>
             <li>keywords: IF, THEN, GOTO, WHILE, DO, END, ELSE</li>
+            <li>special instruction - EXIT (to immediately end the program when this instruction is called)
+              <div class="new new--small"></div>
+            </li>
             <li>comparison operators (FANUC/HAAS): EQ, LT, LE, GT, GE, NE</li>
-            <li>comparison operators (CENTROID): <code>== or EQ, < OR LT, <= or LE, > or GT, >= or GE, != or NE</code>
+            <li>comparison operators (CENTROID):
+              <code>== or EQ, < OR LT, <= or LE, > or GT, >= or GE, != or NE<div class="new new--small"></div></code>
             </li>
             <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
             <li>local, common variables and some of the most popular system variables</li>
@@ -145,6 +157,8 @@
         <div class="article__list">
           <ul>
             <li>assigned and created variables</li>
+            <li>called subroutine and nesting level<div class="new new--small"></div>
+            </li>
             <li>math and logical calculations in line</li>
             <li>for IF and WHILE statement shows the actual value (true or false)</li>
           </ul>
@@ -154,6 +168,9 @@
           <ul>
             <li>code highlighting</li>
             <li>formatting</li>
+            <li>commenting and uncommenting a piece of code<div class="new new--small"></div>
+            <li>code indentation<div class="new new--small"></div>
+            </li>
             <li>undo/redo</li>
             <li>adding/removing EOB</li>
             <li>adding/removing %</li>
@@ -164,7 +181,8 @@
         <div class="article__list">
           <ul>
             <li>new project</li>
-            <li>open file</li>
+            <li>open file (opening multiple files at once)<div class="new new--small"></div>
+            </li>
             <li>open template</li>
             <li>append(to add a subroutine locally)</li>
             <li>save</li>

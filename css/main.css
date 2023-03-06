@@ -254,7 +254,7 @@ noscript {
 }
 
 #splash-screen::before {
-  content: "CNC Macro Simulator";
+  content: "CNC Macro Simulator II";
 }
 
 #splash-screen > img {
@@ -305,13 +305,13 @@ noscript {
 }
 
 .nav__name::after {
-  content: "CMS";
+  content: "CMS2";
   font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
   .nav__name::after {
-    content: "CNC Macro Simulator";
+    content: "CNC Macro Simulator II";
   }
 }
 
@@ -842,6 +842,7 @@ noscript {
   color: #333333;
   margin-left: 1rem;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .article__feature {
@@ -1006,8 +1007,8 @@ noscript {
 }
 
 .movie {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../resources/conversational.png");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../resources/conversational.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../resources/cutter.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../resources/cutter.png");
   height: 50vh;
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -1350,6 +1351,16 @@ th, td {
 
 .new::after {
   content: 'New';
+}
+
+.new--small {
+  right: 0;
+  top: -2px;
+  display: inline-block;
+  position: relative;
+  font-size: 0.7rem;
+  margin-left: 5px;
+  padding: 3px 8px;
 }
 
 .gallery {

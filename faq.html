@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
-    <link rel="stylesheet" href="css/main.css">
-    <title>Macro Simulator CNC | FAQ</title>
-    <meta name="description" content="Macro Simulator CNC | the most important questions" />
-    <meta name="keywords" content=""/>
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-  </head>
-  <body>
-    <noscript>Your browser does not support JavaScript!</noscript>
-    <div id="splash-screen">
-      <img src="resources/spinner.gif"  alt="spinner"/>
-    </div>
-    <div id="app" class="hide">
-      <header>
-        {{ header }}
-      </header>
-      <main>
-        <section class="faq h-k">
-          <h1 class="faq__title">FAQ</h1>
-          <div class="separator"></div>
-          <h2 class="faq__question">Whether the purchase is indefinite or has a validity period.</h2>
-          <p class="faq__answer">The purchase is for an unlimited period of time and has no expiry date.</p>
-          <h2 class="faq__question">I cannot find the file after saving it.</h2>
-          <p class="faq__answer">For most devices (desktops and mobile devices) files will be saved to the download folder, unless you changed the default directory</p>
-          <h2 class="faq__question">The message "Program not found" appears.</h2>
-          <p class="faq__answer">You are probably using the wrong settings - for example: if you want to create a program for a Haas machine, select the Haas option in the settings panel. If it does not work, please contact us.</p>
-          
-          <h2 class="faq__question">I found an error, what should I do?</h2>
-          <p class="faq__answer">If you found any bug, please contact us.</p>
-          <h2 class="faq__question">After pressing the execution button (light gray triangle in the upper right corner of the top bar) "Execution in progress" state does not change.</h2>
-          <p class="faq__answer">This could be because your program is very long, has many loops, or has many nested loops. In this case, wait for a while for the program to complete. However, if the execution time is more than 30 seconds, it may mean a looping of the program. To finish its execution, press the red stop button. If you cannot find the wrong part in your code, go to "Exec line / Line by line” and press "Play" or " Play fast". After a while you should recognize what part of the code is repeating itself. If you are still unsure, press "Stop" and then manually step through the lines using the "Next" button.</p>
-          <h2 class="faq__question">There were some warnings during the execution of the program, can I still use this program?</h2>
-          <p class="faq__answer">Yes, warnings do not mean that your program is buggy, but rather are intended to draw attention to possible unclear situations that may consequently be dangerous.</p>
-          <h2 class="faq__question">The rendered image is so large that I cannot shift it to see all the details. What should I do?</h2>
-          <p class="faq__answer">In the "Settings" panel, change the table settings to the size that matches the size of your CNC milling machine or CNC machining center.</p>
-          <h2 class="faq__question">How to use external subroutines?</h2>
-          <p class="faq__answer">Since you have a different file structure on your mobile device and this can cause problems with finding the subroutine, subroutines are added after the main program, just like local subroutines.</p>
-          <h2 class="faq__question">I'm using a Fanuc control that is not listed in compatibility. Will it work?</h2>
-          <p class="faq__answer">In most cases, the differences in Fanuc when it comes to programming are minor, so there should not be any problem. Nevertheless, it is better to check the manual.</p>
-        </section>
-      </main>
-      <footer class="footer">
-        {{ footer }}
-      </footer>
-      <script src="js/script-loader.js"></script>
-      <script src="js/main.js"></script>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>CNC Macro Simulator II | FAQ</title>
+  <meta name="description" content="Macro Simulator CNC | the most important questions" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ header }}
+    </header>
+    <main>
+      <section class="faq h-k">
+        <h1 class="faq__title">FAQ</h1>
+        <div class="separator"></div>
+        <h2 class="faq__question">Whether the purchase is indefinite or has a validity period.</h2>
+        <p class="faq__answer">The purchase is for an unlimited period of time and has no expiry date.</p>
+        <h2 class="faq__question">I cannot find the file after saving it.</h2>
+        <p class="faq__answer">For most devices (desktops and mobile devices) files will be saved to the download
+          folder, unless you changed the default directory</p>
+        <h2 class="faq__question">The message "Program not found" appears.</h2>
+        <p class="faq__answer">You are probably using the wrong settings - for example: if you want to create a program
+          for a Haas machine, select the Haas option in the settings panel. If it does not work, please contact us.</p>
+
+        <h2 class="faq__question">I found an error, what should I do?</h2>
+        <p class="faq__answer">If you found any bug, please contact us.</p>
+        <h2 class="faq__question">After pressing the execution button (light gray triangle in the upper right corner of
+          the top bar) "Execution in progress" state does not change.</h2>
+        <p class="faq__answer">This could be because your program is very long, has many loops, or has many nested
+          loops. In this case, wait for a while for the program to complete. However, if the execution time is more than
+          30 seconds, it may mean a looping of the program. To finish its execution, press the red stop button. If you
+          cannot find the wrong part in your code, go to "Exec line / Line by line” and press "Play" or " Play fast".
+          After a while you should recognize what part of the code is repeating itself. If you are still unsure, press
+          "Stop" and then manually step through the lines using the "Next" button.</p>
+        <h2 class="faq__question">There were some warnings during the execution of the program, can I still use this
+          program?</h2>
+        <p class="faq__answer">Yes, warnings do not mean that your program is buggy, but rather are intended to draw
+          attention to possible unclear situations that may consequently be dangerous.</p>
+        <h2 class="faq__question">The rendered image is so large that I cannot shift it to see all the details. What
+          should I do?</h2>
+        <p class="faq__answer">In the "Settings" panel, change the table settings to the size that matches the size of
+          your CNC milling machine or CNC machining center.</p>
+        <h2 class="faq__question">How to use external subroutines?</h2>
+        <p class="faq__answer">Since you have a different file structure on your mobile device and this can cause
+          problems with finding the subroutine, subroutines are added after the main program, just like local
+          subroutines.</p>
+        <h2 class="faq__question">I'm using a Fanuc control that is not listed in compatibility. Will it work?</h2>
+        <p class="faq__answer">In most cases, the differences in Fanuc when it comes to programming are minor, so there
+          should not be any problem. Nevertheless, it is better to check the manual.</p>
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
 </html>
