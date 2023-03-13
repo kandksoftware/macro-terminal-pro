@@ -92,7 +92,7 @@ const main = () => {
   }, {
     type: ['nav', 'menu', 'footer'],
     link: 'macro-programming.html',
-    desc: 'Why'
+    desc: 'Interesting'
   }, {
     type: ['nav', 'menu', 'footer'],
     link: 'contact.html',

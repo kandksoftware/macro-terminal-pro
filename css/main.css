@@ -1154,6 +1154,10 @@ th, td {
   }
 }
 
+.cards__center-title {
+  text-align: center;
+}
+
 .card {
   width: 100%;
   height: auto;
