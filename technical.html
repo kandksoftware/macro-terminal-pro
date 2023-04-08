@@ -28,7 +28,36 @@
       <section class="article">
         <h1 class="article__title">Technical information (CNC Macro Simulator II)</h1>
         <div class="separator"></div>
-        <h2 class="article__subtitle" id="cycles">Conversational mode (conversational and PRO version only):</h2>
+        <h2 class="article__subtitle" id="cycles">Lathe conversational shell (TC and PRO version
+          only):
+        </h2>
+        <div class="article__list">
+          <ul>
+            <li><span class="article--important">FACING</span> - removing material from the end of a workpiece to create
+              a flat surface perpendicular to the axis of rotation</li>
+            <li><span class="article--important">TURNING</span> - removing material from the inside od outside of a
+              workpiece
+              to create a desired shape or size
+            </li>
+            <li><span class="article--important">CONTOURING</span> - create specific shape, tool follows a path with a
+              predefined geometry</li>
+            <li><span class="article--important">DRILLING</span> - making a hole in a workpiece using a drill bit</li>
+            <li><span class="article--important">THREADING</span> - cutting threads on the inside or outside of a
+              workpiece</li>
+            <li><span class="article--important">TAPPING</span> - cutting threads into a pre-drilled hole in a workpiece
+            </li>
+            <li><span class="article--important">REAMING</span> - enlarging a pre-existing hole in a workpiece to a
+              specific size and shape using a reamer tool</li>
+            <li><span class="article--important">BORING</span> - enlarging an existing hole in a workpiece to a specific
+              size and shape using a boring tool</li>
+            <li><span class="article--important">GROOVING</span> - cutting a groove into the surface of a workpiece</li>
+            <li><span class="article--important">FACE GROOVING</span> - cutting a groove into the end face of a
+              workpiece</li>
+            <li><span class="article--important">PARTING</span> - cutting a workpiece to create two separate pieces</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle" id="cycles">Mill conversational shell (MC and PRO version only):
+        </h2>
         <div class="article__list">
           <ul>
             <li><span class="article--important">POCKET</span> - circular/rectangular pocket milling</li>
@@ -44,7 +73,8 @@
             <li><span class="article--important">HELICAL BORING</span> - helical boring, circular pocket milling</li>
           </ul>
         </div>
-        <h2 class="article__subtitle" id="cycles">Micro commands (conversational and PRO version only):</h2>
+        <h2 class="article__subtitle" id="cycles">Micro commands (MC and PRO version only):
+        </h2>
         <div class="article__list">
           <ul>
             <li><span class="article--important">TOOL</span> - tool call</li>
@@ -92,30 +122,52 @@
             <li>measuring an object / coordinates<div class="new new--small"></div>
             </li>
             <li>simulation (play, play fast, stop, next, reset, previous, rewind)</li>
-            <li>5 view modes (3D, XY, XY removal, XZ, YZ)</li>
-            <li>image rotation in x axis</li>
+            <li>mill - 5 view modes (3D, XY, XY removal, XZ, YZ), lathe - 1 view modes XZ</li>
+            <li>image rotation in x axis (mill)</li>
             <li>zoom</li>
             <li>shift image</li>
             <li>show/hide rapid movement</li>
-            <li>simplified representation of tools (max 50 tools)</li>
+            <li>simplified representation of tools (mill - max 100 tools, lathe - max 32 tools)</li>
             <li>metric/imperial mode</li>
             <li>3 themes (dark, bright, black & white)</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Lathe cycles support (TC and PRO version only):</h2>
+        <div class="article__list">
+          <ul>
+            <li>G28, G30 and G53(home position)</li>
+            <li>G70 finishing cycle</li>
+            <li>G71 rough machining cycle</li>
+            <li>G72 facing cycle</li>
+            <li>G73 pattern repetition cycle</li>
+            <li>G74 face grooving cycle</li>
+            <li>G75 grooving cycle</li>
+            <li>G76/G78 threading cycle</li>
+            <li>G90 turning cycle</li>
+            <li>G92 threading cycle</li>
+            <li>G94 facing cycle</li>
+            <li>G32/G33 thread cutting (straight and tapered)</li>
           </ul>
         </div>
         <h2 class="article__subtitle">G-code/Fanuc/Haas/Mazak ISO support:</h2>
         <div class="article__list">
           <ul>
             <li>absolute, incremental and polar mode</li>
-            <li>G16 polar coordinate</li>
-            <li>G51 scaling</li>
-            <li>G52 local work shift</li>
-            <li>G65/G66 macro subprogram call</li>
-            <li>G68 coordinate system rotation</li>
             <li>G98 retract to initial Z value</li>
             <li>G99 retract to R value</li>
             <li>M98 subprogram (multiple formats)</li>
             <li>repeat canned cycle (L and K)</li>
-            <li>circular interpolation supported by using (I, J or R)</li>
+            <li>circular interpolation supported by using (I, J, K or R)</li>
+          </ul>
+        </div>
+
+        <h2 class="article__subtitle">Fanuc/Haas support:</h2>
+        <div class="article__list">
+          <ul>
+            <li>G16 polar coordinate</li>
+            <li>G51 scaling</li>
+            <li>G52 local work shift</li>
+            <li>G68 coordinate system rotation</li>
           </ul>
         </div>
 
@@ -142,6 +194,7 @@
             <li>comparison operators (CENTROID):
               <code>== or EQ, < OR LT, <= or LE, > or GT, >= or GE, != or NE<div class="new new--small"></div></code>
             </li>
+            <li>G65/G66 macro subprogram call</li>
             <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
             <li>local, common variables and some of the most popular system variables</li>
             <li>support for both syntax FANUC/HAAS and CENTROID</li>

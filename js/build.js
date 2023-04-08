@@ -83,10 +83,6 @@ const main = () => {
     desc: 'AERS'
   }, {
     type: ['nav', 'menu', 'footer'],
-    link: 'lathe.html',
-    desc: 'Lathe'
-  }, {
-    type: ['nav', 'menu', 'footer'],
     link: 'get-started.html',
     desc: 'Manual'
   }, {

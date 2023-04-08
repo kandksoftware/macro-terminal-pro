@@ -1007,8 +1007,9 @@ noscript {
 }
 
 .movie {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../resources/cutter.png");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../resources/cutter.png");
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../resources/cutter.png");*/
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../resources/lathe-shape.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../resources/lathe-shape.png");
   height: 50vh;
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -1053,6 +1054,12 @@ noscript {
 
 .brand-color {
   color: #c50000;
+}
+
+.back-link {
+  display: block;
+  color: #c50000;
+  margin-bottom: 1rem;
 }
 
 .btn {
@@ -1151,6 +1158,7 @@ th, td {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 0.5rem;
   }
 }
 
@@ -1196,6 +1204,7 @@ th, td {
   border-radius: 5px;
   width: calc(100% - 2rem);
   margin: 0 1rem 1rem 1rem;
+  padding: 0.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -1211,7 +1220,8 @@ th, td {
     height: auto;
   }
   .card--pricing {
-    margin: 1rem;
+    margin: 0.5rem;
+    width: 25%;
   }
   .card__content {
     font-size: 1rem;
@@ -1411,5 +1421,18 @@ th, td {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.table-view {
+  padding: 1rem;
+}
+
+.table-view__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.table-view > table td {
+  font-size: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
