@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Haas cycle list</title>
+  <meta name="description" content="CNC Macro Simulator | Haas cycle list" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ header }}
+    </header>
+    <main>
+      <section class="article table-view">
+        <h1 class="article__title">Specific cycles for Haas controls</h1>
+        <div class="separator"></div>
+        <table class="table">
+          <tr>
+            <th>Name</th>
+            <th>Function</th>
+            <th>Machine type</th>
+          </tr>
+          <tr>
+            <td>G70</td>
+            <td>Bolt Hole Circle cycle</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G71</td>
+            <td>Bolt Hole Arc cycle</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G72</td>
+            <td>Bolt Holes cycle</td>
+            <td>Mill</td>
+          </tr>
+        </table>
+        <a class="back-link" href="get-started.html">&#8592; back to the manual</a>
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>

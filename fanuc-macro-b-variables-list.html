@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Fanuc Custom Macro B variables list</title>
+  <meta name="description" content="CNC Macro Simulator | Fanuc Custom Macro B variables list" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ header }}
+    </header>
+    <main>
+      <section class="article table-view">
+        <h1 class="article__title">Fanuc Custom Macro B variables list</h1>
+        <div class="separator"></div>
+        <h1 class="table-view__title">Common system variables</h1>
+        <table class="table">
+          <tr>
+            <th>Name</th>
+            <th>Meaning</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>#0</td>
+            <td>null</td>
+            <td>This is a read-only variable that contains "null" meaning the variable exists but is empty.
+              This variable is typically used to test other variables for null or to clear the value of a variable.</td>
+          </tr>
+          <tr>
+            <td>#1 ... #33</td>
+            <td>Local variables</td>
+            <td>Local variables are most commonly used to get values from G65 or G66. Their values are cleared by M99
+              (the value will be reassigned as null) at the end of the subroutine.
+              Local variable values are set to null when the power is turned off.
+            </td>
+          </tr>
+          <tr>
+            <td>#100 ... #149<br /><br /> #500 ... #531</td>
+            <td>Common variables</td>
+            <td>Common variables allow you to read their values from other programs using macros.
+              <br />Note that #100 ... #149 will lose their values (values will be set to null) when power is turned
+              off.
+              <br />#500 ... #531 in contrast to the example above, they keep their value even after the power is turned
+              off.
+              <!--<a href="system-variables.html"> Read how to clear #500 ... #531 programmatically.</a>-->
+            </td>
+          </tr>
+          <tr>
+            <td>#1000 ....</td>
+            <td>System variables</td>
+            <td>System variables contain a lot of useful information from the control system, such as tool position,
+              tool wear or tool compensation, and many other.
+              <a href="system-variables-list.html"> Read more about system variables.</a>
+            </td>
+          </tr>
+        </table>
+        <a class="back-link" href="get-started.html">&#8592; back to the manual</a>
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>

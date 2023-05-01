@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>G code list</title>
+  <meta name="description" content="CNC Macro Simulator | G code list" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ header }}
+    </header>
+    <main>
+      <section class="article table-view">
+        <h1 class="article__title">G code list</h1>
+        <div class="separator"></div>
+        <table class="table">
+          <tr>
+            <th>Name</th>
+            <th>Meaning</th>
+            <th>Machine type</th>
+          </tr>
+          <tr>
+            <td>G00</td>
+            <td>Rapid positioning</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G01</td>
+            <td>Linear interpolation</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G02</td>
+            <td>Clockwise circular interpolation</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G03</td>
+            <td>Counterclockwise ircular interpolation</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G15</td>
+            <td>Cancel polar programming</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G16</td>
+            <td>Polar programming</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G17</td>
+            <td>XY plane selection</td>
+            <td>Mill </td>
+          </tr>
+          <tr>
+            <td>G18</td>
+            <td>XZ plane selection</td>
+            <td>Lathe</td>
+          </tr>
+          <!--<tr>
+            <td>G19</td>
+            <td>YZ plane selection</td>
+            <td>Mill</td>
+          </tr>-->
+          <tr>
+            <td>G20</td>
+            <td>Imperial mode</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G21</td>
+            <td>Metric mode</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G28</td>
+            <td>Return to home position</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G30</td>
+            <td>Return to home position specified by the parameters</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G32</td>
+            <td>Thread cutting</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G33</td>
+            <td>Thread cutting</td>
+            <td>Lathe</td>
+          </tr>
+          <!--<tr>
+            <td>G40</td>
+            <td>Cancel tool radius compensation</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G41</td>
+            <td>Tool radius compensation from left to right</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G42</td>
+            <td>Tool radius compensation from right to left</td>
+            <td>Mill / Lathe</td>
+          </tr>-->
+          <tr>
+            <td>G43</td>
+            <td>Tool length (height) compensation</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G50</td>
+            <td>Cancel scaling coordinate</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G51</td>
+            <td>Scaling coordinate</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G52</td>
+            <td>Local (programmable) coordinate</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G53</td>
+            <td>Machine coordinate</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G54 ... G59</td>
+            <td>Work coordinate</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G65 / G66</td>
+            <td>Macro subroutine call</td>
+            <td>Mill / Lathe</td>
+          </tr>
+          <tr>
+            <td>G68</td>
+            <td>Coordinate rotation</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G69</td>
+            <td>Cancel coordinate rotation</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G70</td>
+            <td>Finishing cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G71</td>
+            <td>Roughing cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G72</td>
+            <td>Facing cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G73</td>
+            <td>Fast peck drilling</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G73</td>
+            <td>Pattern repeating cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G74</td>
+            <td>Face grooving cycle (peck drilling)</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G75</td>
+            <td>Grooving cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G76</td>
+            <td>Threading cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G78</td>
+            <td>Threading cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G80</td>
+            <td>Cancel canned cycle</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G81</td>
+            <td>Simple drilling canned cycle</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G82</td>
+            <td>Dwell drilling canned cycle</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G83</td>
+            <td>Peck drilling canned cycle</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G84</td>
+            <td>Tapping canned cycle</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G85</td>
+            <td>Boring canned cycle</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G90</td>
+            <td>Absolute programming</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G90</td>
+            <td>Straight and tapered cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G91</td>
+            <td>Incremental programming</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G92</td>
+            <td>Threading cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G94</td>
+            <td>Simple facing cycle</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G96</td>
+            <td>Constant surface speed</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>G98</td>
+            <td>In the canned cycle, is it a return to initial "Z" value position</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G99</td>
+            <td>In the canned cycle, is it a return to "R" value position</td>
+            <td>Mill</td>
+          </tr>
+        </table>
+        <a class="back-link" href="get-started.html">&#8592; back to the manual</a>
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>
