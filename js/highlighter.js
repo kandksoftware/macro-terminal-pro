@@ -26,7 +26,7 @@ function Highlighter() {
     this.keyword = [{
       name: 'keyword',
       keys: [
-        'WHILE', 'IF', 'GOTO', 'THEN', 'END', 'DO', 'ELSE', 'POCKET', 'TOOL', 'SLOT', 'CYCLE', 'PATTERN', 'SURFACE', 'SHOULDER', 'SET', 'SETTOOL', 'THREADING', 'DRILLING', 'BORING', 'MIRROR', 'SHIFT', 'ZOOM', 'ROTATE', 'CUSTOM'
+        'BSHAPE', 'ESHAPE', 'WHILE', 'IF', 'GOTO', 'THEN', 'END', 'DO', 'ELSE', 'POCKET', 'TOOL', 'SLOT', 'CYCLE', 'PATTERN', 'SURFACE', 'SHOULDER', 'SET', 'SETTOOL', 'DELTOOL', 'THREADING', 'DRILLING', 'BORING', 'MIRROR', 'SHIFT', 'ZOOM', 'ROTATE', 'CUSTOM'
       ],
       test: new TestIdentical(),
       color: '#C677DD'
