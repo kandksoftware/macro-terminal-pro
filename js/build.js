@@ -87,8 +87,8 @@ const main = () => {
     desc: 'Manual'
   }, {
     type: ['nav', 'menu', 'footer'],
-    link: 'macro-programming.html',
-    desc: 'Interesting'
+    link: 'lathe.html',
+    desc: 'Lathe'
   }, {
     type: ['nav', 'menu', 'footer'],
     link: 'contact.html',

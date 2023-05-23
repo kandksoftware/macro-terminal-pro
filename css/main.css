@@ -860,8 +860,16 @@ noscript {
   padding: 0rem;
 }
 
+.article--lathe {
+  padding: 1rem;
+}
+
 @media screen and (min-width: 768px) {
   .article--main {
+    padding: 1rem;
+    width: 70% !important;
+  }
+  .article--lathe {
     padding: 1rem;
     width: 70% !important;
   }
@@ -1341,7 +1349,7 @@ th, td {
 }
 
 .list > li {
-  color: #333333;
+  color: #4d4d4d;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #333333;
