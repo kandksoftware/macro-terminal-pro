@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: proxima_nova;
   src: url("../resources/fonts/Proxima Nova Alt Light.otf");
@@ -295,7 +296,7 @@ noscript {
 .nav__icon {
   width: 2rem;
   height: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 .nav__name {
@@ -404,10 +405,9 @@ noscript {
   font-weight: 600;
   color: #000;
   font-size: 1.2rem;
-}
-
-.menu > a:last-child {
-  margin-top: 0.8rem !important;
+  /*&:last-child {
+      margin-top: 0.8rem !important;
+    }*/
 }
 
 .menu.active {
@@ -753,7 +753,7 @@ noscript {
 
 @media screen and (min-width: 768px) {
   .article {
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 }
 
@@ -806,8 +806,8 @@ noscript {
 
 .article__content {
   margin-bottom: 1rem;
-  color: #262626;
-  font-size: 1.4rem;
+  color: #404040;
+  font-size: 1.2rem;
 }
 
 .article__content > a {
@@ -843,6 +843,11 @@ noscript {
   margin-left: 1rem;
   margin-bottom: 1rem;
   position: relative;
+  padding: 0.5rem;
+}
+
+.article__list li {
+  margin: 5px 0;
 }
 
 .article__feature {
@@ -864,6 +869,10 @@ noscript {
   padding: 1rem;
 }
 
+.article--pricing {
+  padding: 0rem;
+}
+
 @media screen and (min-width: 768px) {
   .article--main {
     padding: 1rem;
@@ -872,6 +881,10 @@ noscript {
   .article--lathe {
     padding: 1rem;
     width: 70% !important;
+  }
+  .article--pricing {
+    padding: 1rem;
+    width: 80% !important;
   }
 }
 
@@ -925,12 +938,16 @@ noscript {
   font-weight: 800;
 }
 
-.main__list > li {
-  color: #c50000;
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 800;
-  list-style-type: none;
+.main {
+  /*&__list {
+    &>li {
+      color: $brand-color;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 800;
+      list-style-type: none;
+    }
+  }*/
 }
 
 .main__title {
@@ -983,7 +1000,7 @@ noscript {
 @media screen and (min-width: 768px) {
   .main {
     width: 100%;
-    height: 100vh !important;
+    height: 60vh !important;
     /*margin: 50px 0;*/
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1015,8 +1032,8 @@ noscript {
 }
 
 .movie {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../resources/top.png");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../resources/top.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url("../resources/lathe.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../resources/lathe.jpg");
   height: 50vh;
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -1027,6 +1044,7 @@ noscript {
 
 .controls {
   margin: 1rem;
+  margin-top: 0;
   text-align: center;
   background-color: #c50000;
   display: -webkit-box;
@@ -1035,11 +1053,12 @@ noscript {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 5px;
+  border-radius: 2.5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -1067,6 +1086,10 @@ noscript {
   display: block;
   color: #c50000;
   margin-bottom: 1rem;
+}
+
+.back-link::before {
+  content: '⇦ ';
 }
 
 .vid {
@@ -1202,7 +1225,7 @@ th, td {
 
 .card__content {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #333333;
   position: relative;
 }
@@ -1258,7 +1281,7 @@ th, td {
 .card--device {
   color: #c50000;
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .contact {
@@ -1338,7 +1361,7 @@ th, td {
 }
 
 .list {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-left: 1rem;
   list-style-type: none;
 }
@@ -1349,7 +1372,7 @@ th, td {
 }
 
 .list > li {
-  color: #4d4d4d;
+  color: #333333;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #333333;
@@ -1361,9 +1384,9 @@ th, td {
 }
 
 .list > li::before {
-  content: '+ ';
-  color: red;
-  font-size: 1.6rem;
+  content: '⇨ ';
+  color: #c50000;
+  font-size: 1.2rem;
 }
 
 .list--full {
@@ -1455,5 +1478,75 @@ th, td {
 
 .table-view > table td {
   font-size: 1rem;
+}
+
+.price__container {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .price__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.price__subcontainer {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 140px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid #000;
+}
+
+.price__subcontainer--left {
+  border-bottom: none;
+}
+
+@media screen and (min-width: 768px) {
+  .price__subcontainer {
+    width: 50%;
+    border: none;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    height: auto;
+  }
+  .price__subcontainer--left {
+    border-right: 2px solid #000;
+  }
+}
+
+.price__value {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 10px;
+  color: #c50000;
 }
 /*# sourceMappingURL=main.css.map */

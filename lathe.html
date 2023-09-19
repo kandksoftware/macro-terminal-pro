@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
   <link rel="stylesheet" href="css/main.css">
-  <title>CNC Macro Simulator II | 2 axis cnc conversational
-    software for the lathes</title>
-  <meta name="description" content="CNC Macro Simulator II | 2 axis cnc conversational
+  <title>CNC Macro Simulator II TC-C | Lathe conversational programming | C axis + live tooling</title>
+  <meta name="description" content="CNC Macro Simulator II TC-C | C axis + live tooling cnc conversational
   software for the lathes" />
   <meta name="keywords" content="" />
   <meta name="robots" content="index, follow">
@@ -27,17 +26,19 @@
     </header>
     <main>
       <section class="article article--lathe">
-        <h1 class="article__title" style="text-align:center">CNC Macro Simulator II TC - 2 axis cnc conversational
-          software + macro</h1>
+        <h1 class="article__title" style="text-align:center">Lathe conversational programming (C axis + live tooling)
+        </h1>
         <div class="separator"></div>
         <div class="gallery">
           <img src="resources/lathe/1.png">
-          <img src="resources/lathe/7.png">
-          <img src="resources/lathe/2.png">
+          <img src="resources/lathe/6.png">
+          <img src="resources/lathe/10.png">
+          <img src="resources/lathe/9.png">
           <img src="resources/lathe/4.png">
+          <img src="resources/lathe/11.png">
           <img src="resources/lathe/3.png">
           <img src="resources/lathe/5.png">
-          <img src="resources/lathe/6.png">
+
         </div>
         <div class="hide">
           <div class="article__content">
@@ -89,7 +90,7 @@
         <div class="separator"></div>
         <ul class="list list--full">
           <li>
-            11 useful operations in most cases that can be quickly called up using the search bar
+            23 useful operations in most cases that can be quickly called up using the search bar
           </li>
           <li>
             it is available for (Windows, MacOS, Linux, IOS and Android)
@@ -144,12 +145,148 @@
           <li>
             the ability to use mathematical formulas as input
           </li>
-          <li>
+          <!--<li>
             instructional videos available on our YouTube channel >> <a
               href="https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA">see here</a>
-            << </li>
+            << </li>-->
         </ul>
         <a class="article__link" href="technical.html">Technical information</a>
+        <div class="article__list">
+          <ul>
+            <li><span class="article--important">FACING</span> - removing material from the end of a workpiece to create
+              a flat surface perpendicular to the axis of rotation</li>
+            <li><span class="article--important">TURNING</span> - removing material from the inside od outside of a
+              workpiece
+              to create a desired shape or size
+            </li>
+            <li><span class="article--important">CONTOURING</span> - create specific shape, tool follows a path with a
+              predefined geometry</li>
+            <li><span class="article--important">DRILLING</span> - making a hole in a workpiece using a drill bit</li>
+            <li><span class="article--important">THREADING</span> - cutting threads on the inside or outside of a
+              workpiece</li>
+            <li><span class="article--important">TAPPING</span> - cutting threads into a pre-drilled hole in a workpiece
+            </li>
+            <li><span class="article--important">REAMING</span> - enlarging a pre-existing hole in a workpiece to a
+              specific size and shape using a reamer tool</li>
+            <li><span class="article--important">BORING</span> - enlarging an existing hole in a workpiece to a specific
+              size and shape using a boring tool</li>
+            <li><span class="article--important">GROOVING</span> - cutting a groove into the surface of a workpiece</li>
+            <li><span class="article--important">FACE GROOVING</span> - cutting a groove into the end face of a
+              workpiece</li>
+            <li><span class="article--important">PARTING</span> - cutting a workpiece to create two separate pieces</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Viewport (simulator/graphics) information:</h2>
+        <div class="article__list">
+          <ul>
+            <li>measuring an object / coordinates</li>
+            <li>simulation (play, play fast, stop, next, reset, previous, rewind)</li>
+            <li>lathe - radial and axial view</li>
+            <li>zoom</li>
+            <li>shift image</li>
+            <li>show/hide rapid movement</li>
+            <li>simplified representation of tools (max 32 tools)</li>
+            <li>metric/imperial mode</li>
+            <li>3 themes (dark, bright, black & white)</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Lathe cycles support (TC and PRO version only):</h2>
+        <div class="article__list">
+          <ul>
+            <li>G70 finishing cycle</li>
+            <li>G71 rough machining cycle</li>
+            <li>G72 facing cycle</li>
+            <li>G73 pattern repetition cycle</li>
+            <li>G74 face grooving cycle</li>
+            <li>G75 grooving cycle</li>
+            <li>G76/G78 threading cycle</li>
+            <li>G90 turning cycle</li>
+            <li>G92 threading cycle</li>
+            <li>G94 facing cycle</li>
+            <li>G32/G33 thread cutting (straight and tapered)</li>
+            <li>G28, G30 and G53 (home position)</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">G-code/Fanuc/Haas/Mazak ISO support:</h2>
+        <div class="article__list">
+          <ul>
+            <li>absolute, incremental and polar mode</li>
+            <li>M98 subprogram (multiple formats)</li>
+            <li>circular interpolation supported by using (I, J, K or R)</li>
+          </ul>
+        </div>
+
+        <h2 class="article__subtitle">Macro (Fanuc Custom Macro B/Haas/Centroid) support:</h2>
+        <div class="article__list">
+          <ul>
+            <li>improved and faster macro interpreter (XME 1.4.0) for advanced macro programs</li>
+            <li>keywords: IF, THEN, GOTO, WHILE, DO, END, ELSE</li>
+            <li>special instruction - EXIT (to immediately end the program when this instruction is called)</li>
+            <li>comparison operators (FANUC/HAAS): EQ, LT, LE, GT, GE, NE</li>
+            <li>comparison operators (CENTROID):
+              <code>== or EQ, < OR LT, <= or LE, > or GT, >= or GE, != or NE</code>
+            </li>
+            <li>G65/G66 macro subprogram call</li>
+            <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
+            <li>local, common variables and some of the most popular system variables</li>
+            <li>support for both syntax FANUC/HAAS and CENTROID</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Debugger:</h2>
+        <div class="article__list">
+          <ul>
+            <li>assigned and created variables</li>
+            <li>called subroutine and nesting level
+            </li>
+            <li>math and logical calculations in line</li>
+            <li>for IF and WHILE statement shows the actual value (true or false)</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Code editor:</h2>
+        <div class="article__list">
+          <ul>
+            <li>code highlighting</li>
+            <li>formatting</li>
+            <li>commenting and uncommenting a piece of code
+            <li>code indentation
+            </li>
+            <li>undo/redo</li>
+            <li>adding/removing EOB</li>
+            <li>adding/removing %</li>
+            <li>adding decimal point</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Files:</h2>
+        <div class="article__list">
+          <ul>
+            <li>new project</li>
+            <li>open file (opening multiple files at once)</li>
+            <li>append (to add a subroutine locally)</li>
+            <li>save</li>
+            <li>save as</li>
+            <li>export (to export macro program as a pure g code program)</li>
+            <li>file extension supported:nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+          </ul>
+        </div>
+
+        <h2 class="article__subtitle" id="compatibility">Input compatibility:</h2>
+        <div class="article__feature">
+          Fanuc 0, Fanuc 6, Fanuc 10, Fanuc 11, Fanuc 12, Fanuc 15, Fanuc 16, Fanuc 18, Fanuc 20, Fanuc 21,
+          Fanuc 30i,
+          Fanuc 31i, Fanuc 32i, Fanuc 35i, Haas, Centroid, Mazak ISO, Siemens 802D and others using CNC macros based on
+          Fanuc
+          Custom Macro B.
+        </div>
+        <h2 class="article__subtitle" id="compatibility">Output compatibility:</h2>
+        <div class="article__feature">
+          Same as input control selected, it also can be converted to Heidenhain, Sinumerik or other control upon
+          special request.
+        </div>
+
+        <h2 class="article__subtitle">Languages:</h2>
+        <div class="article__feature">
+          English
+        </div>
         <div class="sell-container hide">
           <div class="price">
             $44.99

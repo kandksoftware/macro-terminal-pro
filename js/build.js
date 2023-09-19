@@ -1,7 +1,8 @@
 'use strict'
 
 const main = () => {
-  const APP_NAME = 'CNC Macro Simulator'
+  //const APP_NAME = 'CNC Macro Simulator'
+  const APP_NAME = 'PJ Software'
   const array = [{
     id: 'header',
     content: `<nav class="nav">
@@ -23,7 +24,7 @@ const main = () => {
     content: `<div class="footer__links"></div>
     <div class="footer__copy">
       <a href="#!">Inject here</a> 
-      <a href="privacy-policy">Privacy Policy</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
     </div>`
   }, {
     id: 'feedback',
@@ -75,38 +76,43 @@ const main = () => {
     desc: 'Main'
   }, {
     type: ['nav', 'menu'],
-    link: 'technical.html',
-    desc: 'Technical'
+    link: 'products.html',
+    desc: 'Products',
   }, {
     type: ['footer'],
-    link: 'aers.html',
-    desc: 'AERS'
-  }, {
+    link: 'products.html',
+    desc: 'Products',
+  }, /*{
+    type: ['nav', 'menu'],
+    link: 'technical.html',
+    desc: 'Technical'
+  }, */{
     type: ['nav', 'menu', 'footer'],
     link: 'get-started.html',
-    desc: 'Manual'
+    desc: 'Knowledge'
   }, {
     type: ['nav', 'menu', 'footer'],
-    link: 'lathe.html',
-    desc: 'Lathe'
+    link: 'https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA',
+    desc: 'Youtube'
+  }, {
+    type: ['nav', 'menu'],
+    link: 'demo.html',
+    desc: 'Get demo',
+    dec: ['btn btn-brand-color'],
   }, {
     type: ['nav', 'menu', 'footer'],
     link: 'contact.html',
     desc: 'Contact'
   }, {
     type: ['footer'],
-    link: 'https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA',
-    desc: 'Youtube'
-  }, {
-    type: ['footer'],
     link: 'faq.html',
     desc: 'FAQ'
-  }, {
+  }/*, {
     type: ['nav', 'menu'],
     link: 'pricing.html',
     dec: ['btn btn-brand-color'],
     desc: 'Purchase'
-  }, {
+  }*/, {
     type: ['footer',],
     link: 'about.html',
     desc: 'About us'
