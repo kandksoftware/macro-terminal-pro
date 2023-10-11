@@ -93,7 +93,8 @@ const main = () => {
   }, {
     type: ['nav', 'menu', 'footer'],
     link: 'https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA',
-    desc: 'Youtube'
+    desc: 'Youtube',
+    target: '_blank'
   }, {
     type: ['nav', 'menu'],
     link: 'demo.html',
