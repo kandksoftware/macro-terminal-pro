@@ -57,6 +57,18 @@ const main = () => {
   }, {
     id: 'current-year',
     content: new Date().getFullYear()
+  }, {
+    id: 'price-container',
+    content: `<div class="price__container">
+                <div class="price__subcontainer price__subcontainer--left">
+                  <strong class="price__value" data-bind="${Pricer.OPTION_ONE()}"></strong>
+                  <button class="btn--purchase" id="${Pricer.OPTION_ONE()}">Buy</button>
+                </div>
+                <div class="price__subcontainer">
+                  <strong class="price__value" data-bind="${Pricer.OPTION_TWO()}"></strong>
+                  <button class="btn--purchase" id="${Pricer.OPTION_TWO()}">Buy</button>
+                </div>
+              </div>`
   }]
 
   const components = [{
@@ -155,4 +167,66 @@ const main = () => {
     const hg = new Highlighter().exec(e.innerHTML)
     e.innerHTML = hg
   });
+
+  new Pricer({
+    products: {
+      "Sell test": {
+        "limited": {
+          price: 0.20
+        },
+        "unlimited": {
+          price: 0.40
+        }
+      },
+      "CNC Macro Simulator II SD": {
+        "limited": {
+          price: 99
+        },
+        "unlimited": {
+          price: 199
+        }
+      },
+      "CNC Macro Simulator II MC": {
+        "limited": {
+          price: 159
+        },
+        "unlimited": {
+          price: 259
+        }
+      },
+      "CNC Macro Simulator II TC": {
+        "limited": {
+          price: 189
+        },
+        "unlimited": {
+          price: 289
+        }
+      },
+      "CNC Macro Simulator II TC-C": {
+        "limited": {
+          price: 220
+        },
+        "unlimited": {
+          price: 320
+        }
+      },
+      "CNC Macro Simulator II PRO": {
+        "limited": {
+          price: 260.99
+        },
+        "unlimited": {
+          price: 360.99
+        }
+      },
+      "CNC Macro Simulator II PRO-TC": {
+        "limited": {
+          price: 329
+        },
+        "unlimited": {
+          price: 429
+        }
+      }
+    },
+    goto: 'payment.html'
+  }).exec()
 }

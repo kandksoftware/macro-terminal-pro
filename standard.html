@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
   <link rel="stylesheet" href="css/main.css">
-  <title>CNC Macro Simulator II | CNC Macro Simulator II SD</title>
+  <title>CNC Macro Simulator II SD</title>
   <meta name="description" content="3 axis milling parametric programming" />
   <meta name="keywords" content="" />
   <meta name="robots" content="index, follow">
@@ -210,31 +210,10 @@
         <div class="article__feature">
           English
         </div>
-        <div class="price__container">
-          <div class="price__subcontainer price__subcontainer--left">
-            <strong class="price__value">$99 (up to 5 devices)</strong>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="hosted_button_id" value="5726TDV6YA6B2">
-              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit"
-                alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-          </div>
-          <div class="price__subcontainer">
-            <strong class="price__value">$199 (unlimited number of devices)</strong>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_s-xclick" />
-              <input type="hidden" name="hosted_button_id" value="4CS8TYFVR7KF2" />
-              <input type="hidden" name="currency_code" value="USD" />
-              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit"
-                title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
-            </form>
-
-          </div>
-        </div>
+        {{ price-container }}
       </div>
     </main>
+
     <footer class="footer">
       {{ footer }}
     </footer>

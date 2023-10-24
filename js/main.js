@@ -1,6 +1,5 @@
 window.addEventListener('load', () => {
   const __PATH = 'js/'
-  const __REMOTE_PATH = 'https://kandksoftware.github.io/remote/'
 
   new ScriptLoader([
     __PATH + 'global.js',
@@ -10,6 +9,7 @@ window.addEventListener('load', () => {
     __PATH + 'feedback.js',
     __PATH + 'replacer.js',
     __PATH + 'highlighter.js',
+    __PATH + 'price-controller.js',
     __PATH + 'build.js',
   ]).exec(() => main())
 })

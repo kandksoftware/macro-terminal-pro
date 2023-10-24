@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Add meta tags for mobile and IE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Payment</title>
+  <style>
+    body {
+      background-color: lightgray;
+    }
+
+    #app {
+      overflow: auto;
+      width: 400px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: red;
+      border-radius: 1rem;
+      padding: 1rem;
+      background-color: #fff;
+    }
+
+    [data-bind="product-price"] {
+      color: dodgerblue;
+    }
+
+    [data-bind="product-price"]::before {
+      content: 'Price: $';
+    }
+
+    [data-bind="product-license"] {
+      color: gray;
+    }
+
+    [data-bind="product-license"]::before {
+      content: 'License type:';
+    }
+  </style>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AejdBp5fL_3jo-A4tE0xUaqa1hyObbeBGn7N0gOOLlBgZdiHOSOS1MNLMIQxSp28T3TSyDaJpmZGz4Fq"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h2 data-bind="product-name"></h2>
+    <h2 data-bind="product-price"></h2>
+    <h3 data-bind="product-license"></h3>
+    <div id="paypal-button-container"></div>
+  </div>
+
+
+  <!-- Include the PayPal JavaScript SDK -->
+  <script>
+    (() => {
+      const data = localStorage.getItem("data")
+      if (!data) {
+        window.location.href = 'products.html'
+      } else {
+        const dataObject = JSON.parse(data)
+        const dbs = document.querySelectorAll('[data-bind]')
+        if (dbs) {
+          [...dbs].forEach(db => {
+            const pair = db.getAttribute('data-bind').split('-')
+            db.innerHTML = dataObject[pair[1]]
+          })
+        }
+
+        paypal.Buttons({
+          createOrder: (data, actions) => {
+            return actions.order.create({
+              purchase_units: [{
+                name: dataObject.name, /* Shows within upper-right dropdown during payment approval */
+                description: `${dataObject.name} - (${dataObject.license})`, /* Item details will also be in the completed paypal.com transaction view */
+                amount: {
+                  value: dataObject.price,
+                },
+              }]
+            })
+          },
+          onApprove: (data, actions) => {
+            return actions.order.capture().then(() => {
+              window.location.href = 'success.html'
+              //alert('Go to your emeil account to receive a link to the app!')
+            })
+          },
+          onError: (err) => {
+            alert(err)
+          }
+        }).render('#paypal-button-container');
+      }
+    })()
+  </script>
+</body>
+
+</html>
