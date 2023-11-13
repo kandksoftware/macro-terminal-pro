@@ -850,6 +850,11 @@ noscript {
   margin: 5px 0;
 }
 
+.article__list--important {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 .article__feature {
   color: #333333;
   margin-bottom: 1rem;
@@ -1296,7 +1301,7 @@ th, td {
 .card--device {
   color: #c50000;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .contact {

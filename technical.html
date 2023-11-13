@@ -26,125 +26,94 @@
     </header>
     <main>
       <section class="article">
-        <h1 class="article__title">Technical information (CNC Macro Simulator II)</h1>
+        <h1 class="article__title">Technical information</h1>
         <div class="separator"></div>
-        <h2 class="article__subtitle" id="cycles">Lathe conversational shell (TC and PRO version
-          only):
-        </h2>
-        <div class="article__list">
+        <div class="gallery">
+          <img src="resources/lathe/1.png">
+          <img src="resources/standard/1.png">
+          <img src="resources/TC-C/1.png">
+          <img src="resources/standard/6.png">
+          <img src="resources/lathe/6.png">
+          <img src="resources/standard/4.png">
+          <img src="resources/lathe/10.png">
+          <img src="resources/standard/3.png">
+          <img src="resources/TC-C/3.png">
+          <img src="resources/lathe/9.png">
+          <img src="resources/standard/5.png">
+          <img src="resources/lathe/4.png">
+          <img src="resources/lathe/11.png">
+          <img src="resources/lathe/3.png">
+          <img src="resources/lathe/5.png">
+          <img src="resources/lathe/12.png">
+        </div>
+        <div class="separator"></div>
+        <h2 class="article__subtitle">Conversational programming (MILL)(MC and STUDIO version only):</h2>
+        <div class="article__list article__list--important">
           <ul>
-            <li><span class="article--important">FACING</span> - removing material from the end of a workpiece to create
-              a flat surface perpendicular to the axis of rotation</li>
-            <li><span class="article--important">TURNING</span> - removing material from the inside od outside of a
-              workpiece
-              to create a desired shape or size
-            </li>
-            <li><span class="article--important">CONTOURING</span> - create specific shape, tool follows a path with a
-              predefined geometry</li>
-            <li><span class="article--important">DRILLING</span> - making a hole in a workpiece using a drill bit</li>
-            <li><span class="article--important">THREADING</span> - cutting threads on the inside or outside of a
-              workpiece</li>
-            <li><span class="article--important">TAPPING</span> - cutting threads into a pre-drilled hole in a workpiece
-            </li>
-            <li><span class="article--important">REAMING</span> - enlarging a pre-existing hole in a workpiece to a
-              specific size and shape using a reamer tool</li>
-            <li><span class="article--important">BORING</span> - enlarging an existing hole in a workpiece to a specific
-              size and shape using a boring tool</li>
-            <li><span class="article--important">GROOVING</span> - cutting a groove into the surface of a workpiece</li>
-            <li><span class="article--important">FACE GROOVING</span> - cutting a groove into the end face of a
-              workpiece</li>
-            <li><span class="article--important">PARTING</span> - cutting a workpiece to create two separate pieces</li>
+            <li>circular face milling</li>
+            <li>rectangular face milling</li>
+            <li>circular pocket</li>
+            <li>rectangular pocket</li>
+            <li>circular shoulder</li>
+            <li>rectangular shoulder</li>
+            <li>circular grooving</li>
+            <li>rectangular grooving</li>
+            <li>helical boring</li>
+            <li>spot drilling</li>
+            <li>dwell drilling</li>
+            <li>peck drilling</li>
+            <li>thread milling</li>
+            <li>tapping</li>
+            <li>code snippet</li>
           </ul>
         </div>
-        <h2 class="article__subtitle" id="cycles">Mill conversational shell (MC and PRO version only):
-        </h2>
-        <div class="article__list">
+        <h2 class="article__subtitle">Conversational programming (TURN)(XTC and STUDIO version
+          only):</h2>
+        <div class="article__list article__list--important">
           <ul>
-            <li><span class="article--important">CIRCULAR POCKET</span> - circular pocket milling</li>
-            <li><span class="article--important">RECTANGULAR POCKET</span> - rectangular pocket milling</li>
-            <li><span class="article--important">CIRCULAR GROOVING</span> - circular grooving milling</li>
-            <li><span class="article--important">RECTANGULAR GROOVING</span> - rectangular grooving milling</li>
-            <li><span class="article--important">SPOT DRILLING</span></li>
-            <li><span class="article--important">DWELL DRILLING</span></li>
-            <li><span class="article--important">PECK DRILLING</span></li>
-            <li><span class="article--important">TAPPING</span></li>
-            <li><span class="article--important">THREAD MILLING</span> - external and internal thread milling</li>
-            <li><span class="article--important">CIRCULAR SURFACE</span> - circular face milling</li>
-            <li><span class="article--important">RECTANGULAR SURFACE</span> - rectangular face milling (2 strategies)
-            </li>
-            <li><span class="article--important">CIRCULAR SHOULDER</span> - shoulder circular milling
-            </li>
-            <li><span class="article--important"> RECTANGULAR SHOULDER</span> - shoulder rectangular milling
-            </li>
-            <li><span class="article--important">DRILLING</span> - peck drilling with dwell time (between pecks) and
-              full retract (between pecks)</li>
-            <li><span class="article--important">HELICAL BORING</span> - helical boring</li>
+            <li>facing</li>
+            <li>turning</li>
+            <li>contouring</li>
+            <li>axial contour OD</li>
+            <li>axial contour ID</li>
+            <li>axial cicular keyway slot</li>
+            <li>drilling</li>
+            <li>axial drilling</li>
+            <li>radial drilling</li>
+            <li>face grooving</li>
+            <li>grooving</li>
+            <li>axial keyway</li>
+            <li>radial keyway</li>
+            <li>threading</li>
+            <li>tapping</li>
+            <li>axial tapping</li>
+            <li>radial tapping</li>
+            <li>reamimg</li>
+            <li>axial reamimg</li>
+            <li>radial reamimg</li>
+            <li>boring</li>
+            <li>parting</li>
+            <li>code snippet</li>
           </ul>
         </div>
-        <h2 class="article__subtitle" id="cycles">Micro commands (MC and PRO version only):
-        </h2>
-        <div class="article__list">
-          <ul>
-            <li><span class="article--important">SETTOOL</span> - tool define</li>
-            <li><span class="article--important">TOOL</span> - tool call</li>
-            <li><span class="article--important">DELTOOL</span> - tool delete</li>
-            <li><span class="article--important">BSHAPE</span> - worpiece shape beginning</li>
-            <li><span class="article--important">ESHAPE</span> - worpiece shape end</li>
-            <li><span class="article--important">SET</span> - changing global data used by other commands such as
-              approach point (X, Y, Z), rotation (A), coolant (C), retraction (R), spindle direction (D), work offset
-              (W) or surface coordinate (S)</li>
-            <li><span class="article--important">CYCLE</span> - drilling / tapping cycles</li>
-            <li><span class="article--important">POCKET</span> - pocket milling (circular and rectangle) and groving
-              milling (circular and rectangle)</li>
-            <li><span class="article--important">SHOULDER</span> - shoulder milling (circular and rectangle)</li>
-            <li><span class="article--important">SURFACE</span> - face milling (3 strategies)</li>
-            <li><span class="article--important">PATTERN</span> - drilling patterns (4 strategies)</li>
-            <!--<li><span class="article--important">SLOT</span> - circular slot</li>-->
-            <li><span class="article--important">THREADING</span> - milling threading external and internal</li>
-            <li><span class="article--important">DRILLING</span> - peck drilling with dwell time (between pecks) and
-              full retract (between pecks)</li>
-            <li><span class="article--important">HELICAL BORING</span> - helical boring</li>
-            <li><span class="article--important">MIRROR</span> - reverse coordinates in x, y axis</li>
-            <li><span class="article--important">ZOOM</span> - resize coordinates x and y</li>
-            <li><span class="article--important">SHIFT</span> - move coordinates in x, y axis</li>
-            <li><span class="article--important">ROTATE</span> - rotate coordinates in x, y axis
-              <div class="new new--small"></div>
-            </li>
-          </ul>
-        </div>
-        <h2 class="article__subtitle">Program export:</h2>
-        <div class="article__list">
-          <ul>
-            <li>code compressing</li>
-            <li>removing empty lines</li>
-            <li>adding decimal point</li>
-            <li>adding automatically information about the tool used (at the beginning of the program as before calling
-              it)</li>
-            <li>adding line number</li>
-            <li>removing original line number<div class="new new--small"></div>
-            </li>
-            <li>adding safety line</li>
-            <li>auto adding end of program (M30)</li>
-          </ul>
-        </div>
+
         <h2 class="article__subtitle">Viewport (simulator/graphics) information:</h2>
         <div class="article__list">
           <ul>
-            <li>3D tool path</li>
-            <li>measuring an object / coordinates<div class="new new--small"></div>
-            </li>
+            <li>3D tool path (mill)</li>
             <li>simulation (play, play fast, stop, next, reset, previous, rewind)</li>
-            <li>mill - 5 view modes (3D, XY, XY removal, XZ, YZ), lathe - 1 view modes XZ</li>
-            <li>image rotation in x axis (mill)</li>
+            <li>mill - 5 view modes (3D, XY, XY removal, XZ, YZ)</li>
+            <li>lathe - 2 view modes (radial and axial removal view)</li>
+            <li>measuring an object / coordinates</li>
             <li>zoom</li>
+            <li>ruler</li>
             <li>shift image</li>
-            <li>show/hide rapid movement</li>
-            <li>simplified representation of tools (mill - max 100 tools, lathe - max 32 tools)</li>
-            <li>metric/imperial mode</li>
+            <li>show / hide rapid movement</li>
+            <li>metric / imperial mode</li>
             <li>3 themes (dark, bright, black & white)</li>
           </ul>
         </div>
-        <h2 class="article__subtitle">Lathe cycles support (TC and PRO version only):</h2>
+        <h2 class="article__subtitle">Lathe cycles support (XTC and STUDIO version only):</h2>
         <div class="article__list">
           <ul>
             <li>G28, G30 and G53(home position)</li>
@@ -195,16 +164,15 @@
         <h2 class="article__subtitle">Macro (Fanuc Custom Macro B/Haas/Centroid) support:</h2>
         <div class="article__list">
           <ul>
-            <li>improved and faster macro interpreter (XME 1.4.0) for advanced macro programs<div
-                class="new new--small"></div>
+            <li>new faster macro interpreter (Lightning) for advanced macro programs
             </li>
             <li>keywords: IF, THEN, GOTO, WHILE, DO, END, ELSE</li>
             <li>special instruction - EXIT (to immediately end the program when this instruction is called)
-              <div class="new new--small"></div>
+
             </li>
             <li>comparison operators (FANUC/HAAS): EQ, LT, LE, GT, GE, NE</li>
             <li>comparison operators (CENTROID):
-              <code>== or EQ, < OR LT, <= or LE, > or GT, >= or GE, != or NE<div class="new new--small"></div></code>
+              <code>== or EQ, < OR LT, <= or LE, > or GT, >= or GE, != or NE</code>
             </li>
             <li>G65/G66 macro subprogram call</li>
             <li>math functions supported: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
@@ -222,7 +190,7 @@
         <div class="article__list">
           <ul>
             <li>assigned and created variables</li>
-            <li>called subroutine and nesting level<div class="new new--small"></div>
+            <li>called subroutine and nesting level
             </li>
             <li>math and logical calculations in line</li>
             <li>for IF and WHILE statement shows the actual value (true or false)</li>
@@ -232,23 +200,37 @@
         <div class="article__list">
           <ul>
             <li>code highlighting</li>
-            <li>formatting</li>
-            <li>commenting and uncommenting a piece of code<div class="new new--small"></div>
-            <li>code indentation<div class="new new--small"></div>
-            </li>
+            <li>formatting / code indentation</li>
+            <li>commenting and uncommenting a piece of code</li>
             <li>undo/redo</li>
             <li>adding/removing EOB</li>
             <li>adding/removing %</li>
+          </ul>
+        </div>
+        <h2 class="article__subtitle">Program export:</h2>
+        <div class="article__list">
+          <ul>
+            <li>code compressing</li>
+            <li>removing empty lines</li>
             <li>adding decimal point</li>
+            <li>adding automatically information about the tool used (at the beginning of the program as before calling
+              it)</li>
+            <li>adding line number</li>
+            <li>removing original line number
+            </li>
+            <li>adding safety line</li>
+            <li>auto adding end of program (M30)</li>
           </ul>
         </div>
         <h2 class="article__subtitle">Files:</h2>
         <div class="article__list">
           <ul>
             <li>new project</li>
-            <li>open file (opening multiple files at once)<div class="new new--small"></div>
-            </li>
+            <li>open file (opening multiple files at once)</li>
             <li>append(to add a subroutine locally)</li>
+            <li>import conversational program</li>
+            <li>export conversational program</li>
+            <li>examples</li>
             <li>save</li>
             <li>save as</li>
             <li>export(to export macro program as a pure g code program)</li>
@@ -272,8 +254,7 @@
 
         <h2 class="article__subtitle">Languages:</h2>
         <div class="article__feature">
-          English <div class="hide">, Français, Deutsche, Italiano, Español, 한국어, 日本語, Polski, Magyar, Pусский,
-            Português, 中文, Türkçe</div>
+          English
         </div>
       </section>
     </main>

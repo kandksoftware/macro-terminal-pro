@@ -27,48 +27,34 @@ const main = () => {
       <a href="privacy-policy.html">Privacy Policy</a>
     </div>`
   }, {
-    id: 'feedback',
-    content: APP.generateFeedbacks([{
-      name: 'Martin Wesselink',
-      rate: 5,
-      review: 'This is a very useful and accurate program to check your macro calculations, before you put them in the machine. Helps very good with the debugging of your program. I use it to check',
-      location: APP.GOOGLE_PLAY()
-    }, {
-      name: 'Paul S',
-      rate: 5,
-      review: 'This software is a godsend for building macros. You can see the program as it would flow naturally if the program was written point-to-point. Great for testing out how the logic will play out ...',
-      location: APP.GOOGLE_PLAY()
-    }, {
-      name: 'rabbit_goodwin',
-      rate: 5,
-      review: 'Amazing app I do a ton of programming at the machine (HAAS). This app is super helpful for writing new programs while it’s running and is perfect for testing new macros without ...',
-      location: APP.APP_STORE()
-    }, {
-      name: 'Michael Hicks',
-      rate: 5,
-      review: 'A Must have app !',
-      location: APP.GOOGLE_PLAY()
-    }, {
-      name: 'jared.s88',
-      rate: 5,
-      review: 'This app works as advertised that is for sure! It helped me troubleshoot and write some macro cycles I was attempting. I didn’t have time to test them on the machines at work every adjustment. So here I could nail down the code to then only fix minor controller differences in the code',
-      location: APP.GOOGLE_PLAY()
-    }])
-  }, {
     id: 'current-year',
     content: new Date().getFullYear()
   }, {
-    id: 'price-container',
-    content: `<div class="price__container">
-                <div class="price__subcontainer price__subcontainer--left">
-                  <strong class="price__value" data-bind="${Pricer.OPTION_ONE()}"></strong>
-                  <button class="btn--purchase" id="${Pricer.OPTION_ONE()}">Buy</button>
-                </div>
-                <div class="price__subcontainer">
-                  <strong class="price__value" data-bind="${Pricer.OPTION_TWO()}"></strong>
-                  <button class="btn--purchase" id="${Pricer.OPTION_TWO()}">Buy</button>
-                </div>
-              </div>`
+    id: 'pricing-feature',
+    content: `<div class="separator"></div>
+    <div class="card__content">
+      Macro support
+    </div>
+    <div class="separator"></div>
+    <div class="card__content">
+      Haas support
+    </div>
+    <div class="separator"></div>
+    <div class="card__content">
+      Fanuc support
+    </div>
+    <div class="separator"></div>
+    <div class="card__content">
+      Centroid support
+    </div>
+    <div class="separator"></div>
+    <div class="card__content">
+      Macro export support
+    </div>
+    <div class="separator"></div>
+    <div class="card__content">
+      Advanced calculator
+    </div>`
   }]
 
   const components = [{
@@ -88,8 +74,8 @@ const main = () => {
     desc: 'Main'
   }, {
     type: ['nav', 'menu'],
-    link: 'products.html',
-    desc: 'Products',
+    link: 'technical.html',
+    desc: 'Specification',
   }, {
     type: ['footer'],
     link: 'products.html',
@@ -102,15 +88,15 @@ const main = () => {
     type: ['nav', 'menu', 'footer'],
     link: 'get-started.html',
     desc: 'Knowledge'
-  }, {
+  }/*, {
     type: ['nav', 'menu', 'footer'],
     link: 'https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA',
     desc: 'Youtube',
     target: '_blank'
-  }, {
+  }*/, {
     type: ['nav', 'menu'],
-    link: 'demo.html',
-    desc: 'Get demo',
+    link: 'pricing.html',
+    desc: 'Purchase',
     dec: ['btn btn-brand-color'],
   }, {
     type: ['nav', 'menu', 'footer'],
@@ -168,65 +154,99 @@ const main = () => {
     e.innerHTML = hg
   });
 
-  new Pricer({
-    products: {
-      "Sell test": {
-        "limited": {
-          price: 0.20
-        },
-        "unlimited": {
-          price: 0.40
-        }
-      },
-      "CNC Macro Simulator II SD": {
-        "limited": {
-          price: 99
-        },
-        "unlimited": {
-          price: 199
-        }
-      },
-      "CNC Macro Simulator II MC": {
-        "limited": {
-          price: 159
-        },
-        "unlimited": {
-          price: 259
-        }
-      },
-      "CNC Macro Simulator II TC": {
-        "limited": {
-          price: 189
-        },
-        "unlimited": {
-          price: 289
-        }
-      },
-      "CNC Macro Simulator II TC-C": {
-        "limited": {
-          price: 220
-        },
-        "unlimited": {
-          price: 320
-        }
-      },
-      "CNC Macro Simulator II PRO": {
-        "limited": {
-          price: 260.99
-        },
-        "unlimited": {
-          price: 360.99
-        }
-      },
-      "CNC Macro Simulator II PRO-TC": {
-        "limited": {
-          price: 329
-        },
-        "unlimited": {
-          price: 429
-        }
+  /* new Pricer({
+     products: {
+       "Sell test": {
+         "limited": {
+           price: 0.20
+         },
+         "unlimited": {
+           price: 0.40
+         }
+       },
+       "CNC Macro Simulator II SD": {
+         "limited": {
+           price: 99
+         },
+         "unlimited": {
+           price: 199
+         }
+       },
+       "CNC Macro Simulator II MC": {
+         "limited": {
+           price: 159
+         },
+         "unlimited": {
+           price: 259
+         }
+       },
+       "CNC Macro Simulator II TC": {
+         "limited": {
+           price: 189
+         },
+         "unlimited": {
+           price: 289
+         }
+       },
+       "CNC Macro Simulator II TC-C": {
+         "limited": {
+           price: 220
+         },
+         "unlimited": {
+           price: 320
+         }
+       },
+       "CNC Macro Simulator II PRO": {
+         "limited": {
+           price: 260.99
+         },
+         "unlimited": {
+           price: 360.99
+         }
+       },
+       "CNC Macro Simulator II PRO-TC": {
+         "limited": {
+           price: 329
+         },
+         "unlimited": {
+           price: 429
+         }
+       }
+     },
+     goto: 'payment.html'
+   }).exec()*/
+
+  const products = [{
+    name: 'SD (MILL)',
+    price: '199.99'
+  }, {
+    name: 'MC (MILL)',
+    price: '259.00'
+  }, {
+    name: 'XTC (TURN)',
+    price: '320.00'
+  }, {
+    name: 'STUDIO',
+    price: '429.00'
+  }]
+
+  const elm = document.getElementsByClassName('card--pricing')
+  if (elm) {
+    [...elm].forEach((_, i, arr) => {
+      const product = products[i]
+      for (let key in product) {
+        const attr = arr[i].querySelector(`[data-id="${key}"]`)
+        if (attr) attr.innerHTML = product[key]
       }
-    },
-    goto: 'payment.html'
-  }).exec()
+      const btn = arr[i].querySelector('.btn--purchase')
+      if (btn) btn.addEventListener('click', () => {
+        localStorage.setItem("data", JSON.stringify({
+          name: product.name,
+          price: product.price,
+          license: 'unlimited number of devices'
+        }))
+        window.location.href = 'payment.html'
+      })
+    })
+  }
 }
