@@ -88,12 +88,12 @@ const main = () => {
     type: ['nav', 'menu', 'footer'],
     link: 'get-started.html',
     desc: 'Knowledge'
-  }/*, {
-    type: ['nav', 'menu', 'footer'],
+  }, {
+    type: ['footer'],
     link: 'https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA',
     desc: 'Youtube',
     target: '_blank'
-  }*/, {
+  }, {
     type: ['nav', 'menu'],
     link: 'pricing.html',
     desc: 'Purchase',
@@ -227,7 +227,7 @@ const main = () => {
     price: '320.00'
   }, {
     name: 'STUDIO',
-    price: '429.00'
+    price: '529.00'
   }]
 
   const elm = document.getElementsByClassName('card--pricing')
