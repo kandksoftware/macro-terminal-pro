@@ -216,6 +216,11 @@ const main = () => {
      goto: 'payment.html'
    }).exec()*/
 
+  const countDiscount = (price, discount = 0.5) => {
+    const np = price * discount
+    return np.toFixed()
+  }
+
   const products = [{
     name: 'SD (MILL)',
     price: '199.99'
@@ -236,13 +241,16 @@ const main = () => {
       const product = products[i]
       for (let key in product) {
         const attr = arr[i].querySelector(`[data-id="${key}"]`)
-        if (attr) attr.innerHTML = product[key]
+        if (attr) {
+          if (key == 'price') attr.innerHTML = `<div style="text-decoration: line-through;color:lightgray;font-size:1.4rem">$${product[key]}</div>$${countDiscount(product[key])}`
+          else attr.innerHTML = product[key]
+        }
       }
       const btn = arr[i].querySelector('.btn--purchase')
       if (btn) btn.addEventListener('click', () => {
         localStorage.setItem("data", JSON.stringify({
           name: product.name,
-          price: product.price,
+          price: countDiscount(product.price),
           license: 'unlimited number of devices'
         }))
         window.location.href = 'payment.html'
