@@ -242,8 +242,9 @@ const main = () => {
       for (let key in product) {
         const attr = arr[i].querySelector(`[data-id="${key}"]`)
         if (attr) {
-          if (key == 'price') attr.innerHTML = `<div style="text-decoration: line-through;color:lightgray;font-size:1.4rem">$${product[key]}</div>$${countDiscount(product[key])}`
-          else attr.innerHTML = product[key]
+          //if (key == 'price') attr.innerHTML = `<div style="text-decoration: line-through;color:lightgray;font-size:1.4rem">$${product[key]}</div>$${countDiscount(product[key])}`
+          //else attr.innerHTML = product[key]
+          attr.innerHTML = product[key]
         }
       }
       const btn = arr[i].querySelector('.btn--purchase')
