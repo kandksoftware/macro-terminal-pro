@@ -251,7 +251,7 @@ const main = () => {
       if (btn) btn.addEventListener('click', () => {
         localStorage.setItem("data", JSON.stringify({
           name: product.name,
-          price: countDiscount(product.price),
+          price: product.price,
           license: 'unlimited number of devices'
         }))
         window.location.href = 'payment.html'
