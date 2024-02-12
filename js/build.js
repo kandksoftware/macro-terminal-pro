@@ -94,6 +94,11 @@ const main = () => {
     desc: 'Youtube',
     target: '_blank'
   }, {
+    type: ['nav'],
+    link: 'courses.html',
+    desc: 'Courses',
+    target: '_blank'
+  }, {
     type: ['nav', 'menu'],
     link: 'pricing.html',
     desc: 'Purchase',
