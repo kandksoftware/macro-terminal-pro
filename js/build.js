@@ -76,11 +76,11 @@ const main = () => {
     type: ['nav', 'menu'],
     link: 'technical.html',
     desc: 'Specification',
-  }, {
+  }, /*{
     type: ['footer'],
     link: 'products.html',
     desc: 'Products',
-  }, /*{
+  }, {
     type: ['nav', 'menu'],
     link: 'technical.html',
     desc: 'Technical'
@@ -221,7 +221,7 @@ const main = () => {
      goto: 'payment.html'
    }).exec()*/
 
-  const countDiscount = (price, discount = 0.5) => {
+  const countDiscount = (price, discount = 1) => {
     const np = price * discount
     return np.toFixed()
   }
@@ -256,7 +256,7 @@ const main = () => {
       if (btn) btn.addEventListener('click', () => {
         localStorage.setItem("data", JSON.stringify({
           name: product.name,
-          price: product.price,
+          price: countDiscount(product.price),
           license: 'unlimited number of devices'
         }))
         window.location.href = 'payment.html'

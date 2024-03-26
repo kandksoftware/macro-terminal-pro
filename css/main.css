@@ -955,6 +955,12 @@ noscript {
   }*/
 }
 
+.main__list > li {
+  color: #fff !important;
+  border-bottom: none !important;
+  padding-bottom: 0rem !important;
+}
+
 .main__title {
   display: inline-block;
   margin-top: 1rem;
@@ -976,6 +982,14 @@ noscript {
   height: auto;
 }
 
+.main__product-text {
+  width: 100%;
+}
+
+.main__product-text > h1 {
+  font-size: 4rem;
+}
+
 .main__product-text > h1,
 .main__product-text > h3 {
   margin-bottom: 1rem;
@@ -994,7 +1008,7 @@ noscript {
 
 .main__desc {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   display: none;
 }
 
@@ -1005,7 +1019,7 @@ noscript {
 @media screen and (min-width: 768px) {
   .main {
     width: 100%;
-    height: 60vh !important;
+    height: 100vh !important;
     /*margin: 50px 0;*/
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1013,7 +1027,7 @@ noscript {
             flex-direction: row;
   }
   .main__product-image, .main__product-text {
-    width: 50%;
+    width: 90%;
   }
   .main__product-image {
     -webkit-box-align: center;
@@ -1037,9 +1051,9 @@ noscript {
 }
 
 .movie {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url("../resources/lathe.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../resources/lathe.jpg");
-  height: 50vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../resources/circle.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../resources/circle.png");
+  height: 100vh;
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
