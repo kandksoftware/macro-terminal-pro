@@ -221,7 +221,7 @@ const main = () => {
      goto: 'payment.html'
    }).exec()*/
 
-  const countDiscount = (price, discount = 1) => {
+  const countDiscount = (price, discount = 0.5) => {
     const np = price * discount
     return np.toFixed()
   }
@@ -247,10 +247,10 @@ const main = () => {
       for (let key in product) {
         const attr = arr[i].querySelector(`[data-id="${key}"]`)
         if (attr) {
-          //if (key == 'price') attr.innerHTML = `<div style="text-decoration: line-through;color:lightgray;font-size:1.4rem">$${product[key]}</div>$${countDiscount(product[key])}`
-          //else attr.innerHTML = product[key]
-          if (key == 'price') attr.innerHTML = `$${product[key]}`
+          if (key == 'price') attr.innerHTML = `<div style="text-decoration: line-through;color:lightgray;font-size:1.4rem">$${product[key]}</div>$${countDiscount(product[key])}`
           else attr.innerHTML = product[key]
+          /*if (key == 'price') attr.innerHTML = `$${product[key]}`
+          else attr.innerHTML = product[key]*/
         }
       }
       const btn = arr[i].querySelector('.btn--purchase')
