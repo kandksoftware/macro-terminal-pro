@@ -222,7 +222,7 @@ const main = () => {
    }).exec()*/
 
   const countDiscount = (price, discount = 0.5) => {
-    const np = price * discount
+    const np = price * (1 - discount)
     return np.toFixed()
   }
 
@@ -240,24 +240,30 @@ const main = () => {
     price: '529.00'
   }]
 
+  const discount = 0.25
   const elm = document.getElementsByClassName('card--pricing')
+
   if (elm) {
     [...elm].forEach((_, i, arr) => {
       const product = products[i]
       for (let key in product) {
         const attr = arr[i].querySelector(`[data-id="${key}"]`)
         if (attr) {
-          if (key == 'price') attr.innerHTML = `<div style="text-decoration: line-through;color:lightgray;font-size:1.4rem">$${product[key]}</div>$${countDiscount(product[key])}`
-          else attr.innerHTML = product[key]
-          /*if (key == 'price') attr.innerHTML = `$${product[key]}`
-          else attr.innerHTML = product[key]*/
+          if (discount != 0) {
+            if (key == 'price') attr.innerHTML = `<div style="text-decoration: line-through;color:lightgray;font-size:1.4rem">$${product[key]}</div>
+                                                <span class="discounted-price">$${countDiscount(product[key], discount)}<div class="discount-label">${discount * 100}%</div></span>`
+            else attr.innerHTML = product[key]
+          } else {
+            if (key == 'price') attr.innerHTML = product[key]
+            else attr.innerHTML = product[key]
+          }
         }
       }
       const btn = arr[i].querySelector('.btn--purchase')
       if (btn) btn.addEventListener('click', () => {
         localStorage.setItem("data", JSON.stringify({
           name: product.name,
-          price: countDiscount(product.price),
+          price: countDiscount(product.price, discount),
           license: 'unlimited number of devices'
         }))
         window.location.href = 'payment.html'
