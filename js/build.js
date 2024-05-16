@@ -240,7 +240,7 @@ const main = () => {
     price: '529.00'
   }]
 
-  const discount = 0.25
+  const discount = 0.5
   const elm = document.getElementsByClassName('card--pricing')
 
   if (elm) {
