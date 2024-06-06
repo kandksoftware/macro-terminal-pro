@@ -277,7 +277,10 @@ const main = () => {
       const spinner = ife[i].querySelector('.iframe-spinner')
       const iframe = ife[i].querySelector('iframe')
       spinner.style.display = 'block'
-      iframe.addEventListener('load', () => spinner.style.display = 'none')
+      iframe.addEventListener('load', () => {
+        spinner.style.display = 'none'
+        iframe.style.display = 'block'
+      })
     }
   }
 
