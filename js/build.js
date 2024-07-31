@@ -304,10 +304,23 @@ const main = () => {
 
 
 
-
+  //goto the page section
   const goto = new URLSearchParams(window.location.search).get('goto')
   const element = document.getElementById(goto)
   if (element) {
     element.scrollIntoView()
+  }
+
+
+  const galeryImgs = document.querySelectorAll('#gallery__selector img')
+  const galeryPreview = document.querySelector('#gallery__preview img')
+  if (galeryImgs) {
+    for (let i = 0, l = galeryImgs.length; i < l; i++) {
+      galeryImgs[i].addEventListener('click', () => {
+        galeryPreview.src = galeryImgs[i].src
+        //console.log(galeryImgs[i].src)
+      })
+    }
+
   }
 }
