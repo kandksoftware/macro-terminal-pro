@@ -30,27 +30,34 @@
         <div class="main__product-text p-1">
           <h1>CNC Macro Simulator II</h1>
           <h3 class="main__desc">
-            Everything you need in one place:
-
-            <!--Powerful, advanced and easy-to-use CNC software with macro simulator, conversational
-            programming, CNC code editor, CNC backplotter and code converter for CNC lathes and milling machines-->
+            Probably the best CNC code editor + simulator ever created
           </h3>
-          <ul class="list main__list">
-            <li>milling - 3 axis, turning - 2 axis, C axis + live tooling, Y axis</li>
-            <li>conversational programming (turning/milling)</li>
-            <li>macro simulator (Fanuc Macro B/Centroid)</li>
-
-            <li>custom cycles (based of Fanuc Macro B)</li>
-            <li>advanced macro code debugging tool</li>
-            <li>macro to pure g code converter</li>
-          </ul>
-          <div class="main__btn-container">
-            <a class="btn btn-brand-color" href="pricing.html">Purchase</a>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>everything you need in one place
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>buy once (works offline, no time limit, no subscription, no account,
+            no devices limit)
+          </h3>
+          <div class=" main__btn-container">
+            <a class="btn btn-brand-color" href="{{ purchase-link }}">Purchase</a>
             <a class="btn btn--reverse" href="demo.html" style="margin-left: 10px;">Get demo</a>
           </div>
         </div>
       </section>
       <section class="article article--main">
+        <h1 class="main__title" id="what-is-this">What is CNC Macro Simulator II?</h1>
+        <div class="separator" style="margin: 1rem;"></div>
+        <div class="product__intro">
+          CNC Macro Simulator II is a lightweight CNC code editor and simulator designed to simplify the creation of
+          macro programs for controls such as Fanuc, Haas, Mazak (ISO) and Centroid, and even Sinumerik, Heidenhain or
+          Okuma when
+          using built-in converters.
+          Supporting both 3-axis mills and lathes with C + Y axes and live tooling. It works offline on Windows,
+          Linux, MacOS, Android, and IOS, and is available for desktops, tablets, and mobile phones.
+          Although the simulator currently only allows for 3 axes to be represented, the software can execute macro
+          programs for up to 6 axes along with debugging and conversion to plain G-code.
+        </div>
         <div class="controls">
           <div class="control">
             FANUC
@@ -68,10 +75,12 @@
             CENTROID
           </div>
         </div>
+        <h1 class="main__title">Gallery</h1>
+        <div class="separator" style="margin: 1rem;"></div>
         <div class="gallery" style="width: calc(100% - 2rem);margin-left:1rem">
-          <img src="resources/lathe/1.png">
-          <img src="resources/standard/1.png">
-          <img src="resources/TC-C/1.png">
+          <img src="resources/conversational-programming.png" alt="cnc conversational programmin">
+          <img src="resources/export.png" alt="cnc macro program export to plain ISO, Heidenhain, Sinumerik and Okuma">
+          <img src="resources/macro-circle.png" alt="a circle generate using parametric programming">
           <img src="resources/standard/6.png">
           <img src="resources/lathe/6.png">
           <img src="resources/standard/4.png">
@@ -159,13 +168,88 @@
           </div>
         </div>-->
 
-        <h1 class="main__title">Why CNC Macro Simulator II?</h1>
+        <h1 class="main__title" id="advantages">Advantages</h1>
         <div class="separator" style="margin: 1rem;"></div>
-        <ul class="list">
+        <div class="cards">
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Macro analyzing tool
+            </div>
+            <img class="card__img" src="resources/macro-analize.png" alt="safetiness" />
+            <div class="card__content">
+              See step by step what variables are used, evaluation of mathematical operations with tool path simulation
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Program export
+            </div>
+            <img class="card__img" src="resources/export.png" alt="file-export" loading="lazy" />
+            <div class="card__content">
+              Export macro programs to plain ISO, Heidenhain, Sinumerik or Okuma formats and run them on different CNC
+              machines
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Conversational programming
+            </div>
+
+            <img class="card__img" src="resources/conversational-programming.png" alt="easy-to-use" />
+            <div class="card__content">
+              Leverage conversational programming to rapidly generate CNC programs for repetitive tasks, all without any
+              coding required.
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Compatibility
+            </div>
+            <img class="card__img" src="resources/compatibility.png" alt="compatibility" loading="lazy" />
+            <div class="card__content">
+              Compatible with a wide range of popular CNC controls, including Fanuc, Haas, Centroid, Mazak ISO, and
+              Siemens 802D.
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Multiplatform
+            </div>
+            <img class="card__img" src="resources/multi-platform.png" alt="multi-platform" loading="lazy" />
+            <div class="card__content">
+              It seamlessly operates across your desktop, tablet, and mobile phone, and is fully compatible with
+              Windows, MacOS, Linux, Android, and IOS.
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Lightweight
+            </div>
+            <img class="card__img" src="resources/lightweight.png" alt="lightweight" loading="lazy" />
+            <div class="card__content">
+              Hard disk space low? CNC Macro Simulator II does not need much. It takes less than 5MB (tested on MacOS)
+            </div>
+          </div>
+        </div>
+        <!-- demo request banner -->
+        <a href="demo.html">
+          <div class="banner banner__demo"></div>
+        </a>
+        <h1 class="main__title" id="features">Features</h1>
+        <div class="separator" style="margin: 1rem;"></div>
+        <ul class="list hide">
           <li>CNC simulator, backplotter, cnc viewer, macro interpreter, conversational programming, code converters -
             all in one</li>
           <li>easy, fast and powerful mill & lathe conversational programming, import & export programs *</li>
-          <li>3 axis mill, 2 axis lathe, C axis + live tooling lathe, Y axis lathe *</li>
+          <li>3 axis for milling machines, C + Y axis + live tooling for lathes</li>
           <li>conversational mode offers automatic calculation of speed and feed and plunge feed based on the selected
             material being
             machined and the tools used</li>
@@ -193,10 +277,153 @@
           <li>launch offline - no internet connection needed!</li>
           <li>quick support in case of problems (response within 24 hours, except on weekends)</li>
         </ul>
-        <div style="padding:1rem;color:red">
+        <h1 class="main__subtitle" id="viewport">Viewport (simulator/graphics)</h1>
+        <ul class="list">
+          <li>3D tool path (mill)</li>
+          <li>simulation (play, play fast, stop, next, reset, previous, rewind)</li>
+          <li>mill - 5 view modes (3D, XY, XY removal, XZ, YZ)</li>
+          <li>lathe - 2 view modes (radial and axial removal view)</li>
+          <li>measuring an object/coordinates</li>
+          <li>dynamic zoom, pan, and rotation features are accessible through the cursor, dedicated buttons, or keyboard
+            shortcuts</li>
+          <li>show/hide rapid movement</li>
+          <li>3 themes (dark, bright, black & white)</li>
+          <li>machining time estimator</li>
+        </ul>
+        <h1 class="main__subtitle" id="code-editor">Code editor</h1>
+        <ul class="list">
+          <li>stores data even if there is a power outage</li>
+          <li>code highlighting/indentation</li>
+          <li>formatting code</li>
+          <li>intelligent adding/removing line numbers (automatically updates or preserves line numbers associated with
+            GOTO, P and Q addresses in turning cycles, Q address in a subroutine call)</li>
+          <li>advanced code transformation tools: move, rotate, mirror, scale, abs to rel (and vice versa), mm to inch
+            (and vice versa)</li>
+          <li>comment removing</li>
+          <li>skip block add/remove</li>
+          <li>undo/redo</li>
+          <li>adding/removing EOB</li>
+          <li>decimal point adding</li>
+        </ul>
+        <h1 class="main__subtitle" id="debugger">Debugger tool</h1>
+        <ul class="list">
+          <li>assigned and created variables</li>
+          <li>called subroutine and nesting level</li>
+          <li>math and logical calculations in line</li>
+          <li>for IF and WHILE statement shows the actual value (true or false)</li>
+        </ul>
+        <h1 class="main__subtitle">Advanced calculator</h1>
+        <ul class="list">
+          <li>use of variables (including system ones)</li>
+          <li>use of logical and arithmetic operators (as in Fanuc Macro B or Centroid)</li>
+          <li>using functions (same as Fanuc Macro B)</li>
+          <li>supports Fanuc Macro B and Centroid syntax</li>
+        </ul>
+        <h1 class="main__subtitle" id="macro-support">Macro (Fanuc Custom Macro B/Haas/Centroid) support</h1>
+        <ul class="list">
+          <li>keywords: IF, THEN (or TH), GOTO, WHILE (or WH), DO, END, ELSE (CENTROID), DPRNT, FOPEN, FCLOS</li>
+          <li>keyword shortcuts: TH => THEN, WH => WHILE</li>
+          <li>comparison operators (FANUC/HAAS): EQ, LT, LE, GT, GE, NE</li>
+          <li>comparison operators (CENTROID): ==, <, <=,>, >=, !=</li>
+          <li>G65/G66/G66.1 macro subprogram call</li>
+          <li>math functions: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
+          <li>local, common and the most popular system variables</li>
+        </ul>
+        <h1 class="main__subtitle" id="common-iso-support">Common ISO support</h1>
+        <ul class="list">
+          <li>G28, G30 and G53 (home position)</li>
+          <li>absolute, incremental and polar mode</li>
+          <li>G98 retract to initial Z value (mill)</li>
+          <li>G99 retract to R value (mill)</li>
+          <li>M98 subprogram (multiple formats)</li>
+          <li>repeat canned cycle (L and K)</li>
+          <li>circular interpolation supported by using (I, J, K or R)</li>
+        </ul>
+        <h1 class="main__subtitle" id="lathe-cycles">Lathe cycles support</h1>
+        <ul class="list">
+          <li>G32/G33 thread cutting (straight and tapered)</li>
+          <li>G70 finishing cycle</li>
+          <li>G71 rough machining cycle</li>
+          <li>G72 facing cycle</li>
+          <li>G73 pattern repetition cycle</li>
+          <li>G74 face grooving cycle</li>
+          <li>G75 grooving cycle</li>
+          <li>G76/G78 threading cycle</li>
+          <li>G90 turning cycle</li>
+          <li>G92 threading cycle</li>
+          <li>G94 facing cycle</li>
+        </ul>
+        <h1 class="main__subtitle" id="transformation-cycles">Transformation cycles</h1>
+        <ul class="list">
+          <li>G16 polar coordinate</li>
+          <li>G51 scaling</li>
+          <li>G52 local work shift</li>
+          <li>G68 coordinate system rotation</li>
+        </ul>
+        <h1 class="main__subtitle" id="haas-cycles-support">Haas cycles support</h1>
+        <ul class="list">
+          <li>G70 Bolt Hole Circle</li>
+          <li>G71 Bolt Hole Arc</li>
+          <li>G72 Bolt Holes Along an Angle</li>
+        </ul>
+        <h1 class="main__subtitle" id="milling-conversational-programming">Milling conversational programming</h1>
+        <ul class="list">
+          <li>CIRCULAR FACE MILLING</li>
+          <li>RECTANGULAR FACE MILLING</li>
+          <li>CIRCULAR POCKET</li>
+          <li>RECTANGULAR POCKET</li>
+          <li>CIRCULAR SHOULDER</li>
+          <li>RECTANGULAR SHOULDER</li>
+          <li>CIRCULAR GROOVING</li>
+          <li>RECTANGULAR GROOVING</li>
+          <li>HELICAL BORING</li>
+          <li>SPOT DRILLING</li>
+          <li>DWELL DRILLING</li>
+          <li>PECK DRILLING</li>
+          <li>THREAD MILLING</li>
+          <li>TAPPING</li>
+          <li>CODE SNIPPET (add your own code)</li>
+        </ul>
+        <h1 class="main__subtitle" id="turning-conversational-programming">Turning conversational programming</h1>
+        <ul class="list">
+          <li>FACING</li>
+          <li>TURNING</li>
+          <li>CONTOURING</li>
+          <li>AXIAL CONTOUR OD/ID</li>
+          <li>AXIAL CICULAR KEYWAY SLOT</li>
+          <li>DRILLING</li>
+          <li>AXIAL and RADIA DRILLING</li>
+          <li>FACE GROOVING</li>
+          <li>GROOVING</li>
+          <li>AXIAL and RADIAL KEYWAY</li>
+          <li>THREADING</li>
+          <li>TAPPING</li>
+          <li>AXIAL and RADIAL TAPPING</li>
+          <li>REAMIMG</li>
+          <li>AXIAL and RADIAL REAMIMG</li>
+          <li>BORING</li>
+          <li>PARTING</li>
+          <li>CODE SNIPPET (add your own code)</li>
+        </ul>
+        <h1 class="main__subtitle">Files</h1>
+        <ul class="list">
+          <li>new project</li>
+          <li>open file (open multiple files at once)</li>
+          <li>append (add a subroutine under the main program)</li>
+          <li>import/export conversational program</li>
+          <li>cnc programs examples</li>
+          <li>save, save as</li>
+          <li>export to plain ISO, Heidenhain i530, Sinumerik 840D or Okuma code</li>
+          <li>file extension supported: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+        </ul>
+        <h1 class="main__subtitle">Languages</h1>
+        <ul class="list">
+          <li>English</li>
+        </ul>
+        <div style="padding:1rem;color:red" class="hide">
           <p>* depends on the version purchased, ** depends on the selected settings</p>
         </div>
-        <h1 class="main__title">Trusted by specialists from:</h1>
+        <h1 class="main__title">Trusted by specialists</h1>
         <div class="separator" style="margin: 1rem;"></div>
         <img class="card__img-full" src="resources/companies.png" alt="companies" loading="lazy" />
         <div class="separator" style="margin: 1rem;"></div>
@@ -383,10 +610,25 @@
             </iframe>
           </div>
         </div>-->
-
-        <a href="demo.html">
-          <div class="banner banner__demo"></div>
-        </a>
+        <div class="hide">
+          <a href="demo.html">
+            <div class="banner banner__demo"></div>
+          </a>
+        </div>
+        <div class="main__pricing" id="purchase">
+          <div class="main__pricing-card">
+            <div class="main__pricing-title">CNC Macro Simulator II STUDIO</div>
+            <div class="main__pricing-desc">(unlimited number of devices)</div>
+            <div class="main__pricing-normal-price hide">529.00</div>
+            <div class="main__pricing-discount-price" data-id="pay-price">397</div>
+          </div>
+          <div class="main__pricing-card">
+            <div class="main__pricing-pay-button-container">
+              <button class="main__pricing-pay-button" id="purchase-studio-version">Pay</button>
+            </div>
+          </div>
+        </div>
+        <div class="separator" style="margin: 1rem;"></div>
         <!--<a href="lathe.html">
           <div class="banner banner__lathe"></div>
         </a>-->

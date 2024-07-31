@@ -1,9 +1,9 @@
 @charset "UTF-8";
-@font-face {
+/*@font-face {
   font-family: proxima_nova;
-  src: url("../resources/fonts/Proxima Nova Alt Light.otf");
-}
-
+  src: url('../resources/fonts/Proxima Nova Alt Light.otf');
+}*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -27,6 +27,7 @@ body {
   /*background-color: $secondary-color;*/
   color: #000;
   font-family: proxima_nova;
+  font-family: "Roboto", sans-serif;
   counter-reset: section;
 }
 
@@ -307,7 +308,7 @@ noscript {
 
 .nav__name::after {
   content: "CMS2";
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
@@ -331,6 +332,7 @@ noscript {
   color: #000;
   font-size: 1.125rem;
   margin: 0 0.3rem;
+  font-weight: 400;
 }
 
 .nav__links > a:hover {
@@ -492,7 +494,7 @@ noscript {
 .footer__links > a {
   color: #000;
   padding: 0.5rem;
-  font-weight: 600;
+  font-weight: 450;
 }
 
 .footer__links > a:hover {
@@ -971,6 +973,17 @@ noscript {
   margin-left: 1rem;
 }
 
+.main__subtitle {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: calc(100% - 2rem);
+  text-align: left;
+  color: #c50000;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+}
+
 .main__product-text, .main__product-image {
   text-align: center;
   /*width: 100%;*/
@@ -1019,7 +1032,7 @@ noscript {
 @media screen and (min-width: 768px) {
   .main {
     width: 100%;
-    height: 100vh !important;
+    height: 80vh !important;
     /*margin: 50px 0;*/
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1027,7 +1040,8 @@ noscript {
             flex-direction: row;
   }
   .main__product-image, .main__product-text {
-    width: 90%;
+    width: 100%;
+    text-align: left;
   }
   .main__product-image {
     -webkit-box-align: center;
@@ -1050,9 +1064,15 @@ noscript {
   }
 }
 
+.main__sub-decor {
+  color: #c50000;
+}
+
 .movie {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../resources/circle.png");
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../resources/circle.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8))), url("../resources/graphics-window.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../resources/graphics-window.png");
   height: 100vh;
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -1151,6 +1171,125 @@ noscript {
   margin-top: 1rem;
   display: block;
   color: #c50000;
+}
+
+.main__pricing {
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  height: auto;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .main__pricing {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.main__pricing-card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .main__pricing-card {
+    width: 50%;
+  }
+}
+
+.main__pricing-title, .main__pricing-desc, .main__pricing-discount-price {
+  margin-bottom: 5px;
+}
+
+.main__pricing-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.main__pricing-desc {
+  font-weight: 200;
+  text-align: center;
+  color: #3c3c3c;
+}
+
+.main__pricing-discount-price {
+  font-weight: 200;
+  font-size: 2rem;
+  color: #c50000;
+}
+
+.main__pricing-discount-price::before {
+  content: '$';
+}
+
+.main__pricing-pay-button-container {
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .main__pricing-pay-button-container {
+    height: 100%;
+  }
+}
+
+.main__pricing-pay-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #c50000;
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+}
+
+.main__pricing-pay-button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  .main__pricing-pay-button {
+    width: 200px;
+  }
+}
+
+.product__intro {
+  color: #3c3c3c;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  width: calc(100% - 2rem);
 }
 
 .btn {
@@ -1283,12 +1422,13 @@ th, td {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   color: #c50000;
+  text-align: center;
 }
 
 .card__content {
   margin-top: 1rem;
   font-size: 1.5rem;
-  color: #333333;
+  color: #3c3c3c;
   position: relative;
 }
 
@@ -1327,7 +1467,7 @@ th, td {
   }
   .card--pricing {
     margin: 0.5rem;
-    width: 25%;
+    width: 50%;
   }
   .card__content {
     font-size: 1rem;
@@ -1423,7 +1563,7 @@ th, td {
 }
 
 .list {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-left: 1rem;
   list-style-type: none;
 }
@@ -1434,10 +1574,10 @@ th, td {
 }
 
 .list > li {
-  color: #333333;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #333333;
+  color: #3c3c3c;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e6e6e6;
   width: calc(100% - 1rem);
 }
 
@@ -1448,7 +1588,7 @@ th, td {
 .list > li::before {
   content: '⇨ ';
   color: #c50000;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .list--full {
@@ -1490,10 +1630,10 @@ th, td {
 }
 
 .gallery > img {
-  width: 650px;
-  height: auto;
+  height: 200px;
+  width: auto;
   border-radius: 5px;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .sell-container {
@@ -1594,7 +1734,7 @@ th, td {
 
 @media screen and (min-width: 768px) {
   .price__subcontainer {
-    width: 50%;
+    width: 25%;
     border: none;
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;

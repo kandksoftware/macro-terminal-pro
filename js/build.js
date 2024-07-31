@@ -1,6 +1,7 @@
 'use strict'
 
 const main = () => {
+  const PURCHASE_LINK = 'index.html#purchase'
   //const APP_NAME = 'CNC Macro Simulator'
   const APP_NAME = 'PJ Software'
   const array = [{
@@ -55,6 +56,9 @@ const main = () => {
     <div class="card__content">
       Advanced calculator
     </div>`
+  }, {
+    id: 'purchase-link',
+    content: PURCHASE_LINK,
   }]
 
   const components = [{
@@ -74,8 +78,8 @@ const main = () => {
     desc: 'Main'
   }, {
     type: ['nav', 'menu'],
-    link: 'technical.html',
-    desc: 'Specification',
+    link: 'index.html#features',
+    desc: 'Features',
   }, /*{
     type: ['footer'],
     link: 'products.html',
@@ -100,7 +104,7 @@ const main = () => {
     target: '_blank'
   }, {
     type: ['nav', 'menu'],
-    link: 'pricing.html',
+    link: PURCHASE_LINK,
     desc: 'Purchase',
     dec: ['btn btn-brand-color'],
   }, {
@@ -271,6 +275,18 @@ const main = () => {
     })
   }
 
+  const psv = document.querySelector('#purchase-studio-version')
+  if (psv) {
+    psv.addEventListener('click', () => {
+      localStorage.setItem("data", JSON.stringify({
+        name: 'STUDIO',
+        price: '397',
+        license: 'unlimited number of devices'
+      }))
+      window.location.href = 'payment.html'
+    })
+  }
+
   const iframeSpinnerLoading = () => {
     const ife = document.querySelectorAll('.iframe-container')
     for (let i = 0, l = ife.length; i < l; i++) {
@@ -285,4 +301,13 @@ const main = () => {
   }
 
   iframeSpinnerLoading()
+
+
+
+
+  const goto = new URLSearchParams(window.location.search).get('goto')
+  const element = document.getElementById(goto)
+  if (element) {
+    element.scrollIntoView()
+  }
 }
