@@ -1178,6 +1178,8 @@ noscript {
   margin-left: 1rem;
   height: auto;
   padding: 1rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
