@@ -280,7 +280,7 @@ const main = () => {
     psv.addEventListener('click', () => {
       localStorage.setItem("data", JSON.stringify({
         name: 'STUDIO',
-        price: '397',
+        price: document.querySelector('#pay-price').innerHTML,
         license: 'unlimited number of devices'
       }))
       window.location.href = 'payment.html'
