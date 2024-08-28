@@ -308,6 +308,7 @@ const main = () => {
   const goto = new URLSearchParams(window.location.search).get('goto')
   const element = document.getElementById(goto)
   if (element) {
+    console.log('used')
     element.scrollIntoView()
   }
 

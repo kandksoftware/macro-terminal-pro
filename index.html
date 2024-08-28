@@ -49,14 +49,12 @@
         <h1 class="main__title" id="what-is-this">What is CNC Macro Simulator II?</h1>
         <div class="separator" style="margin: 1rem;"></div>
         <div class="product__intro">
-          CNC Macro Simulator II is a lightweight CNC code editor and simulator designed to simplify the creation of
-          macro programs for controls such as Fanuc, Haas, Mazak (ISO) and Centroid, and even Sinumerik, Heidenhain or
-          Okuma when
-          using built-in converters.
-          Supporting both 3-axis mills and lathes with C + Y axes and live tooling. It works offline on Windows,
-          Linux, MacOS, Android, and IOS, and is available for desktops, tablets, and mobile phones.
-          Although the simulator currently only allows for 3 axes to be represented, the software can execute macro
-          programs for up to 6 axes along with debugging and conversion to plain G-code.
+          CNC Macro Simulator II is a lightweight CNC code editor and simulator designed to streamline the creation of
+          macro programs for controls like Fanuc, Haas, Mazak (ISO), Centroid, and even Sinumerik, Heidenhain, or Okuma
+          with built-in converters. It supports both 3-axis mills and lathes with C/Y axis and live tooling. The
+          software operates offline on Windows, Linux, macOS, Android, and iOS, and is available for desktops, tablets,
+          and mobile phones. While the simulator currently represents only 3 axes, the software can execute macro
+          programs for up to 6 axes, offering debugging and conversion to plain G-code.
         </div>
         <div class="controls">
           <div class="control">
@@ -183,8 +181,14 @@
               Macro analyzing tool
             </div>
             <img class="card__img" src="resources/debugger2.png" alt="debugging fanuc macro B program" />
-            <div class="card__content">
+            <div class="card__content hide">
               See step by step what variables are used, evaluation of mathematical operations with tool path simulation
+
+
+            </div>
+            <div class="card__content">
+              View the variables used and their values, mathematical and logical operations, alarms and subroutine
+              nesting
             </div>
           </div>
           <!-- card -->
@@ -194,8 +198,8 @@
             </div>
             <img class="card__img" src="resources/export.png" alt="file-export" loading="lazy" />
             <div class="card__content">
-              Export macro programs to plain ISO, Heidenhain, Sinumerik or Okuma formats and run them on different CNC
-              machines
+              Convert macro programs to plain ISO, Heidenhain, Sinumerik, or Okuma formats for compatibility with
+              different CNC machines
             </div>
           </div>
           <!-- card -->
@@ -206,8 +210,7 @@
 
             <img class="card__img" src="resources/conversational-programming.png" alt="easy-to-use" />
             <div class="card__content">
-              Leverage conversational programming to rapidly generate CNC programs for repetitive tasks, all without any
-              coding required.
+              Utilize conversational programming to quickly generate CNC programs without any coding
             </div>
           </div>
         </div>
@@ -220,7 +223,7 @@
             <img class="card__img" src="resources/compatibility.png" alt="compatibility" loading="lazy" />
             <div class="card__content">
               Compatible with a wide range of popular CNC controls, including Fanuc, Haas, Centroid, Mazak ISO, and
-              Siemens 802D.
+              Siemens 802D
             </div>
           </div>
           <!-- card -->
@@ -230,8 +233,8 @@
             </div>
             <img class="card__img" src="resources/multi-platform.png" alt="multi-platform" loading="lazy" />
             <div class="card__content">
-              It seamlessly operates across your desktop, tablet, and mobile phone, and is fully compatible with
-              Windows, MacOS, Linux, Android, and IOS.
+              Works on desktops, tablets and mobile phones and is fully compatible with Windows, MacOS, Linux, Android
+              and IOS
             </div>
           </div>
           <!-- card -->
@@ -288,9 +291,9 @@
           <li>3D tool path (mill)</li>
           <li>simulation (play, play fast, stop, next, previous, rewind, reset)</li>
           <li>mill - 5 view modes (3D, XY, XY removal, XZ, YZ)</li>
+          <li>lathe - 2 view modes (radial and axial removal view)</li>
           <li>full screen support</li>
           <li>adjustable simulation speed</li>
-          <li>lathe - 2 view modes (radial and axial removal view)</li>
           <li>measuring an object/coordinates</li>
           <li>dynamic zoom, pan, and rotation features are accessible through the cursor, dedicated buttons, or keyboard
             shortcuts</li>
@@ -307,7 +310,7 @@
           <li>debugging options: play, play fast, stop, next, previous, rewind, reset</li>
           <li>called subroutine and nesting level</li>
           <li>math and logical calculations in line</li>
-          <li>for IF and WHILE statement shows the actual value (true or false)</li>
+          <li class="hide">for IF and WHILE statement shows the actual value (true or false)</li>
           <li>adjustable debugging speed</li>
           <li>seamless manual control over modifying local, common, and system variable values during active debugging
           </li>
@@ -429,7 +432,7 @@
         </ul>
         <h1 class="main__subtitle" id="postprocessors">Postprocessors</h1>
         <ul class="list">
-          <li>turning mode: ISO(FANUC/HAAS, 2-line or 1-line cycles depending on the selected control), Okuma
+          <li>turning mode: ISO (FANUC/HAAS, 2-line or 1-line cycles depending on the selected control), Okuma
             OSP-P300</li>
           <li>Do you need a special post-processor? <a href="contact.html">Contact us</a></li>
         </ul>
