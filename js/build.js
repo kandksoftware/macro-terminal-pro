@@ -25,7 +25,9 @@ const main = () => {
     content: `<div class="footer__links"></div>
     <div class="footer__copy">
       <a href="#!">Inject here</a> 
-      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="privacy-policy.html">Privacy</a>
+      | <a href="terms-of-service.html">Legal</a>
+      | <a href="disclaimer.html">Disclaimer</a>
     </div>`
   }, {
     id: 'current-year',
