@@ -334,7 +334,7 @@ noscript {
 
 .nav__links-container > * {
   margin: 0 0.3rem;
-  display: inline;
+  /*display: inline;*/
 }
 
 @media screen and (min-width: 768px) {

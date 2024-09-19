@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="../css/main.css">
+  <title>
+    CNC Macro Simulator II | Fanuc Custom Macro B | Haas makro | Centroid | Konversationsprogrammering | CNC
+    programmering
+  </title>
+  <meta name="description"
+    content="CNC Macro Simulator II - Kraftfull, avancerad och lättanvänd CNC-mjukvara med CNC-makrosimulator och CNC-simulator för CNC-makro (parametrisk) programmering och CNC-programmering" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Din webbläsare stöder inte JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="../resources/spinner.gif" alt="spinnare" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ menu }}
+    </header>
+    <main>
+      <section class="main flex-c movie">
+        <div class="main__product-text p-1">
+          <h1>CNC Macro Simulator II</h1>
+          <h3 class="main__desc">
+            Förmodligen den bästa CNC-kodredigeraren + simulatorn som någonsin skapats
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>allt du behöver på ett ställe
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>köp en gång (fungerar offline, ingen tidsgräns, ingen
+            prenumeration, inget konto,
+            ingen enhetsbegränsning)
+          </h3>
+          <div class=" main__btn-container">
+            <a class="btn btn-brand-color" href="{{ purchaseLink }}">Köp</a>
+            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">Hämta demo</a>
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="what-is-this">Vad är CNC Macro Simulator II?</h1>
+        <div class="main__product-intro">
+          CNC Macro Simulator II är en lätt CNC-kodredigerare och simulator designad för att effektivisera skapandet
+          av
+          makroprogram för kontroller som Fanuc, Haas, Mazak (ISO), Centroid och till och med Sinumerik, Heidenhain
+          eller Okuma
+          med inbyggda omvandlare. Den stöder både 3-axliga fräsar och svarvar med C/Y-axel och spänningsförande
+          verktyg. De
+          programvara fungerar offline på Windows, Linux, macOS, Android och iOS, och är tillgänglig för stationära
+          datorer, surfplattor,
+          och mobiltelefoner. Medan simulatorn för närvarande endast representerar 3 axlar, kan programvaran köra
+          makro
+          program för upp till 6 axlar, som erbjuder felsökning och konvertering till vanlig G-kod.
+        </div>
+      </section>
+      <!-- betrodd av avsnitt -->
+      <section class="article article--main">
+        <h1 class="main__title">Betrodd av specialister från:</h1>
+        <img class="card__img-full" src="../resources/used-by-specialists-from-companies.png"
+          alt="Betrodd av specialister från: United States Navy, Tesla, General Motors" loading="lat" />
+      </section>
+      <!-- kontrollerar stödet -->
+      <section class="article article--main">
+        <div class="controls">
+          <div class="control">
+            FANUC
+          </div>
+          <div class="control">
+            HEIDENHAIN
+          </div>
+          <div class="control">
+            HAAS
+          </div>
+          <div class="control">
+            OKUMA
+          </div>
+          <div class="control">
+            SINUMERIK
+          </div>
+          <div class="control">
+            MAZAK ISO
+          </div>
+          <div class="control">
+            CENTROID
+          </div>
+        </div>
+      </section>
+      <!-- gallerisektion -->
+      <section class="article article--main">
+        <h1 class="main__title">Galleri</h1>
+        <div id="gallery">
+          <div id="gallery__preview">
+            <img src="../resources/conversational-programming.png" alt="cnc konversationsprogrammering">
+          </div>
+          <div id="gallery__selector">
+            <img src="../resources/conversational-programming.png" alt="cnc konversationsprogrammering">
+            <img src="../resources/macro-circle.png" alt="en cirkel genererar med parametrisk programmering">
+            <img src="../resources/laser2.png" alt="cnc laserskärningsprogram med Fanuc Macro B">
+            <img src="../resources/debugging.png" alt="felsökningsmakroprogram med inbyggd debugger">
+            <img src="../resources/sphere.png" alt="skapa sfär med hjälp av programmeringsparametri">
+            <img src="../resources/plazma.png" alt="cnc plazma cutter program">
+            <img src="../resources/laser.png" alt="cnc laserskärningsprogram">
+            <img src="../resources/circular-pocket.png" alt="fanuc makro B fickfräsmakro">
+            <img src="../resources/gear.png" alt="hämta data från gear cnc program">
+            <img src="../resources/oval.png" alt="testar ovalt makroprogram">
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="advantages">Fördelar</h1>
+        <div class="cards">
+          <!-- kort -->
+          <div class="card">
+            <div class="card__title">
+              Makroanalysverktyg
+            </div>
+            <img class="card__img" src="../resources/debugger2.png" alt="felsökning av fanuc makro B-program" />
+            <div class="card__content hide">
+              Se steg för steg vilka variabler som används, utvärdering av matematiska operationer med
+              verktygsbanasimulering
+            </div>
+            <div class="card__content">
+              Se de variabler som används och deras värden, matematiska och logiska operationer, larm och subrutiner
+              häckande
+            </div>
+          </div>
+          <!-- kort -->
+          <div class="card">
+            <div class="card__title">
+              Programexport
+            </div>
+            <img class="card__img" src="../resources/export.png" alt="fil-export" loading="lat" />
+            <div class="card__content">
+              Konvertera makroprogram till vanliga ISO-, Heidenhain-, Sinumerik- eller Okuma-format för
+              kompatibilitet med
+              olika CNC-maskiner
+            </div>
+          </div>
+          <!-- kort -->
+          <div class="card">
+            <div class="card__title">
+              Konversation
+            </div>
+            <img class="card__img" src="../resources/conversational-programming.png" alt="lätt att använda" />
+            <div class="card__content">
+              Använd konversationsprogrammering för att snabbt generera CNC-program utan någon kodning
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <!-- kort -->
+          <div class="card">
+            <div class="card__title">
+              Kompatibilitet
+            </div>
+            <img class="card__img" src="../resources/compatibility.png" alt="kompatibilitet" loading="lat" />
+            <div class="card__content">
+              Kompatibel med ett brett utbud av populära CNC-kontroller, inklusive Fanuc, Haas, Centroid, Mazak ISO
+              och
+              Siemens 802D
+            </div>
+          </div>
+          <!-- kort -->
+          <div class="card">
+            <div class="card__title">
+              Multiplattform
+            </div>
+            <img class="card__img" src="../resources/multi-platform.png" alt="multi-platform" loading="lat" />
+            <div class="card__content">
+              Fungerar på stationära datorer, surfplattor och mobiltelefoner och är helt kompatibel med Windows,
+              MacOS, Linux, Android
+              och IOS
+            </div>
+          </div>
+          <!-- kort -->
+          <div class="card">
+            <div class="card__title">
+              Lättvikt
+            </div>
+            <img class="card__img" src="../resources/lightweight.png" alt="lättvikt" loading="lat" />
+            <div class="card__content">
+              Lite hårddiskutrymme? CNC Macro Simulator II behöver inte mycket. Det tar mindre än 5 MB (testat på
+              MacOS)
+            </div>
+          </div>
+        </div>
+        <!-- demo request banner -->
+        <a href="{{ demoLink }}">
+          <div class="banner banner__demo"></div>
+        </a>
+      </section>
+      <!-- funktioner -->
+      <section class="article article--main">
+        <h1 class="main__title" id="features">Funktioner</h1>
+        <ul class="list hide">
+          <li>CNC-simulator, backplotter, cnc viewer, makrotolk, konversationsprogrammering, kodkonverterare -
+            allt i ett</li>
+          <li>enkel, snabb och kraftfull konversationsprogrammering för fräs och svarv, import och export *</li>
+          <li>3-axlig för fräsmaskiner, C + Y-axel + spänningsförande verktyg för svarvar</li>
+          <li>Konversationsläge erbjuder automatisk beräkning av hastighet och matning och dykmatning baserat på det
+            valda
+            materiell varelse
+            bearbetade och de verktyg som används</li>
+          <li>3 inbyggda omvandlare från ISO till Okuma, Sinumerik 840D, Heidenhain i530 *</li>
+          <li>köp en gång (ingen tidsgräns, ingen prenumeration, inget konto, ingen enhetsgräns)</li>
+          <li>bygg dina egna anpassade cykler med Fanuc Macro B/Centroid <a href="../custom-cycle.html">läs
+              mer</a>
+          </li>
+          <li>använd på din dator, surfplatta eller till och med mobiltelefon</li>
+          <li>Fanuc Custom Macro B / Haas / Centroid-stöd <a href="../technical.html">läs mer</a></li>
+          <li>stöd för många systemvariabler som används av Fanuc Macro B <a href="../system-variables-list.html">läs
+              mer</a>
+          </li>
+          <li>används och testas av proffs runt om i världen</li>
+          <li>CNC-visare stöder många fräs- och svarvcykler, absolut, inkrementell och polär programmering, upprepa
+            konserverad cykel med L och K och lokala subrutiner</li>
+          <li>rad för rad utvärdering av aritmetiska och logiska operationer</li>
+          <li>konvertering av ett program skrivet med makron till ren g-kod och möjligheten att komprimera den med
+            upp till 40
+            procent **</li>
+          <li>skapa, exportera eller importera verktygsbibliotek</li>
+          <li>behåller data i kodredigeraren även om du tappade ström</li>
+          <li>många exempel på CNC-program</li>
+          <li>inbyggd avancerad kalkylator (använd variabler, funktioner, matematiska och logiska operatorer)</li>
+          <li>lätt - tar upp mindre än 5 MB hårddiskutrymme</li>
+          <li>körs på Windows, MacOS, Linux, Android och IOS</li>
+          <li>starta offline - ingen internetanslutning behövs!</li>
+          <li>snabb support vid problem (svar inom 24 timmar, förutom på helger)</li>
+        </ul>
+        <h1 class="main__subtitle" id="viewport">Viewport (simulator/grafik)</h1>
+        <ul class="list">
+          <li>3D-verktygsbana (fräs)</li>
+          <li>simulering (spela, spela snabbt, stoppa, nästa, föregående, spola tillbaka, återställa)</li>
+          <li>fräs - 5 visningslägen (3D, XY, XY-borttagning, XZ, YZ)</li>
+          <li>svarv - 2 visningslägen (radiell och axiell borttagningsvy)</li>
+          <li>helskärmsstöd</li>
+          <li>justerbar simuleringshastighet</li>
+          <li>mäta ett objekt/koordinater</li>
+          <li>dynamiska zoom-, panorerings- och rotationsfunktioner är tillgängliga via markören, dedikerade
+            knapparna eller tangentbordet
+            genvägar</li>
+          <li>visa/dölj snabba rörelser</li>
+          <li>3 teman (mörkt, ljust, svart och vitt)</li>
+          <li>bearbetningstidsuppskattare</li>
+          <li>information om klipplängd</li>
+          <li>min/max för X-, Y- och Z-axlar</li>
+        </ul>
+        <h1 class="main__subtitle" id="debugger">Felsökningsverktyg</h1>
+        <ul class="list">
+          <li>tilldelade och skapade lokala, vanliga och systemvariabler</li>
+          <li>markera rader i kodredigeraren under felsökning</li>
+          <li>felsökningsalternativ: spela, spela snabbt, stoppa, nästa, föregående, spola tillbaka, återställa</li>
+          <li>kallas subrutin och kapslingsnivå</li>
+          <li>matematiska och logiska beräkningar i linje</li>
+          <li class="hide">för IF- och WHILE-satsen visar det faktiska värdet (sant eller falskt)</li>
+          <li>justerbar felsökningshastighet</li>
+          <li>sömlös manuell kontroll över ändring av lokala, vanliga och systemvariabler under aktiv felsökning
+          </li>
+        </ul>
+        <h1 class="main__subtitle" id="code-editor">Kodredigerare</h1>
+        <ul class="list">
+          <li>lagrar data även om det blir strömavbrott</li>
+          <li>kodmarkering/indrag</li>
+          <li>formateringskod</li>
+          <li>intelligent lägga till/ta bort radnummer (uppdaterar eller bevarar automatiskt radnummer associerade
+            med
+            GOTO-, P- och Q-adresser i vändcykler, Q-adress i ett subrutinsamtal)</li>
+          <li>avancerade kodomvandlingsverktyg: flytta, rotera, spegla, skala, abs till rel (och vice versa), mm
+            till tum
+            (och vice versa)</li>
+          <li>kommentar borttagning</li>
+          <li>hoppa över block lägg till/ta bort</li>
+          <li>ångra/gör om</li>
+          <li>lägga till/ta bort EOB</li>
+          <li>tillägg av decimalkomma</li>
+        </ul>
+        <h1 class="main__subtitle">Avancerad kalkylator</h1>
+        <ul class="list">
+          <li>användning av variabler (inklusive systemvariabler)</li>
+          <li>läser värdena för både vanliga och systemvariabler som används under felsökning</li>
+          <li>användning av logiska och aritmetiska operatorer (som i Fanuc Macro B eller Centroid)</li>
+          <li>använda funktioner (samma som Fanuc Macro B)</li>
+          <li>stöder Fanuc Macro B och Centroid-syntax</li>
+        </ul>
+        <h1 class="main__subtitle" id="macro-support">Stöd för makro (Fanuc Custom Macro B/Haas/Centroid)</h1>
+        <ul class="list">
+          <li>sökord: IF, THEN (eller TH), GOTO, WHILE (eller WH), DO, END, ELSE (CENTROID), DPRNT, FOPEN, FCLOS
+          </li>
+          <li>Sökordsgenvägar: TH => THEN, WH => WHILE</li>
+          <li>jämförelseoperatorer (FANUC/HAAS): EQ, LT, LE, GT, GE, NE</li>
+          <li>jämförelseoperatorer (CENTROID): ==, <, <=,>, >=, !=</li>
+          <li>G65/G66/G66.1 makrounderprogramanrop</li>
+          <li>matematiska funktioner: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
+          <li>lokala, vanliga och de mest populära systemvariablerna</li>
+        </ul>
+        <h1 class="main__subtitle" id="common-iso-support">Vanligt ISO-stöd</h1>
+        <ul class="list">
+          <li>G28, G30 och G53 (hemposition)</li>
+          <li>absolut, inkrementellt och polärt läge</li>
+          <li>G98 dras tillbaka till initialt Z-värde (mill)</li>
+          <li>G99 dras tillbaka till R-värde (mill)</li>
+          <li>M98-underprogram (flera format)</li>
+          <li>upprepa den konserverade cykeln (L och K)</li>
+          <li>cirkulär interpolation som stöds genom att använda (I, J, K eller R)</li>
+        </ul>
+        <h1 class="main__subtitle" id="lathe-cycles">Stöd för svarvcykler</h1>
+        <ul class="list">
+          <li>G32/G33-gängskärning (rak och avsmalnande)</li>
+          <li>G70 efterbehandlingscykel</li>
+          <li>G71 grovbearbetningscykel</li>
+          <li>G72 vänd cykel</li>
+          <li>G73 mönsterupprepningscykel</li>
+          <li>G74 räfflingscykel</li>
+          <li>G75 spårningscykel</li>
+          <li>G76/G78-gängningscykel</li>
+          <li>G90 vändcykel</li>
+          <li>G92-gängningscykel</li>
+          <li>G94-vänd cykel</li>
+        </ul>
+        <h1 class="main__subtitle" id="transformation-cycles">Transformationscykler</h1>
+        <ul class="list">
+          <li>G16 polär koordinat</li>
+          <li>G51-skalning</li>
+          <li>G52 lokalt arbetsskift</li>
+          <li>G68-koordinatsystemrotation</li>
+        </ul>
+        <h1 class="main__subtitle" id="haas-cycles-support">Stöd för Haas-cykler</h1>
+        <ul class="list">
+          <li>G70 Bolt Hole Circle</li>
+          <li>G71 Bolt Hole Arc</li>
+          <li>G72-bulthål längs en vinkel</li>
+        </ul>
+        <h1 class="main__subtitle" id="milling-conversational-programming">Fräsning av konversationsprogrammering
+        </h1>
+        <ul class="list">
+          <li>CIRKULÄR ANSIKTSFRÄSNING</li>
+          <li>REKTANGULÄR FLÄSNING</li>
+          <li>RUNDFICKA</li>
+          <li>REKTANGULÄR FICKA</li>
+          <li>CIRKULÄR AXEL</li>
+          <li>REKTANGULÄR AXEL</li>
+          <li>CIRKULÄR RÅLNING</li>
+          <li>REKTANGULÄR SPÅLNING</li>
+          <li>HELICAL BRING</li>
+          <li>PUNKTBORRNING</li>
+          <li>BORRNING</li>
+          <li>PACKBORRNING</li>
+          <li>GÄNGFRÄSNING</li>
+          <li>KNAPPAR</li>
+          <li>KODSNITTA (lägg till din egen kod)</li>
+        </ul>
+        <h1 class="main__subtitle" id="turning-conversational-programming">Vända konversationsprogrammering</h1>
+        <ul class="list">
+          <li>MÄTTA mot</li>
+          <li>SVÄNDNING</li>
+          <li>KONTURERING</li>
+          <li>AXIAL KONTUR OD/ID</li>
+          <li>AXIAL CICULAR KEYWAY SLOT</li>
+          <li>BORRNING</li>
+          <li>AXIAL- och RADIALBORRNING</li>
+          <li>ANsiktsspår</li>
+          <li>RUVNING</li>
+          <li>AXIAL och RADIAL KEYWAY</li>
+          <li>TRÄDNING</li>
+          <li>KNAPPAR</li>
+          <li>AXIAL och RADIAL TAPPNING</li>
+          <li>REAMNING</li>
+          <li>AXIAL och RADIAL REAMING</li>
+          <li>TRÅTT</li>
+          <li>SKIPPAS</li>
+          <li>KODSNITTA (lägg till din egen kod)</li>
+        </ul>
+        <h1 class="main__subtitle" id="converters">Kodkonverterare</h1>
+        <ul class="list">
+          <li>fräsläge: ISO/MACRO till vanlig ISO, Heidenhain iTNC 530, Sinumerik 840D/840Di/810D, Okuma (fräs)</li>
+          <li>svängläge: ISO/MACRO till vanlig ISO, Okuma OSP-P300</li>
+          <li>Behöver du en speciell omvandlare? <a href="{{ contactLink }}">Kontakta oss</a></li>
+        </ul>
+        <h1 class="main__subtitle" id="postprocessors">Efterbehandlare</h1>
+        <ul class="list">
+          <li>svängläge: ISO (FANUC/HAAS, 2-rads eller 1-rads cykler beroende på vald kontroll), Okuma
+            OSP-P300</li>
+          <li>Behöver du en speciell efterbehandlare? <a href="{{ contactLink }}">Kontakta oss</a></li>
+        </ul>
+        <h1 class="main__subtitle">Filer</h1>
+        <ul class="list">
+          <li>nytt projekt</li>
+          <li>öppna fil (öppna flera filer samtidigt)</li>
+          <li>lägg till (lägg till en subrutin under huvudprogrammet)</li>
+          <li>importera/exportera samtalsprogram</li>
+          <li>exempel på cnc-program</li>
+          <li>spara, spara som</li>
+          <li>exportera till vanlig ISO, Heidenhain iTNC 530, Sinumerik 840D eller Okuma-kod</li>
+          <li>filtillägg som stöds: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+        </ul>
+        <h1 class="main__subtitle">Språk</h1>
+        <ul class="list">
+          <li>Engelska</li>
+        </ul>
+
+        <div class="main__pricing" id="purchase">
+          <div class="main__pricing-card">
+            <div class="main__pricing-title">CNC Macro Simulator II STUDIO</div>
+            <div class="main__pricing-desc">(obegränsat antal enheter)</div>
+            <div class="main__pricing-normal-price hide">529,00</div>
+            <div class="main__pricing-discount-price" id="pay-price">529</div>
+          </div>
+          <div class="main__pricing-card">
+            <div class="main__pricing-pay-button-container">
+              <button class="main__pricing-pay-button" id="purchase-studio-version">Köp</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="../js/script-loader.js"></script>
+    <script src="../js/main2.js"></script>
+  </div>
+</body>
+
+</html>

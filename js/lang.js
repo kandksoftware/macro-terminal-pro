@@ -13,7 +13,7 @@
     flag: '🇫🇷',
     desc: 'Français'
   }, {
-    id: 'jp',
+    id: 'ja',
     flag: '🇯🇵',
     desc: '日本語'
   }, {
@@ -32,9 +32,27 @@
     id: 'it',
     flag: '🇨🇮',
     desc: 'Italiano'
+  }, {
+    id: 'se',
+    flag: '🇸🇪',
+    desc: 'Svenska'
+  }, {
+    id: 'no',
+    flag: '🇳🇴',
+    desc: 'Norsk'
+  }, {
+    id: 'nl',
+    flag: '🇳🇱',
+    desc: 'Nederlands'
+  }, {
+    id: 'fi',
+    flag: '🇫🇮',
+    desc: 'Suomi'
+  }, {
+    id: 'da',
+    flag: '🇩🇰',
+    desc: 'Dansk'
   }]
-
-
 
   const lang = {
     LANG_SELECTOR_COMPONENT: (selectedLang) => {
@@ -71,7 +89,9 @@
           localStorage.setItem("lang", items[i].dataset.id)
           selectedItem.innerHTML = langList.find(lang => lang.id == items[i].dataset.id).flag
 
-          let path = reducePath(window.location.href, '#')
+          let path = reducePath(window.location.href, '?')
+          console.log(path)
+          path = reducePath(path, '#')
 
           if (pathEndsWith(path, '.html')) {
             path = reducePath(path)

@@ -11,7 +11,7 @@ const main = () => {
   const path = window.location.href.indexOf('http://127.0.0') == 0 ? 'http://127.0.0.1:5502/dist/' : config.websiteName + '/'
   //init templates based of config
   for (let key in config) {
-    templates.push({ id: key, content: config[key].indexOf('html') != -1 ? path + config[key] : config[key] })
+    templates.push({ id: key, content: config[key].indexOf('?goto=') == -1 && config[key].indexOf('html') != -1 ? path + config[key] : config[key] })
   }
 
   templates.push({
@@ -157,7 +157,7 @@ const main = () => {
       'FAQ',
       '회사 소개'
     ],
-    jp: [
+    ja: [
       'メイン',
       '機能',
       '知識',
@@ -178,14 +178,65 @@ const main = () => {
       '联系',
       '常见问题',
       '关于我们'
+    ],
+    no: [
+      'Hoved',
+      'Funksjoner',
+      'Kunnskap',
+      'Youtube',
+      'Kurs',
+      'Kjøpe',
+      'Kontakt',
+      'FAQ',
+      'Om oss'
+    ],
+    fi: [
+      'Main',
+      "Ominaisuudet",
+      "Tieto",
+      'Youtube',
+      "Kurssit",
+      'Ostaa',
+      'Ota yhteyttä',
+      'FAQ',
+      'Meistä'
+    ],
+    da: [
+      'Main',
+      'Funktioner',
+      'Viden',
+      'Youtube',
+      'Kurser',
+      'Køb',
+      'Kontakte',
+      'Ofte stillede spørgsmål',
+      'Om os'
+    ],
+    nl: [
+      'Hoofdpagina',
+      'Functies',
+      'Kennis',
+      'Youtube',
+      'Cursussen',
+      'Aankoop',
+      'Contact',
+      'FAQ',
+      'Over ons'
+    ],
+    se: [
+      'Huvud',
+      'Drag',
+      'Kunskap',
+      'YouTube',
+      'Kurser',
+      'Köpa',
+      'Kontakta',
+      'FAQ',
+      "Om oss"
     ]
   }
 
   //const selectedLang = localStorage.getItem("lang") || 'en'
-
-
-
-
 
   const menu = [{
     type: ['nav', 'menu', 'footer'],
