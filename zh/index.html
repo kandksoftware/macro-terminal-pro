@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="../css/main.css">
+  <title>
+    CNC 宏模拟器 II | Fanuc 自定义宏 B | Haas 宏 | Centroid | 对话式编程 | CNC 编程
+  </title>
+  <meta name="description" content="CNC 宏模拟器 II - 功能强大、先进且易于使用的 CNC 软件，带有 CNC 宏模拟器和 CNC 模拟器，用于 CNC 宏（参数化）编程和 CNC 编程" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>您的浏览器不支持 JavaScript！</noscript>
+  <div id="splash-screen">
+    <img src="../resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ menu }}
+    </header>
+    <main>
+      <section class="main flex-c movie">
+        <div class="main__product-text p-1">
+          <h1>CNC Macro Simulator II</h1>
+          <h3 class="main__desc">
+            可能是有史以来最好的 CNC 代码编辑器 + 模拟器
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>您需要的一切都在一个地方
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>一次购买（离线工作，没有时间限制，没有订阅，没有帐户，
+            没有设备限制）
+          </h3>
+          <div class=" main__btn-container">
+            <a class="btn btn-brand-color" href="{{ purchaseLink }}">购买</a>
+            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">获取演示</a>
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="what-is-this">什么是 CNC Macro Simulator II？</h1>
+        <div class="main__product-intro">
+          CNC Macro Simulator II 是一款轻量级 CNC 代码编辑器和模拟器，旨在简化 Fanuc、Haas、Mazak (ISO)、Centroid 甚至 Sinumerik、Heidenhain 或
+          Okuma 等控制器的宏程序创建，内置转换器。它支持 3 轴铣床和带有 C/Y 轴和动力刀具的车床。该软件可在 Windows、Linux、macOS、Android 和 iOS
+          上离线运行，并可用于台式机、平板电脑和手机。虽然模拟器目前仅代表 3 个轴，但该软件可以执行最多 6 个轴的宏程序，提供调试和转换为普通 G 代码的功能。
+        </div>
+      </section>
+      <!-- 受部分信任 -->
+      <section class="article article--main">
+        <h1 class="main__title">受以下专家信任：</h1>
+        <img class="card__img-full" src="../resources/used-by-specialists-from-companies.png"
+          alt="受以下专家信任：美国海军、特斯拉、通用汽车" loading="lazy" />
+      </section>
+      <!-- 控件支持 -->
+      <section class="article article--main">
+        <div class="controls">
+          <div class="control">
+            FANUC
+          </div>
+          <div class="control">
+            HEIDENHAIN
+          </div>
+          <div class="control">
+            HAAS
+          </div>
+          <div class="control">
+            OKUMA
+          </div>
+          <div class="control">
+            SINUMERIK
+          </div>
+          <div class="control">
+            MAZAK ISO
+          </div>
+          <div class="control">
+            CENTROID
+          </div>
+        </div>
+      </section>
+      <!-- gallery section -->
+      <section class="article article--main">
+        <h1 class="main__title">Gallery</h1>
+        <div id="gallery">
+          <div id="gallery__preview">
+            <img src="../resources/conversational-programming.png" alt="cnc dialogueal programmin">
+          </div>
+          <div id="gallery__selector">
+            <img src="../resources/conversational-programming.png" alt="cnc dialogueal programmin">
+            <img src="../resources/macro-circle.png" alt="使用参数化编程生成圆">
+            <img src="../resources/laser2.png" alt="使用 Fanuc Macro B 的 cnc 激光切割机程序">
+            <img src="../resources/debugging.png" alt="使用内置调试器调试宏程序">
+            <img src="../resources/sphere.png" alt="使用编程参数创建球体">
+            <img src="../resources/plazma.png" alt="cnc plazma 切割机程序">
+            <img src="../resources/laser.png" alt="cnc 激光切割机程序">
+            <img src="../resources/circular-pocket.png" alt="fanuc macro B 口袋铣削宏">
+            <img src="../resources/gear.png" alt="获取齿轮 cnc pro 的数据gram">
+            <img src="../resources/oval.png" alt="测试椭圆宏程序">
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="advantages">优点</h1>
+        <div class="cards">
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              宏分析工具
+            </div>
+            <img class="card__img" src="../resources/debugger2.png" alt="调试 fanuc 宏 B 程序" />
+            <div class="card__content hide">
+              逐步了解所使用的变量，使用刀具路径模拟评估数学运算
+            </div>
+            <div class="card__content">
+              查看所使用的变量及其值、数学和逻辑运算、警报和子程序
+              嵌套
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              程序导出
+            </div>
+            <img class="card__img" src="../resources/export.png" alt="file-export" loading="lazy" />
+            <div class="card__content">
+              将宏程序转换为纯 ISO、Heidenhain、Sinumerik 或 Okuma 格式，以兼容
+              不同的 CNC 机器
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              对话式
+            </div>
+            <img class="card__img" src="../resources/conversational-programming.png" alt="easy-to-use" />
+            <div class="card__content">
+              利用对话式编程快速生成 CNC 程序，无需任何编码
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              兼容性
+            </div>
+            <img class="card__img" src="../resources/compatibility.png" alt="compatibility" loading="lazy" />
+            <div class="card__content">
+              兼容多种流行的 CNC 控制器，包括 Fanuc、Haas、Centroid、Mazak ISO 和
+              Siemens 802D
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              多平台
+            </div>
+            <img class="card__img" src="../resources/multi-platform.png" alt="multi-platform" loading="lazy" />
+            <div class="card__content">
+              适用于台式机、平板电脑和手机，完全兼容 Windows、MacOS、Linux、 Android
+              和 IOS
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              轻量级
+            </div>
+            <img class="card__img" src="../resources/lightweight.png" alt="lightweight" loading="lazy" />
+            <div class="card__content">
+              硬盘空间不足？CNC Macro Simulator II 不需要太多。占用空间不到 5MB（在 MacOS 上测试）
+            </div>
+          </div>
+        </div>
+        <!-- demo request banner -->
+        <a href="{{ demoLink }}">
+          <div class="banner banner__demo"></div>
+        </a>
+      </section>
+      <!-- features -->
+      <section class="article article--main">
+        <h1 class="main__title" id="features">功能</h1>
+        <ul class="list hide">
+          <li>CNC 模拟器、backplotter、cnc 查看器、宏解释器、对话式编程、代码转换器 -
+            一应俱全</li>
+          <li>简单、快速且功能强大的铣床和车床对话式编程、导入和导出程序*</li>
+          <li>铣床有 3 轴，车床有 C + Y 轴 + 动力刀具</li>
+          <li>对话模式可根据所选的加工材料自动计算速度、进给和切入进给，使用的工具</li>
+          <li>3 个内置转换器，从 ISO 到 Okuma、Sinumerik 840D、Heidenhain i530*</li>
+          <li>一次购买（无时间限制、无订阅、无帐户、无设备限制）</li>
+          <li>使用 Fanuc Macro B/Centroid 构建您自己的自定义循环 <a href="../custom-cycle.html">阅读更多</a>
+          </li>
+          <li>在您的桌面、平板电脑甚至手机上使用</li>
+          <li>Fanuc Custom Macro B / Haas / Centroid 支持 <a href="../technical.html">阅读更多</a></li>
+          <li>支持 Fanuc Macro B 使用的许多系统变量 <a href="../system-variables-list.html">阅读更多</a>
+          </li>
+          <li>由世界各地的专业人士使用和测试</li>
+          <li>CNC 查看器支持许多铣削和车削循环，绝对、增量和极坐标编程，重复
+            使用 L 和 K 的固定循环以及局部子程序</li>
+          <li>逐行评估算术和逻辑运算</li>
+          <li>将使用宏编写的程序转换为纯 g 代码，并能够将其压缩高达 40%**</li>
+          <li>创建、导出或导入工具库</li>
+          <li>即使断电也能将数据保留在代码编辑器中</li>
+          <li>许多 CNC 程序示例</li>
+          <li>内置高级计算器（使用变量、函数、数学和逻辑运算符）</li>
+          <li>轻量级 - 占用不到 5 MB 的硬盘空间</li>
+          <li>可在 Windows、MacOS、Linux、Android 和 IOS 上运行</li>
+          <li>离线启动 - 无需互联网连接！</li>
+          <li>出现问题时快速支持（24 小时内响应，周末除外）</li>
+        </ul>
+        <h1 class="main__subtitle" id="viewport">Viewport （模拟器/图形）</h1>
+        <ul class="list">
+          <li>3D 刀具路径（铣削）</li>
+          <li>模拟（播放、快速播放、停止、下一个、上一个、倒带、重置）</li>
+          <li>铣削 - 5 种视图模式（3D、XY、XY 移除、XZ、YZ）</li>
+          <li>车床 - 2 种视图模式（径向和轴向移除视图）</li>
+          <li>全屏支持</li>
+          <li>可调节模拟速度</li>
+          <li>测量对象/坐标</li>
+          <li>可通过光标、专用按钮或键盘快捷键访问动态缩放、平移和旋转功能</li>
+          <li>显示/隐藏快速移动</li>
+          <li>3 个主题（深色、明亮、黑色和白色）</li>
+          <li>加工时间估算器</li>
+          <li>切削长度信息</li>
+          <li>最小/最大值X、Y、Z 轴</li>
+        </ul>
+        <h1 class="main__subtitle" id="debugger">调试器工具</h1>
+        <ul class="list">
+          <li>分配和创建本地、公共和系统变量</li>
+          <li>调试时在代码编辑器中突出显示行</li>
+          <li>调试选项：播放、快速播放、停止、下一个、上一个、倒带、重置</li>
+          <li>调用子程序和嵌套级别</li>
+          <li>行中的数学和逻辑计算</li>
+          <li class="hide">对于 IF 和 WHILE 语句显示实际值（真或假）</li>
+          <li>可调调试速度</li>
+          <li>在活动调试期间无缝手动控制修改本地、公共和系统变量值
+          </li>
+        </ul>
+        <h1 class="main__subtitle" id="code-editor">代码编辑器</h1>
+        <ul class="list">
+          <li>即使断电也能存储数据</li>
+          <li>代码高亮/缩进</li>
+          <li>格式化代码</li>
+          <li>智能添加/删除行号（自动更新或保留与 GOTO、车削循环中的 P 和 Q 地址、子程序调用中的 Q 地址相关的行号）</li>
+          <li>高级代码转换工具：移动、旋转、镜像、缩放、abs 到 rel（反之亦然）、mm 到 inch（反之亦然）</li>
+          <li>注释删除</li>
+          <li>跳过块添加/删除</li>
+          <li>撤消/重做</li>
+          <li>添加/删除 EOB</li>
+          <li>小数点添加</li>
+        </ul>
+        <h1 class="main__subtitle">高级计算器</h1>
+        <ul class="list">
+          <li>变量的使用（包括系统一）</li>
+          <li>读取调试期间使用的通用变量和系统变量的值</li>
+          <li>使用逻辑和算术运算符（如 Fanuc Macro B 或 Centroid）</li>
+          <li>使用函数（与 Fanuc Macro B 相同）</li>
+          <li>支持 Fanuc Macro B 和 Centroid 语法</li>
+        </ul>
+        <h1 class="main__subtitle" id="macro-support">宏（Fanuc Custom Macro B/Haas/Centroid）支持</h1>
+        <ul class="list">
+          <li>关键字：IF、THEN（或 TH）、GOTO、WHILE（或 WH）、DO、END、ELSE（CENTROID）、DPRNT、FOPEN、FCLOS</li>
+          <li>关键字快捷键：TH => THEN、WH => WHILE</li>
+          <li>比较运算符（FANUC/HAAS）：EQ、LT、 LE、GT、GE、NE</li>
+          <li>比较运算符 (CENTROID)：==、<、<=、>、>=、!=</li>
+          <li>G65/G66/G66.1 宏子程序调用</li>
+          <li>数学函数：sin、cos、tan、asin、acos、atan、sqrt、abs、round、fix、fup、ln、exp、pow</li>
+          <li>本地、常用和最流行的系统变量</li>
+        </ul>
+        <h1 class="main__subtitle" id="common-iso-support">常用 ISO 支持</h1>
+        <ul class="list">
+          <li>G28、G30 和 G53（起始位置）</li>
+          <li>绝对、增量和极坐标模式</li>
+          <li>G98 退回到初始 Z 值（铣削）</li>
+          <li>G99 退回到 R 值（铣削）</li>
+          <li>M98 子程序（多种格式）</li>
+          <li>重复固定循环（L 和 K）</li>
+          <li>使用（I、J、K 或 R）支持圆弧插补</li>
+        </ul>
+        <h1 class="main__subtitle" id="lathe-cycles">车床循环支持</h1>
+        <ul class="list">
+          <li>G32/G33 螺纹切削（直螺纹和锥形螺纹）</li>
+          <li>G70 精加工循环</li>
+          <li>G71 粗加工循环</li>
+          <li>G72 端面循环</li>
+          <li>G73 图案重复循环</li>
+          <li>G74 端面开槽循环</li>
+          <li>G75 开槽循环</li>
+          <li>G76/G78 螺纹加工循环</li>
+          <li>G90 车削循环</li>
+          <li>G92 螺纹加工循环</li>
+          <li>G94 端面循环</li>
+        </ul>
+        <h1 class="main__subtitle" id="transformation-cycles">转换循环</h1>
+        <ul class="list">
+          <li>G16 极坐标</li>
+          <li>G51 缩放</li>
+          <li>G52 本地工作移位</li>
+          <li>G68 坐标系旋转</li>
+        </ul>
+        <h1 class="main__subtitle" id="haas-cycles-support">Haas 循环支持</h1>
+        <ul class="list">
+          <li>G70 螺栓孔圆</li>
+          <li>G71 螺栓孔圆弧</li>
+          <li>G72 沿角度的螺栓孔</li>
+        </ul>
+        <h1 class="main__subtitle" id="milling-conversational-programming">铣削对话式编程</h1>
+        <ul class="list">
+          <li>圆形面铣削</li>
+          <li>矩形面铣削</li>
+          <li>圆形凹槽</li>
+          <li>矩形凹槽</li>
+          <li>圆形肩部</li>
+          <li>矩形肩部</li>
+          <li>圆形开槽</li>
+          <li>矩形开槽</li>
+          <li>螺旋镗孔</li>
+          <li>点钻</li>
+          <li>停留钻</li>
+          <li>啄钻</li>
+          <li>螺纹铣削</li>
+          <li>攻丝</li>
+          <li>代码片段（添加您自己的代码）</li>
+        </ul>
+        <h1 class="main__subtitle" id="turning-conversational-programming">车削对话式编程</h1>
+        <ul class="list">
+          <li>端面加工</li>
+          <li>车削</li>
+          <li>轮廓加工</li>
+          <li>轴向轮廓外径/内径</li>
+          <li>轴向圆形键槽</li>
+          <li>钻孔</li>
+          <li>轴向和径向钻孔</li>
+          <li>端面开槽</li>
+          <li>开槽</li>
+          <li>轴向和径向键槽</li>
+          <li>螺纹加工</li>
+          <li>攻丝</li>
+          <li>轴向和径向攻丝</li>
+          <li>铰孔</li>
+          <li>轴向和径向铰孔</li>
+          <li>镗孔</li>
+          <li>分度</li>
+          <li>代码片段（添加您自己的代码）</li>
+        </ul>
+        <h1 class="main__subtitle" id="converters">代码转换器</h1>
+        <ul class="list">
+          <li>铣削模式：ISO/MACRO 到普通 ISO，Heidenhain iTNC 530、Sinumerik 840D/840Di/810D、Okuma（铣床）</li>
+          <li>车削模式：ISO/MACRO 至普通 ISO、Okuma OSP-P300</li>
+          <li>您需要特殊的转换器吗？<a href="{{ contactLink }}">联系我们</a></li>
+        </ul>
+        <h1 class="main__subtitle" id="postprocessors">后处理器</h1>
+        <ul class="list">
+          <li>车削模式：ISO（FANUC/HAAS，2 行或 1 行循环，具体取决于所选的控制器）、Okuma
+            OSP-P300</li>
+          <li>您需要特殊的后处理器吗？ <a href="{{ contactLink }}">联系我们</a></li>
+        </ul>
+        <h1 class="main__subtitle">文件</h1>
+        <ul class="list">
+          <li>新项目</li>
+          <li>打开文件（一次打开多个文件）</li>
+          <li>附加（在主程序下添加子程序）</li>
+          <li>导入/导出对话程序</li>
+          <li>cnc 程序示例</li>
+          <li>保存、另存为</li>
+          <li>导出为纯 ISO、Heidenhain iTNC 530、Sinumerik 840D 或 Okuma 代码</li>
+          <li>支持的文件扩展名：nc、cn、ncc、cnc、eia、txt、min、mpf</li>
+        </ul>
+        <h1 class="main__subtitle">语言</h1>
+        <ul class="list">
+          <li>英语</li>
+        </ul>
+
+        <div class="main__pricing" id="purchase">
+          <div class="main__pricing-card">
+            <div class="main__pricing-title">CNC Macro Simulator II STUDIO</div>
+            <div class="main__pricing-desc">（设备数量不限）</div>
+            <div class="main__pricing-normal-price hide">529.00</div>
+            <div class="main__pricing-discount-price" id="pay-price">529</div>
+          </div>
+          <div class="main__pricing-card">
+            <div class="main__pricing-pay-button-container">
+              <button class="main__pricing-pay-button" id="purchase-studio-version">购买</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hide">
+          <a href="{{ demoLink }}">
+            <div class="banner banner__demo"></div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="../js/script-loader.js"></script>
+    <script src="../js/main2.js"></script>
+  </div>
+</body>
+
+</html>

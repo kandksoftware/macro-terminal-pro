@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="../css/main.css">
+  <title>
+    CNC マクロ シミュレーター II | Fanuc カスタム マクロ B | Haas マクロ | Centroid | 会話型プログラミング | CNC プログラミング
+  </title>
+  <meta name="description"
+    content="CNC マクロ シミュレーター II - CNC マクロ (パラメトリック) プログラミングおよび CNC プログラミング用の CNC マクロ シミュレーターと CNC シミュレーターを備えた強力で高度で使いやすい CNC ソフトウェア" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>お使いのブラウザーは JavaScript をサポートしていません。</noscript>
+  <div id="splash-screen">
+    <img src="../resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ menu }}
+    </header>
+    <main>
+      <section class="main flex-c movie">
+        <div class="main__product-text p-1">
+          <h1>CNC Macro Simulator II</h1>
+          <h3 class="main__desc">
+            おそらく史上最高の CNC コード エディター + シミュレーター
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>必要なものがすべて 1 か所に
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>1 回購入 (オフラインで動作、時間制限なし、サブスクリプションなし、アカウントなし、デバイス制限なし)
+          </h3>
+          <div class=" main__btn-container">
+            <a class="btn btn-brand-color" href="{{ purchaseLink }}">購入</a>
+            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">デモを入手</a>
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="what-is-this">CNC Macro Simulator II とは?</h1>
+        <div class="main__product-intro">
+          CNC Macro Simulator II は、組み込みコンバーターを使用して、Fanuc、Haas、Mazak (ISO)、Centroid、さらには Sinumerik、Heidenhain、Okuma
+          などの制御用のマクロ プログラムの作成を効率化するように設計された軽量の CNC コード エディターおよびシミュレーターです。C/Y 軸とライブ ツールを備えた 3
+          軸ミルと旋盤の両方をサポートします。このソフトウェアは、Windows、Linux、macOS、Android、iOS でオフラインで動作し、デスクトップ、タブレット、携帯電話で利用できます。シミュレータは現在 3
+          軸のみを表しますが、ソフトウェアは最大 6 軸のマクロ プログラムを実行でき、デバッグとプレーン G コードへの変換が可能です。 </div>
+      </section>
+      <!-- section から信頼されています -->
+      <section class="article article--main">
+        <h1 class="main__title">次の専門家から信頼されています:</h1>
+        <img class="card__img-full" src="../resources/used-by-specialists-from-companies.png"
+          alt="次の専門家から信頼されています: 米国海軍、Tesla、General Motors" loading="lazy" />
+      </section>
+      <!-- コントロールのサポート -->
+      <section class="article article--main">
+        <div class="controls">
+          <div class="control">
+            FANUC
+          </div>
+          <div class="control">
+            HEIDENHAIN
+          </div>
+          <div class="control">
+            HAAS
+          </div>
+          <div class="control">
+            OKUMA
+          </div>
+          <div class="control">
+            SINUMERIK
+          </div>
+          <div class="control">
+            MAZAK ISO
+          </div>
+          <div class="control">
+            CENTROID
+          </div>
+        </div>
+      </section>
+      <!-- gallery section -->
+      <section class="article article--main">
+        <h1 class="main__title">ギャラリー</h1>
+        <div id="gallery">
+          <div id="gallery__preview">
+            <img src="../resources/conversational-programming.png" alt="cnc 会話型プログラミング">
+          </div>
+          <div id="gallery__selector">
+            <img src="../resources/conversational-programming.png" alt="cnc 会話型プログラミング">
+            <img src="../resources/macro-circle.png" alt="パラメトリック プログラミングを使用した円生成">
+            <img src="../resources/laser2.png" alt="Fanuc Macro を使用した cnc レーザー カッター プログラムB">
+            <img src="../resources/debugging.png" alt="組み込みデバッガーを使用したマクロ プログラムのデバッグ">
+            <img src="../resources/sphere.png" alt="パラメトリック プログラミングを使用した球体の作成">
+            <img src="../resources/plazma.png" alt="CNC プラズマ カッター プログラム">
+            <img src="../resources/laser.png" alt="CNC レーザー カッター プログラム">
+            <img src="../resources/circular-pocket.png" alt="Fanuc マクロ B ポケット ミリング マクロ">
+            <img src="../resources/gear.png" alt="ギア CNC プログラムのデータ取得">
+            <img src="../resources/oval.png" alt="楕円マクロ プログラムのテスト">
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="advantages">利点</h1>
+        <div class="cards">
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              マクロ分析ツール
+            </div>
+            <img class="card__img" src="../resources/debugger2.png" alt="fanuc マクロ B プログラムのデバッグ" />
+            <div class="card__content hide">
+              使用される変数をステップごとに確認し、ツール パス シミュレーションを使用して数学演算を評価します
+            </div>
+            <div class="card__content">
+              使用される変数とその値、数学演算と論理演算、アラーム、サブルーチンのネストを表示します
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              プログラムのエクスポート
+            </div>
+            <img class="card__img" src="../resources/export.png" alt="file-export" loading="lazy" />
+            <div class="card__content">
+              マクロ プログラムをプレーンな ISO、Heidenhain、Sinumerik、または Okuma 形式に変換して、さまざまな CNC マシンとの互換性を確保します
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              会話型
+            </div>
+            <img class="card__img" src="../resources/conversational-programming.png" alt="easy-to-use" />
+            <div class="card__content">
+              会話型プログラミングを使用して、コーディングなしで CNC プログラムをすばやく生成します
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              互換性
+            </div>
+            <img class="card__img" src="../resources/compatibility.png" alt="compatibility" loading="lazy" />
+            <div class="card__content">
+              Fanuc、Haas、Centroid、Mazak ISO、Siemens 802D など、幅広い一般的な CNC コントロールと互換性があります
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              マルチプラットフォーム
+            </div>
+            <img class="card__img" src="../resources/multi-platform.png" alt="multi-platform" loading="lazy" />
+            <div class="card__content">
+              デスクトップ、タブレット、携帯電話で動作し、Windows、MacOS、Linux、Android、IOS と完全に互換性があります
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              軽量
+            </div>
+            <img class="card__img" src="../resources/lightweight.png" alt="lightweight" loading="lazy" />
+            <div class="card__content">
+              ハードディスクの空き容量が不足していますか? CNC Macro Simulator II ではそれほど容量は必要ありません。 5MB 未満です (MacOS でテスト済み)
+            </div>
+          </div>
+        </div>
+        <!-- デモ リクエスト バナー -->
+        <a href="{{ demoLink }}">
+          <div class="banner banner__demo"></div>
+        </a>
+      </section>
+      <!-- 機能 -->
+      <section class="article article--main">
+        <h1 class="main__title" id="features">機能</h1>
+        <ul class="list hide">
+          <li>CNC シミュレーター、バックプロッター、CNC ビューアー、マクロ インタープリター、会話型プログラミング、コード コンバーター - オールインワン</li>
+          <li>簡単、高速、強力なミル & 旋盤会話型プログラミング、インポート & エクスポート プログラム *</li>
+          <li>フライス盤用の 3 軸、旋盤用の C + Y 軸 + ライブ ツール</li>
+          <li>会話型モードでは、選択した速度と送り、およびプランジ送りの自動計算が提供されます
+            加工される材料と使用されるツール</li>
+          <li>ISO から Okuma、Sinumerik 840D、Heidenhain i530 への 3 つの組み込みコンバーター *</li>
+          <li>一度購入すれば完了 (時間制限なし、サブスクリプションなし、アカウントなし、デバイス制限なし)</li>
+          <li>Fanuc Macro B/Centroid を使用して独自のカスタム サイクルを構築 <a href="custom-cycle.html">詳細を読む</a>
+          </li>
+          <li>デスクトップ、タブレット、さらには携帯電話で使用可能</li>
+          <li>Fanuc Custom Macro B / Haas / Centroid のサポート <a href="technical.html">詳細を読む</a></li>
+          <li>Fanuc Macro B で使用される多くのシステム変数のサポート <a href="system-variables-list.html">詳細を読む</a>
+          </li>
+          <li>世界中の専門家によって使用およびテスト済み</li>
+          <li>CNC ビューアは、絶対、増分、極性など、多くのフライス加工および旋削サイクルをサポートしますプログラミング、繰り返し
+            L と K およびローカル サブルーチンを使用した固定サイクル</li>
+          <li>算術演算と論理演算の行ごとの評価</li>
+          <li>マクロを使用して記述されたプログラムを純粋な G コードに変換し、最大 40 パーセントまで圧縮する機能 **</li>
+          <li>ツール ライブラリの作成、エクスポート、またはインポート</li>
+          <li>停電してもコード エディターにデータを保持</li>
+          <li>CNC プログラムの多数の例</li>
+          <li>組み込みの高度な計算機 (変数、関数、数学演算子、論理演算子を使用)</li>
+          <li>軽量 - 5 MB 未満のハード ディスク領域を占有します</li>
+          <li>Windows、MacOS、Linux、Android、および IOS で動作します</li>
+          <li>オフラインで起動 - インターネット接続は必要ありません!</li>
+          <li>問題が発生した場合の迅速なサポート (週末を除き 24 時間以内に応答)</li>
+        </ul>
+        <h1 class="main__subtitle" id="viewport">ビューポート (シミュレーター/グラフィックス)</h1>
+        <ul class="list">
+          <li>3D ツール パス(ミル)</li>
+          <li>シミュレーション (再生、高速再生、停止、次へ、前へ、巻き戻し、リセット)</li>
+          <li>ミル - 5 つの表示モード (3D、XY、XY 除去、XZ、YZ)</li>
+          <li>旋盤 - 2 つの表示モード (ラジアルおよび軸方向除去ビュー)</li>
+          <li>フル スクリーン サポート</li>
+          <li>調整可能なシミュレーション速度</li>
+          <li>オブジェクト/座標の測定</li>
+          <li>動的なズーム、パン、および回転機能は、カーソル、専用ボタン、またはキーボード ショートカットからアクセスできます</li>
+          <li>高速移動の表示/非表示</li>
+          <li>3 つのテーマ (暗い、明るい、白黒)</li>
+          <li>加工時間推定</li>
+          <li>切削長さ情報</li>
+          <li>X、Y、Z 軸の最小/最大</li>
+        </ul>
+        <h1 class="main__subtitle" id="debugger">デバッガー ツール</h1>
+        <ul class="list">
+          <li>ローカル変数、共通変数、システム変数の割り当てと作成</li>
+          <li>デバッグ中にコード エディターで行を強調表示</li>
+          <li>デバッグ オプション: 再生、高速再生、停止、次へ、前へ、巻き戻し、リセット</li>
+          <li>呼び出されたサブルーチンとネスト レベル</li>
+          <li>行内の数学および論理計算</li>
+          <li class="hide">IF および WHILE ステートメントで実際の値 (true または false) を表示</li>
+          <li>調整可能なデバッグ速度</li>
+          <li>アクティブなデバッグ中にローカル変数、共通変数、システム変数の値を変更するシームレスな手動制御
+          </li>
+        </ul>
+        <h1 class="main__subtitle" id="code-editor">コード エディター</h1>
+        <ul class="list">
+          <li>停電があってもデータを保存します</li>
+          <li>コードハイライト/インデント</li>
+          <li>コードの書式設定</li>
+          <li>行番号のインテリジェントな追加/削除（GOTO、旋盤サイクルのPおよびQアドレス、サブルーチン呼び出しのQアドレスに関連付けられた行番号を自動的に更新または保持）</li>
+          <li>高度なコード変換ツール：移動、回転、ミラー、スケール、absからrel（およびその逆）、mmからinch（およびその逆）</li>
+          <li>コメントの削除</li>
+          <li>スキップブロックの追加/削除</li>
+          <li>元に戻す/やり直し</li>
+          <li>EOBの追加/削除</li>
+          <li>小数点の追加</li>
+        </ul>
+        <h1 class="main__subtitle">高度な計算機</h1>
+        <ul class="list">
+          <li>変数の使用（システム変数を含む）</li>
+          <li>実行中に使用される共通変数とシステム変数の両方の値を読み取りますデバッグ</li>
+          <li>論理演算子と算術演算子の使用 (Fanuc Macro B または Centroid と同様)</li>
+          <li>関数の使用 (Fanuc Macro B と同じ)</li>
+          <li>Fanuc Macro B および Centroid 構文をサポート</li>
+        </ul>
+        <h1 class="main__subtitle" id="macro-support">マクロ (Fanuc Custom Macro B/Haas/Centroid) のサポート</h1>
+        <ul class="list">
+          <li>キーワード: IF、THEN (または TH)、GOTO、WHILE (または WH)、DO、END、ELSE (CENTROID)、DPRNT、FOPEN、FCLOS</li>
+          <li>キーワード ショートカット: TH => THEN、WH => WHILE</li>
+          <li>比較演算子 (FANUC/HAAS): EQ、LT、LE、GT、GE、NE</li>
+          <li>比較演算子 (CENTROID): ==、<、<=、>、>=、!=</li>
+          <li>G65/G66/G66.1 マクロ サブプログラム呼び出し</li>
+          <li>数学関数: sin、cos、tan、asin、acos、atan、sqrt、abs、round、fix、fup、ln、exp、pow</li>
+          <li>ローカル、共通、および最も一般的なシステム変数</li>
+        </ul>
+        <h1 class="main__subtitle" id="common-iso-support">共通 ISO サポート</h1>
+        <ul class="list">
+          <li>G28、G30、および G53 (ホーム ポジション)</li>
+          <li>絶対、増分、および極モード</li>
+          <li>G98 初期 Z 値へのリトラクト (ミル)</li>
+          <li>G99 R 値へのリトラクト (ミル)</li>
+          <li>M98 サブプログラム (複数の形式)</li>
+          <li>固定サイクルの繰り返し (L および K)</li>
+          <li>(I、J、K、または R) を使用した円弧補間のサポート</li>
+        </ul>
+        <h1 class="main__subtitle" id="lathe-cycles">旋盤サイクルのサポート</h1>
+        <ul class="list">
+          <li>G32/G33 ねじ切り (ストレートおよびテーパー)</li>
+          <li>G70 仕上げサイクル</li>
+          <li>G71 荒加工サイクル</li>
+          <li>G72 面削りサイクル</li>
+          <li>G73 パターン繰り返しサイクル</li>
+          <li>G74 面溝入れサイクル</li>
+          <li>G75 溝入れサイクル</li>
+          <li>G76/G78 ねじ切りサイクル</li>
+          <li>G90 旋削サイクル</li>
+          <li>G92 ねじ切りサイクル</li>
+          <li>G94 面削りサイクル</li>
+        </ul>
+        <h1 class="main__subtitle" id="transformation-cycles">変換サイクル</h1>
+        <ul class="list">
+          <li>G16 極座標</li>
+          <li>G51 スケーリング</li>
+          <li>G52 ローカル作業シフト</li>
+          <li>G68 座標系の回転</li>
+        </ul>
+        <h1 class="main__subtitle" id="haas-cycles-support">Haas サイクル サポート</h1>
+        <ul class="list">
+          <li>G70 ボルト穴円</li>
+          <li>G71 ボルト穴円弧</li>
+          <li>G72 角度に沿ったボルト穴</li>
+        </ul>
+        <h1 class="main__subtitle" id="milling-conversational-programming">フライス加工会話型プログラミング</h1>
+        <ul class="list">
+          <li>円形フェース フライス加工</li>
+          <li>長方形フェース フライス加工</li>
+          <li>円形ポケット</li>
+          <li>長方形ポケット</li>
+          <li>円形ショルダー</li>
+          <li>長方形ショルダー</li>
+          <li>円形溝入れ</li>
+          <li>長方形溝入れ</li>
+          <li>ヘリカルボーリング</li>
+          <li>スポットドリル</li>
+          <li>ドウェルドリル</li>
+          <li>ペックドリル</li>
+          <li>スレッドミル加工</li>
+          <li>タッピング</li>
+          <li>コードスニペット（独自のコードを追加）</li>
+        </ul>
+        <h1 class="main__subtitle" id="turning-conversational-programming">旋削会話型プログラミング</h1>
+        <ul class="list">
+          <li>フェーシング</li>
+          <li>旋削</li>
+          <li>輪郭加工</li>
+          <li>軸方向輪郭 OD/ID</li>
+          <li>軸方向円形キー溝スロット</li>
+          <li>ドリリング</li>
+          <li>軸方向およびラジアルドリリング</li>
+          <li>端面溝入れ</li>
+          <li>溝入れ</li>
+          <li>軸方向およびラジアルキー溝</li>
+          <li>ねじ切り</li>
+          <li>タッピング</li>
+          <li>軸方向およびラジアルタッピング</li>
+          <li>リーミング</li>
+          <li>軸方向およびラジアルリーミング</li>
+          <li>ボーリング</li>
+          <li>パーティング</li>
+          <li>コードスニペット（独自のコードを追加）</li>
+        </ul>
+        <h1 class="main__subtitle" id="converters">コードコンバーター</h1>
+        <ul class="list">
+          <li>フライス加工モード：ISO/MACROからプレーンISO、Heidenhain iTNC 530、Sinumerik 840D/840Di/810D、オークマ（ミル）</li>
+          <li>旋削モード：ISO/MACROからプレーンISO、オークマOSP-P300</li>
+          <li>特別なコンバータが必要ですか？ <a href="{{ contactLink }}">お問い合わせください</a></li>
+        </ul>
+        <h1 class="main__subtitle" id="postprocessors">ポストプロセッサ</h1>
+        <ul class="list">
+          <li>旋削モード：ISO（FANUC/HAAS、選択した制御に応じて2ラインまたは1ラインサイクル）、オークマ
+            OSP-P300</li>
+          <li>特別なポストプロセッサが必要ですか？ <a href="{{ contactLink }}">お問い合わせ</a></li>
+        </ul>
+        <h1 class="main__subtitle">ファイル</h1>
+        <ul class="list">
+          <li>新規プロジェクト</li>
+          <li>ファイルを開く (複数のファイルを一度に開く)</li>
+          <li>追加 (メイン プログラムの下にサブルーチンを追加する)</li>
+          <li>会話型プログラムのインポート/エクスポート</li>
+          <li>CNC プログラムの例</li>
+          <li>保存、名前を付けて保存</li>
+          <li>プレーン ISO、Heidenhain iTNC 530、Sinumerik 840D、または Okuma コードへのエクスポート</li>
+          <li>サポートされているファイル拡張子: nc、cn、ncc、cnc、eia、txt、min、mpf</li>
+        </ul>
+        <h1 class="main__subtitle">言語</h1>
+        <ul class="list">
+          <li>英語</li>
+        </ul>
+
+        <div class="main__pricing" id="purchase">
+          <div class="main__pricing-card">
+            <div class="main__pricing-title">CNC Macro Simulator II STUDIO</div>
+            <div class="main__pricing-desc">(デバイス数無制限)</div>
+            <div class="main__pricing-normal-price hide">529.00</div>
+            <div class="main__pricing-discount-price" id="pay-price">529</div>
+          </div>
+          <div class="main__pricing-card">
+            <div class="main__pricing-pay-button-container">
+              <button class="main__pricing-pay-button" id="purchase-studio-version">購入</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="../js/script-loader.js"></script>
+    <script src="../js/main2.js"></script>
+  </div>
+</body>
+
+</html>

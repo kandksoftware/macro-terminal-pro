@@ -11,41 +11,6 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-  <style>
-    body {
-      --marginBottom: 1.5rem;
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: #333;
-      margin-bottom: var(--marginBottom);
-    }
-
-    h3 {
-      font-weight: 600;
-    }
-
-    p {
-      margin: 0 0 10px;
-      margin-bottom: var(--marginBottom);
-    }
-
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-      margin-bottom: var(--marginBottom);
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 20px;
-      margin-top: 5rem;
-    }
-  </style>
 </head>
 
 <body>
@@ -55,16 +20,15 @@
   </div>
   <div id="app" class="hide">
     <header>
-      {{ header }}
+      {{ menu }}
     </header>
     <main>
-      <div class="container">
+      <div class="legal__container">
         <h1>Terms of Service</h1>
         <p><strong>Effective Date:</strong> April 20, 2020</p>
 
-        <p>These Terms of Service ("Terms") govern your purchase, access, and use of <strong>CNC Macro
-            Simulator</strong>
-          ("Software") provided by <strong>PJ Software</strong> ("we", "our", or "us"). By purchasing, downloading,
+        <p>These Terms of Service ("Terms") govern your purchase, access, and use of <strong>{{ appName }}</strong>
+          ("Software") provided by <strong>{{ appName }}</strong> ("we", "our", or "us"). By purchasing, downloading,
           installing, or using the Software, you agree to be bound by these Terms. If you do not agree to these Terms,
           do not use the Software.</p>
 
@@ -113,8 +77,9 @@
           defective or significantly different from its description.</p>
 
         <h3>b. Refund Request</h3>
-        <p>If you believe you are entitled to a refund, you must contact us within 30 days of purchase at
-          macrosimulatorcnc@gmail.com, providing your order number and a detailed explanation of the issue. We reserve
+        <p>If you believe you are entitled to a refund, you must contact us within {{ refundRequestWithin }} days of
+          purchase at
+          {{ companyEmail }}, providing your order number and a detailed explanation of the issue. We reserve
           the right to
           approve or deny any refund requests at our discretion.</p>
 
@@ -125,19 +90,19 @@
           improve functionality. If provided, these updates may be installed manually or automatically, depending on
           your settings. These updates are included in the one-time purchase unless specified otherwise.</p>
 
-        <p>Major version upgrades (e.g., CNC Macro Simulator 2.0 to CNC Macro Simulator 3.0) may be offered for an
+        <p>Major version upgrades (e.g., {{ appName }} 2.0 to {{ appName }} 3.0) may be offered for an
           additional
           fee and are not included as part of the initial one-time purchase.</p>
 
         <h3>b. Technical Support</h3>
         <p>We offer limited technical support to assist with installation and resolving any issues related to the
-          Software's basic functionality. Support is available via email at macrosimulatorcnc@gmail.com. Extended or
+          Software's basic functionality. Support is available via email at {{ companyEmail }}. Extended or
           priority
           support may be available for an additional fee.</p>
 
         <h2>6. Intellectual Property</h2>
         <p>The Software, including all code, content, design elements, and any related intellectual property, remains
-          the exclusive property of <strong>PJ Software</strong> or its licensors. All rights not expressly granted
+          the exclusive property of <strong>{{ appName }}</strong> or its licensors. All rights not expressly granted
           to you are reserved.</p>
 
         <p>You may not use any trademarks, logos, or brand elements associated with the Software without our express
@@ -158,12 +123,14 @@
 
         <h2>9. Data Collection and Privacy</h2>
         <p>By using the Software, you consent to the collection and use of certain data as described in our <a
-            href="privacy-policy.html">Privacy Policy</a>. We do not collect personally identifiable information unless
+            href="{{ privacyPolicyLink }}">Privacy Policy</a>. We do not collect personally identifiable information
+          unless
           you voluntarily provide it.</p>
 
         <h2>10. Limited Warranty</h2>
         <p>We warrant that the Software will perform substantially in accordance with the accompanying documentation for
-          a period of 365 days from the date of delivery ("Warranty Period"). If the Software fails to meet this
+          a period of {{ limitedWarrantyTime }} days from the date of delivery ("Warranty Period"). If the Software
+          fails to meet this
           standard, you may notify us during the Warranty Period, and we will use reasonable efforts to correct or
           replace the Software.</p>
 
@@ -180,7 +147,7 @@
           of merchantability, fitness for a particular purpose, or non-infringement.</p>
 
         <h2>12. Limitation of Liability</h2>
-        <p>To the fullest extent permitted by law, <strong>PJ Software</strong> and its affiliates shall not be
+        <p>To the fullest extent permitted by law, <strong>{{ appName }}</strong> and its affiliates shall not be
           liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to
           loss of data, profits, or business opportunities, arising out of or related to your use or inability to use
           the Software.</p>
@@ -188,7 +155,7 @@
         <p>In no event will our total liability to you exceed the amount paid by you for the Software.</p>
 
         <h2>13. Indemnification</h2>
-        <p>You agree to indemnify, defend, and hold harmless <strong>PJ Software</strong>, its affiliates, and
+        <p>You agree to indemnify, defend, and hold harmless <strong>{{ appName }}</strong>, its affiliates, and
           licensors from and against any claims, damages, liabilities, and expenses, including legal fees, arising from
           your use of the Software, your violation of these Terms, or your violation of any third-party rights.</p>
 
@@ -204,16 +171,15 @@
           effect.</p>
 
         <h2>16. Entire Agreement</h2>
-        <p>These Terms, together with our <a href="privacy-policy.html">Privacy Policy</a> and any other documents
-          referenced herein, constitute the entire agreement between you and <strong>PJ Software</strong> regarding
+        <p>These Terms, together with our <a href="{{ privacyPolicyLink }}">Privacy Policy</a> and any other documents
+          referenced herein, constitute the entire agreement between you and <strong>{{ appName }}</strong> regarding
           the Software and supersede any prior agreements or communications.</p>
 
         <h2>17. Contact Information</h2>
         <p>For questions or concerns regarding these Terms or the Software, you can contact us at:</p>
-        <p><strong>PJ Software</strong><br>
-          Email: macrosimulatorcnc@gmail.com<br>
-          Address: Rustaveli ave 82
-          Kutaisi, Georgia 4600</p>
+        <p><strong>{{ companyName }}</strong><br>
+          Email: {{ companyEmail }}<br>
+          Address: {{ companyAddress }}</p>
 
         <p><strong>By purchasing, downloading, and using the Software, you acknowledge that you have read, understood,
             and agree to be bound by these Terms of Service.</strong></p>

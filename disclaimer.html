@@ -11,41 +11,6 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
-  <style>
-    body {
-      --marginBottom: 1.5rem;
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: #333;
-      margin-bottom: var(--marginBottom);
-    }
-
-    h3 {
-      font-weight: 600;
-    }
-
-    p {
-      margin: 0 0 10px;
-      margin-bottom: var(--marginBottom);
-    }
-
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-      margin-bottom: var(--marginBottom);
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 20px;
-      margin-top: 5rem;
-    }
-  </style>
 </head>
 
 <body>
@@ -55,15 +20,15 @@
   </div>
   <div id="app" class="hide">
     <header>
-      {{ header }}
+      {{ menu }}
     </header>
     <main>
-      <div class="container">
+      <div class="legal__container">
         <h1>Disclaimer</h1>
         <p><strong>Effective Date:</strong> April 20, 2020</p>
 
-        <p>This disclaimer ("Disclaimer") applies to your purchase and use of <strong>CNC Macro Simulator</strong>
-          ("Software"), provided by <strong>PJ Software</strong> ("we", "our", or "us"). By using the Software, you
+        <p>This disclaimer ("Disclaimer") applies to your purchase and use of <strong>{{ appName }}</strong>
+          ("Software"), provided by <strong>{{ appName }}</strong> ("we", "our", or "us"). By using the Software, you
           agree to this Disclaimer. If you do not agree, please do not use the Software.</p>
 
         <h2>1. General Information</h2>
@@ -77,7 +42,7 @@
           regarding the use, performance, or results you may achieve from the Software.</p>
 
         <h2>3. Limitation of Liability</h2>
-        <p>To the fullest extent permitted by law, <strong>PJ Software</strong> and its affiliates, licensors, and
+        <p>To the fullest extent permitted by law, <strong>{{ appName }}</strong> and its affiliates, licensors, and
           suppliers are not liable for any direct, indirect, incidental, special, or consequential damages, including
           but not limited to loss of data, revenue, or profits, arising from your use or inability to use the Software,
           even if we have been advised of the possibility of such damages.</p>
@@ -101,7 +66,7 @@
 
         <h2>7. Intellectual Property</h2>
         <p>All intellectual property rights in the Software, including but not limited to copyrights, trademarks, and
-          trade secrets, are the exclusive property of <strong>PJ Software</strong> or its licensors. No part of this
+          trade secrets, are the exclusive property of <strong>{{ appName }}</strong> or its licensors. No part of this
           Disclaimer grants you any ownership or rights to the Software beyond what is expressly stated in the license
           agreement.</p>
 
@@ -117,10 +82,9 @@
 
         <h2>10. Contact Us</h2>
         <p>If you have any questions or concerns regarding this Disclaimer, please contact us at:</p>
-        <p><strong>PJ Software</strong><br>
-          Email: macrosimulatorcnc@gmail.com<br>
-          Address: Rustaveli ave 82
-          Kutaisi, Georgia 4600</p>
+        <p><strong>{{ companyName }}</strong><br>
+          Email: {{ companyEmail }}<br>
+          Address: {{ companyAddress }}</p>
 
         <p><strong>By purchasing, downloading, or using the Software, you acknowledge that you have read, understood,
             and agree to this Disclaimer.</strong></p>

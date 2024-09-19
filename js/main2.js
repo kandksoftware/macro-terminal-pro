@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-  const __PATH = 'js/'
+  const __PATH = '../js/'
 
   new ScriptLoader([
     __PATH + 'global.js',
