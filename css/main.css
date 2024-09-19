@@ -1773,10 +1773,10 @@ th, td {
 
 .lang-list {
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 140px;
+  right: 0%;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  width: 160px;
   height: auto;
   background-color: #fff;
   z-index: 100;
@@ -1787,5 +1787,27 @@ th, td {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.lang-list > span {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.lang-list > span:last-child {
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .lang-list {
+    width: 140px;
+    left: 100%;
+    -webkit-transform: translateX(-27px);
+            transform: translateX(-27px);
+  }
+  .lang-list > span {
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
