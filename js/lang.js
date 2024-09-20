@@ -80,31 +80,31 @@
     return str
   }
 
+  app.setLanguege = (lang) => {
+    localStorage.setItem("lang", lang)
+
+    let path = reducePath(window.location.href, '?')
+
+    path = reducePath(path, '#')
+
+    if (pathEndsWith(path, '.html')) {
+      path = reducePath(path)
+    }
+
+    if (app.isLangSelected()) {
+      window.location.href = path.replace(path, reducePath(path) + '/' + lang)
+    }
+    else {
+      window.location.href = path + '/' + lang
+    }
+
+  }
+
   app.listenLangSelector = () => {
     const items = document.querySelectorAll('.lang-list span')
-    const selectedItem = document.querySelector('#lang-selected')
     if (items) {
       for (let i = 0, l = items.length; i < l; i++) {
-        items[i].addEventListener('click', () => {
-          localStorage.setItem("lang", items[i].dataset.id)
-          selectedItem.innerHTML = langList.find(lang => lang.id == items[i].dataset.id).flag
-
-          let path = reducePath(window.location.href, '?')
-          console.log(path)
-          path = reducePath(path, '#')
-
-          if (pathEndsWith(path, '.html')) {
-            path = reducePath(path)
-          }
-
-          if (app.isLangSelected()) {
-            window.location.href = path.replace(path, reducePath(path) + '/' + items[i].dataset.id)
-          }
-          else {
-            window.location.href = path + '/' + items[i].dataset.id
-          }
-
-        })
+        items[i].addEventListener('click', () => app.setLanguege(items[i].dataset.id))
       }
     }
   }
@@ -121,6 +121,16 @@
       if (window.location.href.indexOf(`/${lang.id}/`) > -1) return lang.id
     }
     return 'en'
+  }
+
+  app.detectAndChangeLang = () => {
+    if (!localStorage.getItem("lang")) {
+      const navLang = navigator.language.split('-')[0]
+
+      if (langList.find(lang => lang.id == navLang)) {
+        app.setLanguege(navLang)
+      }
+    }
   }
 
   app.lang = lang

@@ -1,9 +1,9 @@
 'use strict'
 
 const main = () => {
-  const selectedLang = APP.getLangSelected()
+  APP.detectAndChangeLang()
 
-  localStorage.setItem('lang', selectedLang)
+  const selectedLang = APP.getLangSelected()
 
   const templates = []
   const config = APP.config
@@ -236,47 +236,47 @@ const main = () => {
     ]
   }
 
-  //const selectedLang = localStorage.getItem("lang") || 'en'
+  const selectedTranslation = transl[selectedLang] || transl['en']
 
   const menu = [{
     type: ['nav', 'menu', 'footer'],
     link: 'index.html#main',
-    desc: transl[selectedLang][0]
+    desc: selectedTranslation[0]
   }, {
     type: ['nav', 'menu'],
     link: 'index.html#features',
-    desc: transl[selectedLang][1]
+    desc: selectedTranslation[1]
   }, {
     type: ['nav', 'menu', 'footer'],
     link: `${path}get-started.html`,
-    desc: transl[selectedLang][2]
+    desc: selectedTranslation[2]
   }, {
     type: ['footer'],
     link: 'https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA',
-    desc: transl[selectedLang][3],
+    desc: selectedTranslation[3],
     target: '_blank'
   }, {
     type: ['nav'],
     link: `${path}courses.html`,
-    desc: transl[selectedLang][4],
+    desc: selectedTranslation[4],
     target: '_blank'
   }, {
     type: ['nav', 'menu'],
     link: `${path}${config.purchaseLink}`,
-    desc: transl[selectedLang][5],
+    desc: selectedTranslation[5],
     dec: ['btn btn-brand-color'],
   }, {
     type: ['nav', 'menu', 'footer'],
     link: `${path}contact.html`,
-    desc: transl[selectedLang][6],
+    desc: selectedTranslation[6],
   }, {
     type: ['footer'],
     link: `${path}faq.html`,
-    desc: transl[selectedLang][7]
+    desc: selectedTranslation[7]
   }, {
     type: ['footer',],
     link: `${path}about.html`,
-    desc: transl[selectedLang][8]
+    desc: selectedTranslation[8]
   }]
 
   APP.injectTemplates(templates)
