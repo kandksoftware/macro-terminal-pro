@@ -233,6 +233,50 @@ const main = () => {
       'Kontakta',
       'FAQ',
       "Om oss"
+    ],
+    ru: [
+      'Главная',
+      'Функции',
+      'Знания',
+      'Youtube',
+      'Курсы',
+      'Купить',
+      'Контакты',
+      'FAQ',
+      'О нас'
+    ],
+    hu: [
+      'Fő',
+      "Jellemzők",
+      'Tudás',
+      'Youtube',
+      "tanfolyamok",
+      'Vásárlás',
+      'Érintkezés',
+      'GYIK',
+      'Rólunk'
+    ],
+    he: [
+      'רָאשִׁי',
+      'תכונות',
+      'יֶדַע',
+      'יוטיוב',
+      'קורסים',
+      'לִרְכּוֹשׁ',
+      'מַגָע',
+      'שאלות נפוצות',
+      'עלינו'
+    ],
+    pl: [
+      'Główna',
+      'Funkcje',
+      'Wiedza',
+      'Youtube',
+      'Kursy',
+      'Zakup',
+      'Kontakt',
+      'FAQ',
+      'O nas'
     ]
   }
 

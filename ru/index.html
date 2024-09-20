@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="../css/main.css">
+  <title>
+    Симулятор макросов ЧПУ II | Пользовательский макрос Fanuc B | Макрос Haas | Центроид | Разговорное программирование
+    | Программирование ЧПУ
+  </title>
+  <meta name="description"
+    content="CNC Macro Simulator II - Мощное, передовое и простое в использовании программное обеспечение ЧПУ с симулятором макросов ЧПУ и симулятором ЧПУ для макропрограммирования ЧПУ (параметрического) и программирования ЧПУ" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Ваш браузер не поддерживает JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="../resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ menu }}
+    </header>
+    <main>
+      <section class="main flex-c movie">
+        <div class="main__product-text p-1">
+          <h1>CNC Macro Simulator II</h1>
+          <h3 class="main__desc">
+            Возможно, лучший редактор кода ЧПУ + симулятор из когда-либо созданных
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>все, что вам нужно, в одном месте
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>купить один раз (работает офлайн, без ограничений по времени, без
+            подписки, без учетной записи,
+            без ограничений по устройствам)
+          </h3>
+          <div class=" main__btn-container">
+            <a class="btn btn-brand-color" href="{{ purchaseLink }}">Купить</a>
+            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">Получить демо</a>
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="what-is-this">Что такое CNC Macro Simulator II?</h1>
+        <div class="main__product-intro">
+          CNC Macro Simulator II — это легкий редактор кода ЧПУ и симулятор, разработанный для упрощения создания
+          макропрограмм для таких элементов управления, как Fanuc, Haas, Mazak (ISO), Centroid и даже Sinumerik,
+          Heidenhain или Okuma
+          со встроенными преобразователями. Он поддерживает как 3-осевые фрезерные, так и токарные станки с осями C/Y и
+          приводным инструментом. Программное обеспечение
+          работает в автономном режиме на Windows, Linux, macOS, Android и iOS и доступно для настольных компьютеров,
+          планшетов и мобильных телефонов. Хотя в настоящее время симулятор представляет только 3 оси, программное
+          обеспечение может выполнять макропрограммы
+          для 6 осей, предлагая отладку и преобразование в простой G-код. </div>
+      </section>
+      <!-- доверяет раздел -->
+      <section class="article article--main">
+        <h1 class="main__title">Доверяют специалисты из:</h1>
+        <img class="card__img-full" src="../resources/used-by-specialists-from-companies.png"
+          alt="Доверяют специалисты из: ВМС США, Tesla, General Motors" loading="lazy" />
+      </section>
+      <!-- поддержка управления -->
+      <section class="article article--main">
+        <div class="controls">
+          <div class="control">
+            FANUC
+          </div>
+          <div class="control">
+            HEIDENHAIN
+          </div>
+          <div class="control">
+            HAAS
+          </div>
+          <div class="control">
+            OKUMA
+          </div>
+          <div class="control">
+            SINUMERIK
+          </div>
+          <div class="control">
+            MAZAK ISO
+          </div>
+          <div class="control">
+            CENTROID
+          </div>
+        </div>
+      </section>
+      <!-- раздел галереи -->
+      <section class="article article--main">
+        <h1 class="main__title">Галерея</h1>
+        <div id="gallery">
+          <div id="gallery__preview">
+            <img src="../resources/conversational-programming.png" alt="чпу диалоговое программирование">
+          </div>
+          <div id="gallery__selector">
+            <img src="../resources/conversational-programming.png" alt="чпу диалоговое программирование">
+            <img src="../resources/macro-circle.png"
+              alt="создание окружности с использованием параметрического программирования">
+            <img src="../resources/laser2.png" alt="программа лазерной резки с ЧПУ с использованием Fanuc Macro B">
+            <img src="../resources/debugging.png" alt="отладка макропрограммы с использованием встроенного отладчика">
+            <img src="../resources/sphere.png" alt="создание сферы с использованием параметрического программирования">
+            <img src="../resources/plazma.png" alt="программа лазерной резки с ЧПУ">
+            <img src="../resources/laser.png" alt="программа лазерной резки с ЧПУ">
+            <img src="../resources/circular-pocket.png" alt="макрос для фрезерования карманов fanuc macro B">
+            <img src="../resources/gear.png" alt="получение данных о gear cnc program">
+            <img src="../resources/oval.png" alt="тестирование овальной макропрограммы">
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="advantages">Преимущества</h1>
+        <div class="cards">
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Инструмент анализа макросов
+            </div>
+            <img class="card__img" src="../resources/debugger2.png" alt="отладка fanuc macro B program" />
+            <div class="card__content hide">
+              Пошагово посмотрите, какие переменные используются, оценка математических операций с имитацией траектории
+              инструмента
+            </div>
+            <div class="card__content">
+              Просмотр используемых переменных и их значений, математических и логических операций, сигналов тревоги и
+              подпрограмм
+              вложенность
+            </div>
+          </div>
+          <!-- карта -->
+          <div class="card">
+            <div class="card__title">
+              Экспорт программы
+            </div>
+            <img class="card__img" src="../resources/export.png" alt="file-export" loading="lazy" />
+            <div class="card__content">
+              Конвертируйте макропрограммы в простые форматы ISO, Heidenhain, Sinumerik или Okuma для совместимости с
+              различными станками с ЧПУ
+            </div>
+          </div>
+          <!-- карта -->
+          <div class="card">
+            <div class="card__title">
+              Разговорный
+            </div>
+            <img class="card__img" src="../resources/conversational-programming.png" alt="easy-to-use" />
+            <div class="card__content">
+              Используйте диалоговое программирование для быстрого создания программ с ЧПУ без кодирование
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <!-- карта -->
+          <div class="card">
+            <div class="card__title">
+              Совместимость
+            </div>
+            <img class="card__img" src="../resources/compatibility.png" alt="compatibility" loading="lazy" />
+            <div class="card__content">
+              Совместимость с широким спектром популярных ЧПУ, включая Fanuc, Haas, Centroid, Mazak ISO и
+              Siemens 802D
+            </div>
+          </div>
+          <!-- карта -->
+          <div class="card">
+            <div class="card__title">
+              Мультиплатформенность
+            </div>
+            <img class="card__img" src="../resources/multi-platform.png" alt="multi-platform" loading="lazy" />
+            <div class="card__content">
+              Работает на настольных компьютерах, планшетах и ​​мобильных телефонах и полностью совместима с Windows,
+              MacOS, Linux, Android
+              и IOS
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Легкий
+            </div>
+            <img class="card__img" src="../resources/lightweight.png" alt="lightweight" loading="lazy" />
+            <div class="card__content">
+              Мало места на жестком диске? CNC Macro Simulator II не нужно много. Занимает менее 5 МБ (проверено на
+              MacOS)
+            </div>
+          </div>
+        </div>
+        <!-- баннер запроса демо -->
+        <a href="{{ demoLink }}">
+          <div class="banner banner__demo"></div>
+        </a>
+      </section>
+      <!-- функции -->
+      <section class="article article--main">
+        <h1 class="main__title" id="features">Функции</h1>
+        <ul class="list hide">
+          <li>Симулятор ЧПУ, плоттер, просмотрщик ЧПУ, интерпретатор макросов, диалоговое программирование,
+            преобразователи кодов — все в одном</li>
+          <li>легкое, быстрое и мощное диалоговое программирование фрезерных и токарных станков, программы импорта и
+            экспорта *</li>
+          <li>3 оси для фрезерных станков, ось C + Y + приводной инструмент для токарных станков</li>
+          <li>диалоговый режим обеспечивает автоматический расчет скорости и подачи и подачи врезания на основе
+            выбранного
+            материала обрабатываются и используемые инструменты</li>
+          <li>3 встроенных конвертера из ISO в Okuma, Sinumerik 840D, Heidenhain i530 *</li>
+          <li>купить один раз (без ограничений по времени, подписки, учетной записи, устройств)</li>
+          <li>создать собственные пользовательские циклы с помощью Fanuc Macro B/Centroid <a
+              href="../custom-cycle.html">подробнее</a>
+          </li>
+          <li>использовать на настольном компьютере, планшете или даже мобильном телефоне</li>
+          <li>Поддержка Fanuc Custom Macro B / Haas / Centroid <a href="../technical.html">подробнее</a></li>
+          <li>поддержка многих системных переменных, используемых Fanuc Macro B <a
+              href="../system-variables-list.html">подробнее</a>
+          </li>
+          <li>используется и тестируется профессионалами по всему миру</li>
+          <li>Просмотрщик ЧПУ поддерживает множество фрезерных и токарных циклы, абсолютное, инкрементное и полярное
+            программирование, повтор
+            закрепленный цикл с использованием L и K и локальных подпрограмм</li>
+          <li>построчная оценка арифметических и логических операций</li>
+          <li>преобразование программы, написанной с использованием макросов, в чистый g-код и возможность сжатия ее до
+            40 процентов**</li>
+          <li>создание, экспорт или импорт библиотек инструментов</li>
+          <li>сохранение данных в редакторе кода даже при отключении электричества</li>
+          <li>множество примеров программ ЧПУ</li>
+          <li>встроенный расширенный калькулятор (использует переменные, функции, математические и логические операторы)
+          </li>
+          <li>легкий — занимает менее 5 МБ на жестком диске</li>
+          <li>работает на Windows, MacOS, Linux, Android и IOS</li>
+          <li>запуск в автономном режиме — подключение к Интернету не требуется!</li>
+          <li>быстрая поддержка в случае возникновения проблем (ответ в течение 24 часов, кроме выходных)</li>
+        </ul>
+        <h1 class="main__subtitle" id="viewport">Видовой экран (симулятор/графика)</h1>
+        <ul class="list">
+          <li>3D траектория инструмента (фрезерование)</li>
+          <li>симуляция (воспроизведение, быстрое воспроизведение, остановка, следующий, предыдущий, перемотка назад,
+            сброс)</li>
+          <li>фрезерование — 5 режимов просмотра (3D, XY, удаление XY, XZ, YZ)</li>
+          <li>токарный станок — 2 режима просмотра (радиальный и осевой вид удаления)</li>
+          <li>поддержка полного экрана</li>
+          <li>регулируемая скорость моделирования</li>
+          <li>измерение объекта/координат</li>
+          <li>динамические функции масштабирования, панорамирования и вращения доступны с помощью курсора, специальных
+            кнопок или сочетаний клавиш</li>
+          <li>показать/скрыть быстрое перемещение</li>
+          <li>3 темы (темная, светлая, черно-белая)</li>
+          <li>оценщик времени обработки</li>
+          <li>длина реза информация</li>
+          <li>мин/макс для осей X, Y, Z</li>
+        </ul>
+        <h1 class="main__subtitle" id="debugger">Инструмент отладки</h1>
+        <ul class="list">
+          <li>назначенные и созданные локальные, общие и системные переменные</li>
+          <li>подсветка строк в редакторе кода во время отладки</li>
+          <li>опции отладки: воспроизведение, быстрое воспроизведение, остановка, следующий, предыдущий, перемотка
+            назад, сброс</li>
+          <li>вызванная подпрограмма и уровень вложенности</li>
+          <li>математические и логические вычисления в строке</li>
+          <li class="hide">для операторов IF и WHILE отображается фактическое значение (истина или ложь)</li>
+          <li>регулируемая скорость отладки</li>
+          <li>бесшовное ручное управление изменением значений локальных, общих и системных переменных во время активной
+            отладки
+          </li>
+        </ul>
+        <h1 class="main__subtitle" id="code-editor">Редактор кода</h1>
+        <ul class="list">
+          <li>сохраняет данные даже при отключении питания</li>
+          <li>подсветка/отступ кода</li>
+          <li>форматирование кода</li>
+          <li>интеллектуальное добавление/удаление номеров строк (автоматически обновляет или сохраняет номера строк,
+            связанные с
+            GOTO, адресами P и Q в циклах поворота, адресом Q в вызове подпрограммы)</li>
+          <li>расширенные инструменты преобразования кода: перемещение, поворот, зеркальное отображение,
+            масштабирование, abs в rel (и наоборот), мм в дюйм
+            (и наоборот)</li>
+          <li>удаление комментариев</li>
+          <li>пропустить блок, добавить/удалить</li>
+          <li>отменить/повторить</li>
+          <li>добавление/удаление EOB</li>
+          <li>добавление десятичной точки</li>
+        </ul>
+        <h1 class="main__subtitle">Расширенные калькулятор</h1>
+        <ul class="list">
+          <li>использование переменных (включая системные)</li>
+          <li>считывает значения как общих, так и системных переменных, используемых во время отладки</li>
+          <li>использование логических и арифметических операторов (как в Fanuc Macro B или Centroid)</li>
+          <li>использование функций (как в Fanuc Macro B)</li>
+          <li>поддерживает синтаксис Fanuc Macro B и Centroid</li>
+        </ul>
+        <h1 class="main__subtitle" id="macro-support">Поддержка макросов (Fanuc Custom Macro B/Haas/Centroid)</h1>
+        <ul class="list">
+          <li>ключевые слова: IF, THEN (или TH), GOTO, WHILE (или WH), DO, END, ELSE (CENTROID), DPRNT, FOPEN, FCLOS
+          </li>
+          <li>сочетания клавиш: TH => THEN, WH => WHILE</li>
+          <li>операторы сравнения (FANUC/HAAS): EQ, LT, LE, GT, GE, NE</li>
+          <li>операторы сравнения (CENTROID): ==, <, <=,>, >=, !=</li>
+          <li>вызов макроподпрограммы G65/G66/G66.1</li>
+          <li>математические функции: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
+          <li>локальные, общие и самые популярные системные переменные</li>
+        </ul>
+        <h1 class="main__subtitle" id="common-iso-support">Общая поддержка ISO</h1>
+        <ul class="list">
+          <li>G28, G30 и G53 (исходное положение)</li>
+          <li>абсолютный, инкрементный и полярный режим</li>
+          <li>G98 отвод к начальному значению Z (фрезерование)</li>
+          <li>G99 отвод к значению R (фрезерование)</li>
+          <li>M98 подпрограмма (несколько форматов)</li>
+          <li>повторить стандартный цикл (L и K)</li>
+          <li>круговая интерполяция поддерживается с помощью (I, J, K или R)</li>
+        </ul>
+        <h1 class="main__subtitle" id="lathe-cycles">Поддерживаются циклы токарного станка</h1>
+        <ul class="list">
+          <li>G32/G33 нарезание резьбы (прямой и конической)</li>
+          <li>G70 чистовой цикл</li>
+          <li>G71 черновой цикл обработки</li>
+          <li>G72 цикл торцевания</li>
+          <li>G73 цикл повторения шаблона</li>
+          <li>G74 цикл проточки торца</li>
+          <li>G75 цикл проточки канавок</li>
+          <li>G76/G78 цикл нарезания резьбы</li>
+          <li>G90 цикл точения</li>
+          <li>G92 цикл нарезания резьбы</li>
+          <li>G94 цикл торцевания</li>
+        </ul>
+        <h1 class="main__subtitle" id="transformation-cycles">Циклы преобразования</h1>
+        <ul class="list">
+          <li>G16 полярный координата</li>
+          <li>G51 масштабирование</li>
+          <li>G52 локальный рабочий сдвиг</li>
+          <li>G68 вращение системы координат</li>
+        </ul>
+        <h1 class="main__subtitle" id="haas-cycles-support">Поддержка циклов Haas</h1>
+        <ul class="list">
+          <li>G70 окружность отверстий для болтов</li>
+          <li>G71 дуга отверстий для болтов</li>
+          <li>G72 отверстия для болтов вдоль угла</li>
+        </ul>
+        <h1 class="main__subtitle" id="milling-conversational-programming">Фрезерование диалоговое программирование</h1>
+        <ul class="list">
+          <li>КРУГЛОЕ ФРЕЗЕРОВАНИЕ ТОРЦА</li>
+          <li>ПРЯМОУГОЛЬНОЕ ФРЕЗЕРОВАНИЕ ТОРЦА</li>
+          <li>КРУГЛОЕ КАРМАН</li>
+          <li>ПРЯМОУГОЛЬНЫЙ КАРМАН</li>
+          <li>КРУГЛЫЙ УПЛОТНИТЕЛЬ</li>
+          <li>ПРЯМОУГОЛЬНЫЙ УПЛОТНИТЕЛЬ</li>
+          <li>КРУГЛЫЙ ПРОТОЧНЫЙ ДИСК</li>
+          <li>ПРЯМОУГОЛЬНЫЙ ПРОТОЧНЫЙ ДИСК</li>
+          <li>СПИРАЛЬНОЕ СВЕРЛЕНИЕ</li>
+          <li>ТОЧЕЧНОЕ СВЕРЛЕНИЕ</li>
+          <li>СВЕРЛЕНИЕ С ВЫДЕРЖКОЙ</li>
+          <li>ФРЕЗЕРОВАНИЕ РЕЗЬБЫ</li>
+          <li>НАРЕЗАНИЕ РЕЗЬБЫ</li>
+          <li>ФРАГМЕНТ КОДА (добавьте свой код)</li>
+        </ul>
+        <h1 class="main__subtitle" id="turning-conversational-programming">Токарное диалоговое программирование</h1>
+        <ul class="list">
+          <li>ОБРАБОТКА ТОРЦА</li>
+          <li>ТОКАНИЕ</li>
+          <li>КОНТУРНАЯ ОБРАБОТКА</li>
+          <li>ОСЕВОЙ КОНТУР OD/ID</li>
+          <li>ОСЕВОЙ КРУГОВОЙ ШПОНОЧНЫЙ ПАЗ</li>
+          <li>СВЕРЛЕНИЕ</li>
+          <li>ОСЕВОЕ и РАДИАЛЬНОЕ СВЕРЛЕНИЕ</li>
+          <li>ОБРАБОТКА ТОРЦЕВЫХ КАНАВОК</li>
+          <li>ОБРАБОТКА КАНАВОК</li>
+          <li>ОСЕВОЙ и РАДИАЛЬНЫЙ ШПОНОЧНЫЙ ПАЗ</li>
+          <li>РЕЗЬБОВАНИЕ</li>
+          <li>НАРЕЗАНИЕ РЕЗЬБЫ</li>
+          <li>ОСЕВОЕ и РАДИАЛЬНОЕ НАРЕЗАНИЕ РЕЗЬБЫ</li>
+          <li>РАЗВЕРТЫВАНИЕ</li>
+          <li>ОСЕВОЕ и РАДИАЛЬНОЕ РАЗВЕРТЫВАНИЕ</li>
+          <li>РАСТОЧКА</li>
+          <li>РАЗДЕЛКА</li>
+          <li>ФРАГМЕНТ КОДА (добавьте свой собственный код)</li>
+        </ul>
+        <h1 class="main__subtitle" id="converters">Конвертеры кодов</h1>
+        <ul class="list">
+          <li>режим фрезерования: ISO/MACRO в простой ISO, Heidenhain iTNC 530, Sinumerik 840D/840Di/810D, Okuma
+            (фрезерный станок)</li>
+          <li>режим токарной обработки: ISO/MACRO в простой ISO, Okuma OSP-P300</li>
+          <li>Вам нужен специальный конвертер? <a href="{{ contactLink }}">Свяжитесь с нами</a></li>
+        </ul>
+        <h1 class="main__subtitle" id="postprocessors">Постпроцессоры</h1>
+        <ul class="list">
+          <li>режим токарной обработки: ISO (FANUC/HAAS, 2-строчные или 1-строчные циклы в зависимости от выбранного
+            управления), Okuma
+            OSP-P300</li>
+          <li>Вам нужен специальный постпроцессор? <a href="{{ contactLink }}">Связаться с нами</a></li>
+        </ul>
+        <h1 class="main__subtitle">Файлы</h1>
+        <ul class="list">
+          <li>новый проект</li>
+          <li>открыть файл (открыть несколько файлов одновременно)</li>
+          <li>добавить (добавить подпрограмму в основную программу)</li>
+          <li>импортировать/экспортировать диалоговую программу</li>
+          <li>примеры программ ЧПУ</li>
+          <li>сохранить, сохранить как</li>
+          <li>экспортировать в простой код ISO, Heidenhain iTNC 530, Sinumerik 840D или Okuma</li>
+          <li>поддерживаемые расширения файлов: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+        </ul>
+        <h1 class="main__subtitle">Языки</h1>
+        <ul class="list">
+          <li>Английский</li>
+        </ul>
+
+        <div class="main__pricing" id="purchase">
+          <div class="main__pricing-card">
+            <div class="main__pricing-title">CNC Macro Simulator II STUDIO</div>
+            <div class="main__pricing-desc">(неограниченное количество устройств)</div>
+            <div class="main__pricing-normal-price hide">529.00</div>
+            <div class="main__pricing-discount-price" id="pay-price">529</div>
+          </div>
+          <div class="main__pricing-card">
+            <div class="main__pricing-pay-button-container">
+              <button class="main__pricing-pay-button" id="purchase-studio-version">Купить</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="../js/script-loader.js"></script>
+    <script src="../js/main2.js"></script>
+  </div>
+</body>
+
+</html>

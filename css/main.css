@@ -1488,6 +1488,10 @@ th, td {
   width: 100%;
 }
 
+.rtl .list > li::before {
+  content: '⇦ ';
+}
+
 .new {
   position: absolute;
   right: 5px;

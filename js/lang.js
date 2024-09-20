@@ -52,6 +52,22 @@
     id: 'da',
     flag: '🇩🇰',
     desc: 'Dansk'
+  }, {
+    id: 'pl',
+    flag: '🇵🇱',
+    desc: 'Polski'
+  }, {
+    id: 'ru',
+    flag: '🇷🇺',
+    desc: 'Русский'
+  }, {
+    id: 'hu',
+    flag: '🇭🇺',
+    desc: 'Magyar'
+  }, {
+    id: 'he',
+    flag: '🇮🇱',
+    desc: 'עברית'
   }]
 
   const lang = {

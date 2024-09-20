@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="../css/main.css">
+  <title>
+    CNC Macro Simulator II | Fanuc Custom Macro B | Makro Haas | Centroid | Programowanie konwersacyjne | Programowanie
+    CNC
+  </title>
+  <meta name="description"
+    content="CNC Macro Simulator II - Potężne, zaawansowane i łatwe w użyciu oprogramowanie CNC z symulatorem makr CNC i symulatorem CNC do programowania makr CNC (parametrycznego) i programowania CNC" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Twoja przeglądarka nie obsługuje JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="../resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ menu }}
+    </header>
+    <main>
+      <section class="main flex-c movie">
+        <div class="main__product-text p-1">
+          <h1>CNC Macro Simulator II</h1>
+          <h3 class="main__desc">
+            Prawdopodobnie najlepszy edytor kodu CNC + symulator, jaki kiedykolwiek stworzono
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>wszystko, czego potrzebujesz w jednym miejscu
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>kup raz (działa offline, bez limitu czasu, bez subskrypcji, bez
+            konta,
+            bez limitu urządzeń)
+          </h3>
+          <div class=" main__btn-container">
+            <a class="btn btn-brand-color" href="{{ purchaseLink }}">Kup</a>
+            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">Pobierz demo</a>
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="what-is-this">Czym jest CNC Macro Simulator II?</h1>
+        <div class="main__product-intro">
+          CNC Macro Simulator II to lekki edytor kodu CNC i symulator zaprojektowany w celu usprawnienia tworzenia
+          programów makr dla takich sterowników jak Fanuc, Haas, Mazak (ISO), Centroid, a nawet Sinumerik, Heidenhain
+          lub Okuma
+          z wbudowanymi konwerterami. Obsługuje zarówno frezarki 3-osiowe, jak i tokarki z osią C/Y i narzędziami
+          roboczymi. Oprogramowanie
+          działa w trybie offline na systemach Windows, Linux, macOS, Android i iOS i jest dostępne na komputery
+          stacjonarne, tablety
+          i telefony komórkowe. Podczas gdy symulator obecnie reprezentuje tylko 3 osie, oprogramowanie może wykonywać
+          programy makro dla maksymalnie 6 osi, oferując debugowanie i konwersję do zwykłego kodu G.
+        </div>
+      </section>
+      <!-- zaufane przez sekcję -->
+      <section class="article article--main">
+        <h1 class="main__title">Zaufali nam specjaliści z:</h1>
+        <img class="card__img-full" src="../resources/used-by-specialists-from-companies.png"
+          alt="Zaufali nam specjaliści z: United States Navy, Tesla, General Motors" loading="lazy" />
+      </section>
+      <!-- wsparcie kontroli -->
+      <section class="article article--main">
+        <div class="controls">
+          <div class="control">
+            FANUC
+          </div>
+          <div class="control">
+            HEIDENHAIN
+          </div>
+          <div class="control">
+            HAAS
+          </div>
+          <div class="control">
+            OKUMA
+          </div>
+          <div class="control">
+            SINUMERIK
+          </div>
+          <div class="control">
+            MAZAK ISO
+          </div>
+          <div class="control">
+            CENTROID
+          </div>
+        </div>
+      </section>
+      <!-- gallery section -->
+      <section class="article article--main">
+        <h1 class="main__title">Galeria</h1>
+        <div id="gallery">
+          <div id="gallery__preview">
+            <img src="../resources/conversational-programming.png" alt="programowanie konwersacyjne cnc">
+          </div>
+          <div id="gallery__selector">
+            <img src="../resources/conversational-programming.png" alt="programowanie konwersacyjne cnc">
+            <img src="../resources/macro-circle.png" alt="koło generowane przy użyciu programowania parametrycznego">
+            <img src="../resources/laser2.png" alt="program do wycinarki laserowej cnc przy użyciu Fanuc Macro B">
+            <img src="../resources/debugging.png" alt="program makro debugowania przy użyciu wbudowanego debugera">
+            <img src="../resources/sphere.png" alt="tworzenie sfery przy użyciu programowania parametrycznego">
+            <img src="../resources/plazma.png" alt="program do wycinarki plazmowej cnc">
+            <img src="../resources/laser.png" alt="program do wycinarki laserowej cnc">
+            <img src="../resources/circular-pocket.png" alt="makro frezowania kieszeni fanuc macro B"> <img
+              src="../resources/gear.png" alt="pobieranie danych o przekładni cnc program">
+            <img src="../resources/oval.png" alt="testowanie programu makro oval">
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="advantages">Zalety</h1>
+        <div class="cards">
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Narzędzie do analizy makr
+            </div>
+            <img class="card__img" src="../resources/debugger2.png" alt="debugowanie programu makro fanuc B" />
+            <div class="card__content hide">
+              Zobacz krok po kroku, jakie zmienne są używane, ocena operacji matematycznych z symulacją ścieżki
+              narzędzia
+            </div>
+            <div class="card__content">
+              Wyświetl zmienne używane i ich wartości, operacje matematyczne i logiczne, alarmy i podprogramy
+              zagnieżdżanie
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Eksport programu
+            </div>
+            <img class="card__img" src="../resources/export.png" alt="file-export" loading="lazy" />
+            <div class="card__content">
+              Konwertuj programy makro do zwykłych formatów ISO, Heidenhain, Sinumerik lub Okuma w celu zapewnienia
+              zgodności z
+              różnymi maszynami CNC
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Konwersacyjne
+            </div>
+            <img class="card__img" src="../resources/conversational-programming.png" alt="łatwy w użyciu" />
+            <div class="card__content">
+              Wykorzystaj programowanie konwersacyjne, aby szybko generować programy CNC bez kodowania
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Zgodność
+            </div>
+            <img class="card__img" src="../resources/compatibility.png" alt="zgodność" loading="leniwy" />
+            <div class="card__content">
+              Zgodność z szeroką gamą popularnych sterowników CNC, w tym Fanuc, Haas, Centroid, Mazak ISO i
+              Siemens 802D
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Multiplatformowy
+            </div>
+            <img class="card__img" src="../resources/multi-platform.png" alt="multi-platform" loading="lazy" />
+            <div class="card__content">
+              Działa na komputerach stacjonarnych, tabletach i telefonach komórkowych i jest w pełni kompatybilny z
+              systemami Windows, MacOS, Linux, Android
+              i IOS
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Lekki
+            </div>
+            <img class="card__img" src="../resources/lightweight.png" alt="lightweight" loading="lazy" />
+            <div class="card__content">
+              Mało miejsca na dysku twardym? CNC Macro Simulator II nie potrzebuje wiele. Zajmuje mniej niż 5 MB
+              (testowane na MacOS)
+            </div>
+          </div>
+        </div>
+        <!-- demo request banner -->
+        <a href="{{ demoLink }}">
+          <div class="banner banner__demo"></div>
+        </a>
+      </section>
+      <!-- features -->
+      <section class="article article--main">
+        <h1 class="main__title" id="features">Funkcje</h1>
+        <ul class="list hide">
+          <li>Symulator CNC, backplotter, przeglądarka CNC, interpreter makr, programowanie konwersacyjne, konwertery
+            kodu -
+            wszystko w jednym</li>
+          <li>łatwe, szybkie i wydajne programowanie konwersacyjne frezarek i tokarek, import i eksport programów *</li>
+          <li>3 osie dla frezarek, oś C + Y + narzędzia robocze dla tokarek</li>
+          <li>tryb konwersacyjny oferuje automatyczne obliczanie prędkości i posuwu oraz posuwu wgłębnego na podstawie
+            wybranego
+            materiału
+            podlegającego obróbce i używanych narzędzi</li>
+          <li>3 wbudowane konwertery z ISO na Okuma, Sinumerik 840D, Heidenhain i530 *</li>
+          <li>kup raz (bez limitu czasowego, bez subskrypcji, bez konta, bez limitu urządzeń)</li>
+          <li>stwórz własne cykle niestandardowe przy użyciu Fanuc Macro B/Centroid <a
+              href="../custom-cycle.html">czytaj
+              więcej</a>
+          </li>
+          <li>używaj na swoim komputerze stacjonarnym, tablecie, a nawet telefonie komórkowym</li>
+          <li>Obsługa Fanuc Custom Macro B / Haas / Centroid <a href="../technical.html">czytaj
+              więcej</a></li>
+          <li>obsługa wielu zmiennych systemowych używanych przez Fanuc Macro B <a
+              href="../system-variables-list.html">czytaj
+              więcej</a>
+          </li>
+          <li>używane i testowane przez profesjonalistów na całym świat</li>
+          <li>Przeglądarka CNC obsługuje wiele cykli frezowania i toczenia, programowanie absolutne, przyrostowe i
+            biegunowe, powtarzanie
+            cykli w puszkach przy użyciu L i K oraz lokalnych podprogramów</li>
+          <li>ocena wiersz po wierszu operacji arytmetycznych i logicznych</li>
+          <li>konwersja programu napisanego przy użyciu makr do czystego kodu G i możliwość jego kompresji nawet o 40
+            procent **</li>
+          <li>tworzenie, eksportowanie lub importowanie bibliotek narzędzi</li>
+          <li>przechowywanie danych w edytorze kodu nawet w przypadku utraty prądu</li>
+          <li>wiele przykładów programów CNC</li>
+          <li>wbudowany zaawansowany kalkulator (używanie zmiennych, funkcji, operatorów matematycznych i logicznych)
+          </li>
+          <li>lekki — zajmuje mniej niż 5 MB miejsca na dysku twardym</li>
+          <li>działa w systemach Windows, MacOS, Linux, Android i IOS</li>
+          <li>uruchamianie w trybie offline — nie jest wymagane połączenie z Internetem!</li>
+          <li>szybkie wsparcie w przypadku problemów (odpowiedź w ciągu 24 godzin, z wyjątkiem weekendów)</li>
+        </ul>
+        <h1 class="main__subtitle" id="viewport">Viewport (symulator/grafika)</h1>
+        <ul class="list">
+          <li>Ścieżka narzędzia 3D (frezarka)</li>
+          <li>Symulacja (odtwórz, odtwórz szybko, zatrzymaj, następny, poprzedni, przewiń, zresetuj)</li>
+          <li>frezarka - 5 trybów widoku (3D, XY, usuwanie XY, XZ, YZ)</li>
+          <li>tokarka - 2 tryby widoku (widok usuwania promieniowego i osiowego)</li>
+          <li>Obsługa pełnego ekranu</li>
+          <li>Regulowana prędkość symulacji</li>
+          <li>Pomiar obiektu/współrzędnych</li>
+          <li>Funkcje dynamicznego powiększania, przesuwania i obracania są dostępne za pomocą kursora, dedykowanych
+            przycisków lub skrótów klawiaturowych</li>
+          <li>Pokaż/ukryj szybki ruch</li>
+          <li>3 motywy (ciemny, jasny, czarno-biały)</li>
+          <li>Oszacowanie czasu obróbki</li>
+          <li>informacje o długości cięcia</li>
+          <li>min/max dla osi X, Y, Z</li>
+        </ul>
+        <h1 class="main__subtitle" id="debugger">Narzędzie debugera</h1>
+        <ul class="list">
+          <li>przypisane i utworzone zmienne lokalne, wspólne i systemowe</li>
+          <li>podświetlanie wierszy w edytorze kodu podczas debugowania</li>
+          <li>opcje debugowania: odtwórz, odtwórz szybko, zatrzymaj, następny, poprzedni, przewiń, zresetuj</li>
+          <li>wywołana podprocedura i poziom zagnieżdżenia</li>
+          <li>obliczenia matematyczne i logiczne w wierszu</li>
+          <li class="hide">dla instrukcji IF i WHILE pokazuje rzeczywistą wartość (prawda lub fałsz)</li>
+          <li>regulowana prędkość debugowania</li>
+          <li>bezproblemowa ręczna kontrola nad modyfikowaniem wartości zmiennych lokalnych, wspólnych i systemowych
+            podczas aktywnego debugowania
+          </li>
+        </ul>
+        <h1 class="main__subtitle" id="code-editor">Edytor kodu</h1>
+        <ul class="list">
+          <li>przechowuje dane nawet w przypadku przerwy w dostawie prądu</li>
+          <li>podświetlanie/wcięcie kodu</li>
+          <li>formatowanie kodu</li>
+          <li>inteligentne dodawanie/usuwanie numerów wierszy (automatycznie aktualizuje lub zachowuje numery wierszy
+            powiązane z
+            adresami GOTO, P i Q w cyklach toczenia, adresem Q w wywołaniu podprogramu)</li>
+          <li>zaawansowane narzędzia do transformacji kodu: przesuwanie, obracanie, odbicie lustrzane, skalowanie, abs
+            na rel (i odwrotnie), mm na cal
+            (i odwrotnie)</li>
+          <li>usuwanie komentarzy</li>
+          <li>pomiń dodawanie/usuwanie bloku</li>
+          <li>cofnij/ponów</li>
+          <li>dodawanie/usuwanie EOB</li>
+          <li>dodawanie przecinka dziesiętnego</li>
+        </ul>
+        <h1 class="main__subtitle">Zaawansowany kalkulator</h1>
+        <ul class="list">
+          <li>używanie zmiennych (w tym systemowych)</li>
+          <li>odczytuje wartości zmiennych wspólnych i systemowych używanych podczas debugowania</li>
+          <li>używanie operatorów logicznych i arytmetycznych (jak w Fanuc Macro B lub Centroid)</li>
+          <li>używanie funkcji (takich samych jak Fanuc Macro B)</li>
+          <li>obsługuje składnię Fanuc Macro B i Centroid</li>
+        </ul>
+        <h1 class="main__subtitle" id="macro-support">Obsługa makr (Fanuc Custom Macro B/Haas/Centroid)</h1>
+        <ul class="list">
+          <li>słowa kluczowe: IF, THEN (lub TH), GOTO, WHILE (lub WH), DO, END, ELSE (CENTROID), DPRNT, FOPEN, FCLOS
+          </li>
+          <li>skróty słowne: TH => THEN, WH => WHILE</li>
+          <li>operatory porównania (FANUC/HAAS): EQ, LT, LE, GT, GE, NE</li>
+          <li>operatory porównania (CENTROID): ==, <, <=,>, >=, !=</li>
+          <li>wywołanie podprogramu makro G65/G66/G66.1</li>
+          <li>funkcje matematyczne: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow</li>
+          <li>zmienne systemowe lokalne, wspólne i najpopularniejsze</li>
+        </ul>
+        <h1 class="main__subtitle" id="common-iso-support">Wsparcie Common ISO</h1>
+        <ul class="list">
+          <li>G28, G30 i G53 (pozycja startowa)</li>
+          <li>tryb bezwzględny, przyrostowy i biegunowy</li>
+          <li>G98 wycofanie do początkowej wartości Z (mill)</li>
+          <li>G99 wycofanie do wartości R (mill)</li>
+          <li>podprogram M98 (wiele formatów)</li>
+          <li>powtórz cykl zamknięty (L i K)</li>
+          <li>interpolacja kołowa obsługiwana przez użycie (I, J, K lub R)</li>
+        </ul>
+        <h1 class="main__subtitle" id="lathe-cycles">Obsługa cykli tokarskich</h1>
+        <ul class="list">
+          <li>G32/G33 gwintowanie (proste i stożkowe)</li>
+          <li>G70 cykl wykańczający</li>
+          <li>G71 cykl obróbki zgrubnej</li>
+          <li>G72 cykl planowania</li>
+          <li>G73 cykl powtarzania wzoru</li>
+          <li>G74 cykl rowkowania powierzchni</li>
+          <li>G75 cykl rowkowania</li>
+          <li>G76/G78 cykl gwintowania</li>
+          <li>G90 cykl toczenia</li>
+          <li>G92 cykl gwintowania</li>
+          <li>G94 cykl planowania</li>
+        </ul>
+        <h1 class="main__subtitle" id="transformation-cycles">Cykle transformacji</h1>
+        <ul class="list">
+          <li>G16 biegunowy współrzędne</li>
+          <li>Skalowanie G51</li>
+          <li>Lokalne przesunięcie robocze G52</li>
+          <li>Obrót układu współrzędnych G68</li>
+        </ul>
+        <h1 class="main__subtitle" id="haas-cycles-support">Obsługa cykli Haas</h1>
+        <ul class="list">
+          <li>G70 Okrąg otworów na śruby</li>
+          <li>G71 Łuk otworów na śruby</li>
+          <li>G72 Otwory na śruby pod kątem</li>
+        </ul>
+        <h1 class="main__subtitle" id="milling-conversational-programming">Programowanie konwersacyjne frezowania</h1>
+        <ul class="list">
+          <li>FREZOWANIE POWIERZCHNI OKRĄGŁEJ</li>
+          <li>FREZOWANIE POWIERZCHNI PROSTOKĄTNEJ</li>
+          <li>KIESZONKA OKRĄGŁA</li>
+          <li>KIESZONKA PROSTOKĄTNA</li>
+          <li>KOŁOWE RAMIĘ</li>
+          <li>PROSTOKĄTNE RAMIĘ</li>
+          <li>ROWKOWANIE OKRĄGŁE</li>
+          <li>ROWKOWANIE PROSTOKĄTNE</li>
+          <li>ROZWIERACZANIE ŚRUBOWE</li>
+          <li>WIERCENIE PUNKTOWE</li>
+          <li>WIERCENIE Z UCHWYTEM</li>
+          <li>WIERCENIE WIERTŁOWE</li>
+          <li>FREZOWANIE GWINTÓW</li>
+          <li>GWINTOWANIE</li>
+          <li>FREZOWANIE GWINTÓW (dodaj własny kod)</li>
+        </ul>
+        <h1 class="main__subtitle" id="turning-conversational-programming">Toczenie w programowaniu konwersacyjnym</h1>
+        <ul class="list">
+          <li>PLANOWANIE</li>
+          <li>TOCZENIE</li>
+          <li>KONTUROWANIE</li>
+          <li>KONTUR OSIOWY ŚREDNICA ZEWNĘTRZNA/WEWNĘTRZNA</li>
+          <li>OKRĄGŁY ROWEK KLUCZOWY</li>
+          <li>WIERCENIE</li>
+          <li>WIERCENIE OSIOWE I PROMIENIOWE</li>
+          <li>ROWKOWANIE CZOŁOWE</li>
+          <li>ROWKOWANIE</li>
+          <li>OSIOWY I PROMIENIOWY ROWEK KLUCZOWY</li>
+          <li>GWINTOWANIE</li>
+          <li>GWINTOWANIE</li>
+          <li>GWINTOWANIE OSIOWE I PROMIENIOWE</li>
+          <li>ROZWIERCANIE</li>
+          <li>ROZWIERCANIE OSIOWE I PROMIENIOWE</li>
+          <li>ROZWIERCANIE</li>
+          <li>ROZWIERCANIE OSIOWE I PROMIENIOWE</li>
+          <li>ROZWIERCANIE</li>
+          <li>PRZECINANIE</li>
+          <li>FRAGMENT KODU (dodaj własny kod)</li>
+        </ul>
+        <h1 class="main__subtitle" id="converters">Kod konwertery</h1>
+        <ul class="list">
+          <li>tryb frezowania: ISO/MACRO na zwykły ISO, Heidenhain iTNC 530, Sinumerik 840D/840Di/810D, Okuma (frezarka)
+          </li>
+          <li>tryb toczenia: ISO/MACRO na zwykły ISO, Okuma OSP-P300</li>
+          <li>Czy potrzebujesz specjalnego konwertera? <a href="{{ contactLink }}">Skontaktuj się z nami</a></li>
+        </ul>
+        <h1 class="main__subtitle" id="postprocessors">Postprocessory</h1>
+        <ul class="list">
+          <li>tryb toczenia: ISO (FANUC/HAAS, cykle 2-liniowe lub 1-liniowe w zależności od wybranego sterowania), Okuma
+            OSP-P300</li>
+          <li>Czy potrzebujesz specjalnego postprocesora? <a href="{{ contactLink }}">Skontaktuj się z nami</a></li>
+        </ul>
+        <h1 class="main__subtitle">Pliki</h1>
+        <ul class="list">
+          <li>nowy projekt</li>
+          <li>otwórz plik (otwórz wiele plików jednocześnie)</li>
+          <li>dołącz (dodaj podprogram pod programem głównym)</li>
+          <li>importuj/eksportuj program konwersacyjny</li>
+          <li>przykłady programów CNC</li>
+          <li>zapisz, zapisz jako</li>
+          <li>eksportuj do zwykłego kodu ISO, Heidenhain iTNC 530, Sinumerik 840D lub Okuma</li>
+          <li>obsługiwane rozszerzenia plików: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+        </ul>
+        <h1 class="main__subtitle">Języki</h1>
+        <ul class="list">
+          <li>Angielski</li>
+        </ul>
+
+        <div class="main__pricing" id="purchase">
+          <div class="main__pricing-card">
+            <div class="main__pricing-title">Symulator makro CNC II STUDIO</div>
+            <div class="main__pricing-desc">(nieograniczona liczba urządzeń)</div>
+            <div class="main__pricing-normal-price hide">529,00</div>
+            <div class="main__pricing-discount-price" id="pay-price">529</div>
+          </div>
+          <div class="main__pricing-card">
+            <div class="main__pricing-pay-button-container">
+              <button class="main__pricing-pay-button" id="purchase-studio-version">Zakup</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="../js/script-loader.js"></script>
+    <script src="../js/main2.js"></script>
+  </div>
+</body>
+
+</html>

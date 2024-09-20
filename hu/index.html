@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, original-scale=1.0">
+  <link rel="shortcut icon" href="../resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="../css/main.css">
+  <title>
+    CNC Macro Simulator II | Fanuc Custom Macro B | Haas makró | Centroid | Beszélgetési programozás | CNC programozás
+  </title>
+  <meta name="description"
+    content="CNC Macro Simulator II - Erőteljes, fejlett és egyszerűen használható CNC szoftver CNC makró szimulátorral és CNC szimulátorral CNC makró (paraméteres) programozáshoz és CNC programozáshoz" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Az Ön böngészője nem támogatja a JavaScriptet!</noscript>
+  <div id="splash-screen">
+    <img src="../resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ menu }}
+    </header>
+    <main>
+      <section class="main flex-c movie">
+        <div class="main__product-text p-1">
+          <h1>CNC Macro Simulator II</h1>
+          <h3 class="main__desc">
+            Valószínűleg a valaha készült legjobb CNC kódszerkesztő + szimulátor
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>minden, amire szüksége van egy helyen
+          </h3>
+          <h3 class="main__sub-desc">
+            <span class="main__sub-decor">⇨ </span>egyszeri vásárlás (offline működik, nincs időkorlát, nincs
+            előfizetés, nincs fiók,
+            nincs eszközkorlát)
+          </h3>
+          <div class=" main__btn-container">
+            <a class="btn btn-brand-color" href="{{ buyLink }}">Vásárlás</a>
+            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">Demó letöltése</a>
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="what-is-this">Mi az a CNC Macro Simulator II?</h1>
+        <div class="main__product-intro">
+          A CNC Macro Simulator II egy könnyű CNC kódszerkesztő és szimulátor, amelyet a program létrehozásának
+          egyszerűsítésére terveztek.
+          makróprogramok olyan vezérlőkhöz, mint a Fanuc, a Haas, a Mazak (ISO), a Centroid, sőt a Sinumerik, a
+          Heidenhain vagy az Okuma
+          beépített konverterekkel. Támogatja a 3 tengelyes marókat és esztergagépeket C/Y tengellyel és éles
+          szerszámmal. A
+          a szoftver offline módban működik Windows, Linux, macOS, Android és iOS rendszeren, és elérhető asztali
+          számítógépeken, táblagépeken,
+          és mobiltelefonok. Míg a szimulátor jelenleg csak 3 tengelyt képvisel, a szoftver makrót tud
+          végrehajtani
+          programok akár 6 tengelyre, hibakeresést és sima G-kódra konvertálást kínálva.
+        </div>
+      </section>
+      <!-- szakasz szerint megbízható -->
+      <section class="article article--main">
+        <h1 class="main__title">A következő ország szakemberei bíznak meg:</h1>
+        <img class="card__img-full" src="../resources/used-by-specialists-from-companies.png"
+          alt="Az Egyesült Államok haditengerészete, Tesla, General Motors szakemberei bíznak meg" loading="lazy" />
+      </section>
+      <!-- vezérli a támogatást -->
+      <section class="article article--main">
+        <div class="controls">
+          <div class="control">
+            FANUC
+          </div>
+          <div class="control">
+            HEIDENHAIN
+          </div>
+          <div class="control">
+            HAAS
+          </div>
+          <div class="control">
+            OKUMA
+          </div>
+          <div class="control">
+            SINUMERIK
+          </div>
+          <div class="control">
+            MAZAK ISO
+          </div>
+          <div class="control">
+            CENTROID
+          </div>
+        </div>
+      </section>
+      <!-- galéria rovat -->
+      <section class="article article--main">
+        <h1 class="main__title">Galéria</h1>
+        <div id="gallery">
+          <div id="gallery__preview">
+            <img src="../resources/conversational-programming.png" alt="cnc társalgási program">
+          </div>
+          <div id="gallery__selector">
+            <img src="../resources/conversational-programming.png" alt="cnc társalgási program">
+            <img src="../resources/macro-circle.png" alt="kör generálás paraméteres programozással">
+            <img src="../resources/laser2.png" alt="cnc lézervágó program Fanuc Macro B használatával">
+            <img src="../resources/debugging.png" alt="hibakereső makróprogram beépített hibakeresővel">
+            <img src="../resources/sphere.png" alt="gömb létrehozása paraméterek programozásával">
+            <img src="../resources/plazma.png" alt="cnc plazmavágó program">
+            <img src="../resources/laser.png" alt="cnc lézervágó program">
+            <img src="../resources/circular-pocket.png" alt="fanuc makró B zsebmarás makró">
+            <img src="../resources/gear.png" alt="a gear cnc pro adatainak lekérésegramm">
+            <img src="../resources/oval.png" alt="ovális makróprogram tesztelése">
+          </div>
+        </div>
+      </section>
+      <section class="article article--main">
+        <h1 class="main__title" id="advantages">Előnyök</h1>
+        <div class="cards">
+          <!-- kártya -->
+          <div class="card">
+            <div class="card__title">
+              Makró elemző eszköz
+            </div>
+            <img class="card__img" src="../resources/debugger2.png" alt="Fanuc makró B program hibakeresése" />
+            <div class="card__content hide">
+              Tekintse meg lépésről lépésre, milyen változókat használunk, matematikai műveletek kiértékelése
+              szerszámút-szimulációval
+            </div>
+            <div class="card__content">
+              Tekintse meg a használt változókat és azok értékeit, a matematikai és logikai műveleteket, a
+              riasztásokat és az alprogramokat
+              fészkelő
+            </div>
+          </div>
+          <!-- kártya -->
+          <div class="card">
+            <div class="card__title">
+              Program export
+            </div>
+            <img class="card__img" src="../resources/export.png" alt="file-export" loading="lusta" />
+            <div class="card__content">
+              Konvertálja a makróprogramokat sima ISO, Heidenhain, Sinumerik vagy Okuma formátumba a
+              kompatibilitás érdekében
+              különböző CNC gépek
+            </div>
+          </div>
+          <!-- kártya -->
+          <div class="card">
+            <div class="card__title">
+              Társalgó
+            </div>
+            <img class="card__img" src="../resources/conversational-programming.png" alt="könnyen használható" />
+            <div class="card__content">
+              Használja a párbeszédes programozást a CNC programok gyors, kódolás nélküli generálásához
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <!-- kártya -->
+          <div class="card">
+            <div class="card__title">
+              Kompatibilitás
+            </div>
+            <img class="card__img" src="../resources/compatibility.png" alt="kompatibilitás" loading="lusta" />
+            <div class="card__content">
+              Kompatibilis a népszerű CNC vezérlők széles skálájával, beleértve a Fanuc, Haas, Centroid, Mazak ISO
+              és
+              Siemens 802D
+            </div>
+          </div>
+          <!-- kártya -->
+          <div class="card">
+            <div class="card__title">
+              Többplatformos
+            </div>
+            <img class="card__img" src="../resources/multi-platform.png" alt="multi-platform" loading="lusta" />
+            <div class="card__content">
+              Működik asztali számítógépeken, táblagépeken és mobiltelefonokon, és teljes mértékben kompatibilis a
+              Windows, MacOS, Linux és Android rendszerekkel
+              és IOS
+            </div>
+          </div>
+          <!-- kártya -->
+          <div class="card">
+            <div class="card__title">
+              Könnyűsúlyú
+            </div>
+            <img class="card__img" src="../resources/lightweight.png" alt="könnyű" loading="lusta" />
+            <div class="card__content">
+              Kevés a hely a merevlemezen? A CNC Macro Simulator II-hez nem kell sok. Kevesebb, mint 5 MB
+              (MacOS-en tesztelve)
+            </div>
+          </div>
+        </div>
+        <!-- demo kérés banner -->
+        <a href="{{ demoLink }}">
+          <div class="banner banner__demo"></div>
+        </a>
+      </section>
+      <!-- jellemzők -->
+      <section class="article article--main">
+        <h1 class="main__title" id="features">Funkciók</h1>
+        <ul class="list hide">
+          <li>CNC-szimulátor, backplotter, cnc-nézegető, makrótolmács, társalgási programozás, kódkonverterek -
+            minden egyben</li>
+          <li>könnyű, gyors és nagy teljesítményű maró és eszterga társalgási programozás, import és export
+            programok *</li>
+          <li>3 tengely marógépekhez, C + Y tengely + éles szerszámok esztergagépekhez</li>
+          <li>A beszélgetési mód lehetővé teszi a sebesség és az előtolás automatikus kiszámítását, valamint a
+            bemerülést a kiválasztott alapján
+            anyagi lény
+            megmunkált és a felhasznált szerszámok</li>
+          <li>3 beépített konverter ISO-tól Okuma-ig, Sinumerik 840D, Heidenhain i530*</li>
+          <li>egyszer vásároljon (nincs időkorlát, nincs előfizetés, nincs fiók, nincs eszközkorlát)</li>
+          <li>készítse meg saját egyéni ciklusait a Fanuc Macro B/Centroid segítségével <a
+              href="../custom-cycle.html">olvas
+              tovább</a>
+          </li>
+          <li>használhatja asztali számítógépén, táblagépén vagy akár mobiltelefonján</li>
+          <li>Fanuc Custom Macro B / Haas / Centroid támogatás <a href="../technical.html">további információ</a>
+          </li>
+          <li>a Fanuc Macro B által használt számos rendszerváltozó támogatása <a
+              href="../system-variables-list.html">olvasd el
+              tovább</a>
+          </li>
+          <li>szakemberek használják és tesztelték szerte a világon</li>
+          <li>A CNC megjelenítő számos marási és esztergálási ciklust támogat, abszolút, növekményes és poláris
+            programozást, ismétlést
+            konzerv ciklus L és K használatával, valamint helyi szubrutinokkal</li>
+          <li>aritmetikai és logikai műveletek soronkénti kiértékelése</li>
+          <li>makrók használatával írt program átalakítása tiszta g-kódba és akár 40-szeres tömörítési lehetőség
+            százalék **</li>
+          <li>eszköztárak létrehozása, exportálása vagy importálása</li>
+          <li>az adatokat a kódszerkesztőben tartja, még akkor is, ha áramszünet</li>
+          <li>sok példa CNC programra</li>
+          <li>beépített fejlett számológép (változók, függvények, matematikai és logikai operátorok használata)
+          </li>
+          <li>könnyű – kevesebb mint 5 MB helyet foglal a merevlemezen</li>
+          <li>Windows, MacOS, Linux, Android és IOS rendszeren fut</li>
+          <li>offline indítás – nincs szükség internetkapcsolatra!</li>
+          <li>gyors támogatás probléma esetén (24 órán belüli válasz, kivéve hétvégéken)</li>
+        </ul>
+        <h1 class="main__subtitle" id="viewport">Nézetablak (szimulátor/grafika)</h1>
+        <ul class="list">
+          <li>3D szerszámút (marás)</li>
+          <li>szimuláció (lejátszás, gyors lejátszás, leállítás, következő, előző, visszatekerés, visszaállítás)
+          </li>
+          <li>marás – 5 nézetmód (3D, XY, XY eltávolítás, XZ, YZ)</li>
+          <li>eszterga - 2 nézetmód (radiális és axiális eltávolítási nézet)</li>
+          <li>teljes képernyős támogatás</li>
+          <li>állítható szimulációs sebesség</li>
+          <li>egy objektum/koordináták mérése</li>
+          <li>dinamikus zoom, pásztázás és forgatás a kurzorral, a dedikált gombokkal vagy a billentyűzettel
+            érhetők el
+            parancsikonok</li>
+          <li>gyors mozgás megjelenítése/elrejtése</li>
+          <li>3 téma (sötét, világos, fekete-fehér)</li>
+          <li>megmunkálási idő becslő</li>
+          <li>vágási hossz információ</li>
+          <li>min/max X, Y, Z tengelyekhez</li>
+        </ul>
+        <h1 class="main__subtitle" id="debugger">Hibakereső eszköz</h1>
+        <ul class="list">
+          <li>hozzárendelt és létrehozott helyi, közös és rendszerváltozókat</li>
+          <li>sorok kiemelése a kódszerkesztőben hibakeresés közben</li>
+          <li>hibakeresési lehetőségek: lejátszás, gyors lejátszás, leállítás, következő, előző, visszatekerés,
+            visszaállítás</li>
+          <li>szubrutinnak és beágyazási szintnek hívják</li>
+          <li>matematikai és logikai számítások sorban</li>
+          <li class="hide">Az IF és a WHILE utasítás a tényleges értéket mutatja (igaz vagy hamis)</li>
+          <li>állítható hibakeresési sebesség</li>
+          <li>zökkenőmentes kézi vezérlés a helyi, általános és rendszerváltozók értékeinek módosítása felett az
+            aktív hibakeresés során
+          </li>
+        </ul>
+        <h1 class="main__subtitle" id="code-editor">Kódszerkesztő</h1>
+        <ul class="list">
+          <li>áramszünet esetén is tárolja az adatokat</li>
+          <li>kódkiemelés/behúzás</li>
+          <li>formázókód</li>
+          <li>intelligens sorszámok hozzáadása/eltávolítása (automatikusan frissíti vagy megőrzi a
+            GOTO, P és Q címek esztergálási ciklusokban, Q címek szubrutinhívásban)</li>
+          <li>speciális kódtranszformációs eszközök: mozgat, forgatás, tükrözés, méretezés, abs-rel (és fordítva),
+            mm-ről hüvelykre
+            (és fordítva)</li>
+          <li>megjegyzés eltávolítása</li>
+          <li>blokk hozzáadásának/eltávolításának kihagyása</li>
+          <li>visszavonás/újrakészítés</li>
+          <li>EOB hozzáadása/eltávolítása</li>
+          <li>tizedesvessző hozzáadása</li>
+        </ul>
+        <h1 class="main__subtitle">Speciális számológép</h1>
+        <ul class="list">
+          <li>változók használata (beleértve a rendszerváltozókat is)</li>
+          <li>beolvassa a hibakeresés során használt gyakori és rendszerváltozók értékeit is</li>
+          <li>logikai és aritmetikai operátorok használata (mint a Fanuc Macro B vagy Centroid esetében)</li>
+          <li>függvények használatával (ugyanaz, mint a Fanuc Macro B)</li>
+          <li>támogatja a Fanuc Macro B és Centroid szintaxist</li>
+        </ul>
+        <h1 class="main__subtitle" id="macro-support">Makró (Fanuc Custom Macro B/Haas/Centroid) támogatása</h1>
+        <ul class="list">
+          <li>kulcsszavak: IF, THEN (vagy TH), GOTO, WHILE (vagy WH), DO, END, ELSE (CENTROID), DPRNT, FOPEN,
+            FCLOS</li>
+          <li>kulcsszó-billentyűparancsok: TH => THEN, WH => WHILE</li>
+          <li>összehasonlító operátorok (FANUC/HAAS): EQ, LT, LE, GT, GE, NE</li>
+          <li>összehasonlító operátorok (CENTROID): ==, <, <=,>, >=, !=</li>
+          <li>G65/G66/G66.1 makró alprogram hívása</li>
+          <li>matematikai függvények: sin, cos, tan, asin, acos, atan, sqrt, abs, round, fix, fup, ln, exp, pow
+          </li>
+          <li>helyi, általános és legnépszerűbb rendszerváltozók</li>
+        </ul>
+        <h1 class="main__subtitle" id="common-iso-support">Közös ISO-támogatás</h1>
+        <ul class="list">
+          <li>G28, G30 és G53 (alaphelyzet)</li>
+          <li>abszolút, növekményes és poláris mód</li>
+          <li>G98 visszahúzása a kezdeti Z értékre (malom)</li>
+          <li>G99 visszahúzása R értékre (malom)</li>
+          <li>M98 alprogram (több formátum)</li>
+          <li>konzerv ciklus megismétlése (L és K)</li>
+          <li>körkörös interpoláció az (I, J, K vagy R) használatával támogatott</li>
+        </ul>
+        <h1 class="main__subtitle" id="lathe-cycles">Esztergaciklusok támogatása</h1>
+        <ul class="list">
+          <li>G32/G33 menetvágás (egyenes és kúpos)</li>
+          <li>G70 befejező ciklus</li>
+          <li>G71 nagyoló megmunkálási ciklus</li>
+          <li>G72-vel szembeforduló ciklus</li>
+          <li>G73 minta ismétlési ciklus</li>
+          <li>G74 homlokhornyolási ciklus</li>
+          <li>G75 hornyolási ciklus</li>
+          <li>G76/G78 menetvágási ciklus</li>
+          <li>G90 esztergálási ciklus</li>
+          <li>G92 menetvágási ciklus</li>
+          <li>G94-es ciklus</li>
+        </ul>
+        <h1 class="main__subtitle" id="transformation-cycles">Átalakítási ciklusok</h1>
+        <ul class="list">
+          <li>G16 poláris koordináta</li>
+          <li>G51 méretezés</li>
+          <li>G52 helyi műszak</li>
+          <li>G68 koordinátarendszer elforgatása</li>
+        </ul>
+        <h1 class="main__subtitle" id="haas-cycles-support">Haas ciklusok támogatása</h1>
+        <ul class="list">
+          <li>G70 csavarfurat kör</li>
+          <li>G71 csavarlyuk íve</li>
+          <li>G72 csavarfuratok egy szög mentén</li>
+        </ul>
+        <h1 class="main__subtitle" id="milling-conversational-programming">Beszélgetéses programozás marása</h1>
+        <ul class="list">
+          <li>KÖR ALAKÚ MARÁS</li>
+          <li>NÉGYSZÖG MÁRÁS</li>
+          <li>KÖRZSEB</li>
+          <li>NÉGYSZÖG ZSEB</li>
+          <li>KÖR VÁLL</li>
+          <li>NÉGYSZÖG ALAKÚ VÁLL</li>
+          <li>KÖRHARÁZÁS</li>
+          <li>NÉGYSZÖG HORVÁZÁS</li>
+          <li>HELIKUS FÚRÁS</li>
+          <li>FONTOS FÚRÁS</li>
+          <li>LAKÁSFÚRÁS</li>
+          <li>FÚRÁS</li>
+          <li>FONTOS MARÁS</li>
+          <li>ÉPÍTÉS</li>
+          <li>KÓDrészlet (adja hozzá saját kódját)</li>
+        </ul>
+        <h1 class="main__subtitle" id="turning-conversational-programming">Beszélgetéses programozás átalakítása
+        </h1>
+        <ul class="list">
+          <li>SZEMLÉLET</li>
+          <li>FORDULÁS</li>
+          <li>KONTÚRZÁS</li>
+          <li>AXIÁLIS KONTÚR OD/ID</li>
+          <li>AXIÁLIS KIRÁLYÚ KULCSÚT RÉSZ</li>
+          <li>FÚRÁS</li>
+          <li>AXIÁLIS és RADIÁLIS FÚRÁS</li>
+          <li>ARCHOZOLÁS</li>
+          <li>BURKOZÁS</li>
+          <li>AXIÁLIS és RADIÁLIS KULCSÚT</li>
+          <li>SZÁLASZÁMÍTÁS</li>
+          <li>ÉPÍTÉS</li>
+          <li>AXIÁLIS és RADIÁLIS MEGTÉRÍTÉS</li>
+          <li>REAMING</li>
+          <li>AXIÁLIS és RADIÁLIS DRONÁZÁS</li>
+          <li>UNTÁS</li>
+          <li>VÁLTOZÁS</li>
+          <li>KÓDrészlet (adja hozzá saját kódját)</li>
+        </ul>
+        <h1 class="main__subtitle" id="converters">Kódkonvertálók</h1>
+        <ul class="list">
+          <li>marási mód: ISO/MACRO sima ISO-ra, Heidenhain iTNC 530, Sinumerik 840D/840Di/810D, Okuma (maró)</li>
+          <li>fordítási mód: ISO/MACRO sima ISO-ra, Okuma OSP-P300</li>
+          <li>Különleges konverterre van szüksége? <a href="{{ contactLink }}">Vegye fel velünk a kapcsolatot</a>
+          </li>
+        </ul>
+        <h1 class="main__subtitle" id="postprocessors">Utófeldolgozók</h1>
+        <ul class="list">
+          <li>forgatási mód: ISO (FANUC/HAAS, 2 soros vagy 1 soros ciklusok a kiválasztott vezérlőtől függően),
+            Okuma
+            OSP-P300</li>
+          <li>Szükség van egy speciális utófeldolgozóra? <a href="{{ contactLink }}">Vegye fel velünk a
+              kapcsolatot</a></li>
+        </ul>
+        <h1 class="main__subtitle">Fájlok</h1>
+        <ul class="list">
+          <li>új projekt</li>
+          <li>fájl megnyitása (több fájl megnyitása egyszerre)</li>
+          <li>hozzáfűzés (szubrutin hozzáadása a főprogramhoz)</li>
+          <li>beszélgetési program importálása/exportálása</li>
+          <li>cnc programok példák</li>
+          <li>mentés, mentés másként</li>
+          <li>exportálás sima ISO, Heidenhain iTNC 530, Sinumerik 840D vagy Okuma kódba</li>
+          <li>támogatott fájlkiterjesztés: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+        </ul>
+        <h1 class="main__subtitle">Nyelvek</h1>
+        <ul class="list">
+          <li>angol</li>
+        </ul>
+
+        <div class="main__pricing" id="purchase">
+          <div class="main__pricing-card">
+            <div class="main__pricing-title">CNC Macro Simulator II STUDIO</div>
+            <div class="main__pricing-desc">(korlátlan számú eszköz)</div>
+            <div class="main__pricing-normal-price hide">529,00</div>
+            <div class="main__pricing-discount-price" id="pay-price">529</div>
+          </div>
+          <div class="main__pricing-card">
+            <div class="main__pricing-pay-button-container">
+              <button class="main__pricing-pay-button" id="purchase-studio-version">Vásárlás</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="../js/script-loader.js"></script>
+    <script src="../js/main2.js"></script>
+  </div>
+</body>
+
+</html>
