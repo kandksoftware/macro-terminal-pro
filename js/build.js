@@ -306,7 +306,7 @@ const main = () => {
     target: '_blank'
   }, {
     type: ['nav', 'menu'],
-    link: `${path}${config.purchaseLink}`,
+    link: config.purchaseLink,
     desc: selectedTranslation[5],
     dec: ['btn btn-brand-color'],
   }, {
