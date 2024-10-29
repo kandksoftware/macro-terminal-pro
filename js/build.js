@@ -16,23 +16,7 @@ const main = () => {
 
   templates.push({
     id: 'menu',
-    content: `<nav class="nav">
-                <div class="nav__container">
-                  <img class="nav__icon" src="${APP.isLangSelected() ? '../' : ''}resources/icon.png" alt="${config.appName}">
-                  <div class="nav__name"></div>
-                </div>
-                <div class="nav__links-container">
-                  ${APP.lang.LANG_SELECTOR_COMPONENT(selectedLang)}
-                  <div class="nav__links"></div>
-                <div>
-                <div class="hamburger">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </nav>
-              <div class="menu-overlay"></div>
-              <div class="menu">Inject here</div>`
+    content: APP.menuComponent(selectedLang)
   })
 
   templates.push({
@@ -79,6 +63,11 @@ const main = () => {
     </div>`
   })
 
+  templates.push({
+    id: 'purchase-component',
+    content: APP.purchaseComponent(selectedLang)
+  })
+
   const components = [{
     n: 'nav',
     id: '.nav__links'
@@ -90,7 +79,7 @@ const main = () => {
     id: '.footer__links'
   }]
 
-  const transl = {
+  const translMenu = {
     en: [
       'Main',
       'Features',
@@ -280,47 +269,47 @@ const main = () => {
     ]
   }
 
-  const selectedTranslation = transl[selectedLang] || transl['en']
+  const selectedTranslationMenu = translMenu[selectedLang] || translMenu['en']
 
   const menu = [{
     type: ['nav', 'menu', 'footer'],
     link: 'index.html#main',
-    desc: selectedTranslation[0]
+    desc: selectedTranslationMenu[0]
   }, {
     type: ['nav', 'menu'],
     link: 'index.html#features',
-    desc: selectedTranslation[1]
+    desc: selectedTranslationMenu[1]
   }, {
     type: ['nav', 'menu', 'footer'],
     link: `${path}get-started.html`,
-    desc: selectedTranslation[2]
+    desc: selectedTranslationMenu[2]
   }, {
     type: ['footer'],
     link: 'https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA',
-    desc: selectedTranslation[3],
+    desc: selectedTranslationMenu[3],
     target: '_blank'
   }, {
     type: ['nav'],
     link: `${path}courses.html`,
-    desc: selectedTranslation[4],
+    desc: selectedTranslationMenu[4],
     target: '_blank'
   }, {
     type: ['nav', 'menu'],
     link: config.purchaseLink,
-    desc: selectedTranslation[5],
+    desc: selectedTranslationMenu[5],
     dec: ['btn btn-brand-color'],
   }, {
     type: ['nav', 'menu', 'footer'],
     link: `${path}contact.html`,
-    desc: selectedTranslation[6],
+    desc: selectedTranslationMenu[6],
   }, {
     type: ['footer'],
     link: `${path}faq.html`,
-    desc: selectedTranslation[7]
+    desc: selectedTranslationMenu[7]
   }, {
     type: ['footer',],
     link: `${path}about.html`,
-    desc: selectedTranslation[8]
+    desc: selectedTranslationMenu[8]
   }]
 
   APP.injectTemplates(templates)
@@ -328,11 +317,6 @@ const main = () => {
   APP.buildMenu(components, menu)
 
   APP.listenMenu()
-
-  const nc = document.querySelector('.nav__container')
-  const att = document.createAttribute('onclick')
-  att.value = "location.href='index.html'"
-  nc.setAttributeNode(att)
 
   /*APP.initPurchaseBtnListener([{
     name: 'App Store',
@@ -349,7 +333,6 @@ const main = () => {
   const app = document.querySelector('#app')
   if (app) app.classList.remove('hide')
 
-
   const ss = document.querySelector('#splash-screen')
   if (ss) ss.classList.add('hide');
 
@@ -357,118 +340,6 @@ const main = () => {
     const hg = new Highlighter().exec(e.innerHTML)
     e.innerHTML = hg
   });
-
-  /* new Pricer({
-     products: {
-       "Sell test": {
-         "limited": {
-           price: 0.20
-         },
-         "unlimited": {
-           price: 0.40
-         }
-       },
-       "CNC Macro Simulator II SD": {
-         "limited": {
-           price: 99
-         },
-         "unlimited": {
-           price: 199
-         }
-       },
-       "CNC Macro Simulator II MC": {
-         "limited": {
-           price: 159
-         },
-         "unlimited": {
-           price: 259
-         }
-       },
-       "CNC Macro Simulator II TC": {
-         "limited": {
-           price: 189
-         },
-         "unlimited": {
-           price: 289
-         }
-       },
-       "CNC Macro Simulator II TC-C": {
-         "limited": {
-           price: 220
-         },
-         "unlimited": {
-           price: 320
-         }
-       },
-       "CNC Macro Simulator II PRO": {
-         "limited": {
-           price: 260.99
-         },
-         "unlimited": {
-           price: 360.99
-         }
-       },
-       "CNC Macro Simulator II PRO-TC": {
-         "limited": {
-           price: 329
-         },
-         "unlimited": {
-           price: 429
-         }
-       }
-     },
-     goto: 'payment.html'
-   }).exec()*/
-
-  /*const countDiscount = (price, discount = 0.5) => {
-    const np = price * (1 - discount)
-    return np.toFixed()
-  }
-
-  const products = [{
-    name: 'SD (MILL)',
-    price: '199.99'
-  }, {
-    name: 'MC (MILL)',
-    price: '259.00'
-  }, {
-    name: 'XTC (TURN)',
-    price: '320.00'
-  }, {
-    name: 'STUDIO',
-    price: '529.00'
-  }]
-
-  const discount = 0.25
-  const elm = document.getElementsByClassName('card--pricing')
-
-  if (elm) {
-    [...elm].forEach((_, i, arr) => {
-      const product = products[i]
-      for (let key in product) {
-        const attr = arr[i].querySelector(`[data - id= "${key}"]`)
-        if (attr) {
-          if (discount != 0) {
-            if (key == 'price') attr.innerHTML = `< div style = "text-decoration: line-through;color:lightgray;font-size:1.4rem" > $${ product[key]}</div>
-    <span class="discounted-price">$${countDiscount(product[key], discount)}<div class="discount-label">${discount * 100}%</div></span>`
-            else attr.innerHTML = product[key]
-          } else {
-            if (key == 'price') attr.innerHTML = product[key]
-            else attr.innerHTML = product[key]
-          }
-        }
-      }
-      const btn = arr[i].querySelector('.btn--purchase')
-      if (btn) btn.addEventListener('click', () => {
-        localStorage.setItem("data", JSON.stringify({
-          name: product.name,
-          price: countDiscount(product.price, discount),
-          license: 'unlimited number of devices'
-        }))
-        window.location.href = 'payment.html'
-      })
-    })
-  }*/
 
   APP.purchase(path)
   //handle the iframes

@@ -97,6 +97,7 @@
   }
 
   app.setLanguege = (lang) => {
+
     localStorage.setItem("lang", lang)
 
     let path = reducePath(window.location.href, '?')
@@ -111,9 +112,8 @@
       window.location.href = path.replace(path, reducePath(path) + '/' + lang)
     }
     else {
-      window.location.href = path + '/' + lang
+      window.location.href = path.slice(-1) == '/' ? path + lang : path + '/' + lang
     }
-
   }
 
   app.listenLangSelector = () => {

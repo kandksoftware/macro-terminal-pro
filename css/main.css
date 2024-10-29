@@ -1814,4 +1814,44 @@ th, td {
     margin-bottom: 0px;
   }
 }
+
+.promo__container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 5rem;
+  --marginBottom: 1.5rem;
+}
+
+.promo__container h1,
+.promo__container h2,
+.promo__container h3 {
+  color: #333;
+  margin-bottom: var(--marginBottom);
+}
+
+.promo__container h1 {
+  color: #c50000;
+}
+
+.promo__container h2 {
+  margin-bottom: 0.5rem;
+}
+
+.promo__container h3 {
+  font-weight: 600;
+}
+
+.promo__container p {
+  margin: 0 0 10px;
+  margin-bottom: var(--marginBottom);
+  color: #3c3c3c;
+}
+
+.promo__container ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: var(--marginBottom);
+}
 /*# sourceMappingURL=main.css.map */
