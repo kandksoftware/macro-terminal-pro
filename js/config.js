@@ -10,7 +10,7 @@
     refundRequestWithin: '30',
     privacyPolicyLink: 'privacy-policy.html',
 
-    purchaseLink: '?goto=purchase',
+    purchaseLink: 'index.html?goto=purchase',
     demoLink: 'demo.html',
     contactLink: 'contact.html'
   }
