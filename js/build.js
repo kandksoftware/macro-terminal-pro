@@ -277,7 +277,7 @@ const main = () => {
     desc: selectedTranslationMenu[0]
   }, {
     type: ['nav', 'menu'],
-    link: 'index.html#features',
+    link: 'index.html?goto=features',
     desc: selectedTranslationMenu[1]
   }, {
     type: ['nav', 'menu', 'footer'],
