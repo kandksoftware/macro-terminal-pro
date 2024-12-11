@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>CNC Macro Simulator II | Setvn command</title>
+  <meta name="description"
+    content="SETVN, or Set Variable Name, is a command used in Fanuc CNC controls, specifically within the context of Custom Macro B programming. " />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ menu }}
+    </header>
+    <main>
+      <div class="article">
+        <h1 class="article__title">What's SETVN?</h1>
+        <div class="separator"></div>
+        <!--<div class="message message--alert">
+          <h3 class="message__header">Important</h3>
+          If you are using a micro command, the TOOL micro-command is mandatory before using another micro-command. The
+          only exception is the SET micro-command.
+        </div>
+        <div class="message message--alert">
+          <h3 class="message__header">Important</h3>
+          Remember to define the tool radius in the CNC Macro Simulator II tool magazine before calling TOOL micro
+          command.
+        </div>-->
+        <div class="article__content">
+          <strong>SETVN</strong>, or <strong>Set Variable Name</strong>, is a command used in Fanuc CNC controls,
+          specifically within the context of
+          Custom Macro B programming. This command allows users to assign a descriptive name (up to eight characters) to
+          certain permanent common variables (specifically the #500 series variables). This naming feature enhances the
+          documentation and readability of programs by providing meaningful labels next to these variables when
+          displayed on the control's screen.
+        </div>
+        <h1 class="main__subtitle list--full">Functionality of SETVN</h1>
+        <ul class="list list--full">
+          <li>
+            <strong>Purpose</strong> - The primary function of <strong>SETVN</strong> is to document the use of
+            permanent common
+            variables by allowing
+            programmers to assign human-readable names to them. This helps avoid confusion when multiple programs
+            interact with these variables.
+          </li>
+          <li>
+            <strong>Variable Range</strong> - The command can be applied to a limited number of permanent common
+            variables, typically
+            from #500 to #549, depending on the specific Fanuc control model. Some models may allow documentation for
+            the first ten (#500 through #509), while others may extend this capability up to fifty variables.
+          </li>
+        </ul>
+        <h1 class="main__subtitle list--full">Command Format</h1>
+        <div class="article__content">
+          The syntax for using the <strong>SETVN</strong> command is as follows:
+        </div>
+        <div class="code-view this">
+          SETVN &lt;variable_number&gt; [&lt;name&gt;, &lt;name2&gt;, &lt;name3&gt;]
+        </div>
+        <div class="article__content">
+          For example:
+        </div>
+        <div class="code-view this">
+          SETVN 500 [DIAMETER, ANGLE, ANGLE]
+        </div>
+        <div class="article__content">
+          would assign the names #DIAMETER, #ANGLE, #ANGLE to the variables #510 through #512
+          respectively. This allows for easier identification of what each variable represents in the program
+        </div>
+        <div class="message message--info">
+          <h3 class="message__header">Good to know</h3>
+          In this example, "DIAMETER" will appear next to the variable #500 on the display, providing context for its
+          use
+        </div>
+        <h1 class="main__subtitle list--full">Practical Applications</h1>
+        <ul class="list list--full">
+          <li>
+            <strong>Documentation</strong> - By using <strong>SETVN</strong>, programmers can document system constants
+            or
+            important values that are frequently used across various programs. For instance, if variable #501 represents
+            a low spindle range, it could be labeled as follows:
+          </li>
+          <li>
+            <strong>Ease of Use</strong> - This capability simplifies the process for operators and programmers who may
+            not remember specific variable numbers, allowing them to reference variables by their descriptive names
+            instead
+          </li>
+        </ul>
+        <h1 class="main__subtitle list--full">Example Usage</h1>
+        <div class="article__content">
+          Here’s an example of how multiple variables can be documented in a single program:
+        </div>
+        <div class="code-view this">
+          O0001
+          SETVN 500 [DIAMETER, ANGLE, HOLES]
+          M30
+        </div>
+        <div class="article__content">
+          Or
+        </div>
+        <div class="code-view this">
+          O0001
+          SETVN 500 [DIAMETER]
+          SETVN 501 [ANGLE]
+          SETVN 502 [HOLES]
+          M30
+        </div>
+
+
+
+        <div class="article__content">
+          After execution, this code will display "APPROACH," "LOW RNG," and "HIGH RNG" next to their respective
+          variables on the control screen, aiding in clarity and understanding during operation
+        </div>
+        <!-- demo request banner -->
+        <a href="{{ demoLink }}">
+          <div class="banner banner__demo"></div>
+        </a>
+      </div>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>

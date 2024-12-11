@@ -26,14 +26,14 @@ function Highlighter() {
     this.keyword = [{
       name: 'keyword',
       keys: [
-        'BSHAPE', 'ESHAPE', 'WHILE', 'IF', 'GOTO', 'THEN', 'END', 'DO', 'ELSE', 'POCKET', 'TOOL', 'SLOT', 'CYCLE', 'PATTERN', 'SURFACE', 'SHOULDER', 'SET', 'SETTOOL', 'DELTOOL', 'THREADING', 'DRILLING', 'BORING', 'MIRROR', 'SHIFT', 'ZOOM', 'ROTATE', 'CUSTOM'
+        'DPRNT', 'FOPEN', 'FCLOS', 'SETVN', 'BSHAPE', 'ESHAPE', 'WHILE', 'IF', 'GOTO', 'THEN', 'END', 'DO', 'ELSE', 'POCKET', 'TOOL', 'SLOT', 'CYCLE', 'PATTERN', 'SURFACE', 'SHOULDER', 'SET', 'SETTOOL', 'DELTOOL', 'THREADING', 'DRILLING', 'BORING', 'MIRROR', 'SHIFT', 'ZOOM', 'ROTATE', 'CUSTOM'
       ],
       test: new TestIdentical(),
       color: '#C677DD'
     }, {
       name: 'function',
       keys: [
-        'COS', 'SIN', 'TAN', 'SQRT', 'ABS', 'ROUND', 'FIX', 'FUP', 'LN', 'EXP', 'POW', 'ASIN', 'ACOS', 'ATAN'
+        'COS', 'SIN', 'TAN', 'SQRT', 'ABS', 'ROUND', 'FIX', 'FUP', 'LN', 'EXP', 'POW', 'ASIN', 'ACOS', 'ATAN', '<variable_number>'
       ],
       test: new TestIdentical(),
       color: 'dodgerBlue'
@@ -96,7 +96,8 @@ function Highlighter() {
     }, {
       name: 'variables',
       keys: [
-        '#'
+        '#',
+        '<'
       ],
       test: new TestContainsFirst(),
       color: '#66E0FF'
