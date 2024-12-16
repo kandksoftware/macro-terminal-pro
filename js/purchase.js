@@ -15,6 +15,9 @@
   }
 
   app.purchaseComponent = (selectedLang) => {
+    const normalPrice = 529.00
+    const dicount = 0.5
+    const discountPrice = normalPrice - normalPrice * dicount
     const transl = {
       en: [
         'unlimited number of devices',
@@ -92,8 +95,8 @@
               <div class="main__pricing-card">
                 <div class="main__pricing-title">CNC Macro Simulator II STUDIO</div>
                 <div class="main__pricing-desc">(${lang[0]})</div>
-                <div class="main__pricing-normal-price hide">529.00</div>
-                <div class="main__pricing-discount-price" id="pay-price">529</div>
+                <div class="main__pricing-normal-price ${normalPrice != discountPrice ? '' : 'hide'}">${normalPrice}</div>
+                <div class="main__pricing-discount-price" id="pay-price">${discountPrice}</div>
               </div>
               <div class="main__pricing-card">
                 <div class="main__pricing-pay-button-container">

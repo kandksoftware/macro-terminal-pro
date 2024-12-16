@@ -1141,6 +1141,16 @@ noscript {
   content: '$';
 }
 
+.main__pricing-normal-price {
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-decoration: line-through;
+}
+
+.main__pricing-normal-price::before {
+  content: '$';
+}
+
 .main__pricing-pay-button-container {
   width: 100%;
   height: 60px;
