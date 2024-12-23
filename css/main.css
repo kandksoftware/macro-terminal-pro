@@ -1130,25 +1130,28 @@ noscript {
   color: #3c3c3c;
 }
 
-.main__pricing-discount-price {
+.main__pricing-normal-price, .main__pricing-discount-price {
   font-weight: 200;
+}
+
+.main__pricing-normal-price::before, .main__pricing-discount-price::before {
+  content: '$';
+}
+
+.main__pricing-normal-price::after, .main__pricing-discount-price::after {
+  content: ' USD';
+}
+
+.main__pricing-discount-price {
   font-size: 2rem;
   color: #c50000;
   font-weight: 400;
-}
-
-.main__pricing-discount-price::before {
-  content: '$';
 }
 
 .main__pricing-normal-price {
   font-weight: 200;
   font-size: 1.2rem;
   text-decoration: line-through;
-}
-
-.main__pricing-normal-price::before {
-  content: '$';
 }
 
 .main__pricing-pay-button-container {
