@@ -68,6 +68,11 @@ const main = () => {
     content: APP.purchaseComponent(selectedLang)
   })
 
+  templates.push({
+    id: 'hero-component',
+    content: APP.buildHero()
+  })
+
   const components = [{
     n: 'nav',
     id: '.nav__links'
@@ -318,6 +323,8 @@ const main = () => {
 
   APP.listenMenu()
 
+  APP.listenHeroImg()
+
   /*APP.initPurchaseBtnListener([{
     name: 'App Store',
     link: 'https://apps.apple.com/us/app/macro-mill-plus/id1562501002',
@@ -342,6 +349,7 @@ const main = () => {
   });
 
   APP.purchase(path)
+  APP.getDemo(config.demoLink)
   //handle the iframes
   APP.iframeSpinnerLoading()
   //goto the page section
@@ -350,4 +358,6 @@ const main = () => {
   APP.listenGallerySelector()
 
   APP.listenLangSelector()
+
+
 }

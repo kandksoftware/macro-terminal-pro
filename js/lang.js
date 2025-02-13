@@ -5,14 +5,6 @@
     flag: '🇺🇲',
     desc: 'English (US)',
   }, {
-    id: 'es',
-    flag: '🇪🇸',
-    desc: 'Español'
-  }, {
-    id: 'fr',
-    flag: '🇫🇷',
-    desc: 'Français'
-  }, {
     id: 'ja',
     flag: '🇯🇵',
     desc: '日本語'
@@ -28,6 +20,14 @@
     id: 'zh',
     flag: '🇨🇳',
     desc: '简体中文'
+  }/*, {
+    id: 'es',
+    flag: '🇪🇸',
+    desc: 'Español'
+  }, {
+    id: 'fr',
+    flag: '🇫🇷',
+    desc: 'Français'
   }, {
     id: 'it',
     flag: '🇨🇮',
@@ -68,7 +68,7 @@
     id: 'he',
     flag: '🇮🇱',
     desc: 'עברית'
-  }]
+  }*/]
 
   const lang = {
     LANG_SELECTOR_COMPONENT: (selectedLang) => {

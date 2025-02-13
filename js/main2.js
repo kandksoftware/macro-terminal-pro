@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
     __PATH + 'modal.js',
     __PATH + 'menu.js',
     __PATH + 'template-injector.js',
+    __PATH + 'hero.js',
     __PATH + 'feedback.js',
     __PATH + 'replacer.js',
     __PATH + 'highlighter.js',

@@ -26,34 +26,7 @@
       {{ menu }}
     </header>
     <main>
-      <section class="main flex-c movie">
-        <div class="main__product-text p-1">
-          <h1>CNC Macro Simulator II</h1>
-          <h3 class="main__desc">
-            Probably the best CNC code editor + CNC simulator ever created
-          </h3>
-          <h3 class="main__sub-desc hide">
-            <span class="main__sub-decor">⇨ </span>everything you need in one place
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>buy once (works offline, no time limit, no subscription, no account,
-            no devices limit)
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>export macros to plain ISO, Sinumerik, Heidenhain or Okuma
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>works on desktops, tablets and mobile phones
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>runs on almost every operating system
-          </h3>
-          <div class=" main__btn-container">
-            <a class="btn btn-brand-color" href="{{ purchaseLink }}">Purchase</a>
-            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">Get demo</a>
-          </div>
-        </div>
-      </section>
+      {{ hero-component }}
       <section class="article article--main">
         <h1 class="main__title" id="what-is-this">What is CNC Macro Simulator II?</h1>
         <div class="main__product-intro">
@@ -73,6 +46,12 @@
             programs for up to 6 axes, offering debugging and conversion to plain G-code.</span>
         </div>
         <ul class="list">
+          <li>
+            advanced autocomplete system <strong>(use quickly common variables, templates and custom templates, custom
+              variables, Macro Fanuc B/Centroid reserved words
+              and Micro Commands)
+            </strong>
+          </li>
           <li>supports <strong>3-axis milling machines and lathes with C & Y axis + live tooling</strong></li>
           <li>Direct Drawing Dimension Programming (chamfering and rounding) in the lathe mode</li>
           <li>advanced macro support with functions like <strong>SETVN</strong> and <strong>DPRNT</strong></li>
