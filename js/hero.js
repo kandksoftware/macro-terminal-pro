@@ -25,7 +25,7 @@
               </div>
             </section>`
   }*/
-  app.buildHero = () => {
+  app.buildHero = (config, path) => {
     return `<section class="hero">
               <div class="hero__desc-container">
                 <h3 class="hero__text">
@@ -35,8 +35,8 @@
                   and testing CNC programs faster
                 </h3>
                 <div class="hero__btn-container">
-                  <a class="btn btn-brand-color btn-large" href="{{ purchaseLink }}">Purchase</a>
-                  <a class="btn btn--reverse btn-large" href="{{ demoLink }}" style="margin-left: 10px;">Get demo</a>
+                  <a class="btn btn-brand-color btn-large" href="${config.purchaseLink}">Purchase</a>
+                  <a class="btn btn--reverse btn-large" href="${path}${config.demoLink}" style="margin-left: 10px;">Get demo</a>
                 </div>
               </div>
               

@@ -70,7 +70,7 @@ const main = () => {
 
   templates.push({
     id: 'hero-component',
-    content: APP.buildHero()
+    content: APP.buildHero(config, path)
   })
 
   const components = [{
