@@ -24,8 +24,8 @@
   }
 
   app.purchaseComponent = (selectedLang) => {
-    const normalPrice = 529.00
-    const dicount = 0.5
+    const normalPrice = 629.00
+    const dicount = 0.35
     const discountPrice = normalPrice - normalPrice * dicount
     const transl = {
       en: [
