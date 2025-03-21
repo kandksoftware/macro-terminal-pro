@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
   new ScriptLoader([
     __PATH + 'global.js',
     __PATH + 'config.js',
+    __PATH + 'utils.js',
     __PATH + 'modal.js',
     __PATH + 'menu.js',
     __PATH + 'template-injector.js',

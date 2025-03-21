@@ -72,23 +72,7 @@
       <!-- gallery section -->
       <section class="article article--main">
         <h1 class="main__title">갤러리</h1>
-        <div id="gallery">
-          <div id="gallery__preview">
-            <img src="../resources/conversational-programming.png" alt="cnc 대화형 프로그래밍">
-          </div>
-          <div id="gallery__selector">
-            <img src="../resources/conversational-programming.png" alt="cnc 대화형 프로그래밍">
-            <img src="../resources/macro-circle.png" alt="매개변수 프로그래밍을 사용하여 생성된 원">
-            <img src="../resources/laser2.png" alt="Fanuc Macro B를 사용한 CNC 레이저 커터 프로그램">
-            <img src="../resources/debugging.png" alt="내장 디버거를 사용한 디버깅 매크로 프로그램">
-            <img src="../resources/sphere.png" alt="프로그래밍 매개변수를 사용하여 구형 생성">
-            <img src="../resources/plazma.png" alt="CNC 플라즈마 커터 프로그램">
-            <img src="../resources/laser.png" alt="CNC 레이저 커터 프로그램">
-            <img src="../resources/circular-pocket.png" alt="Fanuc Macro B 포켓 밀링 매크로">
-            <img src="../resources/gear.png" alt="기어 CNC 프로의 데이터 가져오기gram">
-            <img src="../resources/oval.png" alt="testing oval macro program">
-          </div>
-        </div>
+        {{gallery}}
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="advantages">장점</h1>
@@ -359,7 +343,7 @@
           <li>cnc 프로그램 예제</li>
           <li>저장, 다른 이름으로 저장</li>
           <li>일반 ISO, Heidenhain iTNC 530, Sinumerik 840D 또는 Okuma 코드로 내보내기</li>
-          <li>지원되는 파일 확장자: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+          <li>지원되는 파일 확장자: {{ext}}</li>
         </ul>
         <h1 class="main__subtitle">언어</h1>
         <ul class="list">

@@ -26,25 +26,7 @@
       {{ menu }}
     </header>
     <main dir='rtl' class="rtl">
-      <section class="main flex-c movie">
-        <div class="main__product-text p-1">
-          <h1>סימולטור מאקרו CNC II</h1>
-          <h3 class="main__desc">
-            כנראה עורך קוד CNC + סימולטור הטוב ביותר שנוצר אי פעם
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇦ </span>כל מה שאתה צריך במקום אחד
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇦ </span>קנה פעם אחת (עובד במצב לא מקוון, ללא הגבלת זמן, ללא מנוי, ללא חשבון,
-            ללא הגבלת מכשירים)
-          </h3>
-          <div class=" main__btn-container">
-            <a class="btn btn-brand-color" href="{{ purchaseLink }}">רכישה</a>
-            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">קבל הדגמה</a>
-          </div>
-        </div>
-      </section>
+      {{ hero-component }}
       <section class="article article--main">
         <h1 class="main__title" id="what-is-this">?מהו CNC Macro Simulator II</h1>
         <div class="main__product-intro">
@@ -91,23 +73,7 @@
       <!-- מדור גלריה -->
       <section class="article article--main">
         <h1 class="main__title">גלריה</h1>
-        <div id="gallery">
-          <div id="gallery__preview">
-            <img src="../resources/conversational-programming.png" alt="cnc conversational programmin">
-          </div>
-          <div id="gallery__selector">
-            <img src="../resources/conversational-programming.png" alt="cnc conversational programmin">
-            <img src="../resources/macro-circle.png" alt="יצירת מעגל באמצעות תכנות פרמטרי">
-            <img src="../resources/laser2.png" alt="תוכנית חותך לייזר cnc באמצעות Fanuc Macro B">
-            <img src="../resources/debugging.png" alt="תוכנית מאקרו ניפוי באגים באמצעות מאפר באגים מובנה">
-            <img src="../resources/sphere.png" alt="יצירת כדור באמצעות פרמטרי תכנות">
-            <img src="../resources/plazma.png" alt="cnc plazma cutter program">
-            <img src="../resources/laser.png" alt="תוכנית חותכי לייזר cnc">
-            <img src="../resources/circular-pocket.png" alt="fanuc macro B כיס כרסום מאקרו">
-            <img src="../resources/gear.png" alt="קבלת נתונים של gear cnc proגרם">
-            <img src="../resources/oval.png" alt="בדיקת תוכנית מאקרו אובלית">
-          </div>
-        </div>
+        {{gallery}}
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="advantages">יתרונות</h1>
@@ -382,7 +348,7 @@
           <li>דוגמאות לתוכניות cnc</li>
           <li>שמור, שמור בשם</li>
           <li>ייצא ל-ISO רגיל, Heidenhain iTNC 530, Sinumerik 840D או קוד Okuma</li>
-          <li>סיומת קובץ נתמכת: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+          <li>סיומת קובץ נתמכת: {{ext}}</li>
         </ul>
         <h1 class="main__subtitle">שפות</h1>
         <ul class="list">

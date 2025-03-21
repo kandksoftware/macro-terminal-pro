@@ -15,6 +15,11 @@ const main = () => {
   }
 
   templates.push({
+    id: 'ext',
+    content: 'cms, nc, cn, ncc, cnc, eia, txt, min, mpf'
+  })
+
+  templates.push({
     id: 'menu',
     content: APP.menuComponent(selectedLang)
   })
@@ -71,6 +76,11 @@ const main = () => {
   templates.push({
     id: 'hero-component',
     content: APP.buildHero(config, path)
+  })
+
+  templates.push({
+    id: 'gallery',
+    content: APP.buildGallery()
   })
 
   const components = [{

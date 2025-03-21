@@ -467,6 +467,7 @@ noscript {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #dddddd;
 }
 
 @media screen and (min-width: 768px) {
@@ -516,7 +517,6 @@ noscript {
 }
 
 .hero__media {
-  background-image: url("../resources/mill-auto.png");
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -526,7 +526,7 @@ noscript {
 @media screen and (min-width: 768px) {
   .hero__media {
     background-size: contain;
-    height: 70vh;
+    height: 80vh;
     margin-top: 2rem;
   }
 }
@@ -1228,7 +1228,7 @@ th, td {
 
 .card__img {
   width: 100%;
-  max-height: 450px;
+  height: 430px;
   border-radius: 5px;
 }
 
@@ -1438,7 +1438,6 @@ th, td {
   opacity: 1;
   height: calc(100% - $selectorHeigth);
   width: 100%;
-  margin-bottom: 0px;
 }
 
 #gallery__preview > img {
@@ -1461,7 +1460,7 @@ th, td {
   height: 65px;
   width: auto;
   border-radius: 5px;
-  margin-right: 0px;
+  margin-right: 5px;
 }
 
 .sell-container {

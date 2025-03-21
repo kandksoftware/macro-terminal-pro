@@ -110,23 +110,7 @@
       <!-- gallery section -->
       <section class="article article--main">
         <h1 class="main__title">Gallery</h1>
-        <div id="gallery">
-          <div id="gallery__preview">
-            <img src="resources/conversational-programming.png" alt="cnc conversational programmin">
-          </div>
-          <div id="gallery__selector">
-            <img src="resources/conversational-programming.png" alt="cnc conversational programmin">
-            <img src="resources/macro-circle.png" alt="a circle generate using parametric programming">
-            <img src="resources/laser2.png" alt="cnc laser cutter program using Fanuc Macro B">
-            <img src="resources/debugging.png" alt="debugging macro program using built-in debugger">
-            <img src="resources/sphere.png" alt="creating sphere using programming parametric">
-            <img src="resources/plazma.png" alt="cnc plazma cutter program">
-            <img src="resources/laser.png" alt="cnc laser cutter program">
-            <img src="resources/circular-pocket.png" alt="fanuc macro B pocket milling macro">
-            <img src="resources/gear.png" alt="getting data of gear cnc program">
-            <img src="resources/oval.png" alt="testing oval macro program">
-          </div>
-        </div>
+        {{gallery}}
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="advantages">Advantages</h1>
@@ -431,7 +415,7 @@
         </ul>
         <h1 class="main__subtitle">Files</h1>
         <ul class="list">
-          <li>saving and opening a project (program content, information about tools,undo/redo history, work
+          <li>saving and opening a project (program content, information about tools, undo/redo history, work
             offset, machine
             selection, units and so on)</li>
           <li>new project</li>
@@ -441,7 +425,7 @@
           <li>cnc programs examples</li>
           <li>save, save as</li>
           <li>export to plain ISO, Heidenhain iTNC 530, Sinumerik 840D or Okuma code</li>
-          <li>file extension supported: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+          <li>file extension supported: {{ext}}</li>
         </ul>
         <h1 class="main__subtitle">Languages</h1>
         <ul class="list">

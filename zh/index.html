@@ -69,23 +69,7 @@
       <!-- gallery section -->
       <section class="article article--main">
         <h1 class="main__title">Gallery</h1>
-        <div id="gallery">
-          <div id="gallery__preview">
-            <img src="../resources/conversational-programming.png" alt="cnc dialogueal programmin">
-          </div>
-          <div id="gallery__selector">
-            <img src="../resources/conversational-programming.png" alt="cnc dialogueal programmin">
-            <img src="../resources/macro-circle.png" alt="使用参数化编程生成圆">
-            <img src="../resources/laser2.png" alt="使用 Fanuc Macro B 的 cnc 激光切割机程序">
-            <img src="../resources/debugging.png" alt="使用内置调试器调试宏程序">
-            <img src="../resources/sphere.png" alt="使用编程参数创建球体">
-            <img src="../resources/plazma.png" alt="cnc plazma 切割机程序">
-            <img src="../resources/laser.png" alt="cnc 激光切割机程序">
-            <img src="../resources/circular-pocket.png" alt="fanuc macro B 口袋铣削宏">
-            <img src="../resources/gear.png" alt="获取齿轮 cnc pro 的数据gram">
-            <img src="../resources/oval.png" alt="测试椭圆宏程序">
-          </div>
-        </div>
+        {{gallery}}
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="advantages">优点</h1>
@@ -352,7 +336,7 @@
           <li>cnc 程序示例</li>
           <li>保存、另存为</li>
           <li>导出为纯 ISO、Heidenhain iTNC 530、Sinumerik 840D 或 Okuma 代码</li>
-          <li>支持的文件扩展名：nc、cn、ncc、cnc、eia、txt、min、mpf</li>
+          <li>支持的文件扩展名：{{ext}}</li>
         </ul>
         <h1 class="main__subtitle">语言</h1>
         <ul class="list">

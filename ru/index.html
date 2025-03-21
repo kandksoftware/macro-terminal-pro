@@ -27,26 +27,7 @@
       {{ menu }}
     </header>
     <main>
-      <section class="main flex-c movie">
-        <div class="main__product-text p-1">
-          <h1>CNC Macro Simulator II</h1>
-          <h3 class="main__desc">
-            Возможно, лучший редактор кода ЧПУ + симулятор из когда-либо созданных
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>все, что вам нужно, в одном месте
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>купить один раз (работает офлайн, без ограничений по времени, без
-            подписки, без учетной записи,
-            без ограничений по устройствам)
-          </h3>
-          <div class=" main__btn-container">
-            <a class="btn btn-brand-color" href="{{ purchaseLink }}">Купить</a>
-            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">Получить демо</a>
-          </div>
-        </div>
-      </section>
+      {{ hero-component }}
       <section class="article article--main">
         <h1 class="main__title" id="what-is-this">Что такое CNC Macro Simulator II?</h1>
         <div class="main__product-intro">
@@ -95,24 +76,7 @@
       <!-- раздел галереи -->
       <section class="article article--main">
         <h1 class="main__title">Галерея</h1>
-        <div id="gallery">
-          <div id="gallery__preview">
-            <img src="../resources/conversational-programming.png" alt="чпу диалоговое программирование">
-          </div>
-          <div id="gallery__selector">
-            <img src="../resources/conversational-programming.png" alt="чпу диалоговое программирование">
-            <img src="../resources/macro-circle.png"
-              alt="создание окружности с использованием параметрического программирования">
-            <img src="../resources/laser2.png" alt="программа лазерной резки с ЧПУ с использованием Fanuc Macro B">
-            <img src="../resources/debugging.png" alt="отладка макропрограммы с использованием встроенного отладчика">
-            <img src="../resources/sphere.png" alt="создание сферы с использованием параметрического программирования">
-            <img src="../resources/plazma.png" alt="программа лазерной резки с ЧПУ">
-            <img src="../resources/laser.png" alt="программа лазерной резки с ЧПУ">
-            <img src="../resources/circular-pocket.png" alt="макрос для фрезерования карманов fanuc macro B">
-            <img src="../resources/gear.png" alt="получение данных о gear cnc program">
-            <img src="../resources/oval.png" alt="тестирование овальной макропрограммы">
-          </div>
-        </div>
+        {{gallery}}
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="advantages">Преимущества</h1>
@@ -401,7 +365,7 @@
           <li>примеры программ ЧПУ</li>
           <li>сохранить, сохранить как</li>
           <li>экспортировать в простой код ISO, Heidenhain iTNC 530, Sinumerik 840D или Okuma</li>
-          <li>поддерживаемые расширения файлов: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+          <li>поддерживаемые расширения файлов: {{ext}}</li>
         </ul>
         <h1 class="main__subtitle">Языки</h1>
         <ul class="list">

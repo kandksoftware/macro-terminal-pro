@@ -67,34 +67,29 @@
               <div class="hero__media-btn-container">
                 <button class="btn btn-brand-color" data-id="mill">Mill</button>
                 <button class="btn btn-brand-color" data-id="lathe">Lathe</button>
+                <button class="btn btn-brand-color" data-id="plasma">Plasma</button>
                 <button class="btn btn-brand-color" data-id="macro">Macro</button>
               </div>
             </section>`
   }
 
   app.listenHeroImg = () => {
-    const setBackgroundImage = (elm, imageUrl, onError = null) => {
-      const img = new Image()
-      img.onload = () => elm.style.backgroundImage = `url('${imageUrl}')`
-      img.onerror = () => { if (onError) onError() }
-      img.src = imageUrl
+    const list = {
+      mill: 'resources/sphere.png',
+      lathe: 'resources/lathe-auto.png',
+      plasma: 'resources/plasma.png',
+      macro: 'resources/macro-auto.png',
     }
 
     const media = document.querySelector('.hero__media')
     const mediaSelected = document.querySelectorAll('.hero__media-btn-container>button')
-    const list = {
-      mill: 'resources/mill-auto.png',
-      lathe: 'resources/lathe-auto.png',
-      macro: 'resources/macro-auto.png',
-    }
+
+
     if (mediaSelected && media) {
       for (const ms of mediaSelected) {
         const src = list[ms.dataset.id] || list['mill']
-        ms.addEventListener('click', () => {
-          media.style.backgroundImage = setBackgroundImage(media, src, () => {
-            media.style.backgroundImage = setBackgroundImage(media, '../' + src)
-          })
-        })
+        APP.exec(media, list['mill'])//init main image
+        ms.addEventListener('click', () => APP.exec(media, src))
       }
     }
   }
@@ -107,7 +102,7 @@
     }
 
     const list = {
-      mill: 'resources/mill.mp4',
+      mill: 'resources/sphere.png',
       lathe: 'resources/lathe-auto.png',
       macro: 'resources/macro-auto.png',
     }

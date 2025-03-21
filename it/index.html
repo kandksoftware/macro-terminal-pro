@@ -74,23 +74,7 @@
       <!-- sezione galleria -->
       <section class="article article--main">
         <h1 class="main__title">Galleria</h1>
-        <div id="gallery">
-          <div id="gallery__preview">
-            <img src="../resources/conversational-programming.png" alt="programmazione conversazionale cnc">
-          </div>
-          <div id="gallery__selector">
-            <img src="../resources/conversational-programming.png" alt="programmazione conversazionale cnc">
-            <img src="../resources/macro-circle.png" alt="un cerchio generato usando la programmazione parametrica">
-            <img src="../resources/laser2.png" alt="programma di taglio laser cnc usando la macro Fanuc B">
-            <img src="../resources/debugging.png" alt="programma di macro di debug usando il debugger integrato">
-            <img src="../resources/sphere.png" alt="creazione di una sfera usando la programmazione parametrica">
-            <img src="../resources/plazma.png" alt="programma di taglio plasma cnc">
-            <img src="../resources/laser.png" alt="programma di taglio laser cnc">
-            <img src="../resources/circular-pocket.png" alt="macro B di fresatura tascabile macro fanuc">
-            <img src="../resources/gear.png" alt="ottenimento dati di ingranaggi cnc program">
-            <img src="../resources/oval.png" alt="testing oval macro program">
-          </div>
-        </div>
+        {{gallery}}
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="advantages">Vantaggi</h1>
@@ -375,7 +359,7 @@
           <li>esempi di programmi CNC</li>
           <li>salva, salva con nome</li>
           <li>esporta in codice ISO semplice, Heidenhain iTNC 530, Sinumerik 840D o Okuma</li>
-          <li>estensioni file supportate: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+          <li>estensioni file supportate: {{ext}}</li>
         </ul>
         <h1 class="main__subtitle">Lingue</h1>
         <ul class="list">

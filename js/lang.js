@@ -20,7 +20,7 @@
     id: 'zh',
     flag: '🇨🇳',
     desc: '简体中文'
-  }/*, {
+  }, {
     id: 'es',
     flag: '🇪🇸',
     desc: 'Español'
@@ -68,7 +68,7 @@
     id: 'he',
     flag: '🇮🇱',
     desc: 'עברית'
-  }*/]
+  }]
 
   const lang = {
     LANG_SELECTOR_COMPONENT: (selectedLang) => {
@@ -81,9 +81,7 @@
     }
   }
 
-  const pathEndsWith = (path, target) => {
-    return path.indexOf(target) == path.length - target.length
-  }
+  const pathEndsWith = (path, target) => path.indexOf(target) == path.length - target.length
 
   const reducePath = (str, sep = '/') => {
     for (let i = str.length - 1; i >= 0; i--) {

@@ -26,26 +26,7 @@
       {{ menu }}
     </header>
     <main>
-      <section class="main flex-c movie">
-        <div class="main__product-text p-1">
-          <h1>CNC Macro Simulator II</h1>
-          <h3 class="main__desc">
-            Valószínűleg a valaha készült legjobb CNC kódszerkesztő + szimulátor
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>minden, amire szüksége van egy helyen
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>egyszeri vásárlás (offline működik, nincs időkorlát, nincs
-            előfizetés, nincs fiók,
-            nincs eszközkorlát)
-          </h3>
-          <div class=" main__btn-container">
-            <a class="btn btn-brand-color" href="{{ buyLink }}">Vásárlás</a>
-            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">Demó letöltése</a>
-          </div>
-        </div>
-      </section>
+      {{ hero-component }}
       <section class="article article--main">
         <h1 class="main__title" id="what-is-this">Mi az a CNC Macro Simulator II?</h1>
         <div class="main__product-intro">
@@ -97,23 +78,7 @@
       <!-- galéria rovat -->
       <section class="article article--main">
         <h1 class="main__title">Galéria</h1>
-        <div id="gallery">
-          <div id="gallery__preview">
-            <img src="../resources/conversational-programming.png" alt="cnc társalgási program">
-          </div>
-          <div id="gallery__selector">
-            <img src="../resources/conversational-programming.png" alt="cnc társalgási program">
-            <img src="../resources/macro-circle.png" alt="kör generálás paraméteres programozással">
-            <img src="../resources/laser2.png" alt="cnc lézervágó program Fanuc Macro B használatával">
-            <img src="../resources/debugging.png" alt="hibakereső makróprogram beépített hibakeresővel">
-            <img src="../resources/sphere.png" alt="gömb létrehozása paraméterek programozásával">
-            <img src="../resources/plazma.png" alt="cnc plazmavágó program">
-            <img src="../resources/laser.png" alt="cnc lézervágó program">
-            <img src="../resources/circular-pocket.png" alt="fanuc makró B zsebmarás makró">
-            <img src="../resources/gear.png" alt="a gear cnc pro adatainak lekérésegramm">
-            <img src="../resources/oval.png" alt="ovális makróprogram tesztelése">
-          </div>
-        </div>
+        {{gallery}}
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="advantages">Előnyök</h1>
@@ -412,7 +377,7 @@
           <li>cnc programok példák</li>
           <li>mentés, mentés másként</li>
           <li>exportálás sima ISO, Heidenhain iTNC 530, Sinumerik 840D vagy Okuma kódba</li>
-          <li>támogatott fájlkiterjesztés: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+          <li>támogatott fájlkiterjesztés: {{ext}}</li>
         </ul>
         <h1 class="main__subtitle">Nyelvek</h1>
         <ul class="list">

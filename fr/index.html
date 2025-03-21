@@ -78,23 +78,7 @@
       <!-- section galerie -->
       <section class="article article--main">
         <h1 class="main__title">Galerie</h1>
-        <div id="gallery">
-          <div id="gallery__preview">
-            <img src="../resources/conversational-programming.png" alt="programmation conversationnelle cnc">
-          </div>
-          <div id="gallery__selector">
-            <img src="../resources/conversational-programming.png" alt="programmation conversationnelle cnc">
-            <img src="../resources/macro-circle.png" alt="un cercle généré à l'aide de la programmation paramétrique">
-            <img src="../resources/laser2.png" alt="programme de découpe laser cnc utilisant Macro Fanuc B">
-            <img src="../resources/debugging.png" alt="programme de macro de débogage à l'aide du débogueur intégré">
-            <img src="../resources/sphere.png" alt="création d'une sphère à l'aide de la programmation paramétrique">
-            <img src="../resources/plazma.png" alt="programme de découpe plasma CNC">
-            <img src="../resources/laser.png" alt="programme de découpe laser CNC">
-            <img src="../resources/circular-pocket.png" alt="macro de fraisage de poche Fanuc Macro B">
-            <img src="../resources/gear.png" alt="obtention des données de l'engrenage cnc program">
-            <img src="../resources/oval.png" alt="test du programme macro ovale">
-          </div>
-        </div>
+        {{gallery}}
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="avantages">Avantages</h1>
@@ -391,7 +375,7 @@
           <li>exemples de programmes cnc</li>
           <li>enregistrer, enregistrer sous</li>
           <li>exporter vers un code ISO simple, Heidenhain iTNC 530, Sinumerik 840D ou Okuma</li>
-          <li>extension de fichier prise en charge : nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+          <li>extension de fichier prise en charge : {{ext}}</li>
         </ul>
         <h1 class="main__subtitle">Langues</h1>
         <ul class="list">

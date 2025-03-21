@@ -26,26 +26,7 @@
         {{ menu }}
       </header>
       <main>
-        <section class="main flex-c movie">
-          <div class="main__product-text p-1">
-            <h1>CNC Macro Simulator II</h1>
-            <h3 class="main__desc">
-              Sannsynligvis den beste CNC-kodeeditoren + simulatoren som noen gang er laget
-            </h3>
-            <h3 class="main__sub-desc">
-              <span class="main__sub-decor">⇨ </span>alt du trenger på ett sted
-            </h3>
-            <h3 class="main__sub-desc">
-              <span class="main__sub-decor">⇨ </span>kjøp én gang (fungerer offline, ingen tidsbegrensning, ingen
-              abonnement, ingen konto,
-              ingen enhetsbegrensning)
-            </h3>
-            <div class=" main__btn-container">
-              <a class="btn btn-brand-color" href="{{ purchaseLink }}">Kjøp</a>
-              <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">Få demo</a>
-            </div>
-          </div>
-        </section>
+        {{ hero-component }}
         <section class="article article--main">
           <h1 class="main__title" id="what-is-this">Hva er CNC Macro Simulator II?</h1>
           <div class="main__product-intro">
@@ -97,23 +78,7 @@
         <!-- galleriseksjon -->
         <section class="article article--main">
           <h1 class="main__title">Galleri</h1>
-          <div id="gallery">
-            <div id="gallery__preview">
-              <img src="../resources/conversational-programming.png" alt="cnc konversasjonsprogrammering">
-            </div>
-            <div id="gallery__selector">
-              <img src="../resources/conversational-programming.png" alt="cnc konversasjonsprogrammering">
-              <img src="../resources/macro-circle.png" alt="en sirkel genererer ved hjelp av parametrisk programmering">
-              <img src="../resources/laser2.png" alt="cnc laserskjærerprogram med Fanuc Macro B">
-              <img src="../resources/debugging.png" alt="feilsøkingsmakroprogram med innebygd debugger">
-              <img src="../resources/sphere.png" alt="opprette sfære ved hjelp av programmeringsparametrisk">
-              <img src="../resources/plazma.png" alt="cnc plazma cutter program">
-              <img src="../resources/laser.png" alt="cnc laserkutterprogram">
-              <img src="../resources/circular-pocket.png" alt="fanuc makro B lommefresemakro">
-              <img src="../resources/gear.png" alt="hente data fra gear cnc program">
-              <img src="../resources/oval.png" alt="testing av ovalt makroprogram">
-            </div>
-          </div>
+          {{gallery}}
         </section>
         <section class="article article--main">
           <h1 class="main__title" id="advantages">Fordeler</h1>
@@ -399,7 +364,7 @@
             <li>eksempler på cnc-programmer</li>
             <li>lagre, lagre som</li>
             <li>eksporter til vanlig ISO, Heidenhain iTNC 530, Sinumerik 840D eller Okuma-kode</li>
-            <li>filtypen støttes: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+            <li>filtypen støttes: {{ext}}</li>
           </ul>
           <h1 class="main__subtitle">Språk</h1>
           <ul class="list">

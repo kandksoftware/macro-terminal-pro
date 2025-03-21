@@ -26,26 +26,7 @@
       {{ menu }}
     </header>
     <main>
-      <section class="main flex-c movie">
-        <div class="main__product-text p-1">
-          <h1>CNC Macro Simulator II</h1>
-          <h3 class="main__desc">
-            Todennäköisesti paras koskaan luotu CNC-koodieditori + -simulaattori
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>kaikki tarvitsemasi yhdessä paikassa
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>osta kerran (toimii offline-tilassa, ei aikarajoitusta, ei
-            tilausta, ei tiliä,
-            ei laiterajoitusta)
-          </h3>
-          <div class=" main__btn-container">
-            <a class="btn btn-brand-color" href="{{ buyLink }}">Osta</a>
-            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">Hanki demo</a>
-          </div>
-        </div>
-      </section>
+      {{ hero-component }}
       <section class="article article--main">
         <h1 class="main__title" id="what-is-this">Mikä on CNC Macro Simulator II?</h1>
         <div class="main__product-intro">
@@ -96,23 +77,7 @@
       <!-- galleria-osio -->
       <section class="article article--main">
         <h1 class="main__title">Galleria</h1>
-        <div id="gallery">
-          <div id="gallery__preview">
-            <img src="../resources/conversational-programming.png" alt="cnc-keskusteluohjelma">
-          </div>
-          <div id="gallery__selector">
-            <img src="../resources/conversational-programming.png" alt="cnc-keskusteluohjelma">
-            <img src="../resources/macro-circle.png" alt="ympyrä, joka luo parametriohjelmoinnin avulla">
-            <img src="../resources/laser2.png" alt="cnc-laserleikkuriohjelma Fanuc Macro B:llä">
-            <img src="../resources/debugging.png" alt="virheenkorjausmakroohjelma sisäänrakennetun debuggerin avulla">
-            <img src="../resources/sphere.png" alt="pallon luominen parametriohjelmoinnin avulla">
-            <img src="../resources/plazma.png" alt="cnc plazma leikkuriohjelma">
-            <img src="../resources/laser.png" alt="cnc-laserleikkuriohjelma">
-            <img src="../resources/circular-pocket.png" alt="fanuc-makro B-taskujyrsintämakro">
-            <img src="../resources/gear.png" alt="gear cnc pron tietojen hakeminengrammaa">
-            <img src="../resources/oval.png" alt="oval-makroohjelman testaus">
-          </div>
-        </div>
+        {{gallery}}
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="advantages">Edut</h1>
@@ -404,7 +369,7 @@
           <li>cnc-ohjelmien esimerkkejä</li>
           <li>tallenna, tallenna nimellä</li>
           <li>vienti tavalliseen ISO-, Heidenhain iTNC 530-, Sinumerik 840D- tai Okuma-koodiin</li>
-          <li>tuettu tiedostopääte: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+          <li>tuettu tiedostopääte: {{ext}}</li>
         </ul>
         <h1 class="main__subtitle">Kielet</h1>
         <ul class="list">

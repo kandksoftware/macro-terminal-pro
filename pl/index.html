@@ -27,26 +27,7 @@
       {{ menu }}
     </header>
     <main>
-      <section class="main flex-c movie">
-        <div class="main__product-text p-1">
-          <h1>CNC Macro Simulator II</h1>
-          <h3 class="main__desc">
-            Prawdopodobnie najlepszy edytor kodu CNC + symulator, jaki kiedykolwiek stworzono
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>wszystko, czego potrzebujesz w jednym miejscu
-          </h3>
-          <h3 class="main__sub-desc">
-            <span class="main__sub-decor">⇨ </span>kup raz (działa offline, bez limitu czasu, bez subskrypcji, bez
-            konta,
-            bez limitu urządzeń)
-          </h3>
-          <div class=" main__btn-container">
-            <a class="btn btn-brand-color" href="{{ purchaseLink }}">Kup</a>
-            <a class="btn btn--reverse" href="{{ demoLink }}" style="margin-left: 10px;">Pobierz demo</a>
-          </div>
-        </div>
-      </section>
+      {{ hero-component }}
       <section class="article article--main">
         <h1 class="main__title" id="what-is-this">Czym jest CNC Macro Simulator II?</h1>
         <div class="main__product-intro">
@@ -96,23 +77,7 @@
       <!-- gallery section -->
       <section class="article article--main">
         <h1 class="main__title">Galeria</h1>
-        <div id="gallery">
-          <div id="gallery__preview">
-            <img src="../resources/conversational-programming.png" alt="programowanie konwersacyjne cnc">
-          </div>
-          <div id="gallery__selector">
-            <img src="../resources/conversational-programming.png" alt="programowanie konwersacyjne cnc">
-            <img src="../resources/macro-circle.png" alt="koło generowane przy użyciu programowania parametrycznego">
-            <img src="../resources/laser2.png" alt="program do wycinarki laserowej cnc przy użyciu Fanuc Macro B">
-            <img src="../resources/debugging.png" alt="program makro debugowania przy użyciu wbudowanego debugera">
-            <img src="../resources/sphere.png" alt="tworzenie sfery przy użyciu programowania parametrycznego">
-            <img src="../resources/plazma.png" alt="program do wycinarki plazmowej cnc">
-            <img src="../resources/laser.png" alt="program do wycinarki laserowej cnc">
-            <img src="../resources/circular-pocket.png" alt="makro frezowania kieszeni fanuc macro B"> <img
-              src="../resources/gear.png" alt="pobieranie danych o przekładni cnc program">
-            <img src="../resources/oval.png" alt="testowanie programu makro oval">
-          </div>
-        </div>
+        {{gallery}}
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="advantages">Zalety</h1>
@@ -405,7 +370,7 @@
           <li>przykłady programów CNC</li>
           <li>zapisz, zapisz jako</li>
           <li>eksportuj do zwykłego kodu ISO, Heidenhain iTNC 530, Sinumerik 840D lub Okuma</li>
-          <li>obsługiwane rozszerzenia plików: nc, cn, ncc, cnc, eia, txt, min, mpf</li>
+          <li>obsługiwane rozszerzenia plików: {{ext}}</li>
         </ul>
         <h1 class="main__subtitle">Języki</h1>
         <ul class="list">
