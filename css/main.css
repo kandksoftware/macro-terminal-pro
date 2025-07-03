@@ -1028,7 +1028,6 @@ noscript {
 .back-link {
   display: block;
   color: #c50000;
-  margin-bottom: 1rem;
 }
 
 .back-link::before {
@@ -1501,6 +1500,7 @@ th, td {
 }
 
 .table-view__title {
+  margin-top: 3rem;
   margin-bottom: 1rem;
   text-align: center;
 }
