@@ -83,6 +83,31 @@ const main = () => {
     content: APP.buildGallery()
   })
 
+  templates.push({
+    id: 'fanucA',
+    content: '<div class="table-view__control-name">Fanuc 0</div>'
+  })
+
+  templates.push({
+    id: 'fanucB',
+    content: '<div class="table-view__control-name">Fanuc 16/18/21/30i/31i/32i/35i</div>'
+  })
+
+  templates.push({
+    id: 'fanucC',
+    content: '<div class="table-view__control-name">Fanuc 10/11/15</div>'
+  })
+
+  templates.push({
+    id: 'haas',
+    content: '<div class="table-view__control-name">Haas</div>'
+  })
+
+  templates.push({
+    id: 'back-2-manual',
+    content: '<a class="back-link" href="get-started.html"> back to the manual</a>'
+  })
+
   const components = [{
     n: 'nav',
     id: '.nav__links'

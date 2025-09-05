@@ -1509,6 +1509,11 @@ th, td {
   font-size: 1rem;
 }
 
+.table-view__control-name {
+  color: #c50000;
+  font-size: 22px;
+}
+
 .price__container {
   width: 100%;
   height: auto;

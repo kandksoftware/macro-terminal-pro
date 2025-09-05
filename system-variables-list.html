@@ -27,34 +27,29 @@
       <section class="article table-view">
         <h1 class="article__title">System variables list</h1>
         <div class="separator"></div>
-        <h1 class="table-view__title">Common system variables</h1>
+        <h1 class="table-view__title">Common system variables {{ fanucA }}{{ fanucB }}{{ fanucC }}{{ haas }}</h1>
         <table class="table">
           <tr>
             <th>Variable</th>
             <th>Meaning</th>
-            <th>Controls</th>
           </tr>
           <tr>
             <td>#3000</td>
             <td>Custom alarm message</td>
-            <td>Fanuc / Haas</td>
           </tr>
           <tr>
             <td>#3006</td>
             <td>Operator message</td>
-            <td>Fanuc / Haas</td>
           </tr>
           <tr>
             <td>#3001</td>
             <td>This variable acts as a timer that counts continuously at 1 millisecond intervals. Upon reaching
               2,147,483,648 milliseconds, the timer returns to 0.</td>
-            <td>Fanuc / Haas</td>
           </tr>
           <tr>
             <td>#3011</td>
             <td>This variable contains the current date (year / month / day). for example, February 01, 2020 is stored
               as 20200201.</td>
-            <td>Fanuc / Haas</td>
           </tr>
           <tr>
             <td>#3012</td>
@@ -62,10 +57,9 @@
               . for example, February 01, 2020 is stored as 20200201. For example, 15 minutes and 10 seconds after 4
               p.m. is stored as 161410.
             </td>
-            <td>Fanuc / Haas</td>
           </tr>
         </table>
-        <a class="back-link" href="get-started.html"> back to the manual</a>
+        {{ back-2-manual }}
         <!-- Tool variables -->
         <h1 class="table-view__title">Tool data system variables</h1>
         <table class="table">
@@ -82,9 +76,9 @@
             <td>Tool diameter</td>
           </tr>
         </table>
-        <a class="back-link" href="get-started.html"> back to the manual</a>
+        {{ back-2-manual }}
         <!-- Work offset variables -->
-        <h1 class="table-view__title">Work offset variables for Fanuc 0/16/18/21</h1>
+        <h1 class="table-view__title">Work offset variables {{ fanucA }}{{ fanucB }}</h1>
         <table class="table">
           <tr>
             <th>Variable</th>
@@ -119,9 +113,9 @@
             <td>G59</td>
           </tr>
         </table>
-        <a class="back-link" href="get-started.html"> back to the manual</a>
+        {{ back-2-manual }}
         <!-- Work offset variables -->
-        <h1 class="table-view__title">Work offset variables for Fanuc 10/11/15</h1>
+        <h1 class="table-view__title">Work offset variables {{ fanucC }}</h1>
         <table class="table">
           <tr>
             <th>Variable</th>
@@ -156,8 +150,8 @@
             <td>G59</td>
           </tr>
         </table>
-        <a class="back-link" href="get-started.html"> back to the manual</a>
-        <h1 class="table-view__title">System variables for Fanuc 0/16/18/21</h1>
+        {{ back-2-manual }}
+        <h1 class="table-view__title">System variables {{ fanucA }}{{ fanucB }}</h1>
         <table class="table">
           <tr>
             <th>Variable</th>
@@ -260,8 +254,8 @@
             <td>22</td>
           </tr>
         </table>
-        <a class="back-link" href="get-started.html"> back to the manual</a>
-        <h1 class="table-view__title">System variables for Fanuc 10/11/15</h1>
+        {{ back-2-manual }}
+        <h1 class="table-view__title">System variables {{ fanucC }}</h1>
         <table class="table">
           <tr>
             <th>Variable - previous line</th>
@@ -385,8 +379,8 @@
             <td>19</td>
           </tr>
         </table>
-        <a class="back-link" href="get-started.html"> back to the manual</a>
-        <h1 class="table-view__title">Other modal for Fanuc 0/16/18/21</h1>
+        {{ back-2-manual }}
+        <h1 class="table-view__title">Other modal {{ fanucA }}{{ fanucB }}</h1>
         <table class="table">
           <tr>
             <th>Variable</th>
@@ -429,8 +423,8 @@
             <td>"T" - tool number</td>
           </tr>
         </table>
-        <a class="back-link" href="get-started.html"> back to the manual</a>
-        <h1 class="table-view__title">Other modal for Fanuc 10/11/15</h1>
+        {{ back-2-manual }}
+        <h1 class="table-view__title">Other modal {{ fanucC }}</h1>
         <table class="table">
           <tr>
             <th>Variable - previous line</th>
@@ -483,7 +477,7 @@
             <td>"T" - tool number</td>
           </tr>
         </table>
-        <a class="back-link" href="get-started.html"> back to the manual</a>
+        {{ back-2-manual }}
         <h1 class="table-view__title">Motion system variables</h1>
         <table class="table">
           <tr>
@@ -515,8 +509,103 @@
             <td>Current line (Z)</td>
           </tr>
         </table>
-        <a class="back-link" href="get-started.html"> back to the manual</a>
-
+        {{ back-2-manual }}
+        <!-- -->
+        <h1 class="table-view__title">G-code Macro Call {{ fanucA }}</h1>
+        <table class="table">
+          <tr>
+            <th>Variable</th>
+            <th>Subprogram</th>
+          </tr>
+          <tr>
+            <td>#220 - #229</td>
+            <td>09010 - 09019</td>
+          </tr>
+        </table>
+        <h1 class="table-view__title">M-code Macro Call {{ fanucA }}</h1>
+        <table class="table">
+          <tr>
+            <th>Variable</th>
+            <th>Subprogram</th>
+          </tr>
+          <tr>
+            <td>#230 - #239</td>
+            <td>09020 - 09029</td>
+          </tr>
+        </table>
+        {{ back-2-manual }}
+        <!-- -->
+        <h1 class="table-view__title">G-code Macro Call {{ fanucB }}</h1>
+        <table class="table">
+          <tr>
+            <th>Variable</th>
+            <th>Subprogram</th>
+          </tr>
+          <tr>
+            <td>#7050 - #7059</td>
+            <td>09010 - 09019</td>
+          </tr>
+        </table>
+        <h1 class="table-view__title">M-code Macro Call {{ fanucB }}</h1>
+        <table class="table">
+          <tr>
+            <th>Variable</th>
+            <th>Subprogram</th>
+          </tr>
+          <tr>
+            <td>#7080 - #7089</td>
+            <td>09020 - 09029</td>
+          </tr>
+        </table>
+        {{ back-2-manual }}
+        <!-- -->
+        <h1 class="table-view__title">G-code Macro Call {{ fanucC }}</h1>
+        <table class="table">
+          <tr>
+            <th>Variable</th>
+            <th>Subprogram</th>
+          </tr>
+          <tr>
+            <td>#6050 - #6059</td>
+            <td>09010 - 09019</td>
+          </tr>
+        </table>
+        <h1 class="table-view__title">M-code Macro Call {{ fanucC }}</h1>
+        <table class="table">
+          <tr>
+            <th>Variable</th>
+            <th>Subprogram</th>
+          </tr>
+          <tr>
+            <td>#6080 - #6089</td>
+            <td>09020 - 09029</td>
+          </tr>
+        </table>
+        {{ back-2-manual }}
+        <!-- -->
+        <h1 class="table-view__title">G-code Macro Call {{ haas }}</h1>
+        <table class="table">
+          <tr>
+            <th>Variable</th>
+            <th>Subprogram</th>
+          </tr>
+          <tr>
+            <td>#91 - #100</td>
+            <td>09010 - 09019</td>
+          </tr>
+        </table>
+        <h1 class="table-view__title">M-code Macro Call {{ haas }}</h1>
+        <table class="table">
+          <tr>
+            <th>Variable</th>
+            <th>Subprogram</th>
+          </tr>
+          <tr>
+            <td>#81 - #90</td>
+            <td>09000 - 09009</td>
+          </tr>
+        </table>
+        {{ back-2-manual }}
       </section>
     </main>
     <footer class="footer">
