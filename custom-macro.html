@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>
+    Custom Macro
+  </title>
+  <meta name="description" content="Build your own Custom Macros using Fanuc Macro B/Centroid" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ menu }}
+    </header>
+    <main>
+      <section class="article">
+        <h1 class="article__title">Custom Macro:</h1>
+        <div class="separator"></div>
+        <ul class="list list--full">
+          <li>
+            <strong>Expanded Variable Ranges</strong> - A wider range of variables allows for more diverse controls:
+            <div class="code-view">
+              Null #0
+              Local #1 - #33
+              Common #100 - #999
+              System > #1000
+            </div>
+          </li>
+          <li>
+            <strong>Variable Aliasing</strong> - You can simulate control-specific system variables by aliasing Fanuc
+            Macro B system variables to your custom identifiers using the Custom Macro feature (settings section):
+            <div class="code-view">
+              @12000 = #5012
+            </div>
+            and then use e.g.:
+            <div class="code-view">
+              X#12000 (#12000 will behave as #5012)
+            </div>
+          </li>
+          <li>
+            <strong>Custom Cycles</strong> – If the simulator does not support the cycles used by your control or you
+            want to override existing cycle, you can create your own using Fanuc Macro B/Centroid using the Custom Macro
+            feature (settings section):
+            <div class="code-view">
+              #10000 = 83 (one-time call)
+              #10000 = -83 (the modal call remains active until it is canceled by G67)
+
+              O10000
+              ...
+              M99
+            </div>
+            When G83 is used, then O10000 will be called.
+            <div class="message message--info">
+              <h3 class="message__header">Good to know</h3>
+              Variables that can be used for G-code Macro Call: #10000 - #10010<br />
+              Variables that can be used for M-code Macro Call: #20000 - #20010
+            </div>
+            <div class="message message--alert">
+              <h3 class="message__header">Important</h3>
+              You can only use one custom macro call (G-code or M-code macro call) per line.
+              The key point is that while multiple standard G or M codes can appear in the same line, only one custom
+              macro call (whether G-code or M-code) is typically allowed per line to avoid command conflicts and ensure
+              proper execution.
+            </div>
+          </li>
+          <li>
+            <strong>Syntax</strong> – Mixed syntax is also supported, providing flexibility across different controls
+            e.g.:
+            <div class="code-view">
+              IF #10 == #11 THEN #10=0
+              IF [#10 EQ #11] THEN #10=0
+            </div>
+            or mix syntax of both above e.g.:
+            <div class="code-view">
+              IF [#10 == #11] THEN #10=0
+            </div>
+          </li>
+          <li>
+            <strong>Variable Initialization List</strong> If your macro requires certain variables to start with
+            predefined values, you can initialize them easily:
+            <div class="code-view">
+              #100 = 10.0
+              #100 = 10.0 * 50
+              #100 = 10.0 * SIN[50]
+            </div>
+          </li>
+          <li>
+            <strong>Human-Readable Variable Names</strong> – In long macros, it's easy to lose track of what each
+            variable represents. Descriptive aliases for common variables greatly improve code readability:
+            <div class="code-view">
+              #DIAM = 10
+              #HOLES_QUANTITY = 6
+              #ANGLE = 30
+            </div>
+            <div class="message message--alert">
+              <h3 class="message__header">Important</h3>
+              This syntax cannot be used in Custom Cycles.
+            </div>
+          </li>
+          <li>
+            <strong>Flexible Variable Usage in Addresses</strong> The system supports multiple syntaxes when using
+            variables in axis commands:
+            <div class="code-view">
+              X#10*6 Y#11*2
+              X#10 * 6 Y#11 * 2
+              X[#10 * 6] Y[#11 * 2]
+            </div>
+          </li>
+          <!--<li>
+            <strong> No limit on the nesting depth of WHILE <condition> DO <number> statements:</strong>
+            <div class="code-view">
+              WHILE <condition> DO <number>
+                  WHILE <condition> DO <number>
+                      WHILE <condition> DO <number>
+                          WHILE <condition> DO <number>
+                              WHILE <condition> DO <number>
+                                  ...
+                                  END
+                                  END
+                                  END
+                                  END
+                                  END
+            </div>
+          </li>
+          <li>
+            <strong> No limits on the depth of brackets nesting in a macro expression:</strong>
+            <div class="code-view">
+              WHILE [condition] DO [number]
+              WHILE <condition> DO <number>
+                  WHILE <condition> DO <number>
+                      WHILE <condition> DO <number>
+                          WHILE <condition> DO <number>
+                              ...
+                              END
+                              END
+                              END
+                              END
+                              END
+            </div>
+          </li>-->
+        </ul>
+        <a href="contact.html">
+          <div class="banner" style="background-color: #c50000; margin: 1rem 0;width: 100%;">Need more information?
+            Contact us!</div>
+        </a>
+      </section>
+
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>
