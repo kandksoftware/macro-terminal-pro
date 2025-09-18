@@ -74,6 +74,11 @@ const main = () => {
   })
 
   templates.push({
+    id: 'purchase-converter-component',
+    content: APP.purchaseConverterComponent(selectedLang)
+  })
+
+  templates.push({
     id: 'hero-component',
     content: APP.buildHero(config, path)
   })
@@ -384,6 +389,7 @@ const main = () => {
   });
 
   APP.purchase(path)
+  APP.purchaseConverter(path)
   APP.getDemo(config.demoLink)
   //handle the iframes
   APP.iframeSpinnerLoading()
