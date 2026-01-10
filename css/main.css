@@ -875,7 +875,7 @@ noscript {
   margin-bottom: 3rem;
 }
 
-.article__img {
+.article__img, .article__video {
   width: 100%;
   height: auto;
   border-radius: 5px;
@@ -886,6 +886,7 @@ noscript {
 
 .article__title {
   color: #c50000;
+  margin-top: 6rem;
 }
 
 .article__subtitle {
