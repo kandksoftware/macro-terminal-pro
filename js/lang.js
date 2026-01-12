@@ -13,61 +13,9 @@
     flag: '🇰🇷',
     desc: '한국어'
   }, {
-    id: 'de',
-    flag: '🇩🇪',
-    desc: 'Deutsch'
-  }, {
     id: 'zh',
     flag: '🇨🇳',
     desc: '简体中文'
-  }, {
-    id: 'es',
-    flag: '🇪🇸',
-    desc: 'Español'
-  }, {
-    id: 'fr',
-    flag: '🇫🇷',
-    desc: 'Français'
-  }, {
-    id: 'it',
-    flag: '🇨🇮',
-    desc: 'Italiano'
-  }, {
-    id: 'se',
-    flag: '🇸🇪',
-    desc: 'Svenska'
-  }, {
-    id: 'no',
-    flag: '🇳🇴',
-    desc: 'Norsk'
-  }, {
-    id: 'nl',
-    flag: '🇳🇱',
-    desc: 'Nederlands'
-  }, {
-    id: 'fi',
-    flag: '🇫🇮',
-    desc: 'Suomi'
-  }, {
-    id: 'da',
-    flag: '🇩🇰',
-    desc: 'Dansk'
-  }, {
-    id: 'pl',
-    flag: '🇵🇱',
-    desc: 'Polski'
-  }, {
-    id: 'ru',
-    flag: '🇷🇺',
-    desc: 'Русский'
-  }, {
-    id: 'hu',
-    flag: '🇭🇺',
-    desc: 'Magyar'
-  }, {
-    id: 'he',
-    flag: '🇮🇱',
-    desc: 'עברית'
   }]
 
   const lang = {
@@ -140,7 +88,7 @@
   app.detectAndChangeLang = () => {
     if (!localStorage.getItem("lang")) {
       const navLang = navigator.language.split('-')[0]
-
+      console.log(navLang)
       if (langList.find(lang => lang.id == navLang)) {
         app.setLanguege(navLang)
       }

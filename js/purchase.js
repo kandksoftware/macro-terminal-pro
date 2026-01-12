@@ -46,22 +46,6 @@
         'unlimited number of devices',
         'Purchase',
       ],
-      es: [
-        'número ilimitado de dispositivos',
-        'Comprar',
-      ],
-      fr: [
-        `nombre illimité d'appareils`,
-        'Achat',
-      ],
-      de: [
-        `unbegrenzte Anzahl an Geräten`,
-        'Kauf',
-      ],
-      it: [
-        `numero illimitato di dispositivi`,
-        'Acquista',
-      ],
       ko: [
         `무제한 기기 수`,
         '구매',
@@ -74,42 +58,6 @@
         `无限数量的设备`,
         '购买',
       ],
-      no: [
-        "ubegrenset antall enheter",
-        'Kjøpe',
-      ],
-      fi: [
-        "rajaton määrä laitteita",
-        'Ostaa',
-      ],
-      da: [
-        "ubegrænset antal enheder",
-        'Køb',
-      ],
-      nl: [
-        `onbeperkt aantal apparaten`,
-        'Aankoop',
-      ],
-      se: [
-        "obegränsat antal enheter",
-        'Köpa',
-      ],
-      ru: [
-        `неограниченное количество устройств`,
-        'Купить',
-      ],
-      hu: [
-        "korlátlan számú eszköz",
-        'Vásárlás',
-      ],
-      he: [
-        `מספר בלתי מוגבל של מכשירים`,
-        'לִרְכּוֹשׁ',
-      ],
-      pl: [
-        `nieograniczona liczba urządzeń`,
-        'Zakup',
-      ]
     }
 
     const lang = transl[selectedLang] || transl['en']
@@ -167,22 +115,6 @@
         'unlimited number of devices',
         'Purchase',
       ],
-      es: [
-        'número ilimitado de dispositivos',
-        'Comprar',
-      ],
-      fr: [
-        `nombre illimité d'appareils`,
-        'Achat',
-      ],
-      de: [
-        `unbegrenzte Anzahl an Geräten`,
-        'Kauf',
-      ],
-      it: [
-        `numero illimitato di dispositivi`,
-        'Acquista',
-      ],
       ko: [
         `무제한 기기 수`,
         '구매',
@@ -194,42 +126,6 @@
       zh: [
         `无限数量的设备`,
         '购买',
-      ],
-      no: [
-        "ubegrenset antall enheter",
-        'Kjøpe',
-      ],
-      fi: [
-        "rajaton määrä laitteita",
-        'Ostaa',
-      ],
-      da: [
-        "ubegrænset antal enheder",
-        'Køb',
-      ],
-      nl: [
-        `onbeperkt aantal apparaten`,
-        'Aankoop',
-      ],
-      se: [
-        "obegränsat antal enheter",
-        'Köpa',
-      ],
-      ru: [
-        `неограниченное количество устройств`,
-        'Купить',
-      ],
-      hu: [
-        "korlátlan számú eszköz",
-        'Vásárlás',
-      ],
-      he: [
-        `מספר בלתי מוגבל של מכשירים`,
-        'לִרְכּוֹשׁ',
-      ],
-      pl: [
-        `nieograniczona liczba urządzeń`,
-        'Zakup',
       ]
     }
 

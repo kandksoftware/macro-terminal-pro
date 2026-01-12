@@ -80,7 +80,7 @@ const main = () => {
 
   templates.push({
     id: 'hero-component',
-    content: APP.buildHero(config, path)
+    content: APP.buildHero(config, path, selectedLang)
   })
 
   templates.push({
@@ -136,50 +136,6 @@ const main = () => {
       'FAQ',
       'About us'
     ],
-    es: [
-      'Principal',
-      'Características',
-      'Conocimiento',
-      'Youtube',
-      'Cursos',
-      'Compra',
-      'Contacto',
-      'Preguntas frecuentes',
-      'Quiénes somos'
-    ],
-    fr: [
-      'Principal',
-      'Fonctionnalités',
-      'Connaissances',
-      'Youtube',
-      'Cours',
-      'Achat',
-      'Contact',
-      'FAQ',
-      'À propos de nous'
-    ],
-    de: [
-      'Hauptseite',
-      'Funktionen',
-      'Wissen',
-      'Youtube',
-      'Kurse',
-      'Kaufen',
-      'Kontakt',
-      'FAQ',
-      'Über uns'
-    ],
-    it: [
-      'Principale',
-      'Caratteristiche',
-      'Conoscenza',
-      'Youtube',
-      'Corsi',
-      'Acquista',
-      'Contatti',
-      'FAQ',
-      'Chi siamo'
-    ],
     ko: [
       '메인',
       '특징',
@@ -212,105 +168,6 @@ const main = () => {
       '联系',
       '常见问题',
       '关于我们'
-    ],
-    no: [
-      'Hoved',
-      'Funksjoner',
-      'Kunnskap',
-      'Youtube',
-      'Kurs',
-      'Kjøpe',
-      'Kontakt',
-      'FAQ',
-      'Om oss'
-    ],
-    fi: [
-      'Main',
-      "Ominaisuudet",
-      "Tieto",
-      'Youtube',
-      "Kurssit",
-      'Ostaa',
-      'Ota yhteyttä',
-      'FAQ',
-      'Meistä'
-    ],
-    da: [
-      'Main',
-      'Funktioner',
-      'Viden',
-      'Youtube',
-      'Kurser',
-      'Køb',
-      'Kontakte',
-      'Ofte stillede spørgsmål',
-      'Om os'
-    ],
-    nl: [
-      'Hoofdpagina',
-      'Functies',
-      'Kennis',
-      'Youtube',
-      'Cursussen',
-      'Aankoop',
-      'Contact',
-      'FAQ',
-      'Over ons'
-    ],
-    se: [
-      'Huvud',
-      'Drag',
-      'Kunskap',
-      'YouTube',
-      'Kurser',
-      'Köpa',
-      'Kontakta',
-      'FAQ',
-      "Om oss"
-    ],
-    ru: [
-      'Главная',
-      'Функции',
-      'Знания',
-      'Youtube',
-      'Курсы',
-      'Купить',
-      'Контакты',
-      'FAQ',
-      'О нас'
-    ],
-    hu: [
-      'Fő',
-      "Jellemzők",
-      'Tudás',
-      'Youtube',
-      "tanfolyamok",
-      'Vásárlás',
-      'Érintkezés',
-      'GYIK',
-      'Rólunk'
-    ],
-    he: [
-      'רָאשִׁי',
-      'תכונות',
-      'יֶדַע',
-      'יוטיוב',
-      'קורסים',
-      'לִרְכּוֹשׁ',
-      'מַגָע',
-      'שאלות נפוצות',
-      'עלינו'
-    ],
-    pl: [
-      'Główna',
-      'Funkcje',
-      'Wiedza',
-      'Youtube',
-      'Kursy',
-      'Zakup',
-      'Kontakt',
-      'FAQ',
-      'O nas'
     ]
   }
 
