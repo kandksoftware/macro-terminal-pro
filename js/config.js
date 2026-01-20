@@ -9,7 +9,6 @@
     limitedWarrantyTime: '365',
     refundRequestWithin: '30',
     privacyPolicyLink: 'privacy-policy.html',
-
     purchaseLink: 'index.html?goto=purchase',
     demoLink: 'demo.html',
     contactLink: 'contact.html'

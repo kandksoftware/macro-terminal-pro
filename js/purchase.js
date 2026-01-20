@@ -37,10 +37,9 @@
     }
   }
 
-  app.purchaseComponent = (selectedLang) => {
+  app.purchaseComponent = (selectedLang, discount = 0) => {
     const normalPrice = 529.00
-    const dicount = 0.25
-    const discountPrice = normalPrice - normalPrice * dicount
+    const discountPrice = normalPrice - normalPrice * discount * 0.01
     const transl = {
       en: [
         'unlimited number of devices',

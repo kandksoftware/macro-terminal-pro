@@ -1,6 +1,36 @@
 'use strict'
 
+const announcementBar = ({ discount, config, selectedLang }) => {
+  const text = {
+    en: [
+      'Winter Sale: Get {discount}% off!',
+      'Get it now'
+    ],
+    ko: [
+      '겨울 세일: {discount}% 할인!',
+      '지금 바로 구매하세요'
+    ],
+    ja: [
+      'ウィンターセール：{discount}% オフ！',
+      '今すぐ入手'
+    ],
+    zh: [
+      '冬季促销：立享{discount}%折扣！',
+      '立即获取'
+    ]
+  }
+
+  const str = text[selectedLang] || text['en']
+  return `<div class="announcement-bar">
+            <div class="announcement-bar-text">${str[0].replace('{discount}', discount)}</div>
+            <a class="announcement-bar-button" href="${config.purchaseLink}">${str[1]}</a>
+          </div>`
+}
+
 const main = () => {
+  //discount: 25/50/75
+  const discount = 25
+
   APP.detectAndChangeLang()
 
   const selectedLang = APP.getLangSelected()
@@ -13,6 +43,16 @@ const main = () => {
   for (let key in config) {
     templates.push({ id: key, content: config[key].indexOf('?goto=') == -1 && config[key].indexOf('html') != -1 ? path + config[key] : config[key] })
   }
+
+  templates.push({
+    id: 'announcement-bar',
+    content: discount == 0 ? '' : announcementBar({ discount, config, selectedLang })
+  })
+
+  templates.push({
+    id: 'modal-announcement-bar',
+    content: 'cms, nc, cn, ncc, cnc, eia, txt, min, mpf'
+  })
 
   templates.push({
     id: 'ext',
@@ -70,7 +110,7 @@ const main = () => {
 
   templates.push({
     id: 'purchase-component',
-    content: APP.purchaseComponent(selectedLang)
+    content: APP.purchaseComponent(selectedLang, discount)
   })
 
   templates.push({
