@@ -1,28 +1,36 @@
 'use strict'
 
-const announcementBar = ({ discount, config, selectedLang }) => {
+const bannerText = ({ discount, selectedLang }) => {
   const text = {
     en: [
-      'Winter Sale: Get {discount}% off!',
-      'Get it now'
+      `Winter Sale: Get ${discount}% off!`,
+      'Get it now',
+      `The new, updated version of our software will be available at a ${discount}% discount until the end of this month.`
     ],
     ko: [
-      '겨울 세일: {discount}% 할인!',
-      '지금 바로 구매하세요'
+      `겨울 세일: ${discount}% 할인!`,
+      '지금 바로 구매하세요',
+      `새롭게 업데이트된 저희 소프트웨어 버전을 이번 달 말까지 ${discount}% 할인된 가격으로 구매하실 수 있습니다.`
     ],
     ja: [
-      'ウィンターセール：{discount}% オフ！',
-      '今すぐ入手'
+      `ウィンターセール：${discount}% オフ！`,
+      '今すぐ入手',
+      `当社のソフトウェアの新しい更新バージョンは、今月末まで ${discount}% 割引でご利用いただけます。`
     ],
     zh: [
-      '冬季促销：立享{discount}%折扣！',
-      '立即获取'
+      `冬季促销：立享${discount}%折扣！`,
+      '立即获取',
+      `本月底前，我们软件的全新升级版将以 ${discount}% 的折扣价出售。`
     ]
   }
 
-  const str = text[selectedLang] || text['en']
+  return text[selectedLang] || text['en']
+}
+
+const announcementBar = ({ discount, config, selectedLang }) => {
+  const str = bannerText({ discount, selectedLang })
   return `<div class="announcement-bar">
-            <div class="announcement-bar-text">${str[0].replace('{discount}', discount)}</div>
+            <div class="announcement-bar-text">${str[0]}</div>
             <a class="announcement-bar-button" href="${config.purchaseLink}">${str[1]}</a>
           </div>`
 }
@@ -47,11 +55,6 @@ const main = () => {
   templates.push({
     id: 'announcement-bar',
     content: discount == 0 ? '' : announcementBar({ discount, config, selectedLang })
-  })
-
-  templates.push({
-    id: 'modal-announcement-bar',
-    content: 'cms, nc, cn, ncc, cnc, eia, txt, min, mpf'
   })
 
   templates.push({
@@ -296,6 +299,24 @@ const main = () => {
   APP.listenGallerySelector()
 
   APP.listenLangSelector()
-
-
+  if (discount != 0) {
+    const KEY = 'modal-banner'
+    const modalShown = sessionStorage.getItem(KEY)
+    if (!modalShown) {
+      setTimeout(() => {
+        const str = bannerText({ discount, selectedLang })
+        const infoModal = new ModalBanner({
+          id: 'modal-banner',
+          title: str[0],
+          message: str[2],
+          type: 'any',
+          buttons: [
+            { text: 'Got it', type: 'primary', action: 'close' }
+          ]
+        });
+        infoModal.open();
+        sessionStorage.setItem(KEY, 'true')
+      }, 3000)
+    }
+  }
 }
