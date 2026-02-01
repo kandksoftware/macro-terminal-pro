@@ -37,7 +37,7 @@ const announcementBar = ({ discount, config, selectedLang }) => {
 
 const main = () => {
   //discount: 25/50/75
-  const discount = 25
+  const discount = 0
 
   APP.detectAndChangeLang()
 
