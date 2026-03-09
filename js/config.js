@@ -1,7 +1,7 @@
 (function (app) {
   'use strict'
   app.config = {
-    websiteName: 'https://kandksoftware.github.io/macro-terminal-pro/',
+    websiteName: 'cncmacrosimulator.com',
     appName: 'CNC Macro Simulator',
     companyName: 'PJ Software',
     companyEmail: 'macrosimulatorcnc@gmail.com',

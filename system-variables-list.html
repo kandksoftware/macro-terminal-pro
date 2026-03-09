@@ -60,20 +60,65 @@
           </tr>
         </table>
         {{ back-2-manual }}
-        <!-- Tool variables -->
-        <h1 class="table-view__title">Tool data system variables</h1>
+        <!-- Tool variables mill -->
+        <h1 class="table-view__title">Tool data (mill) {{ fanucA }}{{ fanucB }}{{ fanucC }}</h1>
         <table class="table">
           <tr>
-            <th>Variable</th>
+            <th>Variable (200 tools max) or (up to 400)</th>
             <th>Meaning</th>
           </tr>
           <tr>
-            <td>#2001 - #2099</td>
-            <td>Tool height</td>
+            <td>#2201 - #2400 or #11001 - #11400</td>
+            <td>Tool length</td>
           </tr>
           <tr>
-            <td>#2401 - #2499</td>
+            <td>#2001 - #2200 or #10001 - #10400</td>
+            <td>Tool length wear</td>
+          </tr>
+          <tr>
+            <td>#2401 - #2600 or #13001 - #13400</td>
             <td>Tool radius</td>
+          </tr>
+          <tr>
+            <td>#2601 - #2800 or #12001 - #12400</td>
+            <td>Tool radius wear</td>
+          </tr>
+        </table>
+        {{ back-2-manual }}
+        <!-- Tool variables lathe -->
+        <h1 class="table-view__title">Tool data (lathe) {{ fanucA }}{{ fanucB }}{{ fanucC }}</h1>
+        <table class="table">
+          <tr>
+            <th>Variable (64 tools max) or (up to 160)</th>
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td>#2701 - #2764 or #10001 - #10160</td>
+            <td>X-axis offset</td>
+          </tr>
+          <tr>
+            <td>#2001 - #2064 or #15001 - #15160</td>
+            <td>X-axis offset wear</td>
+          </tr>
+          <tr>
+            <td>#2801 - #2864 or #11001 - #11160</td>
+            <td>Z-axis offset</td>
+          </tr>
+          <tr>
+            <td>#2101 - #2164 or #16001 - #16160</td>
+            <td>Z-axis offset wear</td>
+          </tr>
+          <tr>
+            <td>#2901 - #2964 or #12001 - #12160</td>
+            <td>Nose radius</td>
+          </tr>
+          <tr>
+            <td>#2201 - #2264 or #17001 - #17160</td>
+            <td>Nose radius wear</td>
+          </tr>
+          <tr>
+            <td>#2300 - #2364 or #13001 - #13160</td>
+            <td>Tool-tip direction</td>
           </tr>
         </table>
         {{ back-2-manual }}

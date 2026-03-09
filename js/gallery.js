@@ -10,17 +10,15 @@
   }
 
   app.listenGallerySelector = () => {
-    const image = img => `<img src="${APP.isLangSelected() ? '../' + img[0] : img[0]}" alt="${img[1]}">`
-
-    const getSrc = src => APP.isLangSelected() ? '../' + src : src
+    const image = img => `<img src="${img[0]}" alt="${img[1]}">`
 
     const setImage = (img, data) => {
-      img.src = getSrc(data[0])
+      img.src = data[0]
       img.alt = data[1]
     }
 
     const list = [
-      ['resources/conversational-programming.png', 'cnc conversational programming'],
+      //['resources/conversational-programming.png', 'cnc conversational programming'],
       ['resources/macro-circle.png', 'a circle generate using parametric programming'],
       ['resources/laser2.png', 'cnc laser cutter program using Fanuc Macro B'],
       ['resources/debugging.png', 'debugging macro program using built-in debugger'],

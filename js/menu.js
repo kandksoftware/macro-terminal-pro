@@ -47,14 +47,13 @@
     nc.setAttributeNode(att)
   }
 
-  app.menuComponent = (selectedLang) => {
+  app.menuComponent = () => {
     return `<nav class="nav">
             <div class="nav__container">
-              <img class="nav__icon" src="${app.isLangSelected() ? '../' : ''}resources/icon.png" alt="${app.config.appName}">
+              <img class="nav__icon" src="resources/icon.png" alt="${app.config.appName}">
               <div class="nav__name"></div>
             </div>
             <div class="nav__links-container">
-              ${app.lang.LANG_SELECTOR_COMPONENT(selectedLang)}
               <div class="nav__links"></div>
             <div>
             <div class="hamburger">

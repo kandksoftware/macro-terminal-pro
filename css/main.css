@@ -531,25 +531,6 @@ noscript {
   }
 }
 
-.hero__media-btn-container {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.hero__media-btn-container > button {
-  margin-right: 0.5rem;
-}
-
-.hero__media-btn-container > button:last-child {
-  margin-right: 0rem;
-}
-
-@media screen and (min-width: 768px) {
-  .hero__media-btn-container > button {
-    margin-right: 1rem;
-  }
-}
-
 .hero__btn-container {
   display: -webkit-box;
   display: -ms-flexbox;

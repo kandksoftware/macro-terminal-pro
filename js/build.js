@@ -1,37 +1,9 @@
 'use strict'
 
-const bannerText = ({ discount, selectedLang }) => {
-  const text = {
-    en: [
-      `Winter Sale: Get ${discount}% off!`,
-      'Get it now',
-      `The new, updated version of our software will be available at a ${discount}% discount until the end of this month.`
-    ],
-    ko: [
-      `겨울 세일: ${discount}% 할인!`,
-      '지금 바로 구매하세요',
-      `새롭게 업데이트된 저희 소프트웨어 버전을 이번 달 말까지 ${discount}% 할인된 가격으로 구매하실 수 있습니다.`
-    ],
-    ja: [
-      `ウィンターセール：${discount}% オフ！`,
-      '今すぐ入手',
-      `当社のソフトウェアの新しい更新バージョンは、今月末まで ${discount}% 割引でご利用いただけます。`
-    ],
-    zh: [
-      `冬季促销：立享${discount}%折扣！`,
-      '立即获取',
-      `本月底前，我们软件的全新升级版将以 ${discount}% 的折扣价出售。`
-    ]
-  }
-
-  return text[selectedLang] || text['en']
-}
-
-const announcementBar = ({ discount, config, selectedLang }) => {
-  const str = bannerText({ discount, selectedLang })
+const announcementBar = ({ discount, config }) => {
   return `<div class="announcement-bar">
-            <div class="announcement-bar-text">${str[0]}</div>
-            <a class="announcement-bar-button" href="${config.purchaseLink}">${str[1]}</a>
+            <div class="announcement-bar-text">Winter Sale: Get ${discount}% off!</div>
+            <a class="announcement-bar-button" href="${config.purchaseLink}">Get it now</a>
           </div>`
 }
 
@@ -39,32 +11,27 @@ const main = () => {
   //discount: 25/50/75
   const discount = 0
 
-  APP.detectAndChangeLang()
-
-  const selectedLang = APP.getLangSelected()
-
   const templates = []
   const config = APP.config
 
-  const path = window.location.href.indexOf('http://127.0.0') == 0 ? 'http://127.0.0.1:5502/dist/' : config.websiteName + '/'
   //init templates based of config
   for (let key in config) {
-    templates.push({ id: key, content: config[key].indexOf('?goto=') == -1 && config[key].indexOf('html') != -1 ? path + config[key] : config[key] })
+    templates.push({ id: key, content: config[key].indexOf('?goto=') == -1 && config[key].indexOf('html') != -1 ? config[key] : config[key] })
   }
 
   templates.push({
     id: 'announcement-bar',
-    content: discount == 0 ? '' : announcementBar({ discount, config, selectedLang })
+    content: discount == 0 ? '' : announcementBar({ discount, config })
   })
 
   templates.push({
     id: 'ext',
-    content: 'cms, nc, cn, ncc, cnc, eia, txt, min, mpf'
+    content: 'nc, cn, ncc, cnc, eia, txt, min, mpf'
   })
 
   templates.push({
     id: 'menu',
-    content: APP.menuComponent(selectedLang)
+    content: APP.menuComponent()
   })
 
   templates.push({
@@ -72,9 +39,9 @@ const main = () => {
     content: `<div class="footer__links"></div>
     <div class="footer__copy">
       <a href="#!">Copyright © ${new Date().getFullYear()} ${config.companyName}. All rights reserved.</a> 
-      <a href="${path}privacy-policy.html">Privacy</a>
-      | <a href="${path}terms-of-service.html">Legal</a>
-      | <a href="${path}disclaimer.html">Disclaimer</a>
+      <a href="privacy-policy.html">Privacy</a>
+      | <a href="terms-of-service.html">Legal</a>
+      | <a href="disclaimer.html">Disclaimer</a>
     </div>`
   })
 
@@ -84,46 +51,13 @@ const main = () => {
   })
 
   templates.push({
-    id: 'pricing-feature',
-    content: `<div class="separator"></div>
-    <div class="card__content">
-      Macro support
-    </div>
-    <div class="separator"></div>
-    <div class="card__content">
-      Haas support
-    </div>
-    <div class="separator"></div>
-    <div class="card__content">
-      Fanuc support
-    </div>
-    <div class="separator"></div>
-    <div class="card__content">
-      Centroid support
-    </div>
-    <div class="separator"></div>
-    <div class="card__content">
-      Macro export support
-    </div>
-    <div class="separator"></div>
-    <div class="card__content">
-      Advanced calculator
-    </div>`
-  })
-
-  templates.push({
     id: 'purchase-component',
-    content: APP.purchaseComponent(selectedLang, discount)
-  })
-
-  templates.push({
-    id: 'purchase-converter-component',
-    content: APP.purchaseConverterComponent(selectedLang)
+    content: APP.purchaseComponent(discount)
   })
 
   templates.push({
     id: 'hero-component',
-    content: APP.buildHero(config, path, selectedLang)
+    content: APP.buildHero(config)
   })
 
   templates.push({
@@ -167,94 +101,45 @@ const main = () => {
     id: '.footer__links'
   }]
 
-  const translMenu = {
-    en: [
-      'Main',
-      'Features',
-      'Knowledge',
-      'Youtube',
-      'Courses',
-      'Purchase',
-      'Contact',
-      'FAQ',
-      'About us'
-    ],
-    ko: [
-      '메인',
-      '특징',
-      '지식',
-      'Youtube',
-      '코스',
-      '구매',
-      '문의',
-      'FAQ',
-      '회사 소개'
-    ],
-    ja: [
-      'メイン',
-      '機能',
-      '知識',
-      'Youtube',
-      'コース',
-      '購入',
-      'お問い合わせ',
-      'よくある質問',
-      '会社概要'
-    ],
-    zh: [
-      '主页',
-      '功能',
-      '知识',
-      'Youtube',
-      '课程',
-      '购买',
-      '联系',
-      '常见问题',
-      '关于我们'
-    ]
-  }
-
-  const selectedTranslationMenu = translMenu[selectedLang] || translMenu['en']
-
   const menu = [{
     type: ['nav', 'menu', 'footer'],
     link: 'index.html#main',
-    desc: selectedTranslationMenu[0]
+    desc: 'Main'
   }, {
     type: ['nav', 'menu'],
     link: 'index.html?goto=features',
-    desc: selectedTranslationMenu[1]
+    desc: 'Features'
   }, {
     type: ['nav', 'menu', 'footer'],
-    link: `${path}get-started.html`,
-    desc: selectedTranslationMenu[2]
+    link: `get-started.html`,
+    desc: 'Knowledge'
   }, {
     type: ['footer'],
     link: 'https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA',
-    desc: selectedTranslationMenu[3],
+    desc: 'Youtube',
     target: '_blank'
   }, {
     type: ['nav'],
-    link: `${path}courses.html`,
-    desc: selectedTranslationMenu[4],
+    link: `courses.html`,
+    desc: 'Courses',
     target: '_blank'
   }, {
     type: ['nav', 'menu'],
     link: config.purchaseLink,
-    desc: selectedTranslationMenu[5],
+    desc: 'Purchase',
     dec: ['btn btn-brand-color'],
   }, {
     type: ['nav', 'menu', 'footer'],
-    link: `${path}contact.html`,
-    desc: selectedTranslationMenu[6],
+    link: `contact.html`,
+    desc: 'Contact',
   }, {
     type: ['footer'],
-    link: `${path}faq.html`,
-    desc: selectedTranslationMenu[7]
+    link: `faq.html`,
+    desc: 'FAQ'
   }, {
     type: ['footer',],
-    link: `${path}about.html`,
-    desc: selectedTranslationMenu[8]
+    link: `about.html`,
+    desc: 'About us'
   }]
 
   APP.injectTemplates(templates)
@@ -262,18 +147,6 @@ const main = () => {
   APP.buildMenu(components, menu)
 
   APP.listenMenu()
-
-  APP.listenHeroImg()
-
-  /*APP.initPurchaseBtnListener([{
-    name: 'App Store',
-    link: 'https://apps.apple.com/us/app/macro-mill-plus/id1562501002',
-    img: 'resources/app-store-badge.svg'
-  }, {
-    name: 'Google Play',
-    link: 'https://play.google.com/store/apps/details?id=com.kandksoftware.macromillplus',
-    img: 'resources/google-play-badge.svg'
-  }])//modal*/
 
   APP.createElement('div', 'm-b')
 
@@ -288,8 +161,7 @@ const main = () => {
     e.innerHTML = hg
   });
 
-  APP.purchase(path)
-  APP.purchaseConverter(path)
+  APP.purchase()
   APP.getDemo(config.demoLink)
   //handle the iframes
   APP.iframeSpinnerLoading()
@@ -298,17 +170,16 @@ const main = () => {
   //gallery
   APP.listenGallerySelector()
 
-  APP.listenLangSelector()
   if (discount != 0) {
     const KEY = 'modal-banner'
     const modalShown = sessionStorage.getItem(KEY)
     if (!modalShown) {
       setTimeout(() => {
-        const str = bannerText({ discount, selectedLang })
+        const array = ['', '', '']
         const infoModal = new ModalBanner({
           id: 'modal-banner',
-          title: str[0],
-          message: str[2],
+          title: array[0],
+          message: array[2],
           type: 'any',
           buttons: [
             { text: 'Got it', type: 'primary', action: 'close' }
