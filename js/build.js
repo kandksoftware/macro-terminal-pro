@@ -103,11 +103,13 @@ const main = () => {
 
   const menu = [{
     type: ['nav', 'menu', 'footer'],
-    link: 'index.html#main',
+    //link: 'index.html#main',
+    link: '#main',
     desc: 'Main'
   }, {
     type: ['nav', 'menu'],
-    link: 'index.html?goto=features',
+    //link: 'index.html?goto=features',
+    link: '/?goto=features',
     desc: 'Features'
   }, {
     type: ['nav', 'menu', 'footer'],
