@@ -1408,7 +1408,7 @@ th, td {
 }
 
 .list > li::before {
-  content: '⇨ ';
+  content: '# ';
   color: #c50000;
   font-size: 1rem;
 }
@@ -1419,10 +1419,6 @@ th, td {
 
 .list--full > li {
   width: 100%;
-}
-
-.rtl .list > li::before {
-  content: '⇦ ';
 }
 
 .new {
