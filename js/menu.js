@@ -43,7 +43,7 @@
     //go to the landing page if the user click on the company's name
     const nc = document.querySelector('.nav__container')
     const att = document.createAttribute('onclick')
-    att.value = "location.href='index.html'"
+    att.value = "location.href='/'"
     nc.setAttributeNode(att)
   }
 
