@@ -26,7 +26,7 @@ const main = () => {
 
   templates.push({
     id: 'ext',
-    content: 'nc, cn, ncc, cnc, eia, txt, min, mpf'
+    content: 'cms, nc, cn, ncc, cnc, eia, txt, min, mpf'
   })
 
   templates.push({
@@ -104,7 +104,7 @@ const main = () => {
   const menu = [{
     type: ['nav', 'menu', 'footer'],
     //link: 'index.html#main',
-    link: '#main',
+    link: '/',
     desc: 'Main'
   }, {
     type: ['nav', 'menu'],
