@@ -18,7 +18,7 @@
     }
 
     const list = [
-      //['resources/conversational-programming.png', 'cnc conversational programming'],
+      ['resources/nremoval.png', 'cnc conversational programming'],
       ['resources/macro-circle.png', 'a circle generate using parametric programming'],
       ['resources/laser2.png', 'cnc laser cutter program using Fanuc Macro B'],
       ['resources/debugging.png', 'debugging macro program using built-in debugger'],

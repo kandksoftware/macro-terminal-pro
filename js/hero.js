@@ -23,7 +23,7 @@
                   <a class="btn btn--reverse btn-large" href="${config.demoLink}" style="margin-left: 10px;">Get demo</a>
                 </div>
               </div>
-              <div class="hero__media" style="background-image:url('resources/sphere.png')">
+              <div class="hero__media" style="background-image:url('resources/nremoval.png')">
               </div>
             </section>`
   }
