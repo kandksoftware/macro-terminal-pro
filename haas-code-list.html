@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Haas CNC G Codes and Cycles | Supported Haas G Code Reference</title>
+  <meta name="description"
+    content="Reference guide to Haas supported G codes and CNC cycles. Includes drilling cycles, tapping cycles, and common Haas CNC programming commands." />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+  <meta name="google-site-verification" content="pXU9G0LIJdRmQOMnDZONTCZDBqwz8L6fspHbtnsOLzo" />
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ menu }}
+    </header>
+    <main>
+      <section class="article table-view">
+        <h1 class="article__title">Specific extra codes for Haas controls</h1>
+        <div class="separator"></div>
+        <div class="article__content">
+          Haas Automation is a major American manufacturer of CNC machine tools and one of the most widely recognized
+          brands in modern manufacturing. The company produces a full range of CNC mills, CNC lathes, rotary tables, and
+          integrated CNC control systems used in machine shops, aerospace manufacturing, automotive production, and
+          engineering workshops worldwide. Haas machines are known for their reliability, accessible controls, and
+          strong presence in CNC machining and programming environments.
+        </div>
+        <div class="article__subtitle">G code list:</div>
+        <table class="table">
+          <tr>
+            <th>Name</th>
+            <th>Function</th>
+            <th>Machine type</th>
+          </tr>
+          <tr>
+            <td>G70</td>
+            <td>Bolt Hole Circle cycle</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G71</td>
+            <td>Bolt Hole Arc cycle</td>
+            <td>Mill</td>
+          </tr>
+          <tr>
+            <td>G72</td>
+            <td>Bolt Holes cycle</td>
+            <td>Mill</td>
+          </tr>
+        </table>
+        <div class="article__subtitle">M code list:</div>
+        <table class="table">
+          <tr>
+            <th>Name</th>
+            <th>Function</th>
+            <th>Machine type</th>
+          </tr>
+          <tr>
+            <td>M10</td>
+            <td>C axis clamp (HAAS)</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>M11</td>
+            <td>C axis unclamp (HAAS)</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>M133</td>
+            <td>live tool cw (HAAS)</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>M134</td>
+            <td>live tool ccw (HAAS)</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>M154</td>
+            <td>C axis mode on (HAAS)</td>
+            <td>Lathe</td>
+          </tr>
+          <tr>
+            <td>M155</td>
+            <td>C axis mode off (HAAS)</td>
+            <td>Lathe</td>
+          </tr>
+        </table>
+        <a class="back-link" href="get-started.html">back to the manual</a>
+      </section>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>

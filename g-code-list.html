@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
   <link rel="stylesheet" href="css/main.css">
-  <title>G code list | ISO</title>
-  <meta name="description" content="CNC Macro Simulator | G code list | ISO" />
+  <title>CNC programming | G code list</title>
+  <meta name="description" content="CNC programming | G code list" />
   <meta name="keywords" content="" />
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,6 +28,12 @@
       <section class="article table-view">
         <h1 class="article__title">G code list</h1>
         <div class="separator"></div>
+        <div class="article__content">
+          G-codes are the main motion control commands in CNC programming. They determine how the cutting tool or the
+          machine table moves along multiple axes within the machine’s coordinate system. G-codes define operations such
+          as rapid moves, linear and circular interpolation, and drilling cycles. Most G-codes operate in modal groups,
+          meaning the selected command stays active until another command from the same group overrides it.
+        </div>
         <table class="table">
           <tr>
             <th>Name</th>
@@ -56,7 +62,7 @@
           </tr>
           <tr>
             <td>G10</td>
-            <td>Set data (L2, L10, L12)</td>
+            <td>Set data (L2, L10, L11, L12, L13)</td>
             <td>Mill / Lathe</td>
           </tr>
           <tr>

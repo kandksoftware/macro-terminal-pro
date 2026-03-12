@@ -113,7 +113,7 @@ const main = () => {
     desc: 'Features'
   }, {
     type: ['nav', 'menu', 'footer'],
-    link: `get-started.html`,
+    link: `knowledge.html`,
     desc: 'Knowledge'
   }, {
     type: ['footer'],

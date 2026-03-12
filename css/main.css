@@ -876,7 +876,7 @@ noscript {
   padding-bottom: 0.5rem;
   font-size: 1.3rem;
   color: #c50000;
-  margin-bottom: 1.3rem;
+  /*margin-bottom: $margin-bottom;*/
 }
 
 .article__content {
@@ -1162,9 +1162,11 @@ table {
   padding: 5px;
   border-radius: 1rem;
   background-color: #fff;
+  margin-bottom: 1.1rem;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding: 16px;
   font-size: 22px;
