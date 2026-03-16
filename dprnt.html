@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>DPRNT in Fanuc Macro Programming – CNC Data Output Explained</title>
+  <meta name="description"
+    content="Learn how to use the DPRNT command in Fanuc Macro B to output CNC data. Understand syntax, variable formatting, examples, and control differences for reliable data logging" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="google-site-verification" content="W8Qc2bZnS1sBiefcr__I_VcYaf1lbykYrjssdS-fZAE" />
+  <meta name="google-site-verification" content="pXU9G0LIJdRmQOMnDZONTCZDBqwz8L6fspHbtnsOLzo" />
+</head>
+
+<body>
+  <noscript>Your browser does not support JavaScript!</noscript>
+  <div id="splash-screen">
+    <img src="resources/spinner.gif" alt="spinner" />
+  </div>
+  <div id="app" class="hide">
+    <header>
+      {{ menu }}
+    </header>
+    <main>
+      <div class="article">
+        <h1 class="article__title">Understanding DPRNT in Fanuc Macro Programming</h1>
+        <div class="separator"></div>
+        <div class="article__content">
+          The <strong>DPRNT</strong> command is widely used in Fanuc Macro B programming to output data from a CNC
+          machine to an external
+          device such as a computer, printer, or monitoring system. It allows programmers to record machining data,
+          offsets, or inspection results directly from the control. When used correctly, <strong>DPRNT</strong> becomes
+          a powerful tool
+          for process monitoring, quality control, and automated data
+          logging in CNC machining.
+        </div>
+        <h1 class="main__subtitle list--full">Basic DPRNT Structure</h1>
+        <div class="article__content">
+          <strong>DPRNT</strong> commands typically operate within an output session that begins with POPEN and ends
+          with PCLOS.
+        </div>
+        <div class="code-view this">
+          POPEN
+          DPRNT []
+          PCLOS
+        </div>
+        <ul class="list list--full list--no-decor">
+          <li><strong>POPEN</strong> - opens the communication channel.</li>
+          <li><strong>DPRNT []</strong> - contains the formatted text and variables to output.</li>
+          <li><strong>PCLOS</strong> - closes the output channel.</li>
+        </ul>
+        <div class="article__content">
+          Everything inside the brackets is transmitted through the CNC control’s output interface.
+        </div>
+        <h1 class="main__subtitle list--full">Formatting Macro Variables</h1>
+        <div class="article__content">
+          Variables can be formatted using the structure:
+        </div>
+        <div class="code-view this">
+          #100[ab]
+        </div>
+        <div class="article__content">
+          Where:
+        </div>
+        <ul class="list list--full list--no-decor">
+          <li><strong>a</strong> - specifies the number of digits before the decimal point</li>
+          <li><strong>b</strong> - specifies the number of digits after the decimal point</li>
+        </ul>
+        <div class="article__content">
+          For example:
+        </div>
+        <div class="code-view this">
+          #100[33]
+        </div>
+        <div class="article__content">
+          This prints the value of variable #100 with three digits before and three digits after the decimal point.
+        </div>
+        <div class="message message--alert">
+          <h3 class="message__header">Important</h3>
+          Fanuc controls limit variable output to a maximum of <strong>eight digits</strong> in total
+          (<strong>a</strong>+<strong>b</strong> less or equal <strong>8</strong>).
+        </div>
+        <h1 class="main__subtitle list--full">
+          Using Spaces in DPRNT Output
+        </h1>
+        <div class="article__content">
+          In <strong>DPRNT</strong> formatting, an <strong>asterisk (*)</strong> represents a space. This is commonly
+          used to structure
+          readable output
+          lines.
+        </div>
+        <div class="article__content">
+          Example formatting may use multiple asterisks to separate values.
+        </div>
+        <h1 class="main__subtitle list--full">
+          Practical Example
+        </h1>
+        <div class="article__content">
+          The following code outputs the G54 work offset coordinates:
+        </div>
+        <div class="code-view this">
+          POPEN
+          DPRNT [WORKOFFSET*G54*X#5221[43]*Y#5222[43]*Z#5223[43]]
+          PCLOS
+        </div>
+        <div class="article__content">
+          The macro variables represent:
+        </div>
+        <ul class="list list--full list--no-decor">
+          <li><strong>#5221 – G54 X offset</strong></li>
+          <li><strong>#5222 – G54 Y offset</strong></li>
+          <li><strong>#5223 – G54 Z offset</strong></li>
+        </ul>
+        <div class="article__content">
+          A typical output might look like:
+        </div>
+        <div class="article__content">
+          WORKOFFSET G54 X123.456 Y78.900 Z-12.345
+        </div>
+        <h1 class="main__subtitle list--full">
+          Handling Null Variables
+        </h1>
+        <div class="article__content">
+          Different Fanuc controls treat null variables differently.
+        </div>
+        <ul class="list list--full list--no-decor">
+          <li><strong>Fanuc 6</strong> – Null variables cannot be printed and will trigger <strong>Alarm #114.</strong>
+          </li>
+          <li><strong>Fanuc 10/11/15/16/18/21</strong> – Null variables are automatically printed as <strong>0.</strong>
+          </li>
+        </ul>
+        <div class="article__content">
+          Because of these differences, programmers working with older controls should validate variables before
+          printing.
+        </div>
+        <h1 class="main__subtitle list--full">
+          Why DPRNT Is Useful
+        </h1>
+        <div class="article__content">
+          <strong>DPRNT</strong> is commonly used in CNC environments for:
+        </div>
+        <ul class="list list--full">
+          <li><strong>Automatic offset reporting</strong></li>
+          <li><strong>SPC and quality data collection</strong></li>
+          <li><strong>Recording probing results</strong></li>
+          <li><strong>Logging tool or process data</strong></li>
+          <li><strong>Integrating machines with external monitoring systems</strong></li>
+        </ul>
+        <div class="article__content">
+          For advanced CNC macro users, <strong>DPRNT</strong> provides a simple but effective way to connect machining
+          processes with
+          digital data tracking.
+        </div>
+        <!-- demo request banner -->
+        <a href="{{ demoLink }}">
+          <div class="banner banner__demo"></div>
+        </a>
+      </div>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
+    <script src="js/script-loader.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>

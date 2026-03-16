@@ -87,7 +87,7 @@ const main = () => {
 
   templates.push({
     id: 'back-2-manual',
-    content: '<a class="back-link" href="get-started.html"> back to the manual</a>'
+    content: '<a class="back-link" href="knowledge.html"> back to the manual</a>'
   })
 
   const components = [{

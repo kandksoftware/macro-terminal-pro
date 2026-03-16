@@ -38,10 +38,8 @@
         <h1 class="main__subtitle list--full">What SETVN Does?</h1>
         <div class="article__content">
           It assigns aliases to common variables beginning with the variable number defined in the
-          <strong>SETVN</strong> command.
-        </div>
-        <div class="article__content">
-          Instead of referencing variables by number (for example <strong>#500</strong> or <strong>#501</strong>), you
+          <strong>SETVN</strong> command. Instead of referencing variables by number (for example <strong>#500</strong>
+          or <strong>#501</strong>), you
           can assign meaningful names such
           as:
         </div>
@@ -52,6 +50,22 @@
         <div class="article__content">
           These names act as direct aliases to the original common variables.
         </div>
+        <h1 class="main__subtitle list--full">Variable Naming Rules</h1>
+        <div class="article__content">
+          <strong>SETVN</strong> variable names The variable name (excluding #) can be up to eight characters long.
+          Their can also include underscores, which can be useful when organizing
+          parameters.
+        </div>
+        <div class="article__content">
+          Examples:
+        </div>
+        <div class="code-view this">
+          #RADIUS_2
+          #ANGLE_2
+        </div>
+        <div class="article__content">
+          This makes it easier to manage multiple related variables within larger macro programs.
+        </div>
         <h1 class="main__subtitle list--full">Control Compatibility</h1>
         <div class="article__content">
           <strong>SETVN</strong> is not supported on all FANUC controls, especially older models. It is typically
@@ -59,8 +73,8 @@
           generations such as:
         </div>
         <ul class="list list--full list--no-decor">
-          <li><strong>16i / 18i / 21i</strong></li>
-          <li><strong>30i / 31i / 32i</strong></li>
+          <li><strong>16i/18i/21i</strong></li>
+          <li><strong>30i/31i/32i</strong></li>
           <li>Some 0i series controls</li>
         </ul>
         <div class="message message--info">
@@ -117,20 +131,20 @@
         <div class="article__content">
           The difference is simply improved readability.
         </div>
-        <h1 class="main__subtitle list--full">Variable Naming Rules</h1>
+        <h1 class="main__subtitle list--full">Deleting Variable Aliases</h1>
         <div class="article__content">
-          <strong>SETVN</strong> variable names can also include underscores, which can be useful when organizing
-          parameters.
+          Aliases created with <strong>SETVN</strong> can be removed by executing the <strong>SETVN</strong> command
+          without specifying names for the
+          variables in the brackets.
         </div>
         <div class="article__content">
-          Examples:
+          Example:
         </div>
         <div class="code-view this">
-          #RADIUS_2
-          #ANGLE_2
+          SETVN 500 []
         </div>
         <div class="article__content">
-          This makes it easier to manage multiple related variables within larger macro programs.
+          After deletion, the variables themselves still exist, the command only removes the assigned names (aliases).
         </div>
         <!-- demo request banner -->
         <a href="{{ demoLink }}">
