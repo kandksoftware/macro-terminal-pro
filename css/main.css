@@ -1435,6 +1435,15 @@ td {
   width: 100%;
 }
 
+.list--no-decor > li {
+  border-bottom: none;
+  line-height: 50%;
+}
+
+.list--no-decor > li::before {
+  content: '';
+}
+
 .new {
   position: absolute;
   right: 5px;
