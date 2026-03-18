@@ -1109,6 +1109,10 @@ noscript {
   opacity: 0.8;
 }
 
+.special {
+  color: #c50000;
+}
+
 .btn {
   padding: 0.4rem 2rem;
   border-radius: 1.2rem;

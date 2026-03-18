@@ -120,12 +120,12 @@ const main = () => {
     link: 'https://www.youtube.com/channel/UCbcwipev1XA_h8HGILF95GA',
     desc: 'Youtube',
     target: '_blank'
-  }, {
+  }/*, {
     type: ['nav'],
     link: `courses.html`,
     desc: 'Courses',
     target: '_blank'
-  }, {
+  }*/, {
     type: ['nav', 'menu'],
     link: config.purchaseLink,
     desc: 'Purchase',
@@ -139,7 +139,7 @@ const main = () => {
     link: `faq.html`,
     desc: 'FAQ'
   }, {
-    type: ['footer',],
+    type: ['nav', 'menu', 'footer'],
     link: `about.html`,
     desc: 'About us'
   }]
