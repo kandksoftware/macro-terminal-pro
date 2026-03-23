@@ -38,10 +38,29 @@
           for process monitoring, quality control, and automated data
           logging in CNC machining.
         </div>
-        <h1 class="main__subtitle list--full">Basic DPRNT Structure</h1>
+        <h1 class="main__subtitle list--full">Character Rules</h1>
         <div class="article__content">
-          <strong>DPRNT</strong> commands typically operate within an output session that begins with POPEN and ends
-          with PCLOS.
+          <strong>DPRNT</strong> allows you to use formatted data consisting of both text and arbitrary variables. The
+          text portion can
+          contain <strong>uppercase letters (A-Z)</strong>,<strong> numbers (0–9)</strong>, and a limited set of
+          special characters such as <strong>+, −,
+            /, *, ., etc.</strong> Variables cannot be used as aliases: <strong>SETVN</strong> or in indexable form:
+          <strong>
+            <pre>#[&lt;value&gt;]</pre>
+          </strong>
+
+        </div>
+        <div class="article__content">
+          An <strong>asterisk (*)</strong> represents a space. This is commonly
+          used to structure
+          readable output
+          lines.
+        </div>
+        <h1 class="main__subtitle list--full">Basic Structure</h1>
+        <div class="article__content">
+          <strong>DPRNT</strong> commands typically operate within an output session that begins with
+          <strong>POPEN</strong> and ends
+          with <strong>PCLOS</strong>.
         </div>
         <div class="code-view this">
           POPEN
@@ -50,7 +69,8 @@
         </div>
         <ul class="list list--full list--no-decor">
           <li><strong>POPEN</strong> - opens the communication channel.</li>
-          <li><strong>DPRNT []</strong> - contains the formatted text and variables to output.</li>
+          <li><strong>DPRNT []</strong> - can contain formatted text and variables, as well as be empty, which will
+            be displayed as a new line</li>
           <li><strong>PCLOS</strong> - closes the output channel.</li>
         </ul>
         <div class="article__content">
@@ -81,45 +101,8 @@
         </div>
         <div class="message message--alert">
           <h3 class="message__header">Important</h3>
-          Fanuc controls limit variable output to a maximum of <strong>eight digits</strong> in total
+          Fanuc, Haas and Mazak controls limit variable output to a maximum of <strong>eight digits</strong> in total
           (<strong>a</strong>+<strong>b</strong> less or equal <strong>8</strong>).
-        </div>
-        <h1 class="main__subtitle list--full">
-          Using Spaces in DPRNT Output
-        </h1>
-        <div class="article__content">
-          In <strong>DPRNT</strong> formatting, an <strong>asterisk (*)</strong> represents a space. This is commonly
-          used to structure
-          readable output
-          lines.
-        </div>
-        <div class="article__content">
-          Example formatting may use multiple asterisks to separate values.
-        </div>
-        <h1 class="main__subtitle list--full">
-          Practical Example
-        </h1>
-        <div class="article__content">
-          The following code outputs the G54 work offset coordinates:
-        </div>
-        <div class="code-view this">
-          POPEN
-          DPRNT [WORKOFFSET*G54*X#5221[43]*Y#5222[43]*Z#5223[43]]
-          PCLOS
-        </div>
-        <div class="article__content">
-          The macro variables represent:
-        </div>
-        <ul class="list list--full list--no-decor">
-          <li><strong>#5221 – G54 X offset</strong></li>
-          <li><strong>#5222 – G54 Y offset</strong></li>
-          <li><strong>#5223 – G54 Z offset</strong></li>
-        </ul>
-        <div class="article__content">
-          A typical output might look like:
-        </div>
-        <div class="article__content">
-          WORKOFFSET G54 X123.456 Y78.900 Z-12.345
         </div>
         <h1 class="main__subtitle list--full">
           Handling Null Variables
@@ -128,15 +111,28 @@
           Different Fanuc controls treat null variables differently.
         </div>
         <ul class="list list--full list--no-decor">
-          <li><strong>Fanuc 6</strong> – Null variables cannot be printed and will trigger <strong>Alarm #114.</strong>
+          <li>
+            <strong>Fanuc 6</strong> – Null variables cannot be printed and will trigger <strong>Alarm #114.</strong>
           </li>
-          <li><strong>Fanuc 10/11/15/16/18/21</strong> – Null variables are automatically printed as <strong>0.</strong>
+          <li>
+            <strong>Fanuc 10/11/15/16/18/21</strong> – Null variables are automatically printed as <strong>0.</strong>
+          </li>
+          <li>
+            <strong>Haas</strong> – Null variables are automatically printed as <strong>0.</strong>
           </li>
         </ul>
-        <div class="article__content">
+        <div class="message message--info">
+          <h3 class="message__header">Good to know</h3>
           Because of these differences, programmers working with older controls should validate variables before
           printing.
         </div>
+        <h1 class="main__subtitle list--full">
+          Practical Example
+        </h1>
+        <div class="article__content">
+          The following code outputs all work offsets from G54 to G59:
+        </div>
+        <img class="article__img" src="resources/dprnt-workoffsets.png" alt="dprnt program for workoffsets" />
         <h1 class="main__subtitle list--full">
           Why DPRNT Is Useful
         </h1>
