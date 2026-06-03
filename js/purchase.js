@@ -24,7 +24,7 @@
   }
 
   app.purchaseComponent = (discount = 0) => {
-    const normalPrice = 529.00
+    const normalPrice = 649.00
     const discountPrice = normalPrice - normalPrice * discount * 0.01
 
 
