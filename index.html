@@ -65,18 +65,24 @@
           <li>Supporting <strong>3-axis milling machines and lathes with C & Y axis + live tooling</strong>
           </li>
 
-          <li>Advanced macro support such as: <strong><a class="special" href="setvn.html">SETVN</a></strong>,
-            <strong><a class="special" href="dprnt.html">DPRNT</a></strong>
-            and
-            <strong>G-code and
-              M-code
-              custom macro call</strong>
-          </li>
-          <li>A powerful debugging tool: <strong>Step forward</strong> or <strong>backward through</strong> CNC macros
+          <li><strong>Multi-Level Program Analysis:</strong> Validation is performed at multiple independent levels,
+            enabling the
+            detection of both syntax errors and programming issues.</li>
+          <li>Customize your control system with variable initialization, system variable aliases, Macro B libraries,
+            and user-defined G/M cycles</li>
+          <li>
+            A powerful debugging tool: <strong>Step forward</strong> or <strong>backward through</strong> CNC macros
             with
             <strong>real-time variable editing</strong> <a class="special" href="hacks-and-tricks.html">(read more)</a>
           </li>
-
+          <li>
+            Lightweight DXF reader and parser for converting common 2D DXF files into G-code for laser, plasma, and
+            similar CNC machines
+          </li>
+          <li>Advanced macro support such as: <strong><a class="special" href="setvn.html">SETVN</a></strong>,
+            <strong><a class="special" href="dprnt.html">DPRNT</a></strong>
+            and <strong>G-code and M-code custom macro call</strong>
+          </li>
           <li>Frequent <strong>free updates</strong> and <strong>feature upgrades</strong></li>
           <li>Macro support for <strong>Fanuc, Haas, Centroid, Mazak ISO
               or Sinumerik 802D</strong> <a class="special" href="/?goto=control-support">(read more)</a>
@@ -128,17 +134,43 @@
       </section>
       <section class="article article--main">
         <h1 class="main__title" id="advantages">Advantages</h1>
+        <!-- cards -->
         <div class="cards">
           <!-- card -->
           <div class="card">
             <div class="card__title">
-              Macro analyzing tool
+              Macro Analyzing Tool
             </div>
             <img class="card__img" src="resources/debugger2.png" alt="debugging fanuc macro B program" />
             <div class="card__content">
               Monitor variables, their values, math and logic operations, alarms, and subroutine nesting at a glance.
             </div>
           </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Basic DXF reader
+            </div>
+            <img class="card__img" src="resources/dxf-reader.png" alt="Basic DXF to G-code Converter" loading="lazy" />
+            <div class="card__content">
+              Lightweight DXF reader and parser for converting common 2D DXF files into G-code for laser, plasma, and
+              similar CNC machines.
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Customize
+            </div>
+            <img class="card__img" src="resources/custom.png" alt="custom" loading="lazy" />
+            <div class="card__content">
+              Extend standard CNC functionality by defining variable aliases, creating Macro B libraries, and
+              implementing custom G- and M-cycles.
+            </div>
+          </div>
+        </div>
+        <!-- cards -->
+        <div class="cards">
           <!-- card -->
           <div class="card">
             <div class="card__title">
@@ -150,9 +182,31 @@
             </div>
           </div>
           <!-- card -->
+          <div class="card hide">
+            <div class="card__title">
+              Advanced Calculator
+            </div>
+            <img class="card__img" src="resources/auto-box.png" alt="file-export" loading="lazy" />
+            <div class="card__content">
+              Boost productivity, minimize errors, and create custom templates tailored to your workflow.
+            </div>
+          </div>
+          <!-- card -->
           <div class="card">
             <div class="card__title">
-              Transfer to machine
+              Intelligent Code Validation
+            </div>
+            <img class="card__img" src="resources/error-checker.png" alt="easy-to-use" />
+            <div class="card__content">
+              Multi-level program analysis validates your code as you write, identifying syntax errors and programming
+              issues instantly
+            </div>
+          </div>
+
+          <!-- card -->
+          <div class="card">
+            <div class="card__title">
+              Transfer to Machine
             </div>
             <img class="card__img" src="resources/dnc.png" alt="debugging fanuc macro B program" />
             <div class="card__content">
@@ -160,6 +214,7 @@
             </div>
           </div>
         </div>
+        <!-- cards -->
         <div class="cards">
           <!-- card -->
           <div class="card">
@@ -168,8 +223,8 @@
             </div>
             <img class="card__img" src="resources/compatibility.png" alt="compatibility" loading="lazy" />
             <div class="card__content">
-              Compatible with a wide range of popular CNC controls, including Fanuc, Haas, Centroid, Mazak ISO, and
-              Siemens 802D
+              Compatible with a wide range of popular CNC controls, including Fanuc, Haas, Centroid, Mazak ISO, Siemens
+              802D, and other compatible controllers
             </div>
           </div>
           <!-- card -->
@@ -208,9 +263,8 @@
           <li>Simulation (play, play fast, stop, next, previous, rewind, reset)</li>
           <li>Mill - 5 view modes (3D, XY, XY removal, XZ, YZ)</li>
           <li>Lathe - 3 view modes (+XZ, -XZ, XC)</li>
-          <li>Full screen support</li>
           <li>Adjustable simulation speed</li>
-          <li>Measuring an object/coordinates</li>
+          <li class="hide">Measuring an object/coordinates</li>
           <li>Dynamic zoom, pan, and rotation features are accessible through the cursor, dedicated buttons, or keyboard
             shortcuts</li>
           <li>Show/hide rapid movement</li>
@@ -325,7 +379,8 @@
           <li class="hide">Import/export conversational program</li>
           <li>CNC programs examples</li>
           <li>Save as</li>
-          <li>Export to plain ISO, Heidenhain iTNC 530, Sinumerik 840D/840Di/810D or Okuma OSP-P300</li>
+          <li>Export to plain ISO<span class="hide">, Heidenhain iTNC 530, Sinumerik 840D/840Di/810D or Okuma
+              OSP-P300</span></li>
           <li>File extension supported: {{ext}}</li>
         </ul>
         <h1 class="main__subtitle" id="control-support">Control support</h1>

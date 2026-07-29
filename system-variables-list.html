@@ -58,14 +58,13 @@
           </tr>
           <tr>
             <td>#3011</td>
-            <td>This variable contains the current date (year / month / day). for example, February 01, 2020 is stored
+            <td>This variable contains the current date (year/month/day). For example, February 01, 2020 is stored
               as 20200201.</td>
           </tr>
           <tr>
             <td>#3012</td>
-            <td>This variable contains the current time (hours / minutes / seconds)
-              . for example, February 01, 2020 is stored as 20200201. For example, 15 minutes and 10 seconds after 4
-              p.m. is stored as 161410.
+            <td>This variable contains the current time (hours/minutes/seconds). For example, 15 minutes and 10 seconds
+              after 4 p.m. is stored as 161510.
             </td>
           </tr>
         </table>
@@ -212,101 +211,122 @@
             <th>Variable</th>
             <th>G-code</th>
             <th>Group number</th>
+            <th>Description</th>
           </tr>
           <tr>
             <td>#4001</td>
             <td>G00 G01 G02 G03 G33</td>
             <td>1</td>
+            <td>Motion control (rapid, linear, circular, etc).</td>
           </tr>
           <tr>
             <td>#4002</td>
             <td>G17 G18 G19</td>
             <td>2</td>
+            <td>Plane selection.</td>
           </tr>
           <tr>
             <td>#4003</td>
             <td>G90 G91</td>
             <td>3</td>
+            <td>Absolute / incremental command.</td>
           </tr>
           <tr>
             <td>#4004</td>
             <td>G22 G23</td>
             <td>4</td>
+            <td>Stored stroke limit ON / OFF.</td>
           </tr>
           <tr>
             <td>#4005</td>
             <td>G93 G94 G95</td>
             <td>5</td>
+            <td>Feedrate mode selection.</td>
           </tr>
           <tr>
             <td>#4006</td>
             <td>G20 G21</td>
             <td>6</td>
+            <td>Units selection - Inch or metric programming units.</td>
           </tr>
           <tr>
             <td>#4007</td>
             <td>G40 G41 G42</td>
             <td>7</td>
+            <td>Tool radius compensation - Canceled, left compensation, or right compensation.</td>
           </tr>
           <tr>
             <td>#4008</td>
             <td>G43 G44 G45</td>
             <td>8</td>
+            <td>Tool length compensation - Positive, negative, or additional tool length compensation mode.</td>
           </tr>
           <tr>
             <td>#4009</td>
-            <td>G73 G74 G76 G80 G81 G82 G83 G84 G85 G86 G87 G88 G89</td>
+            <td>G73 G74 G76 G80-G89</td>
             <td>9</td>
+            <td>Canned cycle mode - Active drilling, tapping, boring, threading, or cycle cancel command.</td>
           </tr>
           <tr>
             <td>#4010</td>
             <td>G98 G99</td>
             <td>10</td>
+            <td>Canned cycle return mode - Return to initial point or R-point after cycle completion.</td>
           </tr>
           <tr>
             <td>#4011</td>
             <td>G50 G51</td>
             <td>11</td>
+            <td>Scaling mode - Scaling canceled or enabled.</td>
           </tr>
           <tr>
             <td>#4012</td>
             <td>G65 G66 G67</td>
             <td>12</td>
+            <td>Macro call mode - Simple macro call, modal macro call, or modal macro cancel.</td>
           </tr>
           <tr>
             <td>#4013</td>
             <td>G96 G97</td>
             <td>13</td>
+            <td>Spindle speed mode - Constant surface speed or fixed RPM mode.</td>
           </tr>
           <tr>
             <td>#4014</td>
-            <td>G54 G55 G56 G57 G58 G59</td>
+            <td>G54-G59</td>
             <td>14</td>
+            <td>Work coordinate system - Active work offset selection.</td>
           </tr>
           <tr>
             <td>#4015</td>
-            <td>G61 G62 G63 G64</td>
+            <td>G61-G64</td>
             <td>15</td>
+            <td>Path control mode - Exact stop, automatic corner control, tapping mode, or continuous cutting mode.
+            </td>
           </tr>
           <tr>
             <td>#4016</td>
             <td>G68 G69</td>
             <td>16</td>
+            <td>Coordinate rotation - Rotation enabled or canceled.</td>
           </tr>
           <tr>
             <td>#4017</td>
             <td>G15 G16</td>
             <td>17</td>
+            <td>Coordinate input mode - Cartesian or polar coordinate programming.</td>
           </tr>
           <tr>
             <td>#4019</td>
             <td>G40.1 G41.1 G42.1</td>
             <td>19</td>
+            <td>Normal direction control / Tool compensation type - Advanced cutter compensation mode.</td>
           </tr>
           <tr>
             <td>#4022</td>
             <td>G50.1 G51.1</td>
             <td>22</td>
+            <td>Mirror image mode - Mirror image canceled or enabled.</td>
           </tr>
         </table>
         {{ back-2-manual }}
@@ -317,121 +337,142 @@
             <th>Variable - current line</th>
             <th>G-code</th>
             <th>Group number</th>
+            <th>Description</th>
           </tr>
           <tr>
             <td>#4001</td>
             <td>#4201</td>
             <td>G00 G01 G02 G03 G33</td>
             <td>1</td>
+            <td>Motion mode - Indicates the current movement command (rapid, linear interpolation, circular
+              interpolation, etc.).</td>
           </tr>
           <tr>
             <td>#4002</td>
             <td>#4202</td>
             <td>G17 G18 G19</td>
             <td>2</td>
+            <td>Plane selection - Active machining plane (XY, ZX, or YZ).</td>
           </tr>
           <tr>
             <td>#4003</td>
             <td>#4203</td>
             <td>G90 G91</td>
             <td>3</td>
+            <td>Positioning mode - Absolute or incremental programming.</td>
           </tr>
           <tr>
             <td>#4004</td>
             <td>#4204</td>
             <td>G22 G23</td>
             <td>4</td>
+            <td>Stored stroke check - Limit checking enabled or canceled.</td>
           </tr>
           <tr>
             <td>#4005</td>
             <td>#4205</td>
             <td>G93 G94 G95</td>
             <td>5</td>
+            <td>Feedrate mode - Inverse time, feed per minute, or feed per revolution.</td>
           </tr>
           <tr>
             <td>#4006</td>
             <td>#4206</td>
             <td>G20 G21</td>
             <td>6</td>
+            <td>Units selection - Inch or metric programming units.</td>
           </tr>
           <tr>
             <td>#4007</td>
             <td>#4207</td>
             <td>G40 G41 G42</td>
             <td>7</td>
+            <td>Tool radius compensation - Canceled, left compensation, or right compensation.</td>
           </tr>
           <tr>
             <td>#4008</td>
             <td>#4208</td>
             <td>G43 G44 G45</td>
             <td>8</td>
+            <td>Tool length compensation - Positive, negative, or additional tool length compensation mode.</td>
           </tr>
           <tr>
             <td>#4009</td>
             <td>#4209</td>
             <td>G73 G74 G76
-              G80 G81 G82 G83 G84 G85 G86 G87 G88 G89</td>
+              G80-G89</td>
             <td>9</td>
+            <td>Canned cycle mode - Active drilling, tapping, boring, threading, or cycle cancel command.</td>
           </tr>
           <tr>
             <td>#4010</td>
             <td>#4210</td>
             <td>G98 G99</td>
             <td>10</td>
+            <td>Canned cycle return mode - Return to initial point or R-point after cycle completion.</td>
           </tr>
           <tr>
             <td>#4011</td>
             <td>#4211</td>
             <td>G50 G51</td>
             <td>11</td>
+            <td>Scaling mode – Scaling canceled or enabled.</td>
           </tr>
           <tr>
             <td>#4012</td>
             <td>#4212</td>
             <td>G65 G66 G67</td>
             <td>12</td>
+            <td>Macro call mode - Simple macro call, modal macro call, or modal macro cancel.</td>
           </tr>
           <tr>
             <td>#4013</td>
             <td>#4213</td>
             <td>G96 G97</td>
             <td>13</td>
+            <td>Spindle speed mode - Constant surface speed or fixed RPM mode.</td>
           </tr>
           <tr>
             <td>#4014</td>
             <td>#4214</td>
-            <td>G54 G55 G56 G57 G58 G59</td>
+            <td>G54-G59</td>
             <td>14</td>
+            <td>Work coordinate system - Active work offset selection.</td>
           </tr>
           <tr>
             <td>#4015</td>
             <td>#4215</td>
-            <td>G61 G62 G63 G64</td>
+            <td>G61-G64</td>
             <td>15</td>
+            <td>Path control mode - Exact stop, automatic corner control, tapping mode, or continuous cutting mode.</td>
           </tr>
           <tr>
             <td>#4016</td>
             <td>#4216</td>
             <td>G68 G69</td>
             <td>16</td>
+            <td>Coordinate rotation - Rotation enabled or canceled.</td>
           </tr>
           <tr>
             <td>#4017</td>
             <td>#4217</td>
             <td>G15 G16</td>
             <td>17</td>
+            <td>Coordinate input mode - Cartesian or polar coordinate programming.</td>
           </tr>
           <tr>
             <td>#4018</td>
             <td>#4218</td>
             <td>G50.1 G51.1</td>
             <td>18</td>
+            <td>Mirror image mode - Mirror image canceled or enabled.</td>
           </tr>
           <tr>
             <td>#4019</td>
             <td>#4219</td>
             <td>G40.1 G41.1 G42.1</td>
             <td>19</td>
+            <td>Normal direction control / Tool compensation type - Advanced cutter compensation mode.</td>
           </tr>
         </table>
         {{ back-2-manual }}

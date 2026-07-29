@@ -26,7 +26,7 @@ const main = () => {
 
   templates.push({
     id: 'ext',
-    content: 'cms, nc, cn, ncc, cnc, eia, txt, min, mpf'
+    content: 'nc, cn, ncc, cnc, eia, txt, dxf'
   })
 
   templates.push({
