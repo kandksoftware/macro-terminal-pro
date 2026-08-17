@@ -1,28 +1,62 @@
 'use strict'
 
-const announcementBar = ({ discount, config }) => {
+/*
+  Winter Sale: Get ${discount}% off!
+  Get it now
+*/
+
+
+const announcementBar = ({ text, btn }) => {
   return `<div class="announcement-bar">
-            <div class="announcement-bar-text">Winter Sale: Get ${discount}% off!</div>
-            <a class="announcement-bar-button" href="${config.purchaseLink}">Get it now</a>
+            <div class="announcement-bar-text">${text}</div>
+            <a class="announcement-bar-button" href="${btn.url}">${btn.text}</a>
           </div>`
+}
+//discount: 25/50/75
+const discount = APP.config.promoDiscount
+const purchaseDiscount = APP.config.purchaseDiscount
+
+const PROMO = {
+  announcementBar: {
+    show: true,
+    data: {
+      text: `🎓 Students save ${discount}%, get our software at half price.`,
+      btn: {
+        text: 'Contact us',
+        url: APP.config.contactLink
+      }
+    }
+  }
 }
 
 const main = () => {
-  //discount: 25/50/75
-  const discount = 0
-
   const templates = []
   const config = APP.config
 
   //init templates based of config
   for (let key in config) {
-    templates.push({ id: key, content: config[key].indexOf('?goto=') == -1 && config[key].indexOf('html') != -1 ? config[key] : config[key] })
+    if (!isNaN(config[key])) continue
+
+    templates.push({
+      id: key,
+      content: config[key].indexOf('?goto=') == -1 && config[key].indexOf('html') != -1 ? config[key] : config[key]
+    })
   }
 
-  templates.push({
+  /*templates.push({
     id: 'announcement-bar',
     content: discount == 0 ? '' : announcementBar({ discount, config })
-  })
+  })*/
+
+  if (PROMO.announcementBar.show) {
+    templates.push({
+      id: 'announcement-bar',
+      content: announcementBar({
+        text: PROMO.announcementBar.data.text,
+        btn: PROMO.announcementBar.data.btn
+      })
+    })
+  }
 
   templates.push({
     id: 'ext',
@@ -52,7 +86,10 @@ const main = () => {
 
   templates.push({
     id: 'purchase-component',
-    content: APP.purchaseComponent(discount)
+    content: APP.purchaseComponent({
+      fullPrice: config.fullPrice,
+      discount: purchaseDiscount
+    })
   })
 
   templates.push({
@@ -177,19 +214,27 @@ const main = () => {
     const modalShown = sessionStorage.getItem(KEY)
     if (!modalShown) {
       setTimeout(() => {
-        const array = ['', '', '']
+
+        const array = [
+          `🎓 ${discount}% Off for Students`,
+          `Good news, students get ${discount}% off our software.\n\nGet access to the tools you need for your studies, projects, and ideas at half the price.`,
+        ]
         const infoModal = new ModalBanner({
           id: 'modal-banner',
           title: array[0],
-          message: array[2],
+          message: array[1],
           type: 'any',
           buttons: [
-            { text: 'Got it', type: 'primary', action: 'close' }
-          ]
+            { text: 'Get more info', type: 'primary', action: 'action' }
+          ],
+          onAction: () => {
+            window.location.href = 'contact.html'
+          }
         });
         infoModal.open();
         sessionStorage.setItem(KEY, 'true')
       }, 3000)
     }
   }
+
 }

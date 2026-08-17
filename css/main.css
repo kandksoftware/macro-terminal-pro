@@ -1932,6 +1932,7 @@ td {
   line-height: 1.6;
   color: #334155;
   margin-bottom: 25px;
+  white-space: pre-line;
 }
 
 .modal-banner__footer {

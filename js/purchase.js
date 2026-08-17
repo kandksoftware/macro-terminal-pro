@@ -23,16 +23,14 @@
     }
   }
 
-  app.purchaseComponent = (discount = 0) => {
-    const normalPrice = 649.00
-    const discountPrice = normalPrice - normalPrice * discount * 0.01
-
+  app.purchaseComponent = ({ fullPrice, discount = 0 }) => {
+    const discountPrice = fullPrice - fullPrice * discount * 0.01
 
     return `<div class="main__pricing" id="purchase">
               <div class="main__pricing-card">
                 <div class="main__pricing-title">CNC Macro Simulator II STUDIO</div>
                 <div class="main__pricing-desc">(unlimited number of devices)</div>
-                <div class="main__pricing-normal-price ${normalPrice != discountPrice ? '' : 'hide'}">${normalPrice}</div>
+                <div class="main__pricing-normal-price ${fullPrice != discountPrice ? '' : 'hide'}">${fullPrice}</div>
                 <div class="main__pricing-discount-price" id="pay-price">${discountPrice}</div>
               </div>
               <div class="main__pricing-card">

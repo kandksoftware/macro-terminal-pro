@@ -11,7 +11,8 @@ class ModalBanner {
         { text: 'Confirm', type: 'primary', action: 'close' }
       ],
       onOpen: null,
-      onClose: null
+      onClose: null,
+      onAction: null,
     }, options);
 
     this.modal = null;
@@ -86,6 +87,9 @@ class ModalBanner {
           if (typeof action === 'function') {
             action();
           } else if (action === 'close') {
+            this.close();
+          } else if (action === 'action') {
+            if (this.options.onAction) this.options.onAction()
             this.close();
           }
         });
