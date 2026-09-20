@@ -13,6 +13,6 @@
     contactLink: 'contact.html',
     fullPrice: 649.00,
     promoDiscount: 50,
-    purchaseDiscount: 0
+    purchaseDiscount: 25
   }
 })(APP);

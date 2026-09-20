@@ -127,6 +127,12 @@ const main = () => {
     content: '<a class="back-link" href="knowledge.html"> back to the manual</a>'
   })
 
+
+  /*templates.push({
+    id: 'purchase-component',
+    content: APP.purchaseComponent()
+  })*/
+
   const components = [{
     n: 'nav',
     id: '.nav__links'
@@ -176,7 +182,7 @@ const main = () => {
     link: `faq.html`,
     desc: 'FAQ'
   }, {
-    type: ['nav', 'menu', 'footer'],
+    type: ['footer'],
     link: `about.html`,
     desc: 'About us'
   }]
@@ -200,7 +206,11 @@ const main = () => {
     e.innerHTML = hg
   });
 
-  APP.purchase()
+  APP.purchase({
+    fullPrice: config.fullPrice,
+    discount: purchaseDiscount
+  })
+
   APP.getDemo(config.demoLink)
   //handle the iframes
   APP.iframeSpinnerLoading()
@@ -208,6 +218,8 @@ const main = () => {
   APP.goto()
   //gallery
   APP.listenGallerySelector()
+
+  //APP.purchaseComponentLogic()
 
   if (discount != 0) {
     const KEY = 'modal-banner'

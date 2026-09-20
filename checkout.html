@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Add meta tags for mobile and IE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="resources/icon.png" type="image/png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Checkout</title>
+  <style>
+    body {
+      background:
+        radial-gradient(circle at 50% -10%,
+          rgba(108, 92, 231, 0.13),
+          transparent 40%),
+        #f7f7fb;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AejdBp5fL_3jo-A4tE0xUaqa1hyObbeBGn7N0gOOLlBgZdiHOSOS1MNLMIQxSp28T3TSyDaJpmZGz4Fq"></script>
+</head>
+
+<body>
+  <div id="checkout-container" class="summary-card">
+    <div class="summary-header">
+      <h2>Order summary</h2>
+    </div>
+
+    <div class="summary-body">
+      <div class="product">
+        <div class="product-icon">
+          CMS2
+        </div>
+
+        <div class="product-info">
+          <p class="product-name">
+            CNC Macro Simulator II STUDIO
+          </p>
+          <p class="product-description">
+            Unlimited number of devices
+          </p>
+        </div>
+      </div>
+
+      <div class="price-lines">
+        <div class="price-line">
+          <span>Regular price</span>
+          <strong class="regular-price" data-bind="product-regular">
+            $99.99
+          </strong>
+        </div>
+
+        <div class="price-line discount-line">
+          <span>Discount</span>
+          <strong class="discount-value" data-bind="product-savings">
+            − $25.00
+          </strong>
+        </div>
+
+        <div class="price-line">
+          <span>Discount rate</span>
+          <strong class="discount-rate" data-bind="product-discount">
+            25% OFF
+          </strong>
+        </div>
+      </div>
+      <div class="total">
+        <div class="total-label">
+          Total
+          <small>
+            One-time payment
+          </small>
+
+        </div>
+        <div class="total-price" data-bind="product-price">
+          $74.99
+        </div>
+      </div>
+      <div class="guarantee hide">
+        ✓ Secure payment · No hidden fees
+      </div>
+      <div class="security-message">
+
+        <div class="security-icon">
+          🔒
+        </div>
+
+        <div>
+          <strong>Your payment is secure</strong>
+
+          Your payment information is processed securely
+          by PayPal. We do not store your payment details.
+        </div>
+
+      </div>
+      <div id="paypal-button-container"></div>
+    </div>
+    <!--<h2 data-bind="product-name"></h2>
+    <h2 data-bind="product-price"></h2>
+    <h3 data-bind="product-license"></h3>
+    <div id="paypal-button-container"></div>-->
+  </div>
+
+
+  <!-- Include the PayPal JavaScript SDK -->
+  <script>
+    (() => {
+      const data = localStorage.getItem("data")
+      if (!data) {
+        //window.location.href = 'products.html'
+      } else {
+        const dataObject = JSON.parse(data)
+        const dbs = document.querySelectorAll('[data-bind]')
+        if (dbs) {
+          [...dbs].forEach(db => {
+            const pair = db.getAttribute('data-bind').split('-')
+            db.innerHTML = dataObject[pair[1]]
+          })
+        }
+
+        paypal.Buttons({
+          createOrder: (data, actions) => {
+            return actions.order.create({
+              purchase_units: [{
+                name: dataObject.name, /* Shows within upper-right dropdown during payment approval */
+                description: `${dataObject.name} - (${dataObject.license})`, /* Item details will also be in the completed paypal.com transaction view */
+                amount: {
+                  value: dataObject.price,
+                },
+              }]
+            })
+          },
+          onApprove: (data, actions) => {
+            return actions.order.capture().then(() => {
+              window.location.href = 'success.html'
+              //alert('Go to your emeil account to receive a link to the app!')
+            })
+          },
+          onError: (err) => {
+            alert(err)
+          }
+        }).render('#paypal-button-container');
+      }
+    })()
+  </script>
+</body>
+
+</html>

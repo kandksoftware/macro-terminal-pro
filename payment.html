@@ -73,7 +73,7 @@
     (() => {
       const data = localStorage.getItem("data")
       if (!data) {
-        window.location.href = 'products.html'
+        //window.location.href = 'products.html'
       } else {
         const dataObject = JSON.parse(data)
         const dbs = document.querySelectorAll('[data-bind]')

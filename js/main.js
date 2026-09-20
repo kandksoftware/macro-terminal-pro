@@ -16,6 +16,8 @@ window.addEventListener('load', () => {
     __PATH + 'purchase.js',
     __PATH + 'lang.js',
     __PATH + 'ModalBanner.js',
+    //__PATH + 'purchase-component.js',
+    __PATH + 'purchase.js',
     __PATH + 'build.js',
   ]).exec(() => main())
 })
